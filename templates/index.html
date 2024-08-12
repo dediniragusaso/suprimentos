@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chat Suprimentos</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<link rel="shortcut icon" href="static/img/logo_jbs.svg" type="image/x-icon">
+<style>
+    h1 {
+        font-size: 1.45rem;
+        font-weight: 600;
+        display: inline;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        display: inline;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+        font-weight: 600;
+        display: inline;
+    }
+
+    strong {
+        font-weight: 500;
+    }
+
+    #hamburger {
+        background-color: #1e1e1e;
+    }
+
+    #sidebar {
+        background-color: #0F3B67;
+    }
+
+    .logo-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    .logo-image {
+        max-width: 150px;
+    }
+
+    #subtitulo,
+    #titulo {
+        margin-top: 5%;
+    }
+
+    #blocos_valores {
+        height: 10%;
+    }
+
+    #messageInput {
+        resize: none;
+        overflow-y: auto;
+        min-height: 38px;
+        max-height: 76px;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+
+    #messageFormContainer .flex {
+        display: flex;
+        align-items: flex-end;
+        gap: 0.5rem;
+    }
+
+    #sendMessageButton {
+        white-space: nowrap;
+        height: 100%;
+        border-radius: 8px;
+    }
+
+    @media screen and (min-width: 768px) {
+        .logo-container {
+            margin-left: 10%;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+
+        #sidebar .top-logo-text-container img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
+        #container-prompt {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        #sidebar h1,
+        #sidebar p,
+        #sidebar a button,
+        #sidebar .top-logo-text-container h2 {
+            font-size: 1.125rem;
+        }
+
+        .mencoes {
+            margin-top: 8%;
+        }
+
+        #chatBox {
+            position: relative;
+            z-index: 1;
+            margin-top: 50px;
+            margin-bottom: 80px;
+        }
+
+        #hamburger {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 2500;
+        }
+
+        #sidebar {
+            position: fixed;
+            top: 0;
+            height: 100%;
+            z-index: 3000;
+        }
+
+        #sidebarContainer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 10;
+        }
+
+        #messageFormContainer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: white;
+            z-index: 9;
+        }
+
+        #loanding_container {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: auto;
+            height: auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.865);
+            border-radius: 10px;
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+    }
+
+    ::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    .spinner {
+        height: 75px;
+        width: 100%;
+        font-size: 16px;
+        font-weight: 600;
+        font-family: monospace;
+        letter-spacing: 1em;
+        color: #0F3B67;
+        filter: drop-shadow(0 0 10px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .spinner span {
+        animation: loading6454 1.75s ease infinite;
+    }
+
+    .spinner span:nth-child(2) {
+        animation-delay: 0.25s;
+    }
+
+    .spinner span:nth-child(3) {
+        animation-delay: 0.5s;
+    }
+
+    .spinner span:nth-child(4) {
+        animation-delay: 0.75s;
+    }
+
+    .spinner span:nth-child(5) {
+        animation-delay: 1s;
+    }
+
+    .spinner span:nth-child(6) {
+        animation-delay: 1.25s;
+    }
+
+    .spinner span:nth-child(7) {
+        animation-delay: 1.5s;
+    }
+
+    @keyframes loading6454 {
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+
+    .cor_1 {
+        background-color: #116581;
+    }
+
+    .cor_1:hover {
+        background-color: #0E5871;
+    }
+
+    .cor_2 {
+        background-color: #197FA1;
+    }
+
+    .cor_2:hover {
+        background-color: #14708E;
+    }
+
+    .cor_3 {
+        background-color: #3DA1C2;
+    }
+
+    .cor_3:hover {
+        background-color: #338EAC;
+    }
+
+    .cor_4 {
+        background-color: #46B7DC;
+    }
+
+    .cor_4:hover {
+        background-color: #3DADD2;
+    }
+
+    .cor_5 {
+        background-color: #31C9C9;
+    }
+
+    .cor_5:hover {
+        background-color: #2ABBBB;
+    }
+
+    .cor_6 {
+        background-color: #38CE98;
+    }
+
+    .cor_6:hover {
+        background-color: #31C18E;
+    }
+
+    .cor_7 {
+        background-color: #37C06E;
+    }
+
+    .cor_7:hover {
+        background-color: #36B76A;
+    }
+
+    .container-processos {
+        padding-right: 5%;
+        overflow-y: scroll;
+        scrollbar-color: #566677 #f1f1f1;
+        height: 300px;
+    }
+</style>
+</head>
+<body class="flex flex-col md:flex-row h-screen w-screen">
+ 
+    <div id="hamburger" class= "md:hidden flex items-center justify-between text-white py-4 px-6">
+        <button id="hamburgerBtn" class="text-white focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+    </div>
+ 
+    <div id="sidebar"
+        class="overflow-auto z-10 text-white w-60 space-y-6 px-4 py-2 absolute inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition duration-200 ease-in-out">
+        <button id="closeBtn" class="absolute top-0 right-0 mt-4 mr-4 text-white focus:outline-none md:hidden">
+            <svg class="w-6 h-6" fill="none" stroke="#ffffff" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+        <div>
+            <div class="mencoes top-logo-text-container flex items-center mb-4 sm:mt-1">
+            <a href="https://institutojef.org.br/escolas/tech/" rel="next" target="_blank"><img src="static/img/logo_jef.svg" alt="Logo" class="logo" style="width: 80px;"></a>
+            <span style="background: white; height: 30px; width: 1px; margin-left: 10px; margin-right: 10px;"></span>
+            <a href="https://gedaijef.com/" rel="next" target="_blank"><h2 class="text-start font-semibold ">GEDAI</h2></a>
+        </div>
+        </div>
+        <p class="text-base font-semibold">CHAT SUPRIMENTOS</p>
+        <p class="text-sm text-blue-100">Consulte de maneira rápida e fácil os procedimentos</p>
+
+        <nav>
+            <div class="container-processos">
+                <a href=""><button class="cor_1 w-full text-center px-4 py-2 mt-2 rounded-md ">Combustíveis</button></a>
+                <a href=""><button class="cor_2 w-full text-center px-4 py-2 mt-2 rounded-md ">Compra de Produtos Químicos</button></a>
+                <a href=""><button class="cor_3 w-full text-center px-4 py-2 mt-2 rounded-md ">Contratação de Materiais e Serviços</button></a>
+                <a href=""><button class="cor_4 w-full text-center px-4 py-2 mt-2 rounded-md ">Compra e Recebimento de Biomassa</button></a>
+                <a href=""><button class="cor_5 w-full text-center px-4 py-2 mt-2 rounded-md ">Procedimento de Importação</button></a>
+                <a href=""><button class="cor_6 w-full text-center px-4 py-2 mt-2 rounded-md ">Contratação de Serviços para RH</button></a>
+                <a href=""><button class="cor_7 w-full text-center px-4 py-2 mt-2 rounded-md ">Locação de Veículos</button></a>
+                <a href=""><button class="cor_6 w-full text-center px-4 py-2 mt-2 rounded-md ">Retorno de Mercadoria Exportada</button></a>
+                <a href=""><button class="cor_5 w-full text-center px-4 py-2 mt-2 rounded-md ">Solitação de Vistos Técnicos</button></a>
+                <a href=""><button class="cor_4 w-full text-center px-4 py-2 mt-2 rounded-md ">Operações de Marketing e Mídia</button></a>
+                <a href=""><button class="cor_3 w-full text-center px-4 py-2 mt-2 rounded-md ">Adiantamento a Fornecedores de Materiais e Serviços JBS</button></a>
+                <a href=""><button class="cor_2 w-full text-center px-4 py-2 mt-2 rounded-md ">Solicitações e Despesas de Viagem</button></a>
+                <a href=""><button class="cor_1 w-full text-center px-4 py-2 mt-2 rounded-md ">Recebimento de Amostra do Exterior</button></a>
+            </div>
+        </nav>
+
+        
+    </div>
+ 
+    <div id="logoContainer" class="logo-container">
+        <img src="static/img/logo_jbs.svg" alt="Logo" class="logo-image">
+    </div>  
+ 
+    <div class="flex-1 flex flex-col">
+        <div id="chatBox" class="flex-1 overflow-y-auto p-4 relative">
+            <!-- Mensagem do chat aparece aqui -->
+            <p class="bg-green-400 text-white text-left rounded-lg rounded-tl-none p-2 m-2 inline-block hidden">{{ variavel_frontend }}</p>
+        </div>
+ 
+        <div id="loanding_container">
+            <div class="spinner min-h-12">
+                <span>C</span>
+                <span>A</span>
+                <span>R</span>
+                <span>R</span>
+                <span>E</span>
+                <span>G</span>
+                <span>A</span>
+                <span>N</span>
+                <span>D</span>
+                <span>O</span>
+            </div>
+        </div>
+ 
+        <div id="messageFormContainer">
+            <form id="messageForm" action="/submit" method="post" onsubmit="sendMessage(event)">
+                <div id="container-prompt" class="border-gray-200 p-6 pb-0 flex items-end gap-2">
+                    <textarea id="messageInput" name="inputMessage" class="flex-1 p-2 rounded-l-lg border-2 border-gray-300" placeholder="Escreva sua mensagem aqui..." rows="1"></textarea>
+                    <input type="button" value="Enviar" id="sendMessageButton" class="font-bold py-2 text-blue-500 border-2 background-blue-100 border-blue-500 hover:border-blue-300 hover:text-blue-400 px-4 rounded-l-lg align-bottom">
+                </div>
+            </form>
+            <div class="mt-1 mb-3 text-start ml-7">
+                <a href="#" id="novo_chat" class="text-grey-300 underline"><img src="static/img/reload.svg" alt="Nova conversa" class="inline-block ml-2" style="width: 15px; height: 15px; margin-right: 5px;">Clique aqui para iniciar um novo chat</a>
+            </div>
+        </div>
+    </div>
+ 
+    <script>
+
+        let isResponseIncreased = false;
+    
+        // Ajusta a altura do input de mensagem conforme o conteúdo
+        document.getElementById("messageInput").addEventListener("input", function() {
+            this.style.height = "auto";
+            this.style.height = (this.scrollHeight) + "px";
+        });
+    
+        // Verifica se a página foi recarregada por um botão específico
+        document.getElementById("novo_chat").addEventListener("click", function() {
+            localStorage.setItem("recarregadoPorBotao", "true");
+            window.location.reload();
+        });
+    
+        // Verifica o recarregamento da página
+        function verificarRecarregamento() {
+            if (localStorage.getItem("recarregadoPorBotao") === "true") {
+                console.log("A página foi recarregada devido ao clique no botão.");
+                localStorage.removeItem("recarregadoPorBotao");
+                enviarResultadoParaBackend(true);
+            } else {
+                console.log("A página não foi recarregada devido ao clique no botão.");
+                enviarResultadoParaBackend(false);
+            }
+        }
+    
+        // Envia o resultado do recarregamento para o backend
+        function enviarResultadoParaBackend(resultado) {
+            fetch('/limparTerminal', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ recarregadoPorBotao: resultado }),
+            })
+            .then(response => response.json())
+            .then(data => console.log('Sucesso:', data))
+            .catch((error) => {
+                console.error('Erro:', error);
+            });
+        }
+    
+        // Executa a verificação de recarregamento quando o DOM é carregado
+        document.addEventListener("DOMContentLoaded", function() {
+            verificarRecarregamento();
+        });
+    
+        // Alterna a visibilidade da sidebar
+        document.getElementById("closeBtn").addEventListener("click", function() {
+            var sidebar = document.getElementById("sidebar");
+            sidebar.classList.toggle("-translate-x-full");
+        });
+    
+        // Esconde o loader quando o DOM é carregado
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("loanding_container").style.display = "none";
+        });
+    
+        // Alterna a visibilidade do spinner (loader)
+        function toggleSpinnerVisibility() {
+            var spinner = document.getElementById("loanding_container");
+            spinner.style.display = spinner.style.display === "none" ? "flex" : "none";
+        }
+    
+        // Desabilita a entrada de mensagem
+        function disableMessageInput() {
+            document.getElementById("messageInput").disabled = true;
+            document.getElementById("sendMessageButton").disabled = true;
+        }
+    
+        // Habilita a entrada de mensagem
+        function enableMessageInput() {
+            document.getElementById("messageInput").disabled = false;
+            document.getElementById("sendMessageButton").disabled = false;
+        }
+    
+        // Envia a mensagem e lida com a resposta contínua do servidor
+        function sendMessage(event) {
+            event.preventDefault();
+            isResponseIncreased = false;
+            var inputMessage = document.getElementById("messageInput").value;
+            if (!inputMessage) {
+                return;
+            }
+    
+            document.getElementById("logoContainer").style.display = "none";
+            disableMessageInput();
+            document.getElementById("loanding_container").style.display = "flex";
+    
+            var chatBox = document.getElementById("chatBox");
+    
+            addMessageToChatBox("user", inputMessage);
+            document.getElementById("messageInput").value = "";
+    
+            fetch('/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: "inputMessage=" + encodeURIComponent(inputMessage),
+            }).then(response => {
+                const reader = response.body.getReader();
+                const decoder = new TextDecoder();
+                let responseText = '';
+    
+                document.getElementById("loanding_container").style.display = "none"; 
+    
+                // Cria um novo contêiner para cada nova resposta
+                const newChatContainer = document.createElement('div');
+                newChatContainer.className = "chat-container";
+                chatBox.appendChild(newChatContainer);
+    
+                function readStream() {
+                    reader.read().then(({ done, value }) => {
+                        if (done) {
+                            enableMessageInput();
+                            return;
+                        }
+    
+                        responseText += decoder.decode(value, { stream: true });
+                        updateServerResponse(responseText, newChatContainer);
+    
+                        readStream(); // Continue reading the stream
+                    }).catch(error => {
+                        console.error('Error reading stream:', error);
+                        document.getElementById("loanding_container").style.display = "none";
+                        enableMessageInput();
+                    });
+                }
+    
+                readStream(); // Start reading the stream
+    
+            }).catch(error => {
+                console.error('Error:', error);
+                document.getElementById("loanding_container").style.display = "none";
+                enableMessageInput();
+            });
+        }
+    
+        // Atualiza a resposta do servidor no chat
+        function updateServerResponse(response, container) {
+            let serverMessage = container.querySelector('.server-message');
+    
+            if (!serverMessage) {
+                serverMessage = document.createElement('div');
+                serverMessage.className = "bg-gray-100 text-black text-left rounded-lg rounded-tl-none p-2 m-2 inline-block server-message";
+                container.appendChild(serverMessage);
+            }
+    
+            function replaceAlternatingStrongTags(message) {
+                var count = 0;
+                return message.replace(/\*\*/g, function() {
+                    count++;
+                    return count % 2 === 1 ? '<strong>' : '</strong>';
+                });
+            }
+    
+            function replaceHashesWithTitles(message) {
+                return message.replace(/^### (.+)$/gm, '<h3>$1</h3>')
+                              .replace(/^## (.+)$/gm, '<h2>$1</h2>')
+                              .replace(/^# (.+)$/gm, '<h1>$1</h1>');
+            }
+    
+            function formatMessage(message) {
+                message = replaceAlternatingStrongTags(message);
+                message = replaceHashesWithTitles(message);
+                return message.replace(/\n/g, '<br>');
+            }
+    
+            serverMessage.innerHTML = formatMessage(response);
+    
+            if (!isResponseIncreased && response.length > 250) {
+                var sendPromptButton = document.createElement("button");
+                sendPromptButton.innerText = "Aumentar resposta";
+                sendPromptButton.className = "send-prompt-button";
+                sendPromptButton.onclick = function() {
+                    sendPrompt(sendPromptButton);
+                };
+                serverMessage.appendChild(document.createElement("br"));
+                serverMessage.appendChild(sendPromptButton);
+            }
+    
+            container.scrollTop = container.scrollHeight;
+            document.getElementById("loanding_container").style.display = "none";
+        }
+    
+        // Adiciona uma mensagem ao chat box
+        function addMessageToChatBox(sender, message) {
+            var chatBox = document.getElementById("chatBox");
+            var messageDiv = document.createElement("div");
+            var messageContent = document.createElement("div");
+    
+            function replaceAlternatingStrongTags(message) {
+                var count = 0;
+                return message.replace(/\*\*/g, function() {
+                    count++;
+                    return count % 2 === 1 ? '<strong>' : '</strong>';
+                });
+            }
+    
+            function replaceHashesWithTitles(message) {
+                return message.replace(/^### (.+)\n/gm, '<h3>$1</h3>\n')
+                              .replace(/^## (.+)\n/gm, '<h2>$1</h2>\n')
+                              .replace(/^# (.+)\n/gm, '<h1>$1</h1>\n');
+            }
+    
+            function formatMessage(message) {
+                message = replaceAlternatingStrongTags(message);
+                message = replaceHashesWithTitles(message);
+                return message.replace(/\n/g, '<br>');
+            }
+    
+            messageContent.innerHTML = formatMessage(message);
+    
+            if (sender === "server" && !isResponseIncreased && message.length > 250 && message !== 'Por favor, insira mais detalhes') {
+                var sendPromptButton = document.createElement("button");
+                sendPromptButton.innerText = "Aumentar resposta";
+                sendPromptButton.className = "send-prompt-button";
+                sendPromptButton.onclick = function() {
+                    sendPrompt(sendPromptButton);
+                };
+                messageContent.appendChild(document.createElement("br"));
+                messageContent.appendChild(sendPromptButton);
+            }
+    
+            messageDiv.appendChild(messageContent);
+    
+            if (sender === "user") {
+                messageContent.className = "bg-gray-300 text-black text-right rounded-lg rounded-tr-none p-2 m-2 inline-block";
+                messageDiv.className = "text-right";
+            } else {
+                messageContent.className = "bg-gray-100 text-black text-left rounded-lg rounded-tl-none p-2 m-2 inline-block";
+                messageDiv.className = "text-left";
+            }
+            chatBox.appendChild(messageDiv);
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+    
+        // Função para enviar o prompt e lidar com o botão e o loader (adaptado para fluxo contínuo)
+        function sendPrompt(button) {
+            button.style.display = 'none';
+            document.getElementById("loanding_container").style.display = "flex";
+            isResponseIncreased = true;
+    
+            fetch('/aumentar_resposta', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({}),
+            }).then(response => {
+                const reader = response.body.getReader();
+                const decoder = new TextDecoder();
+                let responseText = '';
+    
+                // Cria um novo contêiner para a resposta
+                const newChatContainer = document.createElement('div');
+                newChatContainer.className = "chat-container";
+                document.getElementById("chatBox").appendChild(newChatContainer);
+    
+                function readStream() {
+                    reader.read().then(({ done, value }) => {
+                        if (done) {
+                            document.getElementById("loanding_container").style.display = "none";
+                            return;
+                        }
+    
+                        responseText += decoder.decode(value, { stream: true });
+                        updateServerResponse(responseText, newChatContainer);
+    
+                        readStream(); // Continue reading the stream
+                    }).catch(error => {
+                        console.error('Error reading stream:', error);
+                        document.getElementById("loanding_container").style.display = "none";
+                    });
+                }
+    
+                readStream(); // Start reading the stream
+    
+            }).catch(error => {
+                console.error('Error sending prompt:', error);
+                document.getElementById("loanding_container").style.display = "none";
+            });
+        }
+    
+        // Ajusta a altura do input de mensagem conforme o conteúdo
+        document.getElementById("messageInput").addEventListener("input", function() {
+            this.style.height = "auto";
+            var scrollHeight = this.scrollHeight;
+            var maxHeight = parseInt(window.getComputedStyle(this).maxHeight, 10);
+    
+            if (scrollHeight > maxHeight) {
+                this.style.height = maxHeight + "px";
+                this.style.overflowY = "scroll";
+            } else {
+                this.style.height = scrollHeight + "px";
+                this.style.overflowY = "hidden";
+            }
+        });
+    
+        // Adiciona eventos aos botões e inputs
+        document.getElementById("messageInput").addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+                atualizarVariavelPergunta()
+            }
+        })
+        document.getElementById("sendMessageButton").addEventListener("click", sendMessage);
+        
+        
+        
+       
+    
+        document.getElementById("messageInput").addEventListener("keypress", function(event) {
+            if (event.key === "Enter" && !document.getElementById("messageInput").disabled) {
+                event.preventDefault();
+                sendMessage(event);
+            }
+        });
+    
+        document.getElementById("hamburgerBtn").addEventListener("click", function() {
+            var sidebar = document.getElementById("sidebar");
+            sidebar.classList.toggle("-translate-x-full");
+        });
+    
+        document.getElementById("closeBtn").addEventListener("click", function() {
+            document.getElementById("sidebar").classList.add("-translate-x-full");
+        });
+    
+        document.addEventListener("click", function(event) {
+            var sidebar = document.getElementById("sidebar");
+            var hamburgerBtn = document.getElementById("hamburgerBtn");
+            if (!sidebar.contains(event.target) && !hamburgerBtn.contains(event.target)) {
+                sidebar.classList.add("-translate-x-full");
+            }
+        });
+    
+        document.getElementById("sidebar").addEventListener("click", function(event) {
+            event.stopPropagation();
+        });
+
+        function criarVariavel() {
+            sessionStorage.setItem('Pergunta', '')
+            sessionStorage.setItem('Responsta', '')
+        }
+        function atualizarVariavelPergunta() {
+            const message = document.getElementById("messageInput").value
+            sessionStorage.setItem('Pergunta', message)          
+        }
+        // function atualizarVariavelResposta() {
+
+        // }
+        window.addEventListener('load', criarVariavel())
+    
+    </script>
+        
+</body>
+</html>

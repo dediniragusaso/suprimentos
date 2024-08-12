@@ -1,0 +1,273 @@
+h1 {
+    font-size: 1.45rem;
+    font-weight: 600;
+    display: inline;
+}
+
+h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: inline;
+}
+
+h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: inline;
+}
+
+strong {
+    font-weight: 500;
+}
+
+#hamburger{
+    background-color: #1e1e1e;
+}
+
+#sidebar{
+    background-color: #0F3B67;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.logo-image {
+    max-width: 150px;
+}
+
+#subtitulo,
+#titulo {
+    margin-top: 5%;
+}
+
+#blocos_valores {
+    height: 10%;
+}
+
+#messageInput {
+    resize: none;
+    overflow-y: auto;
+    min-height: 38px;
+    max-height: 76px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+#messageFormContainer .flex {
+    display: flex;
+    align-items: flex-end;
+    gap: 0.5rem;
+}
+
+#sendMessageButton {
+    white-space: nowrap;
+    height: 100%;
+    border-radius: 8px;
+}
+
+@media screen and (min-width: 768px) {
+    .logo-container {
+        margin-left: 10%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    #sidebar .top-logo-text-container img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    #container-prompt{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #sidebar h1,
+    #sidebar p,
+    #sidebar a button,
+    #sidebar .top-logo-text-container h2 {
+        font-size: 1.125rem;
+    }
+
+    .mencoes {
+        margin-top: 8%;
+    }
+
+    #chatBox {
+        position: relative;
+        z-index: 1;
+        margin-top: 50px;
+        margin-bottom: 80px;
+    }
+
+    #hamburger {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 2500;
+    }
+
+    #sidebar {
+        position: fixed;
+        top: 0;
+        height: 100%;
+        z-index: 3000;
+    }
+
+    #sidebarContainer {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+    }
+
+    #messageFormContainer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: white;
+        z-index: 9;
+    }
+
+    #loanding_container {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: auto;
+        height: auto;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.865);
+        border-radius: 10px;
+        z-index: 1000;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+
+.spinner {
+    height: 75px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: monospace;
+    letter-spacing: 1em;
+    color: #0F3B67;
+    filter: drop-shadow(0 0 10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner span {
+    animation: loading6454 1.75s ease infinite;
+}
+
+.spinner span:nth-child(2) {
+    animation-delay: 0.25s;
+}
+
+.spinner span:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.spinner span:nth-child(4) {
+    animation-delay: 0.75s;
+}
+
+.spinner span:nth-child(5) {
+    animation-delay: 1s;
+}
+
+.spinner span:nth-child(6) {
+    animation-delay: 1.25s;
+}
+
+.spinner span:nth-child(7) {
+    animation-delay: 1.5s;
+}
+
+@keyframes loading6454 {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.cor_1 {
+    background-color: #116581;
+}.cor_1:hover{
+    background-color: #0E5871;
+}
+
+.cor_2 {
+    background-color: #197FA1;
+}.cor_2:hover{
+    background-color: #14708E;
+}
+
+.cor_3 {
+    background-color: #3DA1C2;
+}.cor_3:hover{
+    background-color: #338EAC;
+}
+
+.cor_4 {
+    background-color: #46B7DC;
+}.cor_4:hover{
+    background-color: #3DADD2;
+}
+
+.cor_5 {
+    background-color: #31C9C9;
+}.cor_5:hover{
+    background-color: #2ABBBB;
+}
+
+.cor_6 {
+    background-color: #38CE98;
+}.cor_6:hover{
+    background-color: #31C18E;
+}
+
+.cor_7 {
+    background-color: #37C06E;
+}.cor_7:hover{
+    background-color: #36B76A;
+}
+
+.container-processos {
+    padding-right: 5%;
+    overflow-y: scroll;
+    scrollbar-color: #566677 #f1f1f1;
+    height: 300px;
+}
