@@ -75,3 +75,18 @@ ERROR->2024-08-23 14:53:08,313->stream_with_context() missing 1 required positio
 ERROR->2024-08-23 14:53:20,193->list assignment index out of range->root
 ERROR->2024-08-23 15:09:47,206->list assignment index out of range->root
 ERROR->2024-08-23 15:40:49,840->You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.->root
+ERROR->2024-08-23 16:30:01,230->list assignment index out of range->root
+ERROR->2024-08-23 16:30:16,278->list index out of range->root
+ERROR->2024-08-23 17:10:57,860->list assignment index out of range->root
+ERROR->2024-08-23 17:11:56,983->list index out of range->root
+ERROR->2024-08-23 17:12:02,017->list index out of range->root
+ERROR->2024-08-23 17:12:22,662->list index out of range->root
+ERROR->2024-08-23 17:12:35,813->list index out of range->root
+ERROR->2024-08-23 17:12:55,836->list index out of range->root
+ERROR->2024-08-23 17:13:05,955->list index out of range->root
+ERROR->2024-08-23 17:13:15,136->list index out of range->root
+ERROR->2024-08-23 17:13:51,654->list index out of range->root
+ERROR->2024-08-23 17:14:06,111->list index out of range->root
+ERROR->2024-08-23 17:16:16,977->list index out of range->root
+ERROR->2024-08-23 17:29:39,277->list assignment index out of range->root
+ERROR->2024-08-23 17:35:29,521->list assignment index out of range->root

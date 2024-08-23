@@ -141,7 +141,7 @@ def submit():
             pergunta_usuario = request.form['inputMessage']
                 
             resposta = respostaApi(pergunta_usuario,prompt_sistema_resposta_api)
-            cont_requisicao = 1 # == 1
+            cont_requisicao = 0 # == 1
             
             lista_historico[cont_requisicao] = f'''#CONVERSA ANTERIOR {cont_requisicao}
                 -Solicitação anterior do usuário: {pergunta_usuario}
@@ -155,9 +155,9 @@ def submit():
             pergunta_usuario = request.form['inputMessage']
 
             resposta = respostaApi(pergunta_usuario,prompt_sistema_resposta_api+lista_historico[cont_requisicao])
-            cont_requisicao = 2 #== 2
+            cont_requisicao = 1 #== 2
             
-            lista_historico[cont_requisicao] = f'''#CONVERSA ANTERIOR {cont_requisicao}
+            lista_historico[1] = f'''#CONVERSA ANTERIOR {cont_requisicao}
                 -Solicitação anterior do usuário: {pergunta_usuario}
                 -Resposta do Chat Valores: {resposta}""" '''
                 
@@ -169,9 +169,9 @@ def submit():
             pergunta_usuario = request.form['inputMessage']
                 
             resposta = respostaApi(pergunta_usuario,prompt_sistema_resposta_api+lista_historico[cont_requisicao] + lista_historico[cont_requisicao-1])
-            cont_requisicao = 3 #== 3
+            cont_requisicao = 2 #== 3
             
-            lista_historico[cont_requisicao] = f'''#CONVERSA ANTERIOR {cont_requisicao}
+            lista_historico[2] = f'''#CONVERSA ANTERIOR {cont_requisicao}
                 -Solicitação anterior do usuário: {pergunta_usuario}
                 -Resposta do Chat Valores: {resposta}""" '''
             
