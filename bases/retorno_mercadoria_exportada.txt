@@ -1,0 +1,158 @@
+*PROCEDIMENTO PARA RETORNO DE MERCADORIA EXPORTADA*
+
+---
+
+**OBJETIVO**
+
+Definir critérios e diretrizes para retorno ao Brasil de mercadorias exportadas (reimportação).
+
+**RESPONSABILIDADE QUANTO AO CUMPRIMENTO**
+
+Cabe a todas as áreas envolvidas no processo e citadas neste documento a responsabilidade pelo cumprimento deste procedimento.
+
+**DISPOSIÇÕES GERAIS**
+
+O processo de retorno de mercadoria exportada ocorrerá quando não houver possibilidade de revenda a outros clientes ou descarte no exterior mediante aprovação da Diretoria de Logística ou da diretoria demandante na Seara ou da área Comercial demandante na JBS;
+
+Para realizar o retorno da mercadoria esta não poderá estar vencida. No caso de data de vencimento próxima deverá ser feita análise criteriosa da viabilidade da reimportação considerando o prazo de validade e prazos de trânsito;
+
+Despesas com demurrage detention e armazenagem entre outras inerentes a esses processos serão lançadas no centro de custo de cada negócio;
+
+Os processos de reimportação deverão ser registrados e tratados no sistema de gestão da divisão;
+
+Para a Seara é obrigatória a abertura de RAC para toda reimportação conforme orientação da área de Gestão ME.
+
+**PROCEDIMENTOS**
+
+**JBS**
+
+**Identificação do retorno de mercadoria**
+
+A área Comercial iniciará o processo de retorno do contêiner exportado depois de verificada a impossibilidade de revenda ou outra destinação para o produto no exterior;
+
+Em casos de retorno da mercadoria por problemas com especificação técnica a área de Garantia da Qualidade deverá ser acionada para auxiliar na análise do processo;
+
+A área Comercial deverá comunicar as áreas de Logística Documentação de Exportação e Importação sobre início do processo de retorno;
+
+Caso o produto tenha sido legalizado no país de exportação para realizar o retorno deverá ser obtido junto ao cliente ou autoridade sanitária o refused certificate e a declaração com os motivos do retorno. Se o retorno ocorrer por motivo de contaminação o laudo de análise deverá ser anexado ao certificado;
+
+Se o produto não tiver sido legalizado no país de exportação deverá ser recolhido o certificado sanitário original e anexada a carta da autoridade sanitária do país do cliente informando o motivo do retorno.
+
+**Solicitação da licença de importação**
+
+A área Logística deverá providenciar cópia dos documentos de exportação Bill of Lading (BL) ou Conhecimento de Transporte Rodoviário (CRT) fatura packing exportação certificado de origem extrato da declaração de exportação por registro de exportação (Declaração Única de Exportação - DU-E) e nota fiscal da exportação bem como certificado sanitário original que será necessário para liberação da mercadoria no porto;
+
+Deverão ser solicitados à Garantia da Qualidade da unidade o croqui dos rótulos aprovados pelo Departamento de Inspeção de Produtos de Origem Animal (DIPOA) e a circular de habilitação da planta;
+
+A área de Importação deverá enviar os documentos listados nos itens 4.2.1 e 4.2.2 ao despachante para abertura do processo emissão da Licença de Importação (LI) e do requerimento da anuência;
+
+Após o recebimento dos documentos o despachante deverá registrar a LI e enviar ao Ministério da Agricultura Pecuária e Abastecimento (MAPA) do Estado do importador para autorização;
+
+A anuência do MAPA deverá ser obtida antes do embarque da mercadoria no exterior.
+
+**Autorização do embarque**
+
+Após a autorização da licença a área de Importação deverá solicitar às demais áreas envolvidas que procedam com o retorno da carga;
+
+A área de Logística deverá negociar o frete internacional e free time no Brasil (sugerido free time mínimo de 30 dias) solicitar ao cliente o draft do BL de retorno enviá-lo para validação da equipe de Importação e coordenar com o cliente o embarque da mercadoria na origem informando o estimated time of departure (ETD) e o estimated time of arrival (ETA) do navio para o monitoramento.
+
+**Desembaraço da mercadoria**
+
+Conforme as condições previstas no art. 70 do Regulamento Aduaneiro antes de registrar o documento de importação (DI) é necessário retificar a DU-E registrada para exportar essa mercadoria a fim de que sejam ajustados as quantidades os valores e os pesos de acordo com o que está se retornando e aguardar seu deferimento;
+
+Após a chegada do contêiner no porto a área de Importação deverá transferir o contêiner para o armazém em caso de desova e acompanhar junto ao despachante o processo de deferimento da LI com os órgãos anuentes (na maioria dos casos MAPA e Anvisa). Deferida a LI deverá ser registrada a declaração da importação;
+
+Para realização de retorno do contêiner para a unidade de origem da mercadoria a área de Importação receberá a declaração de importação e solicitará à referida unidade a nota fiscal de entrada e a guia de desoneração de ICMS conforme regulamentação de cada estado para a planta de origem;
+
+A guia de desoneração do ICMS deverá ser emitida pela Secretaria da Fazenda do Estado de origem da mercadoria;
+
+A nota fiscal e a guia de exoneração serão encaminhadas ao despachante que liberará a mercadoria com o Controle de Trânsito de Produto Importado (CTPI) emitido pelo MAPA;
+
+A área de Transportes deverá coordenar a coleta do contêiner no porto ou armazém acompanhar até a devolução no local de destino determinado pela área Comercial e devolver o contêiner vazio ao armador.
+
+**Seara**
+
+**Identificação do retorno de mercadoria**
+
+A área de Customer Service iniciará o processo de retorno da mercadoria exportada depois de verificada a impossibilidade de revenda ou outra destinação para o produto no exterior com a área Comercial;
+
+Em casos de retorno de mercadoria por problemas com especificação técnica a área de Qualidade deverá ser acionada para auxiliar na análise do processo;
+
+A área de Customer Service deverá comunicar as áreas de Shipping de Operações Portuárias e de Documentação sobre início do processo de retorno e informar detalhadamente o problema ocorrido;
+
+O Certificado Sanitário Internacional (CSI) original deverá retornar ao Brasil. Caso o documento fique retido no país importador a área de Customer Service deverá solicitar que o cliente apresente um documento oficial do país que devolveu a mercadoria justificando o ato (IN MAPA 39/2017 Anexo XXI).
+
+**Solicitação da Licença de Importação**
+
+A área de Documentação deverá providenciar a cópia dos documentos de exportação (fatura comercial packing list e conhecimento de embarque) o recolhimento do CSI original e a devolução do Bill of Lading (BL) original ao armador se marítimo;
+
+A área de Qualidade da unidade produtora deverá providenciar o Relatório de Solicitação de Registro de Produto no Ministério da Agricultura Pecuária e Abastecimento (MAPA) e o croqui dos rótulos aprovados pelo Departamento de Inspeção de Produtos de Origem Animal (DIPOA/MAPA);
+
+A área de Operações Portuárias deverá providenciar cópia da Declaração Única de Exportação (DU-E);
+
+Após o recebimento dos documentos elencados acima a área de Operações Portuárias deverá registrar a Licença de Importação (LI) e submeter o processo à análise do MAPA;
+
+É desejável mas não obrigatório que a LI seja autorizada antes do embarque pelo MAPA (IN SDA/MAPA 34/2018 art. 4º).
+
+**Autorização do embarque**
+
+A área de Operações Portuárias deverá solicitar às demais áreas envolvidas que procedam com o retorno da mercadoria;
+
+A área de Shipping deverá negociar o frete internacional e o free time no Brasil (sugerido mínimo de 30 dias) solicitar o envio do draft do BL de retorno e coordenar com o cliente o embarque da mercadoria na origem além de informar a data estimada de saída (ETS) e a data estimada de chegada (ETA) do navio para o monitoramento se marítimo;
+
+A área de Operações Portuárias deverá fazer a Confirmação de Embarque no SRP/SIMP assim que a mercadoria for embarcada.
+
+**Desembaraço aduaneiro da mercadoria**
+
+Após a chegada da mercadoria no Brasil a área de Operações Portuárias deverá providenciar o deferimento da LI junto aos órgãos anuentes e em seguida registrar e submeter a Declaração de Importação (DI) à análise da Receita Federal do Brasil (RFB);
+
+Após desembaraço aduaneiro a área de Operações Portuárias deverá emitir a nota fiscal de entrada no SRP/SIMP e a Guia de Exoneração do ICMS;
+
+A área de Operações Portuárias deverá encaminhar os documentos instrutivos do processo de reimportação ao recinto alfandegado à área de Transporte e ao local de reinspeção (área de Expedição e de Qualidade da unidade produtora ou do armazém) para que seja providenciada a retirada da mercadoria do porto;
+
+A área de Transportes deverá coordenar a coleta imediata do contêiner no local indicado acompanhar a chegada do veículo no local de reinspeção coordenar a devolução imediata do contêiner vazio ao armador (não é permitido a reutilização) solicitar o Recibo de Intercâmbio de Contêiner (RIC) ao transportador e enviar o documento à área de Operações Portuárias se marítimo;
+
+A área de Operações Portuárias deverá finalizar o
+
+ processo de reimportação no SRP/SIMP.
+
+**Contas a Pagar**
+
+Após a Confirmação de Embarque item 4.2.3.3 ocorrerá automaticamente a provisão do Contas a Pagar e a movimentação de estoque da Seara Meats (quando venda indireta);
+
+Após emissão da nota fiscal de entrada item 4.2.4.2 ocorrerá automaticamente o estorno da provisão e a contabilização do Contas a Pagar bem como a geração das Obrigações (SRP e iScala se aplicável);
+
+A área de Contas a Receber ME será acionada pontualmente a cada carga devolvida e deverá informar à área de Tesouraria se as Obrigações do processo de reimportação deverão ser (i) pagas ao cliente (ii) baixadas contra o Contas a Receber ou (iii) baixadas por realocação do pagamento da exportação.
+
+---
+
+**Revisão**
+
+| Revisão | Responsáveis | Área | Ação |
+|---------|--------------|------|------|
+| 01 | Luiz Guilherme Zeferino, Rafael Piolla Seara | Gerência de Suprimentos – Importação, Coordenação de Logística – ME | Revisão |
+| 01 | Jerson Nascimento Junior, Osvaldo De Carvalho Filho | Diretoria de Suprimentos, Diretoria de Logística ME | Aprovação |
+
+---
+
+**PROCEDIMENTO INTERNO**
+
+PROC-PRESI-SUP-0010
+
+23 de junho de 2021
+
+Revisão: 01
+
+**Retorno de Mercadoria Exportada**
+
+**DESTINATÁRIOS:** Todos os colaboradores da JBS e da Seara.
+
+---
+
+Processos Organizacionais
+
+Documento confidencial para uso da JBS
+
+Página 5 de 5
+
+---

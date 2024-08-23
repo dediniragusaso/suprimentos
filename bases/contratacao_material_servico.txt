@@ -1,0 +1,294 @@
+*PROCEDIMENTO DE CONTRATAÇÃO DE MATERIAIS E SERVIÇOS*
+
+---
+
+**OBJETIVO**
+
+Definir critérios e responsabilidades para a formalização de contratações de prestadores de serviços e fornecedores de materiais pela Companhia.
+
+**RESPONSABILIDADE QUANTO AO CUMPRIMENTO**
+
+Cabe a todas as áreas envolvidas no processo e citadas neste documento a responsabilidade pelo cumprimento deste procedimento.
+
+**DISPOSIÇÕES GERAIS**
+
+- Todo processo de contratação de materiais e serviços deve ser orientado pela IN-PRESI-ADM-0094 - Suprimentos América do Sul;
+
+- Antes de contratar qualquer prestação de serviço ou fornecimento de materiais cabe ao requisitante ou contratante verificar e aplicar as condições deste procedimento;
+
+- Para todo acesso ou substituição de comprador e aprovador, seja em caráter temporário ou definitivo, deverá ser aberto chamado na intranet via Service Desk em Catálogo de Serviços de TI » Corporativo » Sistemas » Mercado Eletrônico;
+
+- É responsabilidade do comprador providenciar toda a documentação necessária para a elaboração de um contrato de prestação de serviço ou fornecimento de materiais;
+
+- Entende-se por “consumo contínuo” a existência do planejamento de utilização para determinado serviço ou produto com necessidade de repetição (pedido x entrega). Os casos que não se enquadram nestas características serão tratados como “compra spot”;
+
+- Antes de qualquer nova cotação, negociação ou contratação, deverá ser realizada consulta da situação cadastral dos terceiros participantes nos sistemas gerenciais da Companhia;
+
+- No momento da contratação de serviço ou material é de responsabilidade do comprador verificar se o fornecedor está bloqueado nos sistemas da Companhia por motivos de cadastro, auditoria comercial ou compliance (watch list);
+
+- Caso seja necessário desbloquear o fornecedor é necessário realizar alinhamento por via formal com o solicitante do bloqueio. Solicitar o desbloqueio via chamado no Service Desk caminho JBS SA » 09 - Suprimentos Corporativo América do Sul » Bloqueio e Desbloqueio de Fornecedores anexando a autorização do solicitante do bloqueio;
+
+- Caso o bloqueio tenha sido feito pela equipe de Compliance encaminhar e-mail para compliance.duediligence@jbs.com.br solicitando autorização conforme IN-PRESI-0156 – Política de Due Diligence de Terceiros. Neste caso, não é necessária abertura de chamado.
+
+- É recomendável solicitar ao fornecedor prestador de serviço comprovação de capacidade econômica como capital real e bens imóveis, seguros, etc.;
+
+- Quando houver compra através de representante comercial é recomendável confirmar com o fabricante a autorização da comercialização por aquele terceiro seja nacional ou internacional;
+
+- Não é permitida a integração de notas fiscais a pedidos ou ordens de fornecimento (OF SRP) com data de emissão anterior a 1 ano da data da integração;
+
+- Caberá ao comprador realizar alterações no contrato no Mercado Eletrônico caso seja necessária edição de vigência, título, prazo de pagamento ou qualquer outra alteração que não tenha correlação com mudança de preço, inclusão de novos itens e criação de novos contratos;
+
+- Para solicitações de criação de novos contratos, alteração de preço ou inclusão de novos itens no contrato do Mercado Eletrônico por parte de Suprimentos Corporativo deverá ser aberto o chamado no Miisy;
+
+- Para solicitações de criação de novos contratos, alteração de preço ou inclusão de novos itens no contrato do Mercado Eletrônico por parte de compradores das filiais, os chamados deverão ser abertos via Service Desk (caminho: JBS SA » 09 - Suprimentos Corporativo América do Sul » Atendimento às filiais). O prazo máximo para atendimento dos chamados é de 3 dias úteis.
+
+**É responsabilidade do comprador corporativo:**
+
+- Negociar e estabelecer contratos de fornecimento que atendam todas as divisões de negócio da Companhia de acordo com alçada definida na IN-PRESI-SUP-0094 - Política de Suprimentos e seguindo as diretrizes da IN-PRESI-JUR-0017 - Política de Contratos;
+- Monitorar o mercado e identificar melhores práticas;
+- Garantir a assinatura dos contratos estabelecidos por parte do terceiro e pela área de Suprimentos. As demais assinaturas são de responsabilidade do negócio;
+- Dar suporte ao comprador local garantindo o atendimento do cliente interno;
+- Gerar pedidos de importações estratégicas de partes e peças de equipamentos;
+- Garantir o cadastro de terceiros quando a negociação for de sua responsabilidade;
+- Atender os chamados recebidos via Service Desk dentro do prazo de 3 dias úteis.
+
+**É responsabilidade do comprador local:**
+
+- Efetuar as compras normais urgentes e emergenciais;
+- Efetuar gestão das necessidades junto aos seus clientes internos;
+- Efetuar os pedidos dos itens em contrato, spots e importados;
+- Acompanhar os pedidos formalizados até a sua entrega juntamente com o solicitante da compra;
+- Estabelecer os devidos contratos jurídicos e atuar na devolução ou na recusa de compras (itens);
+- Justificar a liberação das divergências (pedido x nota fiscal);
+- Acompanhar os indicadores das unidades de sua responsabilidade;
+- Garantir o cadastro de terceiros quando a negociação for de sua responsabilidade;
+- Solicitar atendimento de Suprimentos Corporativo através de chamado no Service Desk (JBS SA » 09 - Suprimentos Corporativo América do Sul).
+
+É responsabilidade de todos os compradores da Companhia recusar e cancelar qualquer solicitação que não esteja de acordo com este procedimento;
+
+- Não é permitido às áreas guardar notas fiscais de serviço ou materiais para lançamento próximo ou posterior ao vencimento;
+- A nota fiscal deverá ser emitida imediatamente após a conclusão do serviço não sendo permitida a solicitação de postergação da emissão;
+
+O controle referente às contratações de comodatos é de inteira responsabilidade da unidade. Cabe a ela zelar pelas melhores práticas de utilização e realizar as manutenções definidas em contrato.
+
+**PROCEDIMENTOS**
+
+**Documentação do terceiro**
+
+- Os prestadores de serviços são obrigados a apresentar documentações vigentes conforme exigido nas minutas padrões de serviços no formulário F-PRESI-RH-0200 - Documentação Terceiros e F-PRESI-RH-SESMT-0111 - Documentação Terceiros SESMT. Não será permitido o início da prestação sem a entrega da documentação exigida;
+
+- Os prestadores deverão seguir as diretrizes para a realização de trabalho terceirizado obedecendo às normas da medicina e segurança do trabalho definidas no PROC-RH-SESMT-0024 - Prestação de Serviços por Terceiros;
+
+- A gestão do terceiro no que se refere à análise dos documentos trabalhista, previdenciário e de segurança do trabalho deverá ser realizada pelo gestor responsável da unidade ou pelo RH local e estes serão responsáveis pela aprovação do acesso à unidade. Após a avaliação da documentação, o terceiro realizará a integração de segurança e saúde.
+
+**Requisição**
+
+- Requisição é a formalização para retirada de material do almoxarifado/estoque da unidade;
+
+- É de responsabilidade do requisitante verificar a existência do material na unidade e formalizar a retirada do material por meio da requisição.
+
+**Solicitação de compra**
+
+- Solicitação de compra (SC) é a formalização de uma necessidade de compra de material ou contratação de serviço;
+
+- Para a JBS S. A., dada ausência de material de consumo (CON) ou reposição (REP) de estoque, será responsabilidade do Almoxarifado da unidade emitir uma solicitação de compra para Suprimentos Local proceder com o processo de compra. Para itens de aplicação imediata (APL) a solicitação de compra é gerada automaticamente pelo sistema;
+
+- Para a Seara e Swift, dada ausência de um material de consumo ou reposição do estoque, fica a critério do requisitante aguardar a reposição via Almoxarifado ou gerar uma solicitação de compra no seu centro de custo para Suprimentos proceder com o processo de compra.
+
+- Em caso de compra de serviços é necessário que o solicitante anexe no momento da criação das solicitações um memorial descritivo ou edital. Caso não haja nenhum dos dois documentos presentes, o comprador deverá cancelar a solicitação.
+
+- Suprimentos é responsável pelo processo de compra a partir do momento que a requisição ou solicitação de compra for aprovada no sistema de gestão (ERP SRP ou SAP) de acordo com as alçadas configuradas e definidas pelo negócio. Não é permitido que a negociação comercial seja feita pelo solicitante. Toda troca de informações referente à negociação comercial com fornecedor deve obrigatoriamente ser feita pelo comprador;
+
+- As requisições e solicitações podem ser classificadas como normais, urgentes ou emergenciais/críticas:
+  - Normal - prazo de entrega é menor ou igual ao prazo de entrega da necessidade;
+  - Urgente - prazo de entrega é maior que o prazo de entrega da necessidade;
+  - Emergencial/crítica - material ou serviço cuja ausência possa criar:
+    - Risco de acidentes: possibilidade de acidentes devido à falta do material ou prestação de serviço;
+    - Risco ao meio ambiente: impacto ambiental negativo devido à falta do material ou prestação do serviço;
+    - Segurança alimentar: comprometimento da segurança alimentar do produto final devido à falta do material ou serviço prestado;
+    - Risco para continuidade operacional: impacto no negócio devido a paradas ou reduções significativas de produção pela falta do material ou prestação de serviço;
+    - Perda de vendas: ação não planejada para aumento de vendas de unidades do mercado varejista criando falta do material ou prestação de serviço.
+
+As solicitações de compra abertas como emergenciais ou urgentes que não se enquadrem nas características acima poderão ser canceladas pelo comprador.
+
+**Cotação**
+
+- Todo
+
+ processo de compra fora de contrato no Mercado Eletrônico (spot) da divisão de negócio Couros deve respeitar o mínimo de cotações:
+  - Até R$ 50.000 - uma cotação;
+  - De R$ 50.001 até R$ 3.000.00 - duas cotações;
+  - Acima de R$ 3.000.00 – três cotações.
+
+- Todo processo de compra fora de contrato no Mercado Eletrônico (spot) das demais divisões de negócio deve respeitar o mínimo de cotações:
+  - Até R$ 3.000.00 - uma cotação;
+  - De R$ 3.000.01 até R$ 6.000.00 - duas cotações;
+  - Acima de R$ 6.000.00 - três cotações.
+
+- Todas as cotações devem ser respondidas pelo fornecedor. Para as cotações formalizadas pelo comprador deverá ser anexada a cotação comercial inicial e a final e o e-mail do fornecedor assim como indicado o motivo desta ação;
+
+- Para compra que exija mais de uma cotação é obrigatório responder as cotações no ME ou anexar o Mapa de Negociação contendo as cotações e os e-mails dos fornecedores que formalizaram as cotações descritas no mapa;
+
+- Casos de solicitações de cotações declinadas pelo fornecedor por questões logísticas, técnicas, entre outras sem registro na cotação do Mercado Eletrônico devem ser registrados através de anexo comprovatório nos pré-pedidos. Estes casos também são aceitos para comprovar o atendimento da quantidade mínima de cotações.
+
+**Exceções**
+
+- Terceiros exclusivos, amostras, lote piloto, itens específicos ou assistência técnica específica: empresas com serviço ou material desenvolvido exclusivamente para os negócios da Companhia. Nestes casos é obrigatório que o comprador justifique na observação do pré-pedido o motivo desta ação;
+
+- Negociações corporativas com pedido spot: em todos os casos em que um comprador local valorizar uma cotação no ME por meio de uma negociação corporativa deverá anexar todos os documentos providenciados pelo comprador corporativo que comprovem a transação (Mapa de Negociação, aditivo, propostas, e-mails, planilhas). Caso a cotação seja respondida pelo fornecedor não serão necessários estes documentos. Caso seja incluído um pedido spot gerado através de uma negociação corporativa deverá ser informado no ME que se trata de uma negociação corporativa e o nome do negociador;
+
+- Ajustes de contrato jurídicos (ProJuris) por conta de gatilho: casos de negociação corporativa que possuem cláusula contratual de gatilho e houve a análise comprovada por ambas as partes (Suprimentos Corporativo e fornecedor) de que se atingiu o gatilho e é necessário ajuste em contrato no Mercado Eletrônico não sendo necessário seguir com mapa de negociação e com a regra de cotações indicada no item 4.6, porém é necessário ter a aprovação formalizada do respectivo gestor de Suprimentos;
+
+- Caso a solicitação de compra seja emergencial não é obrigatório seguir a quantidade mínima de cotações;
+
+- Cotações referentes a serviços contratados pelo time de Suprimentos Corporativo Importação devem ser pautadas pelo PROC-PRESI-SUP-0007 - Procedimento de Importação.
+
+**Contratos e acordos jurídicos**
+
+- O contrato jurídico é o documento utilizado para formalizar contratações de material ou serviço:
+
+- Os modelos contratuais e as regras de utilização de cada um deles devem seguir o estabelecido no documento IN-PRESI-JUR-0017 - Política de Contratos;
+
+- Os contratos não padronizados ou que necessitem de alteração também deverão obrigatoriamente ser tratados através da plataforma ProJuris conforme diretrizes da IN-PRESI-JUR-0017 - Política de Contratos;
+
+- Este procedimento não contempla o processo de emissão de contrato de compra, venda ou locação de imóveis. Para este processo o requisitante deverá entrar em contato diretamente com a Gerência de Contratos do Jurídico Corporativo ou abrir uma requisição através da plataforma ProJuris conforme diretrizes da IN-PRESI-JUR-0017 - Política de Contratos;
+
+- Todo documento contratual que não esteja arquivado digitalmente no ProJuris deverá ser mantido durante 6 anos em arquivo no Suprimentos da unidade ou CDOC local.
+
+- A contratação de serviços em unidade de medida “homem/hora” é permitida somente se o valor total da contratação estiver definido em contrato.
+
+**Pré-pedido**
+
+- O pré-pedido antecede a formalização do pedido de compra com o terceiro e só poderá ser gerado pelo comprador após a realização das cotações que serviram de base para a escolha do terceiro ganhador;
+
+- O pré-pedido pode ser gerado de duas formas:
+  - Spot ou via contrato não automático onde após finalizar a cotação passa pelo processo de aprovação antes de se tornar um pedido de compra;
+  - Automaticamente via contrato e não necessita de aprovação apenas da geração da solicitação ou requisição de compra;
+
+- Os aprovadores têm a autonomia de recusar qualquer pré-pedido que não esteja de acordo com esta política ou procedimentos da Companhia, cabendo a ele a responsabilidade de justificar o motivo da recusa;
+
+- Escolha técnica do solicitante/requisitante: caso o negócio opte por condição econômica menos favorável para compra de materiais ou serviços será obrigatório anexar justificativa à proposta final do terceiro escolhido, juntamente à assinatura e o nome legível do solicitante/requisitante e do gerente responsável ou um e-mail anexado no pré-pedido com a justificativa e “de acordo” do gerente responsável. Neste caso é necessário seguir a regra de quantidade mínima de cotações;
+
+- Fica definido como prazo máximo (lead time) de aprovação dos pré-pedidos 8 horas úteis para cada nível de aprovador;
+
+- Para compra de serviços como obras civis, elétricas, mecânicas, etc., vinculados ou não a investimentos e materiais imobilizados de CAPEX, é obrigatório ter a proposta final validada via assinatura ou e-mail pela área técnica, assim como elaborar um Mapa de Negociação detalhando o escopo de acordo com o memorial descritivo ou PTC - Planilha Técnica Comparativa para equalização técnica e comercial, juntamente com a proposta inicial e a final, independentemente de quem responder a cotação (comprador ou terceiro). Os serviços listados no Anexo A devem seguir regra de cotação para materiais detalhada no tópico 4.6;
+
+- Nos casos onde a negociação foi realizada pelo comprador corporativo e a inserção do pedido foi feita pelo comprador local é necessário informar no campo do pré-pedido “Negociação – Nome Comprador” no nome do comprador responsável pela negociação e no campo “Negociação” informar se foi corporativa ou local.
+
+**Contratos Mercado Eletrônico**
+
+- Para os pedidos de fornecimento com contrato não são geradas cotações. Como referência utilizará uma ou mais requisições/solicitações de compras. Estes pedidos serão gerados automaticamente a partir do fluxo de aprovação da requisição ou solicitação de compras conforme o agendamento do contrato no ME. Deverá ser seguido o procedimento de negociação e de contratação da política IN-PRESI-SUP-0094 – Política de Suprimentos América do Sul e deste procedimento;
+
+- Caso exista uma situação onde a solicitação de compra tenha sido aberta em sistema como emergencial/crítica ou urgente conforme item 4.5 o comprador da unidade poderá executar a geração do pedido manualmente mantendo as condições comerciais do contrato via pedido direto ou compra local via cotação;
+
+- Para formalização contratual no Mercado Eletrônico o comprador deverá anexar as seguintes informações no chamado:
+
+**Comprador local – abertura de chamado no Service Desk:**
+- Mapa de Negociação assinado pelo gestor responsável e pela área solicitante (quando se tratar de uma escolha técnica). As aprovações podem ser feitas via e-mail ou assinatura física;
+- Tabela de preenchimento de contratos no Mercado Eletrônico;
+- Propostas comerciais inicial e final dos terceiros que constarem no Mapa de Negociação;
+- E-mails referentes às negociações realizadas com os terceiros;
+- Número do contrato/aditivo ou requisição ProJuris;
+- Em casos de alteração do CNPJ raiz do terceiro em contratos ME já existentes é necessário anexar o contrato social ou outro documento que comprove a mudança.
+
+**Comprador Corporativo – abertura de chamado no Miisy:**
+- Mapa de Negociação assinado pela área solicitante (quando se tratar de uma escolha técnica) e pelo diretor de Suprimentos quando o valor negociado ultrapassar R$ 20.000.000.00. As aprovações podem ser feitas via e-mail ou assinatura física. Neste caso não é solicitada a aprovação do gestor pois ele realizará a aprovação via sistema Miisy;
+- Template de contratos no Mercado Eletrônico;
+- Propostas comerciais inicial e final dos terceiros que constarem no Mapa de Negociação;
+- E-mails referentes às negociações realizadas com os terceiros;
+- Número do contrato/aditivo ou requisição ProJuris;
+- Em casos de alteração do CNPJ raiz do terceiro em contratos ME já existentes é necessário anexar o contrato social ou outro documento que comprove a mudança.
+
+**Regularização**
+
+Entende-se por regularização:
+
+- A compra em que a nota fiscal tem sua data de emissão anterior à data de emissão do pedido de compra ou ordem de fornecimento. Exceções: antecipação de pagamento, substituição e complemento de pedido;
+
+- Negociações realizadas pelo solicitante e não pelo comprador visto que não houve a negociação pelo departamento responsável (Suprimentos).
+
+- É obrigatório no momento da criação da requisição ou solicitação informar que este processo se refere à regularização
+
+ selecionando “SIM” no campo “Regularização” no sistema justificar no campo de observação;
+
+- Para todas as requisições ou solicitações que caracterizem regularização deverão ser anexadas as notas fiscais digitalizadas ou demais documentos pertinentes ao processo. Caso não sejam anexados o comprador deverá cancelar a solicitação de compra;
+
+- Caso seja necessária substituição ou complemento de um pedido o solicitante/requisitante e o comprador deverão seguir conforme abaixo:
+
+**Solicitante/requisitante:** informar no campo observação “Solicitação/Requisição feita para substituir/complementar o OF/Pedido Num. XXX”;
+
+**Comprador:** informar no campo de observação do Pré-Pedido “Solicitação/Requisição feita para substituir/complementar o OF/Pedido Num. XXX” e anexar o PDF ou imagem do pedido/OF fechado.
+
+- É parametrizada em sistema a tolerância de 10% sobre quantidade para produtos das categorias comerciais Embalagens, Ingredientes e Químicos, caso possa haver entregas com quantidade maior do que indicada em pedido caracterizando complemento de pedido.
+
+**Condições para compra entre coligadas e intercompany**
+
+- Toda negociação ou compra feita indiretamente que por questões de benefícios fiscais ou tributários são trianguladas por alguma empresa do grupo. A empresa que está comprando ou importando o material deverá obrigatoriamente repassar o mesmo prazo da compra no momento da venda ou transferência para a unidade de destino ou empresa de destino sem onerar o preço do produto ou reduzir o prazo;
+
+- Para equalizar os preços de compra será sempre utilizado como referência o preço de mercado calibrado pela variação dos indexadores ou drivers de custo dos produtos. É de responsabilidade da área de Suprimentos Corporativo monitorar os drivers e propor a melhor condição comercial para ambos negócios.
+
+**Forma de pagamento**
+
+- Toda compra deverá ser negociada na forma de pagamento depósito em conta corrente. É proibida negociação via boleto;
+
+- Os pagamentos de terceiros nacionais são realizados pagamentos 2 vezes ao mês (nos dias 1 e 16) e para pagamentos de terceiros internacionais 1 vez por mês (dia 5 subsequente ao mês de vencimento). Para pagamentos fora das datas preestabelecidas classificando-se como exceção deve haver a justificativa do solicitante e também o de acordo do diretor responsável por e-mail. A solicitação de exclusão da regra de pagamento de fornecedores nacionais deve ser feita ao time de Contas a Pagar via Service Desk (caminho do chamado para JBS (Nacionais e Internacionais): “JBS SA. » 12. Financeiro JBS » Contas a Pagar » 07 - Exceção à Regra de Pagamento” caminho do chamado para Seara (Nacionais): “Seara » Atendimento » Contas a Pagar » 04 - Manutenção Sistema » 03 - Exceções Suprimentos” e caminho do chamado para Seara (Internacionais): Seara » Suprimentos Corporativo América do Sul » 10 - Fornecedor Internacional - Exceção de Pagamento);
+
+- O prazo de pagamento para compras ou negociações entre coligada ou intercompany deverá sempre ser pautado em 30 dias da data de faturamento;
+
+- A operação de antecipação de recebíveis é considerada como forma de pagamento uma vez que o terceiro adere à ferramenta e a instituição financeira responsável realiza o depósito em conta corrente quando solicitado.
+
+**Arquivamento da documentação de negociação**
+
+- Toda documentação de compra, como por exemplo Mapa de Negociação, orçamento, proposta, memorial descritivo de obra ou serviço, e-mails, documento contratual, etc., que não tenha sido anexada na plataforma ProJuris deverá ser anexada no contrato ou do pré-pedido no Mercado Eletrônico. No caso dos documentos estarem no ProJuris deverá ser indicado o número da requisição e/ou contrato ProJuris no Mercado Eletrônico.
+
+| Revisão | Responsáveis                                                      | Área                                  | Ação    |
+|---------|-------------------------------------------------------------------|---------------------------------------|---------|
+| 04      | Bárbara Ventura, Denis Peres                                      | Administração e Controle de Suprimentos | Revisão |
+| 04      | Eduardo Gomes, Maximiliano Granada Limberger                      | Diretoria de Tecnologia da Informação, Diretoria de Suprimentos América do Sul | Aprovação |
+
+**ANEXO A: SERVIÇOS SIMPLES**
+
+- Serviço de análise laboratorial;
+- Serviço de cartório;
+- Serviço de chaveiro;
+- Serviço de confecção de carimbo;
+- Serviço de despachante;
+- Serviço de elaboração de projeto;
+- Serviço de floricultura;
+- Serviço de fornecimento de água;
+- Serviço de fornecimento de energia;
+- Serviço de fornecimento de gás;
+- Serviço de manutenção veicular e de pneus;
+- Serviço de marketing;
+- Serviço de monitoramento de veículo;
+- Serviço de pedágio;
+- Serviço de RH;
+- Serviço de taxa/anuidade;
+- Serviço de TI;
+- Serviço de tradução;
+- Serviço de viagens;
+- Serviço ref. a uniformes;
+- Serviço relacionado a contêiner;
+- Serviço transporte aéreo.
+
+---
+
+**PROCEDIMENTO INTERNO**
+
+PROC-PRESI-SUP-0004
+
+4 de março de 2024
+
+Revisão: 04
+
+**Contratação de Materiais e Serviços**
+
+**DESTINATÁRIOS:** Todos os envolvidos no processo de compra da JBS.
+
+Processos Organizacionais
+
+Documento confidencial para uso da JBS
+
+Página 10 de 10
+
+---

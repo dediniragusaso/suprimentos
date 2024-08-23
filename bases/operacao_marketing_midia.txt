@@ -1,0 +1,165 @@
+*PROCEDIMENTO PARA OPERAÇÕES DE MARKETING E MÍDIA*
+
+---
+
+**OBJETIVO**
+
+Definir critérios e responsabilidades para solicitações e contratações de materiais, mídia e serviços de comunicação, marketing e trade marketing de todos os negócios.
+
+**RESPONSABILIDADE QUANTO AO CUMPRIMENTO**
+
+Cabe a todas as áreas envolvidas no processo e citadas neste documento a responsabilidade pelo cumprimento deste procedimento.
+
+**DISPOSIÇÕES GERAIS**
+
+Compras e contratações com valor total até R$ 10.000,00 serão conduzidas pela área demandante e finalizadas pelo Service Desk e Mercado Eletrônico (ME);
+
+Compras com valor total acima de R$ 10.000,00 deverão ser conduzidas pela área Operações de Marketing Corporativo através de chamado interno no Service Desk, fluxo JBS SA » 38 - Operações de Marketing e Mídia » 01 - Solicitações ou via solicitação por e-mail, e finalizadas no ME;
+
+Todos os processos de aquisições de materiais e serviços negociados por Operações de Marketing devem respeitar as alçadas de aprovação mencionadas na instrução normativa IN-PRESI-SUP-0094 – Política de Suprimentos América do Sul.
+
+**Tipos de compras**
+
+**Compras spot:** definem demandas esporádicas e não recorrentes, onde o cliente interno deverá abrir um chamado no Service Desk ou uma solicitação via e-mail. O comprador deverá efetuar as cotações, anexar os documentos que comprovem a transação (propostas, e-mails, planilhas, termos ou minutas) no pré-pedido e, após as aprovações, enviar o PC (Pedido de Compras) ou OF (Ordem de Fornecimento) ao fornecedor.
+
+**Negociações corporativas:** definem demandas de compras recorrentes, onde o comprador deverá propor uma atuação estratégica e negociar contrato para o grupo. Após a negociação, o comprador deverá criar o contrato eletrônico no ME, anexar o croqui (evidência do processo de concorrência) e minuta contratual assinada. A partir deste contrato, o cliente interno poderá contatar diretamente os fornecedores, solicitando uma proposta para o trabalho em questão, abrir um chamado no Service Desk anexando o orçamento do trabalho para geração do pré-pedido. O comprador garantirá o cumprimento dos valores negociados e enviará o pedido ao fornecedor;
+
+**Compras de fornecedores exclusivos ou por escolha técnica:**
+- **Fornecedores exclusivos:** são fornecedores que oferecem serviço ou material exclusivamente desenvolvido para os negócios da Companhia ou que não possuem concorrentes no mercado. Para estes casos, é obrigatório que o comprador justifique a exclusividade para o aprovador do pré-pedido;
+- **Escolha técnica do cliente interno:** para estes casos, o cliente interno precisará justificar tecnicamente o motivo da escolha do fornecedor e formalizar via e-mail ou dentro do chamado.
+
+**PROCEDIMENTOS**
+
+**Requisição de Compra (RC) ou Solicitação de Compra (SC)**
+
+RC é a formalização da necessidade de material ou serviço que deverá ser gerada após a aprovação do orçamento do fornecedor vencedor do processo de cotação e enviada ao comprador corporativo para geração do PC ou OF;
+
+É de responsabilidade do solicitante (cliente interno) realizar a identificação do código a ser utilizado na abertura da requisição e que deverá espelhar contabilmente o bem ou serviço a ser adquirido;
+
+É de responsabilidade do solicitante efetivar a aprovação do gestor imediato e enviar a RC ou SC via sistema devidamente aprovada ao comprador. A aprovação da RC ou SC autoriza a área de Operações de Marketing a seguir com o processo de contratação. Para operações inferiores a R$ 10.000,00, não haverá envolvimento da área de Operações de Marketing; 
+
+Todas RC e SC devem ser aprovadas pelas alçadas competentes conforme estrutura do negócio;
+
+É expressamente proibido ao solicitante fracionar uma RC ou SC e ao comprador fracionar um PC. Estas ações caracterizam quebra de alçada de aprovação no processo de compra e estão sujeitas a correção ou penalidades pela gerência solicitante.
+
+**Cotação**
+
+Todas as cotações devem ser respondidas pelos fornecedores diretamente ao comprador para que o mesmo siga o fluxo no sistema ME;
+
+Todo processo de compra de material fora de contrato deve respeitar o número mínimo de cotações:
+- Até R$ 10.000,00 – uma cotação;
+- Até R$ 50.000,00 – duas cotações;
+- Acima de R$ 50.000,00 – três cotações.
+
+Todo processo de contratação de serviços fora de contrato deve respeitar o número mínimo de cotações:
+- Até R$ 20.000,00 – uma cotação;
+- Até R$ 50.000,00 – duas cotações;
+- Acima de R$ 50.000,00 – três cotações.
+
+Para as contratações abaixo de R$ 10.000,00 o próprio cliente interno deverá inserir a proposta do fornecedor;
+
+No caso de contratações de agências que subcontratarem valores acima de R$ 50.000 em terceiros prestadores de serviços ou materiais, o faturamento deverá ser direto para a empresa contratada. Para estes casos, o cliente interno deverá criar RC ou SC e o comprador deverá criar PO ou OF para o terceiro; 
+
+No caso de subcontratações, a documentação de apoio deverá justificar a contratação do fornecedor principal e não dos terceiros por ela alocados. O fornecedor é responsável comercialmente e juridicamente pelos terceiros, não sendo necessária a realização de concorrência;
+
+Para negociar contratos, o comprador deverá realizar um processo de concorrência aberto ao mercado, convidar fornecedores, efetuar as aprovações com clientes internos e realizar o processo de due diligence junto ao Compliance; 
+
+Concluída e aprovada a negociação, utilizar minuta de contrato adequada ao serviço ou material, cadastrar o contrato no ME e arquivar a documentação:
+- Arquivo de concorrência;
+- Parecer do cliente;
+- Aprovação do cliente e de Operações de Marketing.
+
+**Formalização de minuta contratual**
+
+Para contratações de R$ 10.000,00 até R$ 150.000,00 deverá ser utilizado o Acordo Comercial de Fornecimento de Materiais ou Acordo de Prestação de Serviços de Marketing. Contratações inferiores a R$ 10.000,00 estão dispensadas da formalização contratual;
+
+Para compras acima de R$ 150.000,00 deverá ser utilizada minuta de contrato de acordo com a categoria de compra;
+
+As regras para chancela do Jurídico e outros casos não definidos neste procedimento estão descritas na IN-PRESI-JUR-0017 – Política de Contratos.
+
+**Pré-pedido**
+
+O pré-pedido antecede a formalização do PC com o fornecedor e só poderá ser gerado pelo comprador após a realização das cotações e escolha do fornecedor ganhador;
+
+Os aprovadores têm a autonomia de recusar qualquer pré-pedido que não esteja de acordo com esta política ou demais procedimentos internos, cabendo a ele a responsabilidade de justificar o motivo da recusa ou até mesmo sugerir a inclusão de novos fornecedores ao processo;
+
+Fica definido como prazo máximo (lead time) de aprovação ou reprovação dos pré-pedidos o total de 48 horas úteis divididas em:
+- Comprador Corporativo – até 8 horas úteis no máximo;
+- Gerente Corporativo – até 16 horas úteis no máximo;
+- Diretor de Comunicação – até 16 horas úteis no máximo.
+
+**Regularização**
+
+Entende-se por regularização toda compra acima de R$ 10.000,00 não negociada ou contratada pela área de Operações de Marketing e Mídia;
+
+É obrigatório no momento da criação da RC ou SC que o usuário informe que este processo é uma regularização, selecionando “SIM” no campo “Regularização” no sistema e justificar no campo de observação;
+
+Todas as RC ou SC que caracterizam uma regularização deverão obrigatoriamente apresentar as notas fiscais digitalizadas correspondentes ao processo anexadas ao sistema. A aprovação será considerada como autorização processual para emissão do PC ou OF;
+
+O comprador deverá recusar e cancelar qualquer solicitação que não esteja de acordo com este procedimento.
+
+**Forma de pagamento**
+
+As compras devem ser preferencialmente negociadas para pagamento via depósito em conta corrente;
+
+Em casos de pagamento de fornecedores nacionais, a Companhia realiza pagamentos duas vezes ao mês (dias 01 e 16) e para pagamentos de fornecedores internacionais, uma vez por mês (dia 05 subsequente ao mês de vencimento). Para pagamentos fora das datas preestabelecidas, em caráter de exceção, deve haver a justificativa do solicitante e também o de acordo do diretor responsável por e-mail. 
+
+As diretrizes para oferecimento e recebimento de brindes, presentes e viagens, patrocínios, doações, relacionamento com entidades governamentais e agentes públicos estão definidas em:
+- IN-PRESI-CPL-0133 – Política de Oferecimentos e Recebimento de Brindes, Presentes e Entretenimento;
+- IN-PRESI-0141 – Política de Patrocínios;
+- IN-PRESI-CPL-0143 – Política de Doações;
+- IN-PRESI-CPL-0131 – Política de Relacionamento com Entidades Governamentais e Agentes Públicos.
+
+**Conflito de interesse**
+
+Na necessidade da contratação de algum fornecedor ou terceiro que tenha grau de parentesco com algum colaborador ou qualquer outra situação que possa envolver conflito de interesses, deverão ser observadas as diretrizes descritas na instrução normativa IN-PRESI-0110 – Política de Conflito de Interesses.
+
+**Compliance**
+
+Todos os fornecedores precisam passar pela
+
+ análise de due diligence realizada pela área de Compliance, conforme a instrução normativa IN-PRESI-0156 – Due Diligence de Terceiros. O comprador é responsável por este processo.
+
+**Ouvidoria e Linha Ética**
+
+A Ouvidoria JBS é um canal da Companhia para envio de críticas, elogios e sugestões sobre infraestrutura da nossa unidade, campanhas de comunicação, benefícios oferecidos pela empresa e outros temas relacionados ao dia a dia:
+- Telefone Ouvidoria: 0800-770-4100;
+- Site: [http://ouvidoria.jbs.com.br/](http://ouvidoria.jbs.com.br/); 
+- E-mail: ouvidoria@jbs.com.br.
+
+Linha Ética é um canal que serve para relatar discriminação, assédio moral, uso indevido de materiais, desvio de comportamentos, humilhação, ações como roubo, má fé, fraude, corrupção, uso indevido de propriedade da Companhia. As diretrizes para uso da linha ética da JBS estão descritas na política IN-PRESI-CPL-0146 - Linha Ética JBS:
+- Telefone Linha Ética: 0800-377-8055;
+- Site: [http://linhaeticajbs.com.br/](http://linhaeticajbs.com.br/).
+
+---
+
+**Revisão**
+
+| Revisão | Responsáveis | Área | Ação |
+|---------|--------------|------|------|
+| 02 | Carolina Pastorello, Debora Barreto | Diretoria de Comunicação Corporativa | Revisão |
+| 02 | Juliano Nobrega | Diretoria de Comunicação Corporativa | Aprovação |
+
+---
+
+**PROCEDIMENTO INTERNO**
+
+PROC-PRESI-SUP-0012
+
+12 de janeiro de 2023
+
+Revisão: 02
+
+**Operações de Marketing e Mídia**
+
+**DESTINATÁRIOS:** Colaboradores envolvidos nos processos de comunicação, marketing e trade marketing.
+
+---
+
+Processos Organizacionais
+
+Documento confidencial para uso da JBS
+
+Página 5 de 5
+
+---
