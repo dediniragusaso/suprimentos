@@ -90,3 +90,9 @@ ERROR->2024-08-23 17:14:06,111->list index out of range->root
 ERROR->2024-08-23 17:16:16,977->list index out of range->root
 ERROR->2024-08-23 17:29:39,277->list assignment index out of range->root
 ERROR->2024-08-23 17:35:29,521->list assignment index out of range->root
+ERROR->2024-08-26 15:23:45,764->module 'openai' has no attribute 'AuthenticationError'->root
+ERROR->2024-08-26 19:35:02,344->module 'openai' has no attribute 'AuthenticationError'->root
+ERROR->2024-08-29 17:15:53,274->You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.->root
+ERROR->2024-08-29 17:15:59,330->You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.->root
+ERROR->2024-08-29 17:16:14,084->You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.->root
+ERROR->2024-08-30 14:19:51,337->You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.->root

@@ -15,7 +15,7 @@ def resposta (textos):
     Sua missão é validar a acurácia das respostas que a outra parte do chat gera por meio de documentos. 
 
     #Instruções
-    Analise os as duas respostas que vão ser fornecidas e aponte as diferenças entre elas, analisando se a primeira parte do chat foi eficiente. Verifique também se todas as informações que aparecem no chat IA estão em um dos documentos
+    Analise os as duas respostas que vão ser fornecidas e aponte as diferenças entre elas, analisando se a primeira parte do chat foi eficiente. Verifique também se todas as informações que aparecem no chat IA estão em um dos documentos. Aponte todos os defeitos que a resposta da ia possa ter para que possa concerta-lo
 
 
     #Arquivos
@@ -95,8 +95,8 @@ def resposta (textos):
     '''
 
 
-    for arq in (os.listdir("projeto_chat_suprimentos/bases")):
-        texto += "\n\n" + open(f"projeto_chat_suprimentos/bases/{arq}","r",encoding="utf8").read() 
+    for arq in (os.listdir("./bases")):
+        texto += "\n\n" + open(f"./bases/{arq}","r",encoding="utf8").read() 
 
     api_key = os.getenv("openai_api_key")
 
@@ -155,4 +155,4 @@ for i in teste_base.index:
     prompt_usuário= p1 + "\n\n" + p2 + "\n\n" + p3
     teste_base.loc[i, 'Validacao'] = resposta(prompt_usuário)
     print("Funcionou")
-teste_base.to_excel("data_test.xlsx")
+teste_base.to_excel("teste.xlsx")
