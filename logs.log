@@ -96,3 +96,25 @@ ERROR->2024-08-29 17:15:53,274->You exceeded your current quota, please check yo
 ERROR->2024-08-29 17:15:59,330->You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.->root
 ERROR->2024-08-29 17:16:14,084->You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.->root
 ERROR->2024-08-30 14:19:51,337->You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.->root
+ERROR->2024-08-30 18:09:52,695->415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.->root
+ERROR->2024-08-30 18:10:25,206->415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.->root
+ERROR->2024-08-31 13:01:34,659->415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.->root
+ERROR->2024-09-04 14:29:25,419->module 'openai' has no attribute 'error'->root
+ERROR->2024-09-04 14:30:05,853->module 'openai' has no attribute 'error'->root
+ERROR->2024-09-06 15:17:02,449->cannot access local variable 'texto' where it is not associated with a value->root
+ERROR->2024-09-06 15:18:11,352->cannot access local variable 'texto' where it is not associated with a value->root
+ERROR->2024-09-06 15:18:34,400->cannot access local variable 'texto' where it is not associated with a value->root
+ERROR->2024-09-06 15:19:01,494->cannot access local variable 'texto' where it is not associated with a value->root
+ERROR->2024-09-06 15:19:41,222->cannot access local variable 'texto' where it is not associated with a value->root
+ERROR->2024-09-06 15:19:50,461->cannot access local variable 'texto' where it is not associated with a value->root
+ERROR->2024-09-06 16:38:55,847->'ChatOpenAI' object has no attribute 'error'->root
+ERROR->2024-09-06 16:46:17,136->RunnableSequence.invoke() missing 1 required positional argument: 'input'->root
+ERROR->2024-09-06 16:47:05,398->1 validation error for PromptTemplate
+input_types
+  value is not a valid dict (type=type_error.dict)->root
+ERROR->2024-09-06 16:48:24,112->1 validation error for PromptTemplate
+input_types
+  value is not a valid dict (type=type_error.dict)->root
+ERROR->2024-09-06 16:48:28,646->1 validation error for PromptTemplate
+input_types
+  value is not a valid dict (type=type_error.dict)->root

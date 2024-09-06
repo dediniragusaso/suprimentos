@@ -110,7 +110,7 @@ def resposta (textos):
     }
 
     parameters = {
-        "model": "gpt-4o",
+        "model": "gpt-4o-2024-08-06",
         "messages": [
             {"role": "system", "content": texto},
             {"role": "user", "content": textos}

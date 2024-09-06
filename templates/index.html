@@ -83,6 +83,13 @@
         border-radius: 8px;
     }
 
+    .container-processos {
+        padding-right: 5%;
+        overflow-y: scroll;
+        scrollbar-color: #566677 #f1f1f1;
+        height: 30rem;
+    }
+
     @media screen and (min-width: 768px) {
         .logo-container {
             margin-left: 10%;
@@ -285,13 +292,6 @@
     .cor_7:hover {
         background-color: #33A15F;
     }
-
-    .container-processos {
-        padding-right: 5%;
-        overflow-y: scroll;
-        scrollbar-color: #566677 #f1f1f1;
-        height: 30rem;
-    }
 </style>
 </head>
 <body class="flex flex-col md:flex-row h-screen w-screen">
@@ -382,6 +382,7 @@
     <script>
 
         let isResponseIncreased = false;
+        let cont_requisicao = 0
     
         // Ajusta a altura do input de mensagem conforme o conteúdo
         document.getElementById("messageInput").addEventListener("input", function() {
@@ -480,7 +481,8 @@
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
                 },
-                body: "inputMessage=" + encodeURIComponent(inputMessage),
+                body: `inputMessage=${encodeURIComponent(inputMessage)}&historico=${encodeURIComponent(sessionStorage.getItem("Historico"))}`
+
             }).then(response => {
                 const reader = response.body.getReader();
                 const decoder = new TextDecoder();
@@ -497,6 +499,10 @@
                     reader.read().then(({ done, value }) => {
                         if (done) {
                             enableMessageInput();
+
+                            // atualizar histórico front
+
+                            atualizarVariavel(responseText, inputMessage);
                             return;
                         }
     
@@ -510,9 +516,8 @@
                         enableMessageInput();
                     });
                 }
-    
                 readStream(); // Start reading the stream
-    
+
             }).catch(error => {
                 console.error('Error:', error);
                 document.getElementById("loanding_container").style.display = "none";
@@ -613,11 +618,11 @@
         });
     
         // Adiciona eventos aos botões e inputs
-        document.getElementById("messageInput").addEventListener("keypress", function(event) {
+        /*document.getElementById("messageInput").addEventListener("keypress", function(event) {
             if (event.key === "Enter") {
-                atualizarVariavelPergunta()
+                atualizarVariavel()
             }
-        })
+        })*/
         document.getElementById("sendMessageButton").addEventListener("click", sendMessage);   
     
         document.getElementById("messageInput").addEventListener("keypress", function(event) {
@@ -649,18 +654,23 @@
         });
 
         function criarVariavel() {
-            sessionStorage.setItem('Pergunta', '')
-            sessionStorage.setItem('Resposta', '')
+            sessionStorage.setItem('Historico', '')
         }
 
-        function atualizarVariavelPergunta() {
-            const message = document.getElementById("messageInput").value
-            sessionStorage.setItem('Pergunta', message)          
-        }
+        function atualizarVariavel(resposta, pergunta) {
+            // mensagens do sessionStorage
+            let atualPergunta = pergunta
+            let atualResposta = resposta
 
-        function atualizarVariavelResposta() {
-            const message = document.querySelector('.server-message');
-            sessionStorage.setItem('Resposta', message)          
+            let mensagem = ""
+            let historico = sessionStorage.getItem("Historico")
+            if (historico != undefined) {
+                mensagem += historico
+            }
+
+            mensagem += "usuário: " + atualPergunta + "\nia: " + atualResposta + "\n"
+            console.log(mensagem)
+            sessionStorage.setItem('Historico', mensagem)          
         }
 
         window.addEventListener('load', criarVariavel())
