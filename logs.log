@@ -96,3 +96,14 @@ ERROR->2024-08-29 17:15:53,274->You exceeded your current quota, please check yo
 ERROR->2024-08-29 17:15:59,330->You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.->root
 ERROR->2024-08-29 17:16:14,084->You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.->root
 ERROR->2024-08-30 14:19:51,337->You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.->root
+ERROR->2024-09-06 18:02:52,932->module 'openai' has no attribute 'error'->root
+ERROR->2024-09-06 18:04:11,911->
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+->root

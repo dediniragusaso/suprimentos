@@ -158,54 +158,17 @@ def limparTerminal():
 # manda o contexto, pergunta para ChatGpt e retorna a resposta, atualiza também o histórico
 @app.route("/submit", methods=["POST"])
 def submit():
-    
+
     try:
-        global cont_requisicao
         global prompt_sistema_resposta_api
-        global lista_historico
+        historico = request.form['historico']
+    
+        pergunta_usuario = request.form['inputMessage']
+        prompt_sistema_resposta_api = texto
+                
+        resposta = respostaApi(pergunta_usuario,prompt_sistema_resposta_api, historico)
+        return Response(stream_with_context(resposta), content_type='text/plain')
         
-        # requisição 1
-        if(cont_requisicao == 0):
-            prompt_sistema_resposta_api = texto
-            pergunta_usuario = request.form['inputMessage']
-                
-            resposta = respostaApi(pergunta_usuario,prompt_sistema_resposta_api)
-            cont_requisicao = 0 # == 1
-            
-            lista_historico[cont_requisicao] = f'''#CONVERSA ANTERIOR {cont_requisicao}
-                -Solicitação anterior do usuário: {pergunta_usuario}
-                -Resposta anterior: {resposta}""" '''
-            
-            return Response(stream_with_context(respostaApi(pergunta_usuario,prompt_sistema_resposta_api)), content_type='text/plain')
-        
-        # requisição 2
-        elif(cont_requisicao == 1):
-            prompt_sistema_resposta_api = texto
-            pergunta_usuario = request.form['inputMessage']
-
-            resposta = respostaApi(pergunta_usuario,prompt_sistema_resposta_api+lista_historico[cont_requisicao])
-            cont_requisicao = 1 #== 2
-            
-            lista_historico[1] = f'''#CONVERSA ANTERIOR {cont_requisicao}
-                -Solicitação anterior do usuário: {pergunta_usuario}
-                -Resposta do Chat Valores: {resposta}""" '''
-                
-            return Response(stream_with_context(respostaApi(pergunta_usuario,prompt_sistema_resposta_api)), content_type='text/plain')
-
-        # requisição 3
-        else:
-            prompt_sistema_resposta_api = texto
-            pergunta_usuario = request.form['inputMessage']
-                
-            resposta = respostaApi(pergunta_usuario,prompt_sistema_resposta_api+lista_historico[cont_requisicao] + lista_historico[cont_requisicao-1])
-            cont_requisicao = 2 #== 3
-            
-            lista_historico[2] = f'''#CONVERSA ANTERIOR {cont_requisicao}
-                -Solicitação anterior do usuário: {pergunta_usuario}
-                -Resposta do Chat Valores: {resposta}""" '''
-            
-            return Response(stream_with_context(respostaApi(pergunta_usuario,prompt_sistema_resposta_api)), content_type='text/plain')
-
     except Exception as e:
         error(e)
         return Response(stream_with_context(algo_ocorreu_de_errado()), content_type='text/plain')
@@ -215,13 +178,13 @@ def algo_ocorreu_de_errado():
     yield "Algo ocorreu de errado, tente novamente"
 
 # função que retorna a resposta do chatGpt sobre a pergunta
-def respostaApi(pergunta_usuario, prompt_sistema_resposta_api):
-    load_dotenv()
-
+def respostaApi(pergunta_usuario, prompt_sistema_resposta_api, historico):
+    
     for arq in (os.listdir("./bases")):
         prompt_sistema_resposta_api += f"{arq}" + open(f"./bases/{arq}","r",encoding="utf8").read() 
     
-    
+    prompt_sistema_resposta_api += historico
+    prompt_sistema_resposta_api += "usuário: " + pergunta_usuario+ "\nia: "
     tempo_de_espera = 5
     tentativas = 0
     try:
@@ -229,7 +192,6 @@ def respostaApi(pergunta_usuario, prompt_sistema_resposta_api):
             tentativas+=1
             
             try:
-            
                 resposta = openai.ChatCompletion.create(
                     model="gpt-4o",
                     messages=[
