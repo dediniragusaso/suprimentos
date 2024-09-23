@@ -1275,3 +1275,23 @@ ERROR->2024-09-13 16:19:38,269->module 'openai' has no attribute 'error'->root
 ERROR->2024-09-13 16:28:50,883->can only concatenate str (not "NoneType") to str->root
 ERROR->2024-09-13 17:04:19,262->Unsupported message type: <class 'dict'>->root
 ERROR->2024-09-13 17:25:21,366->Unsupported message type: <class 'dict'>->root
+ERROR->2024-09-18 14:03:47,905->[WinError 3] O sistema não pode encontrar o caminho especificado: './basesViagens'->root
+ERROR->2024-09-18 14:04:08,074->[WinError 3] O sistema não pode encontrar o caminho especificado: './basesViagens'->root
+ERROR->2024-09-18 14:06:34,594->[WinError 3] O sistema não pode encontrar o caminho especificado: './basesViagens'->root
+ERROR->2024-09-18 14:08:36,984->[WinError 3] O sistema não pode encontrar o caminho especificado: './basesViagens'->root
+ERROR->2024-09-18 14:14:23,010->127.0.0.1 - - [18/Sep/2024 14:14:23] code 400, message Bad request version ('\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00')->werkzeug
+ERROR->2024-09-18 14:14:23,011->127.0.0.1 - - [18/Sep/2024 14:14:23] code 400, message Bad request version ("àr\x07j\x8dá8<\x19çU>ú#¹¥'*$\x87Ï\x04U¦5wA\x8e+¨á]\x00°")->werkzeug
+ERROR->2024-09-18 14:14:23,014->127.0.0.1 - - [18/Sep/2024 14:14:23] code 400, message Bad request version ('8(ÄÕ\x19\x88¸Jp')->werkzeug
+ERROR->2024-09-18 14:14:23,015->127.0.0.1 - - [18/Sep/2024 14:14:23] code 400, message Bad request version ('\x81¨\x03yUóZW')->werkzeug
+ERROR->2024-09-18 14:14:23,017->127.0.0.1 - - [18/Sep/2024 14:14:23] code 400, message Bad request version ('BB\x84&³ßAg')->werkzeug
+ERROR->2024-09-18 14:14:23,018->127.0.0.1 - - [18/Sep/2024 14:14:23] code 400, message Bad request version ('xæ[\x8b[\x8cÀ¡3\x08ëµryT\x9a8TU')->werkzeug
+ERROR->2024-09-18 14:14:42,829->[WinError 3] O sistema não pode encontrar o caminho especificado: './basesViagens'->root
+ERROR->2024-09-19 14:45:53,870->127.0.0.1 - - [19/Sep/2024 14:45:53] code 400, message Bad request syntax ('\x16\x03\x01\x06À\x01\x00\x06¼\x03\x03o?')->werkzeug
+ERROR->2024-09-19 14:45:53,871->127.0.0.1 - - [19/Sep/2024 14:45:53] code 400, message Bad request version ('**\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93\x1a\x1a\x00\x00\x00')->werkzeug
+ERROR->2024-09-19 14:45:53,872->127.0.0.1 - - [19/Sep/2024 14:45:53] code 400, message Bad request version ('ã\x10\x84\x1b@o¬Äï/(\x00')->werkzeug
+ERROR->2024-09-19 14:45:53,874->127.0.0.1 - - [19/Sep/2024 14:45:53] code 400, message Bad request version ('**\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93::\x00\x00\x00')->werkzeug
+ERROR->2024-09-19 17:31:34,300->replace expected at least 2 arguments, got 1->root
+ERROR->2024-09-19 17:33:50,907->replace expected at least 2 arguments, got 1->root
+ERROR->2024-09-20 14:49:38,925->[Errno 2] No such file or directory: './bases/erro'->root
+ERROR->2024-09-20 15:29:59,790->[Errno 22] Invalid argument: './bases/"erro"'->root
+ERROR->2024-09-20 15:58:01,625->[Errno 22] Invalid argument: './bases/"erro"'->root

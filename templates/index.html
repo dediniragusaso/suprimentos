@@ -360,7 +360,10 @@
                 <a href="../static/Pdfs/ENC_Manual_de_Viagens/Manual_Adiantamento_Seara_2024.pdf"target="blank"><button class="cor_5 w-full text-center px-4 py-2 mt-2 rounded-md ">Manual de Adiantamento Seara</button></a>
                 <a href="../static/Pdfs/ENC_Manual_de_Viagens/Manual_Reembolso_JBS_2024.pdf"target="blank"><button class="cor_4 w-full text-center px-4 py-2 mt-2 rounded-md ">Manual de Reembolso JBS</button></a>
                 <a href="../static/Pdfs/ENC_Manual_de_Viagens/Manual_Reembolso_Seara_2024.pdf"target="blank"><button class="cor_3 w-full text-center px-4 py-2 mt-2 rounded-md ">Manual de Reembolso Seara</button></a>
-                <a href="../static/Pdfs/ENC_Manual_de_Viagens/Manual_Viagens_WEB_Paytrack.pdf"target="blank"><button class="cor_1 w-full text-center px-4 py-2 mt-2 rounded-md ">Manual de Viagens - Paytrack</button></a>
+                <a href="../static/Pdfs/ENC_Manual_de_Viagens/Manual_Viagens_WEB_Paytrack.pdf"target="blank"><button class="cor_2 w-full text-center px-4 py-2 mt-2 rounded-md ">Manual de Viagens - Paytrack</button></a>
+                <a href="../static/Pdfs/Política de Eventos.pdf"target="blank"><button class="cor_2 w-full text-center px-4 py-2 mt-2 rounded-md ">Política de Eventos</button></a>
+                <a href="../static/Pdfs/Viagens Internacionais (1).pdf"target="blank"><button class="cor_1 w-full text-center px-4 py-2 mt-2 rounded-md ">Viagens Internacionais</button></a>
+                <a href="../static/Pdfs/PROC-PRESI-SUP-0014 - Solicitações e Despesas de Viagem.pdf"target="blank"><button class="cor_1 w-full text-center px-4 py-2 mt-2 rounded-md ">Despesas de viagens</button></a>
 
             </div>
         </nav>
@@ -526,6 +529,7 @@
                     reader.read().then(({ done, value }) => {
                         if (done) {
                             enableMessageInput();
+                            console.log(responseText)
 
                             // atualizar histórico front
 
@@ -575,10 +579,15 @@
                               .replace(/^## (.+)$/gm, '<h2>$1</h2>')
                               .replace(/^# (.+)$/gm, '<h1>$1</h1>');
             }
-    
+
+            function replaceLinkWithImg(message) {
+                return message.replace(/"\.\/imagens\/[^"]+\.(png|jpeg)"/g, '<img src=$&>');
+            }
+            
             function formatMessage(message) {
                 message = replaceAlternatingStrongTags(message);
                 message = replaceHashesWithTitles(message);
+                message = replaceLinkWithImg(message);
                 return message.replace(/\n/g, '<br>');
             }
     
@@ -607,10 +616,15 @@
                               .replace(/^## (.+)\n/gm, '<h2>$1</h2>\n')
                               .replace(/^# (.+)\n/gm, '<h1>$1</h1>\n');
             }
+
+            function replaceLinkWithImg(message) {
+                return message.replace(/"\.\/imagens\/[^"]+\.(png|jpeg)"/g, '<img src=$&>');
+            }
     
             function formatMessage(message) {
                 message = replaceAlternatingStrongTags(message);
                 message = replaceHashesWithTitles(message);
+                message = replaceLinkWithImg(message)
                 return message.replace(/\n/g, '<br>');
             }
     

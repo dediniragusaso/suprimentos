@@ -11,52 +11,16 @@ def imagem_para_base64(image_path):
     with open(image_path, "rb") as image_file:
         return base64.b64encode(image_file.read()).decode('utf-8')
 
-
-# # #Requisição para a API do GPT
-
-# payload = {
-#   "model": "gpt-4o-2024-08-06",
-#   "messages": [
-#     {
-#       "role": "user",
-#       "content": [
-#         {
-#           "type": "text",
-#           "text": """
-#           conte quantas imagens eu passar
-#           """
-#         },
-#         {
-#           "type": "image_url",
-#           "image_url": {
-#             "url": f"data:image/jpeg;base64,{base64_img}"
-#           }
-#         },
-#         {
-#           "type": "image_url",
-#           "image_url": {
-#             "url": f"data:image/jpeg;base64,{base64_img2}"
-#           }
-#         }
-#       ]
-#     }
-#   ],
-#   "max_tokens": 300
-# }
-
-
-
-
 imagens = os.listdir("GPT\images")
 payload = '''{
-  "model": "gpt-4o",
+  "model": "gpt-4o-2024-08-06",
   "messages": [
     {
       "role": "user",
       "content": [
         {
           "type": "text",
-          "text": "conte quantas imagens eu passar"
+          "text": "conte quantas imagens eu passar, independente de serem iguais ou não e no final diga quanto gastou de tokens por imagem"
         }'''
 
 for img in imagens:
@@ -82,7 +46,8 @@ headers = {
   "Authorization": f"Bearer {api_key}"
 }
 
+print(json.loads(payload))
 response = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, json=json.loads(payload))
-print(response)
 retornoGPT = response.json()['choices'][0]['message']['content']
 print(retornoGPT)
+

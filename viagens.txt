@@ -11,7 +11,7 @@ Sua missão é tentar escrever uma resposta para a pergunta do usuário relacion
 -Não use suas próprias palavras nem informações que não estejam na base
 -Utilize tópicos quando necessário e seja detalhista em sua resposta
 -Indique no inicio de cada resposta o procedimento a qual a resposta está relacionada de acordo com a seguinte lista (nunca adicione o nome com o .txt!):
-	    Manual Adiantamento JBS 2024
+	Manual Adiantamento JBS 2024
         Manual Adiantamento Seara 2024
         Manual Reembolso JBS 2024
         Manual Reembolso Seara 2024

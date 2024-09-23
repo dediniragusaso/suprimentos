@@ -143,6 +143,7 @@ def respostaViagens (prompt_usuario, historico):
             )
             
             print("Resposta feita com sucesso")
+            print("Resposta feita com sucesso")
             for chunk in resposta:
                     if 'choices' in chunk and 'delta' in chunk['choices'][0] and 'content' in chunk['choices'][0]['delta']:
                         text = chunk['choices'][0]['delta']['content']
@@ -299,3 +300,13 @@ def submit():
         return Response(stream_with_context(algo_ocorreu_de_errado()), content_type='text/plain')
     
 app.run(debug=True, port=5000)
+
+
+
+
+
+
+
+
+
+

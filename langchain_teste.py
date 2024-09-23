@@ -37,17 +37,21 @@ if not api_key:
 llm = ChatOpenAI(api_key=api_key,
                  model = "gpt-4o-2024-08-06",
                  temperature = 0.7,
-                 max_tokens = 100,
+                 max_tokens = 1000,
                  top_p = 1,
                  frequency_penalty = 0,
                  presence_penalty = 0,
                  streaming = True)
 
 # variáveis globais
-categorizador=open('./categorizador_prompt.txt',"r",encoding="utf8").read() 
-viagens = open('./viagens.txt',"r",encoding="utf8").read() 
-outros= open('./outros.txt',"r",encoding="utf8").read() 
-erro = open('./erro.txt',"r",encoding="utf8").read() 
+# categorizador=open('./categorizador_prompt.txt',"r",encoding="utf8").read() 
+# viagens = open('./viagens.txt',"r",encoding="utf8").read() 
+# outros= open('./outros.txt',"r",encoding="utf8").read() 
+# erro = open('./erro.txt',"r",encoding="utf8").read() 
+
+# variáveis globais
+indicador= open('./prompts/indicador_prompt.txt',"r",encoding="utf8").read() 
+escritor = open('./prompts/escritor_prompt.txt',"r",encoding="utf8").read() 
 
 encoding = tiktoken.encoding_for_model("gpt-4o-2024-08-06")
 
@@ -77,10 +81,9 @@ def algo_ocorreu_de_errado():
 
 
 def identificaArquivo(prompt_usuario):
-    prompt= categorizador
-    for arq in (os.listdir("./basesViagens")):
-        prompt += "\n\n" + open(f"./basesViagens/{arq}","r",encoding="utf8").read() 
+    prompt = indicador
     for arq in (os.listdir("./bases")):
+        prompt += f"\n\n{arq}"
         prompt += "\n\n" + open(f"./bases/{arq}","r",encoding="utf8").read() 
     
     tentativas = 0
@@ -98,6 +101,7 @@ def identificaArquivo(prompt_usuario):
             resposta = cadeia.invoke(input = {prompt_usuario})
             
             print("Análise realizada com sucesso")
+            print(resposta)
             return resposta
         except TracerException as e:
             print(f"Erro de rastreamento: {e}")
@@ -113,65 +117,15 @@ def identificaArquivo(prompt_usuario):
             print(f"Ocorreu um erro inesperado: {e}")
 
 
-
-
-
-def respostaViagens (prompt_usuario, historico):
-    prompt=viagens
-    for arq in (os.listdir("./basesViagens")):
-        prompt += "\n\n" + open(f"./basesViagens/{arq}","r",encoding="utf8").read() 
+def respostaArquivo (prompt_usuario, arquivo, historico):
+    # for arq in (os.listdir("./bases")):
+    #     prompt += "\n\n" + open(f"./bases/{arq}","r",encoding="utf8").read() 
     
-    prompt += historico
+    if arquivo == "erro":
+        return algo_ocorreu_de_errado()
     
-    tentativas = 0
-    tempo_de_espera = 5
-    while tentativas <3:
-        tentativas+=1
-        print(f"Tentativa {tentativas}")
-        print(prompt)
-        try:
-            print(f"Iniciando a análise")
-            
-            # preparar o prompt
-            prompt += "human: {input}\n"
-            prompt += "ai: "
-            
-            modelo = PromptTemplate(template=prompt, input_variables=["input"])
-            cadeia = modelo | llm | StrOutputParser()
-            resposta_stream = cadeia.stream(input=prompt_usuario)
-            
-            print("Resposta feita com sucesso")
-            print(resposta_stream)
-            for chunk in resposta_stream:
-                # Verifica se o chunk contém as informações esperadas
-                try:
-                    if 'choices' in chunk and 'delta' in chunk['choices'][0] and 'content' in chunk['choices'][0]['delta']:
-                        text = chunk['choices'][0]['delta']['content']
-                        if text:
-                            print(text, end='', flush=True)
-                            yield text 
-                except (KeyError, IndexError) as e:
-                    print(f"Erro ao processar chunk: {e}")
-
-            return
-        except TracerException as e:
-            print(f"Erro de rastreamento: {e}")
-        except OutputParserException as e:
-            print(f"Erro ao parser saída: {e}")
-            time.sleep(5)
-        except LangChainException as e:
-            print(f"Erro da LangChain: {e}")
-            time.sleep(tempo_de_espera)
-            tempo_de_espera *=2
-        except Exception as e:
-            print(f"Ocorreu um erro inesperado: {e}")
-
-
-def respostaOutros (prompt_usuario, historico):
-    prompt=outros
-    for arq in (os.listdir("./bases")):
-        prompt += "\n\n" + open(f"./bases/{arq}","r",encoding="utf8").read() 
-    
+    prompt=escritor
+    prompt += "\n\n" + open(f"./bases/{arquivo}","r",encoding="utf8").read()
     prompt += historico
     
     tentativas = 0
@@ -188,22 +142,11 @@ def respostaOutros (prompt_usuario, historico):
             
             modelo = PromptTemplate(template=prompt, input_variables=["input"])
             cadeia = modelo | llm | StrOutputParser()
-            resposta_stream = cadeia.stream(input=prompt_usuario)
+            resposta_stream = cadeia.invoke(input=prompt_usuario)
             
             print("Resposta feita com sucesso")
             print(resposta_stream)
-            for chunk in resposta_stream:
-                # Verifica se o chunk contém as informações esperadas
-                try:
-                    if 'choices' in chunk and 'delta' in chunk['choices'][0] and 'content' in chunk['choices'][0]['delta']:
-                        text = chunk['choices'][0]['delta']['content']
-                        if text:
-                            print(text, end='', flush=True)
-                            yield text 
-                except (KeyError, IndexError) as e:
-                    print(f"Erro ao processar chunk: {e}")
-
-            return
+            return resposta_stream
         except TracerException as e:
             print(f"Erro de rastreamento: {e}")
         except OutputParserException as e:
@@ -217,51 +160,119 @@ def respostaOutros (prompt_usuario, historico):
             print(f"Ocorreu um erro inesperado: {e}")
 
 
-def respostaErro (prompt_usuario, historico):
-    prompt=outros
-    prompt += historico
+# def respostaViagens (prompt_usuario, historico):
+#     prompt=viagens
+#     for arq in (os.listdir("./basesViagens")):
+#         prompt += "\n\n" + open(f"./basesViagens/{arq}","r",encoding="utf8").read() 
     
-    tentativas = 0
-    tempo_de_espera = 5
-    while tentativas <3:
-        tentativas+=1
-        print(f"Tentativa {tentativas}")
-        try:
-            print(f"Iniciando a análise")
+#     prompt += historico
+    
+#     tentativas = 0
+#     tempo_de_espera = 5
+#     while tentativas <3:
+#         tentativas+=1
+#         print(f"Tentativa {tentativas}")
+#         print(prompt)
+#         try:
+#             print(f"Iniciando a análise")
             
-            # Preparar os prompts
-            prompt += "human: {input}\n"
-            prompt += "ai: "
+#             # preparar o prompt
+#             prompt += "human: {input}\n"
+#             prompt += "ai: "
             
-            modelo = PromptTemplate(template=prompt, input_variables=["input"])
-            cadeia = modelo | llm | StrOutputParser()
-            resposta_stream = cadeia.stream(input=prompt_usuario)
+#             modelo = PromptTemplate(template=prompt, input_variables=["input"])
+#             cadeia = modelo | llm | StrOutputParser()
+#             resposta_stream = cadeia.invoke(input=prompt_usuario)
             
-            print(resposta_stream)
-            print("Resposta feita com sucesso")
-            for chunk in resposta_stream:
-                # Verifica se o chunk contém as informações esperadas
-                try:
-                    if 'choices' in chunk and 'delta' in chunk['choices'][0] and 'content' in chunk['choices'][0]['delta']:
-                        text = chunk['choices'][0]['delta']['content']
-                        if text:
-                            print(text, end='', flush=True)
-                            yield text 
-                except (KeyError, IndexError) as e:
-                    print(f"Erro ao processar chunk: {e}")
+#             print("Resposta feita com sucesso")
+#             print(resposta_stream)
+#             return resposta_stream
+#         except TracerException as e:
+#             print(f"Erro de rastreamento: {e}")
+#         except OutputParserException as e:
+#             print(f"Erro ao parser saída: {e}")
+#             time.sleep(5)
+#         except LangChainException as e:
+#             print(f"Erro da LangChain: {e}")
+#             time.sleep(tempo_de_espera)
+#             tempo_de_espera *=2
+#         except Exception as e:
+#             print(f"Ocorreu um erro inesperado: {e}")
 
-            return
-        except TracerException as e:
-            print(f"Erro de rastreamento: {e}")
-        except OutputParserException as e:
-            print(f"Erro ao parser saída: {e}")
-            time.sleep(5)
-        except LangChainException as e:
-            print(f"Erro da LangChain: {e}")
-            time.sleep(tempo_de_espera)
-            tempo_de_espera *=2
-        except Exception as e:
-            print(f"Ocorreu um erro inesperado: {e}")
+
+# def respostaOutros (prompt_usuario, historico):
+#     prompt=outros
+#     for arq in (os.listdir("./bases")):
+#         prompt += "\n\n" + open(f"./bases/{arq}","r",encoding="utf8").read() 
+    
+#     prompt += historico
+    
+#     tentativas = 0
+#     tempo_de_espera = 5
+#     while tentativas <3:
+#         tentativas+=1
+#         print(f"Tentativa {tentativas}")
+#         try:
+#             print(f"Iniciando a análise")
+            
+#             # preparar o prompt
+#             prompt += "human: {input}\n"
+#             prompt += "ai: "
+            
+#             modelo = PromptTemplate(template=prompt, input_variables=["input"])
+#             cadeia = modelo | llm | StrOutputParser()
+#             resposta_stream = cadeia.invoke(input=prompt_usuario)
+            
+#             print("Resposta feita com sucesso")
+#             print(resposta_stream)
+#             return resposta_stream
+#         except TracerException as e:
+#             print(f"Erro de rastreamento: {e}")
+#         except OutputParserException as e:
+#             print(f"Erro ao parser saída: {e}")
+#             time.sleep(5)
+#         except LangChainException as e:
+#             print(f"Erro da LangChain: {e}")
+#             time.sleep(tempo_de_espera)
+#             tempo_de_espera *=2
+#         except Exception as e:
+#             print(f"Ocorreu um erro inesperado: {e}")
+
+
+# def respostaErro (prompt_usuario, historico):
+#     prompt=erro
+#     prompt += historico
+    
+#     tentativas = 0
+#     tempo_de_espera = 5
+#     while tentativas <3:
+#         tentativas+=1
+#         print(f"Tentativa {tentativas}")
+#         try:
+#             print(f"Iniciando a análise")
+            
+#             # Preparar os prompts
+#             prompt += "human: {input}\n"
+#             prompt += "ai: "
+            
+#             modelo = PromptTemplate(template=prompt, input_variables=["input"])
+#             cadeia = modelo | llm | StrOutputParser()
+#             resposta_stream = cadeia.invoke(input=prompt_usuario)
+            
+#             print(resposta_stream)
+#             print("Resposta feita com sucesso")
+#             return resposta_stream
+#         except TracerException as e:
+#             print(f"Erro de rastreamento: {e}")
+#         except OutputParserException as e:
+#             print(f"Erro ao parser saída: {e}")
+#             time.sleep(5)
+#         except LangChainException as e:
+#             print(f"Erro da LangChain: {e}")
+#             time.sleep(tempo_de_espera)
+#             tempo_de_espera *=2
+#         except Exception as e:
+#             print(f"Ocorreu um erro inesperado: {e}")
 
 
 @app.route("/submit", methods=["POST"])
@@ -270,28 +281,35 @@ def submit():
     try:
         historico = request.form['historico']
         pergunta_usuario = request.form['inputMessage']
-        tipo = identificaArquivo(pergunta_usuario)
-        print("tipo: " + tipo)
-        if (tipo == "Viagens"):
-            tokens = encoding.encode(viagens)
-            token_count = len(tokens)
-            print(f"Tokens do prompt: {token_count}")
-            
-            return Response(stream_with_context(respostaViagens(pergunta_usuario, historico)), content_type='text/plain')
-        elif (tipo== "Outros"):
-            tokens = encoding.encode(outros)
-            token_count = len(tokens)
-            print(f"Tokens do prompt: {token_count}")
-            return Response(stream_with_context(respostaOutros(pergunta_usuario, historico)), content_type='text/plain')
-            
-        elif (tipo == "Nenhum"):
-            tokens = encoding.encode(erro)
-            token_count = len(tokens)
-            print(f"Tokens do prompt: {token_count}")
-            return Response(stream_with_context(respostaErro(pergunta_usuario, historico)), content_type='text/plain')
+        arquivo = identificaArquivo(pergunta_usuario)
+        print("tipo: " + arquivo)
+        tokens = encoding.encode(escritor)
+        token_count = len(tokens)
+        print(f"Tokens do prompt: {token_count}")
         
-        else: 
-            print("Erro")
+        
+        # if (tipo == "Viagens"):
+        #     tokens = encoding.encode(viagens)
+        #     token_count = len(tokens)
+        #     print(f"Tokens do prompt: {token_count}")
+            
+        #     return Response(stream_with_context(respostaViagens(pergunta_usuario, historico)), content_type='text/plain')
+        # elif (tipo== "Outros"):
+        #     tokens = encoding.encode(outros)
+        #     token_count = len(tokens)
+        #     print(f"Tokens do prompt: {token_count}")
+        #     return Response(stream_with_context(respostaOutros(pergunta_usuario, historico)), content_type='text/plain')
+            
+        # elif (tipo == "Nenhum"):
+        #     tokens = encoding.encode(erro)
+        #     token_count = len(tokens)
+        #     print(f"Tokens do prompt: {token_count}")
+        #     return Response(stream_with_context(respostaErro(pergunta_usuario, historico)), content_type='text/plain')
+        
+        # else: 
+        #     print("Erro")
+        
+        return Response(stream_with_context(respostaArquivo(pergunta_usuario,arquivo, historico)), content_type='text/plain')
     except Exception as e:
         error(e)
         print(e)
