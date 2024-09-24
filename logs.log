@@ -1276,3 +1276,5 @@ ERROR->2024-09-13 16:28:50,883->can only concatenate str (not "NoneType") to str
 ERROR->2024-09-13 17:04:19,262->Unsupported message type: <class 'dict'>->root
 ERROR->2024-09-13 17:25:21,366->Unsupported message type: <class 'dict'>->root
 >>>>>>> bad32626a74f8d56e24d7cd7b3f085e57b286ecd
+ERROR->2024-09-24 14:30:01,132->400 Bad Request: The browser (or proxy) sent a request that this server could not understand.->root
+ERROR->2024-09-24 15:37:46,618->400 Bad Request: The browser (or proxy) sent a request that this server could not understand.->root

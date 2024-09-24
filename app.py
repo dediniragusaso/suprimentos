@@ -5,7 +5,6 @@ from dotenv import load_dotenv
 import os
 from flask import Flask, render_template,  request, jsonify, Response, stream_with_context
 from logging import ERROR
-# #Funções
 from logging import basicConfig #configurações para os comportamentos dos logs
 from logging import error
 from logging import getLogger
