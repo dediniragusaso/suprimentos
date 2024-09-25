@@ -1,0 +1,224 @@
+*PROCEDIMENTO DE COMPRA DE PRODUTOS QUÍMICOS*
+
+---
+
+**OBJETIVO**
+
+Definir critérios e responsabilidades para negociação de produtos químicos, equipamentos de laboratório e serviços de análises laboratoriais em terceiros para a Companhia.
+
+**RESPONSABILIDADE QUANTO AO CUMPRIMENTO**
+
+Cabe a todas as áreas envolvidas no processo e citadas neste documento a responsabilidade pelo cumprimento deste procedimento. 
+
+**DISPOSIÇÕES GERAIS**
+
+Este procedimento está vinculado às revisões vigentes da IN-PRESI-ADM-0094 - Política de Suprimentos América do Sul e do procedimento PROC-PRESI-SUP-0004 - Contratação de Materiais e Serviços;
+
+Para assuntos que não forem tratados neste procedimento prevalecerão as disposições dos documentos citados no item 3.1.
+
+**CONCEITOS**
+
+**Commodities químicas:** substâncias extraídas da terra. Normalmente possui preço universal e é um bem fungível, ou seja, é equivalente e trocável por outro igual independentemente de quem a produz como:
+- Sulfato básico de cromo (sal cromo);
+- Cloreto de sódio;
+- Sulfato de amônia (sal inorgânico);
+- Ácido fórmico 85%; 
+- Formiato de sódio (sal de sódio do ácido fórmico);
+- Hidróxido de cálcio;
+- Calcário / cal hidratada;
+- Sal (cloreto de sódio);
+- Argila e auxiliares filtrantes;
+- Peróxido de hidrogênio;
+- Ácido peracético.
+
+**Insumo químico:** especialidade para couros. Produto químico processado de acordo com a necessidade e especificação de sua aplicação no couro como:
+- Resina acrílica; 
+- Corante fase úmida;
+- Tanino sintético naftaleno sulfônico;
+- Tanino sintético fenólico;
+- Tanino sintético neutralizante;
+- Engraxante (óleos mineral, natural ou sintético);
+- Auxiliar (recurtimento e acabamento);
+- Pigmento;
+- Anilina.
+
+**Produtos químicos para higienização e limpeza:** insumos químicos que garantem a qualidade e a confiabilidade do produto ao final do processo, por exemplo:
+- Detergente alcalino clorado (higienização industrial); 
+- Gel alcoólico (assepsia das mãos, higienização industrial).
+
+**Produtos químicos para tratamento de água, lavanderia, refeitório, fumigação e controle de pragas:**  insumos químicos que garantem a qualidade e a confiabilidade do produto ao final do processo, por exemplo:
+- Alvejante (lavagem de uniformes das indústrias);
+- Aditivo de secagem (refeitório da indústria);
+- Policloreto de alumínio (tratamento de água potável e efluentes);
+- Inibidor de corrosão e dispersante (tratamento da água de torre e caldeira);
+- Herbicida e inseticida (controle de pragas).
+
+**Aditivos:** insumos químicos destinados ao controle de bactérias e fungos da indústria de feed e food;
+
+**Produtos para uso em laboratórios:** insumos para utilização em laboratórios que garantem a qualidade e a confiabilidade das análises realizadas nos laboratórios internos, por exemplo:
+- Reagente e meio de cultura;
+- Vidrarias e plásticos;
+- Testes rápidos;
+- Equipamentos.
+
+**Combustíveis:** insumos químicos usados para geração de energia para diversas aplicações na Companhia. Maiores detalhes sobre combustíveis no procedimento PROC-PRESI-SUP-0002 – Combustíveis;
+
+**Gases:** insumos químicos usados para geração de energia para diversas aplicações na Companhia no caso de Gás Natural e Gás Liquefeito de Petróleo (GLP) ou os gases industriais criogênicos usados nos laboratórios, manutenção e nos processos de resfriamento de matéria-prima como Dióxido de Carbono (CO2) e Nitrogênio (N2);
+
+**Catalisador de níquel:** insumos químicos utilizados para hidrogenação dos óleos nas fábricas de margarinas;
+
+**Metilato de sódio:** matéria-prima para a produção de biodiesel e no processo industrial das margarinas;
+
+**Serviços de análises laboratoriais:** contratação de laboratórios terceiros que realizam análises laboratoriais para a Companhia.
+
+**PROCEDIMENTOS**
+
+**Cadastro de produtos**
+
+- Todo material para ser cadastrado deverá conter: utilização, unidade de medida, estado (aspecto visual), pH, concentração (%), diluição (%), teor de umidade (%), granulometria, tipo de embalagem, peso da embalagem (Kg), conversão da unidade para o peso e outras características específicas de cada produto químico;
+
+- As unidades de medida dos produtos habilitados são:
+  - Commodities químicos: toneladas (TON) e quilogramas (Kg);
+  - Insumos químicos especialidades para couros: toneladas (TON) e quilogramas (Kg);
+  - Higienização e limpeza: cadastradas no sistema individual para cada código; 
+  - Tratamento de água, lavanderia, refeitório e controle de pragas: cadastradas no sistema individual para cada código;
+  - Aditivos: toneladas (TON) e quilogramas (Kg);
+  - Laboratórios: unidade (UN), quilogramas (Kg) ou conforme a necessidade;
+  - Combustíveis: litros (LT), quilogramas (Kg) e toneladas (TON);
+  - Gases: quilogramas (Kg); metro cúbico (m³) e unidade (UN) para o caso de cadastros em cilindros. 
+
+- Havendo a necessidade de criação de um novo código de produto químico deverá ser aprovado pela Diretoria de Suprimentos Corporativa e pela área técnica, exceto produtos para laboratórios que não precisam da aprovação de Suprimentos. O cadastro ficará sob responsabilidade da área requisitante do produto/serviço. Para produtos químicos aplicados ao negócio Couros consultar as documentações complementares junto à Gerência de Garantia de Qualidade Couros;
+
+- Para a troca de qualquer produto químico deverão ser respeitados os seguintes critérios:
+  - Estratégia de negociação (custo total x benefício e saving):
+    - Especialidades para couros: de pelo menos R$ 150.000,00 ao ano;
+    - Commodities químicos: pelo menos 15% de redução (saving x baseline).
+  - Especificação e a qualidade do produto, sendo que deve respeitar a usabilidade e função do anterior;
+  - Cabe à Gerência Corporativa de Suprimentos Químicos comunicar ao departamento técnico um potencial fornecedor solicitando o processo de P&D (Pesquisa e Desenvolvimento) quanto ao desempenho técnico do produto em produção. Suprimentos Corporativo deverá obter a autorização da área técnica antes de sequenciar a substituição ou a aquisição para uso;
+  - Cabe à Gerência Corporativa de Suprimentos Químicos oficializar ao setor de Planejamento de Químicos e aos fornecedores quanto à troca de insumos validados pela área técnica, formalmente informando quantidades e prazos para a troca, o fornecedor que deixará de fornecer, o fornecedor que passará a fornecer, a quantidade e o prazo para início.
+
+**Fornecedores**
+
+**Cadastro de fornecedor:**
+- Todo fornecedor (pessoa jurídica) deverá ser cadastrado previamente antes de fornecer mercadoria;
+- A responsabilidade de cadastro de fornecedor fica atribuída ao Suprimentos responsável pela negociação (local ou Corporativo).
+
+**Homologação de fornecedor:**
+- É de responsabilidade de Suprimentos solicitante (local ou Corporativo) realizar a abertura e o encerramento do processo de homologação do fornecedor;
+- É de responsabilidade das áreas de P&D e Gestão da Qualidade realizar a qualificação técnica do produto e enviar o feedback à Gerência Corporativa de Suprimentos Químicos com o aval ou recusa do fornecedor junto a justificativa;
+
+**Compra spot:** o comprador local deve verificar quais são os fornecedores aprovados para sua unidade antes da aquisição dos produtos.
+
+**Avaliação dos fornecedores:**
+- A área técnica de cada divisão de negócio é responsável pela avaliação e envio das não conformidades ao fornecedor e ao Suprimentos Corporativo.
+
+**Fornecedores dispensados da qualificação inicial:**
+- Para compras spot, o produto será avaliado na entrega quando o departamento técnico definir a utilização e controles adicionais necessários;
+- As aquisições durante o processo de qualificação do fornecedor serão realizadas por um período determinado. Passado esse período as aquisições não poderão mais serem realizadas sem que a qualificação do fornecedor tenha sido aprovada.
+
+**Avaliação no sistema de gestão da qualidade da JBS Couros:**
+- Cabe à Gerência Corporativa de Suprimentos Químicos solicitar aos fornecedores corporativos cópias de certificados ISO 9001. Caso não possua, será solicitado o preenchimento do formulário F-PRESI-SUP-0020 - Questionário de Avaliação do SGQ de Fornecedores; 
+- Cabe à Gerência Corporativa de Suprimentos Químicos solicitar as declarações de substâncias restritas aos fornecedores através do formulário F-PRESI-SUP-0010 - Declaração de Substâncias Restritas (na versão inglês no formulário F-PRESI-SUP-0011 - Declaração de substâncias restritas) de acordo com a política interna de lista de fornecedores bloqueados da JBS e enviar ao laboratório corporativo para validação antes de ser enviado para qualidade cadastrar no sistema;
+- É responsabilidade da Gestão de Qualidade monitorar a
+
+ data de validade dos certificados enviados pelos fornecedores via IsoSystem;
+- Para novos fornecedores de commodities, limpeza ou químicos especialidades para couros cabe à Gerência Corporativa de Suprimentos Químicos consultar os requisitos específicos para cada fornecimento junto à Gerência de Garantia de Qualidade Couros;
+- Para demandas específicas cabe à Gerência Corporativa de Suprimentos Químicos ser o interlocutor entre JBS Couros e os fornecedores;
+- Toda nova especialidade química proposta deve ter sido analisada via Responsible Tannery Chemistry (RTC), protocolo de Sustentabilidade da JBS Couros.
+
+Cabe à Gerência Corporativa de Suprimentos Químicos possuir plano de contingência alinhado com a área técnica para que no caso de uma situação adversa de fornecimento a mesma não comprometa o bom andamento produtivo. Dessa forma, se possível, deve-se possuir no mínimo dois produtos cadastrados sendo desejável três para contingenciar o não fornecimento de produtos químicos pelo principal fornecedor em contrato. 
+
+**Regra de estoque**
+
+- Estoque mínimo:
+  - O estoque mínimo será proposto pelo Planejamento do negócio levando em conta o estoque geral, o lead time de entrega, a complexidade de operação e produto, a meta, o consumo histórico e os dias trabalhados; 
+  - Todo e qualquer produto químico a ser negociado no mercado como venda deverá respeitar os seguintes critérios:
+    - Estar obsoleto (com mais de 180 dias no estoque);
+    - Constatação de não uso do produto químico em produção em unidades do grupo;
+    - Não ter sido adquirido através do sistema Drawback;
+    - A aprovação da negociação de venda pela Gerência Corporativa de Suprimentos Químicos.
+
+**Política de compra**
+
+Cabe aos compradores das unidades efetuar as ordens de compras de forma a realizá-las no tempo correto, na quantidade certa (alinhado com o Planejamento) e verificar se recebeu efetivamente o que foi adquirido acompanhado de nota fiscal com preço bruto e destaque de impostos; 
+
+A solicitação de compra deverá ser feita exclusivamente via sistema pelos analistas das unidades, atrelando no pedido de compra o código do produto cadastrado para sua unidade e esta deverá ser aprovada de acordo com as políticas de alçadas;
+
+O preço de mercado será acompanhado pela Gerência Corporativa de Suprimentos Químicos levando em conta:
+- Apontamento de valores das principais matérias-primas que compõem a formação do custo dos produtos químicos;
+- Os preços globais dos fornecedores através da quantidade ofertada;
+- Custo de logística;
+- Variação cambial;
+- Sazonalidade de mercado relativo ao consumo;
+- Custo de atendimento técnico.
+
+**Compras mercado externo – importação:**
+- **Compra no incoterm FOB (free on board - livre a bordo):**
+  - O exportador entrega a carga desembaraçada a bordo do navio no porto de origem indicado pelo importador. Desta forma todas as despesas no país de origem ficam a cargo do exportador. As demais despesas como fretes internacionais e seguros internacionais além dos custos de movimentação da carga no destino correm por conta do importador;
+  - A modalidade é restrita ao modal hidroviário marítimo ou lacustre.
+
+- **Compra no incoterm CFR (cost and freight - custo e frete):**
+  - O exportador entrega a carga no porto de destino indicado pelo importador custeando as despesas com frete marítimo. A contratação do seguro internacional é de responsabilidade do importador. As responsabilidades do exportador se encerram a partir do momento em que a mercadoria cruza a amurada do navio e estão dispostos no porto de destino, assim os custos de desembaraço no país destino ficam a critério do importador;
+  - A modalidade CFR é restrita ao modal hidroviário marítimo ou lacustre.
+
+- **Compra no incoterm CIF (cost insurance and freight - custo seguro e frete):**
+  - O exportador é responsável também pelo valor do seguro. Portanto, ele tem que entregar a carga a bordo do navio no porto de embarque com frete e seguro pagos;
+  - A modalidade é restrita ao modal hidroviário marítimo ou lacustre.
+
+- **Compra DDP (delivered duty paid - entregue com direitos pagos):**
+  - Toda a responsabilidade da carga é do exportador. Ele tem o compromisso de entregar a mercadoria no local determinado pelo importador pagando inclusive os impostos e outros encargos de importação. Ele apenas não arcará com o desembaraço da mercadoria;
+  - A modalidade pode ser utilizada com qualquer modalidade de transporte.
+
+**Mercado interno – local:**
+- **Compra EXW (ex works - na origem):**
+  - Toda a responsabilidade da carga é do comprador. O fornecedor tem a obrigação apenas de disponibilizar o produto e a fatura em seu estabelecimento. A partir daí despesas ou prejuízos com danos ficam a cargo de quem está comprando;
+  - A modalidade é utilizada para qualquer meio de transporte.
+
+- **Compra CPT (carriage paid to - transporte pago até):**
+  - O termo reúne as mesmas obrigações do CFR, ou seja, o fornecedor deverá pagar as despesas de embarque da mercadoria e seu frete internacional/nacional até o local de destino designado;
+  - A modalidade pode ser utilizada com relação a qualquer meio de transporte.
+
+- **Compra CIP (carriage and insurance paid to - transporte e seguros pagos até)**
+  - O fornecedor arca com as despesas de embarque do frete e do seguro da mercadoria até o local de destino indicado;
+  - A modalidade pode ser utilizada para todos os meios de transporte, inclusive o multimodal.
+
+**Acordos e contratos comerciais**
+
+- A compra através de contrato deverá ser priorizada ficando como responsabilidade da Gerência Corporativa de Suprimentos Químicos a sua negociação, elaboração e gestão do contrato enquanto sua operacionalização é de responsabilidade da unidade;
+
+- O contrato comercial deverá ser negociado pela Gerência Corporativa de Suprimentos Químicos respeitando as regras das políticas de negócio da Companhia;
+
+- A aprovação e assinatura do contrato serão de responsabilidade do gestor da Gerência Corporativa de Suprimentos Químicos;
+
+- Posteriormente à negociação a Gerência Corporativa de Suprimentos Químicos deverá criar uma requisição de contrato de acordo com os modelos disponibilizados no ProJuris ou o modelo de minuta do fornecedor.
+
+**Compra spot**
+
+A compra spot (fora do contrato ou esporádica) deverá ser negociada pela unidade e aprovada pela Gerência Corporativa de Suprimentos Químicos no Mercado Eletrônico de acordo com a necessidade respeitando as regras relativas às políticas de negócio da Companhia.
+
+| Revisão | Responsáveis                                                                                           | Área                                       | Ação    |
+|---------|--------------------------------------------------------------------------------------------------------|--------------------------------------------|---------|
+| 04      | Daniela Cristina Medeiros Leite Barros, Ricardo Sarreta Filho, Roberta Berardis Linhares               | Gerência de Garantia de Qualidade Couros, Gerência de Commodities Couros, Diretoria de Suprimentos América do Sul | Revisão |
+| 04      | Maximiliano Granada Limberger                                                                           | Diretoria de Suprimentos América do Sul    | Aprovação |
+
+---
+
+**PROCEDIMENTO INTERNO**
+
+PROC-PRESI-SUP-0003
+
+5 de março de 2024
+
+Revisão: 04
+
+**Compra de Produtos Químicos**
+
+**DESTINATÁRIOS:** Todos os colaboradores da JBS S.A.
+
+Processos Organizacionais
+
+Documento confidencial para uso da JBS
+
+Página 6 de 6
+
+--- 

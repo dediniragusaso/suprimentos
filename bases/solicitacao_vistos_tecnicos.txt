@@ -1,0 +1,331 @@
+*PROCEDIMENTO PARA SOLICITAÇÃO DE VISTOS TÉCNICOS*
+
+---
+
+**OBJETIVO**
+
+Definir critérios e responsabilidades para a formalização da mobilidade de prestadores de serviços técnicos estrangeiros pela Companhia.
+
+**RESPONSABILIDADE QUANTO AO CUMPRIMENTO**
+
+Cabe a todas as áreas envolvidas no processo a responsabilidade pelo cumprimento deste procedimento.
+
+**DISPOSIÇÕES GERAIS**
+
+Sempre que necessário acionar serviço técnico do exterior, seja para assistência ou garantia prevista em contrato, será necessária a emissão de visto técnico.
+
+O procedimento é regulado pela Resolução Normativa n° 3 do Conselho Nacional da Imigração, que disciplina a concessão de autorização de residência para fins de trabalho sem vínculo empregatício no Brasil para prestar serviços técnicos.
+
+O técnico estrangeiro estará apto a realizar assistência técnica, trabalho com máquinas (ex.: instalação) e cooperação técnica.
+
+A documentação exigida para emissão de visto técnico deverá ser indicada no fechamento do contrato de prestação de serviço, visando agilizar o processo. O contrato de cooperação técnica também deverá prever se a responsabilidade pela emissão do visto será da Companhia, conforme item 6.1, ou do terceiro, conforme item 6.2.
+
+Compete ao Ministério da Justiça a análise da documentação pertinente e deferimento do visto técnico.
+
+O visto deverá ser providenciado antes da chegada do técnico ao Brasil.
+
+A Companhia não deverá realizar nenhum pagamento diretamente ao técnico estrangeiro durante sua permanência no Brasil para não caracterizar vínculo empregatício. As despesas de hospedagem, alimentação e outros custos são de responsabilidade da empresa com quem foi assinado o contrato de cooperação técnica.
+
+O fluxo da operação está detalhado no Anexo B.
+
+**RESPONSABILIDADES**
+
+Antes de contratar qualquer mobilidade para prestação de serviço técnico, cabe ao responsável pela engenharia do negócio verificar e aplicar as condições deste procedimento.
+
+O acompanhamento do processo de solicitação de visto deve ser realizado pelo responsável pela engenharia do negócio juntamente à área Administrativa local, que deverão atentar para qualquer falha no processo migratório e corrigi-lo imediatamente.
+
+Na chegada do técnico à unidade, será responsabilidade do RH local verificar se o mesmo está com toda a documentação exigida para a prestação do serviço.
+
+É responsabilidade do SESMT local orientar e garantir o cumprimento das normas de Saúde e Segurança da Companhia pelo técnico.
+
+Maiores informações referente ao processo de emissão de visto deverão ser sanadas com o parceiro SIRVA por intermédio do consultor JBS no telefone +55 11 4134 4950, celular +55 11 97166 4466, ou e-mail jbs.initiations@sirva.com.
+
+**TIPOS DE VISTOS**
+
+**Padrão**
+
+A estadia do técnico estrangeiro será de até um ano, prorrogável por igual período.
+
+Após o término da estadia autorizada, caso seja preciso manter o técnico estrangeiro, a Companhia deverá promover sua contratação em observância à legislação brasileira.
+
+Caso o contrato de prestação de serviço firmado entre as partes possua cláusula de garantia, não será aplicada a limitação temporal da Resolução Normativa n° 3. Será observada a vigência estabelecida pelas partes.
+
+Não é necessária comprovação de poderes para firmar contrato de prestação de serviço ou instrumento semelhante.
+
+O prazo de análise da documentação pelo Ministério da Justiça é de até 30 dias, com exceção dos casos emergenciais descritos no item 5.3.
+
+**Curta duração**
+
+Somente será concedido um visto técnico de curta duração por ano migratório.
+
+O prazo de estadia, no caso de visto de curta duração, será de até 180 dias. Logo, este visto deve ser utilizado quando se tem conhecimento de que a estadia do técnico estrangeiro terá duração de no máximo 180 dias.
+
+Esgotado o prazo de 180 dias, caso seja solicitado um visto técnico Padrão (item 5.1) ao mesmo estrangeiro e dentro do mesmo ano migratório, o prazo do visto de curta duração concedido anteriormente será deduzido do prazo do novo visto.
+
+**Solicitações emergenciais**
+
+Em solicitação de emergência ou de urgência a ser informada pela Companhia ao Ministério da Justiça, poderá ser concedida a autorização para prestação de serviço em procedimento simplificado.
+
+As solicitações são divididas em:
+- **Situação de urgência:** casos referentes a perda de vidas não se enquadram nas solicitações JBS, com prazo de análise de até dois dias;
+- **Situação de emergência:** casos que gerem perdas substanciais em valor, fábrica paradas, entre outras emergências pontuais, com prazo de análise de até cinco dias.
+
+As regras para vistos emergenciais são as mesmas do processo de curta duração (tópico 5.2).
+
+**PROCEDIMENTOS**
+
+**Vistos de responsabilidade da Companhia**
+
+O responsável pela engenharia do negócio deverá realizar o cadastro do técnico no portal do parceiro SIRVA Connect e alimentá-lo com a listagem completa de documentos necessários para o processo. Esta lista será disponibilizada pela SIRVA para cada tipo de visto e cada país de imigração.
+
+O fornecedor será responsável por encaminhar os documentos via e-mail ou portal SIRVA Connect para o comprador responsável pela contratação do serviço, sendo necessário o acompanhamento por parte do responsável pela engenharia do negócio para garantir que os prazos de envio sejam garantidos.
+
+Após o envio dos documentos por parte do fornecedor e lançamento dos mesmos no portal por parte do engenheiro, a SIRVA fará a análise dos mesmos.
+
+É responsabilidade do técnico estrangeiro apresentar todos os documentos no momento da retirada do visto no consulado brasileiro no exterior.
+
+O gestor de RH corporativo será o aprovador para a solicitação do visto.
+
+O time administrativo da unidade onde o serviço será prestado deverá realizar o pagamento do serviço prestado pela SIRVA assim como dos custos do processo após a emissão do visto quando receber a NF de cobrança via e-mail.
+
+**Visto de responsabilidade do fornecedor**
+
+O responsável pela engenharia do negócio deverá indicar à empresa estrangeira o parceiro SIRVA, que irá apoiá-lo na emissão do visto, encaminhando o formulário Technical Visa Request Questionnaire JBS S.A. Suppliers disponível no portal SIRVA.
+
+O fornecedor deverá preencher todas as informações do formulário e enviá-lo ao endereço jbs.initiations@sirva.com.
+
+A SIRVA deverá ser informada pelo responsável por engenharia do negócio sobre as indicações em andamento.
+
+A responsabilidade pelo pagamento do serviço prestado será do fornecedor.
+
+**Documentos necessários**
+
+Contrato de prestação de serviço entre a Companhia e a empresa estrangeira, elaborado pelo comprador e validado pelo Jurídico Corporativo – Gerência de Contratos e pela SIRVA. O contrato deverá ser bi colunado português/inglês e traduzido por um tradutor juramentado brasileiro, assinado pelo procurador da unidade e empresa contratada. Deverá constar:
+- Atividades a serem realizadas, caracterizando transferência de tecnologia ou assistência técnica;
+- Nome da empresa que realizou a compra;
+- CNPJ conforme pedido de compra;
+- Endereço da empresa que realizou a compra;
+- Nome da empresa estrangeira;
+- Endereço da empresa estrangeira;
+- Telefones e e-mails do comprador da unidade e do engenheiro responsável;
+- Páginas de identificação do passaporte do técnico (contendo informações pessoais, governo emissor e validade).
+
+Caso não exista contrato, poderá ser apresentado documento que comprove a relação entre a pessoa jurídica brasileira e a pessoa jurídica estrangeira para a prestação de assistência técnica por meio de um dos documentos abaixo:
+- Assistência técnica a equipamentos: cópia do documento de compra carimbado pelos serviços de receita brasileira informando a importação (DI - Documento de Importação);
+- Cooperação técnica entre empresas: declaração da empresa interessada demonstrando a ligação associativa conforme modelo SIRVA. Se necessário e previamente aprovado, a SIRVA poderá ajudar com a emissão do acordo de cooperação técnica apostilado ou com a legalização destes documentos. As taxas serão cobradas separadamente;
+- Nos casos de solicitação padrão ou curta duração, a DI e ordem de compra do equipamento poderão substituir o acordo de cooperação técnica se a ordem de compra contiver os dados do produto, informações sobre o fornecimento de assistência técnica, bem como se a DI estiver assinada pelo despachante.
+
+**Documentos para elaboração da Carta de Convite pela SIRVA:**
+- Cópia em PDF legível das páginas de informação do passaporte do técnico, devidamente apostiladas e traduzidas por tradutor juramentado no Brasil;
+- Cópia em PDF legível do diploma, devidamente apostilado e traduzido por tradutor juramentado no Brasil, e currículo em português demonstrando a qualificação profissional;
+- Questionário de Permissão de Trabalho conforme modelo SIRVA devidamente preenchido;
+- Cópia em PDF legível da certidão de nascimento ou casamento com o nome completo do pai e mãe, devidamente apostilado e traduzido por tradutor juramentado no Brasil;
+- Contrato de prestação de serviço.
+
+A carta convite deverá ser assinada por profissional com poderes para contratar e demitir funcionários ou procuradores e ter firma reconhecida em cartório.
+
+**Documentos para envio ao Ministério da Justiça pela SIRVA:**
+- Carta convite;
+- Contrato de prestação de serviço;
+- Foto 3x4 do técnico digitalizada em formato JPG, JPEG, GIF ou PNG com resolução mínima de 413x531 pixels e máximo de 300 Kb;
+- Assinatura do técnico digitalizada em formato JPG, JPEG, GIF ou PNG com resolução mínima de 413x531 pixels e máximo de 300 Kb;
+- Contratos da empresa contratante ou estatutos societários consolidados e respectivas alterações conforme registrado na Junta Comercial ou Registro Civil Público;
+- Procuração em papel timbrado da Companhia
+
+ autorizando a SIRVA a representar o solicitante perante os Ministérios e autoridades brasileiras. Este documento será elaborado pela SIRVA quando todos os demais forem recebidos;
+- A imagem do logotipo da empresa contratante;
+- Número atualizado de funcionários brasileiros e estrangeiros das empresas envolvidas.
+
+**Documentos para visita do técnico ao Consulado estrangeiro (poderá haver variações de acordo com o país):**
+- Formulário de Solicitação de Visto fornecido pela SIRVA;
+- Passaporte com validade mínima de seis meses;
+- Para cidadãos dos EUA, a certidão de nascimento;
+- Recibo de pagamento da taxa do consulado;
+- Carta de convite assinada e com firma reconhecida;
+- Registro Não Criminal (verificar com as autoridades do país de origem quanto tempo levará para a emissão, pois pode ser demorado);
+- Uma foto 3x4 seguindo obrigatoriamente os critérios:
+  - Fundo branco - não off-white ou cor similar;
+  - Rosto e ombros de frente para a câmera, os ombros não deverão ser cortados;
+  - Sem sombras, reflexos ou manchas escuras;
+  - Olhos abertos e o rosto neutro;
+  - Se o candidato usar óculos, não deverá haver reflexo de luz nas lentes;
+  - Sem óculos de sol ou lentes coloridas;
+  - Chapéus ou véus poderão ser utilizados estritamente por motivos religiosos e não poderão cobrir qualquer parte do rosto.
+
+**Documentos para visita do técnico à Polícia Federal Brasileira:**
+- Passaporte com validade mínima de seis meses;
+- Cartão de entrada e saída devidamente preenchido. Deverá ser apresentado pelo estrangeiro na entrada no Brasil e mantido até o momento de sua saída, quando será recolhido pela Polícia Federal. O documento será fornecido pelas empresas de transporte aéreo ou estará disponível nos Postos de Controle;
+- Visto consular de acordo com a finalidade da viagem;
+- Passagem aérea de entrada e saída do país.
+
+Todo documento emitido no exterior deverá ser apostilado ou legalizado, dependendo se o país emissor do documento faz ou não parte da convenção de Haia, e traduzido para português por um tradutor juramentado.
+
+Documentos adicionais poderão ser solicitados a qualquer momento.
+
+**Prazos**
+
+Os prazos médios para cada etapa do processo são:
+
+| Tipo | Urgência | Normal |
+|------|----------|--------|
+| Sequência | Responsável | Passos do fluxo | Duração (dias úteis) |
+| 1° | Responsável pela engenharia local | Submeter Iniciação ao SIRVA via portal. | 1 | 1 |
+| 2° | SIRVA | Enviar instruções detalhadas do processo de acordo com o tipo de visto. | 1 | 1 |
+| 3° | SIRVA | 1. Preparar Aplicativo de Permissão de Trabalho; 2. Processar pagamentos de taxas governamentais relacionados à RN 03 (48 h SLA); 3. Submeter às autoridades brasileiras e informar a submissão à Companhia e ao fornecedor. | 5 | 5 |
+| 4° | Governo brasileiro | Aprovar o visto. | 5 | 30 |
+| 5° | Governo brasileiro | Aprovar a carta de “Ofício” e enviar ao Consulado. | 5 | 5 |
+| 5° | SIRVA | Receber aprovação do visto e enviar instruções para coletar o visto no consulado. | 0 | 0 |
+| 6° | Fornecedor | Reunir documentos originais e retirar o visto no consulado. | 2* | 2* |
+| 7° | SIRVA | Acompanhar retirada do visto. | 2 | 2 |
+| 8° | Comprador JBS | Informar à SIRVA a data de chegada do técnico ao Brasil. | 2 | 2 |
+| 9° | SIRVA | Enviar as instruções para o registro na Polícia Federal. | 2 | 2 |
+| 10° | Fornecedor | Providenciar documentos requeridos para o registro feito pela SIRVA na Polícia Federal. | 2* | 2* |
+| 11° | SIRVA | 1. Preparar o processo de registro e agenda a visita à Polícia Federal; 2. Processar pagamentos de taxas governamentais relacionados ao registro na Polícia Federal (48 h SLA). | 5 | 5 |
+| 12° | Fornecedor | Visitar a Polícia Federal e atendimento aos pontos mencionados. | 1 | 1 |
+
+Os prazos com * podem ter variação. O fornecedor deve ser comunicado pelo responsável pela engenharia do negócio no início do processo sobre toda documentação necessária, cabendo a ele informar os prazos necessários para a obtenção dos documentos solicitados.
+
+**Prazos internos a serem considerados:**
+- Prazo para validação do contrato pelo departamento Jurídico: 6 dias úteis;
+- Criação de perfil no portal SIRVA: 48 horas (TI SIRVA local);
+- Reativação no portal SIRVA: 72 horas (TI SIRVA Global).
+
+Toda semana a SIRVA enviará um relatório com o status detalhado das solicitações de visto. Caso a atualização não seja recebida, solicitar diretamente ao consultor junto à SIRVA.
+
+Em casos emergenciais, solicitar no portal SIRVA que o processo seja avaliado prioritariamente. Deverá ser apontada justificativa relacionada a aspectos como valor estimado de perda, tempo de unidade parada, ou seja, prejuízo que justifique a solicitação.
+
+**Sistema SIRVA Connect**
+
+Para solicitar acesso ao portal, preencher o formulário de solicitação de perfil Anexo A e enviar para o e-mail jbs.initiations@sirva.com.
+
+No momento de realização do cadastro de perfil, atentar qual deles está de acordo com as atividades desempenhadas no processo:
+
+| Tipos de permissões | Regras de conexão de usuários - SIRVA |
+|---------------------|---------------------------------------|
+| Gerenciamento | Aprovador | Iniciador |
+| Pesquisa simples e avançada. | X | X | X |
+| Iniciação, edição, visualização. | X | X | X |
+| Adicionar, visualizar, pesquisar anotações. | X | X | X |
+| Adicionar e visualizar documentos. | X | X | X |
+| Aprovador de arquivos. | X | X |
+
+| Visualizar relatórios. | X |
+
+| Quem estará apto a cada perfil. | Gerente corporativo de RH | Gerente corporativo de RH | Responsável pela contratação |
+
+O passo a passo para utilização do sistema está disponível no SIRVA Connect HR Operational Guide.
+
+**Chegada e saída do técnico estrangeiro**
+
+A entrada e a saída do território nacional deverão ocorrer exclusivamente pelos locais onde existam Postos de Controle da Polícia Federal.
+
+O viajante internacional deverá submeter-se à fiscalização migratória obrigatoriamente no momento e no local da entrada e saída do Brasil, dirigindo-se ao posto da PF mais próximo. A localização dos postos está disponível no portal da PF.
+
+Na chegada do técnico à unidade, é de responsabilidade do RH local verificar se o mesmo está com toda a documentação exigida.
+
+É de responsabilidade da unidade onde o serviço será prestado disponibilizar um colaborador para acompanhar o técnico, garantir que o mesmo atenda às normas de segurança e faça a visita à Polícia Federal conforme programação da SIRVA.
+
+Caso a visita à polícia não aconteça, deverá ser enviada uma carta de isenção de multa ao técnico explicando o motivo do não comparecimento. A carta deverá ser solicitada à SIRVA e aprovada posteriormente pelo Jurídico – Gerência de Contratos. O custo por este documento deverá ser verificado diretamente com o consultor da SIRVA.
+
+**Segurança do trabalho**
+
+É necessária a contratação de seguro médico para todos os casos.
+
+O técnico deverá utilizar todos os EPIs indicados para a execução da sua atividade.
+
+Em caso de acidente com o técnico dentro das dependências da empresa, caberá à unidade tomar todas as providências para o pronto atendimento e primeiros socorros.
+
+Em caso de dúvidas a respeito da segurança no momento da execução das atividades, entrar em contato com o SESMT local.
+
+**Punições e multas**
+
+Lei de Migração nº 13.445:
+CAPÍTULO IX - DAS INFRAÇÕES E DAS PENALIDADES ADMINISTRATIVAS 
+Art. 108. O valor das multas tratadas neste Capítulo considerará: 
+I - as hipóteses individualizadas nesta Lei; 
+II - a condição econômica do infrator, a reincidência e a gravidade da infração; 
+III - a atualização periódica conforme estabelecido em regulamento; 
+IV - o valor mínimo individualizável de R$ 10.000; 
+V - o valor mínimo de R$ 10.000 e o máximo de R$ 100.000 para infrações cometidas por pessoa física; 
+VI - o valor mínimo de R$ 1.000 e o máximo de R$ 1.000.000 para infrações cometidas por pessoa jurídica por ato infracional.
+
+Os departamentos envolvidos no processo de solicitação de visto técnico serão responsabilizados por eventuais multas a que derem causa.
+
+**Pagamento**
+
+Ao final do processo, a SIRVA realizará o faturamento do serviço prestado e enviará ao e-mail de quem realizou a abertura da solicitação de visto. O processo de pagamento deverá seguir o fluxo:
+- Para realização da requisição de compras, atrelar ao contrato da SIRVA disponível no ME:
+  - JBS e Swift: contrato nº 504846;
+  - Seara: contrato nº 504845.
+
+**Filiais de pagamento do serviço:**
+-
+
+ Filial 51 - ANH - JBS S/A – Anhanguera;
+- Filial 30.555 - Seara Alimentos Ltda. - SP Anhanguera – Matriz.
+
+**Código de produto a ser utilizado:** 
+- JBS e Swift - 79338;
+- Seara - 549274.
+
+Em sequência à requisição, a solicitação de compra será gerada automaticamente.
+
+Não há necessidade de cotação e pré-pedido visto que já existe contrato no ME.
+
+O fluxo deverá seguir o processo padrão de compras local.
+
+Os valores negociados junto à SIRVA para a realização dos processos estarão disponíveis em [https://www.sirva.com/pt-br/login](https://www.sirva.com/pt-br/login).
+
+---
+
+**Revisão**
+
+| Revisão | Responsáveis | Área | Ação |
+|---------|--------------|------|------|
+| 01 | Bárbara Ventura | Diretoria de Suprimentos América do Sul | Revisão |
+| 01 | Maximiliano Granada Limberger | Diretoria de Suprimentos América do Sul | Aprovação |
+
+---
+
+**ANEXO A – SOLICITAÇÃO DE PERFIL**
+
+After completing the form below, please submit it to JBS.Initiations@sirva.com.
+
+| New User Request - Data |
+|-------------------------|
+| First Name:             |
+| Last Name:              |
+| Department:             |
+| Job title:              |
+| E-mail:                 |
+| Phone:                  |
+
+In 24 hours your user will be created. You will receive the email below containing instructions on how to reset your password for first access. Please also check your Spam folder if not finding in your Inbox.
+
+---
+
+**ANEXO B – FLUXO DA OPERAÇÃO**
+
+---
+
+**PROCEDIMENTO INTERNO**
+
+PROC-PRESI-SUP-0011
+
+06 de dezembro de 2023
+
+Revisão: 01
+
+**Solicitação de Vistos Técnicos**
+
+**DESTINATÁRIOS:** Todos os colaboradores da JBS e Seara.
+
+---
+
+Processos Organizacionais
+
+Documento confidencial para uso da JBS
+
+Página 9 de 10
+
+---

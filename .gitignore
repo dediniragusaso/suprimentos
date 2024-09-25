@@ -1,16 +1,4 @@
 .env
-bases/
-DocumentosWord/
-static/Pdfs/
-data_test.txt
-teste.xlsx
-um_prompt.py
-requirements.txt
-basesViagens/
-docs_viagens_word/
-ENC_Manual_de_Viagens/
-imagens
 script.sql
-tempCodeRunnerFile.py
-transformaTxt.py
+.gitignore
 
