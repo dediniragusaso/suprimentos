@@ -297,4 +297,4 @@ def submit():
         error(e)
         return Response(stream_with_context(algo_ocorreu_de_errado()), content_type='text/plain')
     
-app.run(debug=True, port=5000)
+app.run(debug=True, port=5000, host="0.0.0.0")
