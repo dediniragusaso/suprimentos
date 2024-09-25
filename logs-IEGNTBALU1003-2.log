@@ -1,0 +1,1280 @@
+INFO->2024-08-19 14:33:39,297->[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000->werkzeug
+INFO->2024-08-19 14:33:39,299->[33mPress CTRL+C to quit[0m->werkzeug
+INFO->2024-08-19 14:33:39,305-> * Restarting with stat->werkzeug
+WARNING->2024-08-19 14:33:41,047-> * Debugger is active!->werkzeug
+INFO->2024-08-19 14:33:41,055-> * Debugger PIN: 114-742-032->werkzeug
+INFO->2024-08-19 14:38:27,759->127.0.0.1 - - [19/Aug/2024 14:38:27] "[33mGET / HTTP/1.1[0m" 404 -->werkzeug
+INFO->2024-08-19 14:38:28,720->127.0.0.1 - - [19/Aug/2024 14:38:28] "[33mGET / HTTP/1.1[0m" 404 -->werkzeug
+INFO->2024-08-19 14:38:29,006->127.0.0.1 - - [19/Aug/2024 14:38:29] "[33mGET / HTTP/1.1[0m" 404 -->werkzeug
+INFO->2024-08-19 17:15:12,361->[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000->werkzeug
+INFO->2024-08-19 17:15:12,362->[33mPress CTRL+C to quit[0m->werkzeug
+INFO->2024-08-19 17:15:12,366-> * Restarting with stat->werkzeug
+WARNING->2024-08-19 17:15:13,624-> * Debugger is active!->werkzeug
+INFO->2024-08-19 17:15:13,628-> * Debugger PIN: 114-742-032->werkzeug
+INFO->2024-08-22 17:23:58,932->[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000->werkzeug
+INFO->2024-08-22 17:23:58,933->[33mPress CTRL+C to quit[0m->werkzeug
+INFO->2024-08-22 17:23:58,937-> * Restarting with stat->werkzeug
+WARNING->2024-08-22 17:24:00,145-> * Debugger is active!->werkzeug
+INFO->2024-08-22 17:24:00,148-> * Debugger PIN: 464-886-580->werkzeug
+INFO->2024-08-22 17:25:21,250-> * Detected change in 'c:\\Users\\sophiekumagai-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\suprimentos.py', reloading->werkzeug
+INFO->2024-08-22 17:25:21,393-> * Restarting with stat->werkzeug
+WARNING->2024-08-22 17:25:23,405-> * Debugger is active!->werkzeug
+INFO->2024-08-22 17:25:23,408-> * Debugger PIN: 464-886-580->werkzeug
+INFO->2024-08-22 17:25:38,099-> * Detected change in 'c:\\Users\\sophiekumagai-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\suprimentos.py', reloading->werkzeug
+INFO->2024-08-22 17:25:38,254-> * Restarting with stat->werkzeug
+INFO->2024-08-22 17:25:55,609-> * Restarting with stat->werkzeug
+ERROR->2024-08-22 21:18:27,966->cannot access local variable 'tentativas' where it is not associated with a value->root
+ERROR->2024-08-22 21:18:59,455->cannot access local variable 'tentativas' where it is not associated with a value->root
+ERROR->2024-08-22 21:22:55,267->module 'openai' has no attribute 'error'->root
+ERROR->2024-08-22 21:23:00,872->module 'openai' has no attribute 'error'->root
+ERROR->2024-08-22 21:34:23,465->module 'openai' has no attribute 'error'->root
+ERROR->2024-08-22 21:37:42,759->module 'openai' has no attribute 'error'->root
+ERROR->2024-08-22 21:37:46,594->module 'openai' has no attribute 'error'->root
+ERROR->2024-08-22 21:37:50,127->list assignment index out of range->root
+ERROR->2024-08-22 21:37:55,685->list index out of range->root
+ERROR->2024-08-22 21:37:58,527->list index out of range->root
+ERROR->2024-08-22 21:38:56,602->list index out of range->root
+ERROR->2024-08-22 21:39:12,142->list index out of range->root
+ERROR->2024-08-22 21:40:02,582->module 'openai' has no attribute 'error'->root
+ERROR->2024-08-22 21:40:05,665->module 'openai' has no attribute 'error'->root
+ERROR->2024-08-22 21:40:07,217->list assignment index out of range->root
+ERROR->2024-08-22 21:40:33,051->stream_with_context() missing 1 required positional argument: 'generator_or_function'->root
+ERROR->2024-08-22 21:40:33,106->module 'openai' has no attribute 'error'->root
+ERROR->2024-08-22 21:40:37,646->module 'openai' has no attribute 'error'->root
+ERROR->2024-08-22 21:40:39,766->module 'openai' has no attribute 'error'->root
+ERROR->2024-08-22 21:40:41,325->list assignment index out of range->root
+ERROR->2024-08-22 21:41:18,692->module 'openai' has no attribute 'error'->root
+ERROR->2024-08-22 21:41:20,662->module 'openai' has no attribute 'error'->root
+ERROR->2024-08-22 21:41:26,453->list assignment index out of range->root
+ERROR->2024-08-22 21:45:40,176->module 'openai' has no attribute 'error'->root
+ERROR->2024-08-22 21:58:03,116->
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+->root
+ERROR->2024-08-22 22:17:45,155->module 'openai' has no attribute 'RateLimitError'->root
+ERROR->2024-08-22 22:18:22,010->You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.->root
+ERROR->2024-08-22 22:18:29,107->You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.->root
+ERROR->2024-08-22 22:18:39,735->You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.->root
+ERROR->2024-08-22 22:19:20,438->You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.->root
+ERROR->2024-08-22 22:19:26,129->You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.->root
+ERROR->2024-08-23 14:39:35,136->You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.->root
+ERROR->2024-08-23 14:49:50,028->You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.->root
+ERROR->2024-08-23 14:50:08,375->stream_with_context() missing 1 required positional argument: 'generator_or_function'->root
+ERROR->2024-08-23 14:51:26,180->list assignment index out of range->root
+ERROR->2024-08-23 14:52:19,804->stream_with_context() missing 1 required positional argument: 'generator_or_function'->root
+ERROR->2024-08-23 14:53:08,313->stream_with_context() missing 1 required positional argument: 'generator_or_function'->root
+ERROR->2024-08-23 14:53:20,193->list assignment index out of range->root
+ERROR->2024-08-23 15:09:47,206->list assignment index out of range->root
+ERROR->2024-08-23 15:40:49,840->You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.->root
+ERROR->2024-08-23 16:30:01,230->list assignment index out of range->root
+ERROR->2024-08-23 16:30:16,278->list index out of range->root
+ERROR->2024-08-23 17:10:57,860->list assignment index out of range->root
+ERROR->2024-08-23 17:11:56,983->list index out of range->root
+ERROR->2024-08-23 17:12:02,017->list index out of range->root
+ERROR->2024-08-23 17:12:22,662->list index out of range->root
+ERROR->2024-08-23 17:12:35,813->list index out of range->root
+ERROR->2024-08-23 17:12:55,836->list index out of range->root
+ERROR->2024-08-23 17:13:05,955->list index out of range->root
+ERROR->2024-08-23 17:13:15,136->list index out of range->root
+ERROR->2024-08-23 17:13:51,654->list index out of range->root
+ERROR->2024-08-23 17:14:06,111->list index out of range->root
+ERROR->2024-08-23 17:16:16,977->list index out of range->root
+ERROR->2024-08-23 17:29:39,277->list assignment index out of range->root
+ERROR->2024-08-23 17:35:29,521->list assignment index out of range->root
+ERROR->2024-08-26 15:23:45,764->module 'openai' has no attribute 'AuthenticationError'->root
+ERROR->2024-08-26 19:35:02,344->module 'openai' has no attribute 'AuthenticationError'->root
+ERROR->2024-08-29 17:15:53,274->You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.->root
+ERROR->2024-08-29 17:15:59,330->You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.->root
+ERROR->2024-08-29 17:16:14,084->You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.->root
+ERROR->2024-08-30 14:19:51,337->You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.->root
+ERROR->2024-08-30 18:09:52,695->415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.->root
+ERROR->2024-08-30 18:10:25,206->415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.->root
+ERROR->2024-08-31 13:01:34,659->415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.->root
+ERROR->2024-09-04 14:29:25,419->module 'openai' has no attribute 'error'->root
+ERROR->2024-09-04 14:30:05,853->module 'openai' has no attribute 'error'->root
+ERROR->2024-09-06 15:17:02,449->cannot access local variable 'texto' where it is not associated with a value->root
+ERROR->2024-09-06 15:18:11,352->cannot access local variable 'texto' where it is not associated with a value->root
+ERROR->2024-09-06 15:18:34,400->cannot access local variable 'texto' where it is not associated with a value->root
+ERROR->2024-09-06 15:19:01,494->cannot access local variable 'texto' where it is not associated with a value->root
+ERROR->2024-09-06 15:19:41,222->cannot access local variable 'texto' where it is not associated with a value->root
+ERROR->2024-09-06 15:19:50,461->cannot access local variable 'texto' where it is not associated with a value->root
+ERROR->2024-09-06 16:38:55,847->'ChatOpenAI' object has no attribute 'error'->root
+ERROR->2024-09-06 16:46:17,136->RunnableSequence.invoke() missing 1 required positional argument: 'input'->root
+ERROR->2024-09-06 16:47:05,398->1 validation error for PromptTemplate
+input_types
+  value is not a valid dict (type=type_error.dict)->root
+ERROR->2024-09-06 16:48:24,112->1 validation error for PromptTemplate
+input_types
+  value is not a valid dict (type=type_error.dict)->root
+ERROR->2024-09-06 16:48:28,646->1 validation error for PromptTemplate
+input_types
+  value is not a valid dict (type=type_error.dict)->root
+INFO->2024-09-09 15:33:04,298->[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000->werkzeug
+INFO->2024-09-09 15:33:04,298->[33mPress CTRL+C to quit[0m->werkzeug
+INFO->2024-09-09 15:33:04,302-> * Restarting with stat->werkzeug
+WARNING->2024-09-09 15:33:05,299-> * Debugger is active!->werkzeug
+INFO->2024-09-09 15:33:05,299-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-09 15:33:10,531->127.0.0.1 - - [09/Sep/2024 15:33:10] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 15:33:10,711->127.0.0.1 - - [09/Sep/2024 15:33:10] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 15:33:10,724->127.0.0.1 - - [09/Sep/2024 15:33:10] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 15:33:10,726->127.0.0.1 - - [09/Sep/2024 15:33:10] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 15:33:10,726->127.0.0.1 - - [09/Sep/2024 15:33:10] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 15:33:10,753->127.0.0.1 - - [09/Sep/2024 15:33:10] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 15:33:53,991->127.0.0.1 - - [09/Sep/2024 15:33:53] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 15:33:54,004->127.0.0.1 - - [09/Sep/2024 15:33:54] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 15:33:54,004->127.0.0.1 - - [09/Sep/2024 15:33:54] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 15:33:54,010->127.0.0.1 - - [09/Sep/2024 15:33:54] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 15:33:54,113->127.0.0.1 - - [09/Sep/2024 15:33:54] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 15:33:54,133->127.0.0.1 - - [09/Sep/2024 15:33:54] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 15:34:19,347->127.0.0.1 - - [09/Sep/2024 15:34:19] "[35m[1mPOST /submit HTTP/1.1[0m" 500 -->werkzeug
+INFO->2024-09-09 15:34:19,373->127.0.0.1 - - [09/Sep/2024 15:34:19] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 15:34:52,912-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-09 15:34:52,957-> * Restarting with stat->werkzeug
+INFO->2024-09-09 15:36:18,977->[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000->werkzeug
+INFO->2024-09-09 15:36:18,977->[33mPress CTRL+C to quit[0m->werkzeug
+INFO->2024-09-09 15:36:18,980-> * Restarting with stat->werkzeug
+WARNING->2024-09-09 15:36:19,949-> * Debugger is active!->werkzeug
+INFO->2024-09-09 15:36:19,957-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-09 15:36:22,827->127.0.0.1 - - [09/Sep/2024 15:36:22] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 15:36:22,866->127.0.0.1 - - [09/Sep/2024 15:36:22] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 15:36:22,987->127.0.0.1 - - [09/Sep/2024 15:36:22] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 15:36:22,987->127.0.0.1 - - [09/Sep/2024 15:36:22] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 15:36:22,987->127.0.0.1 - - [09/Sep/2024 15:36:22] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 15:36:23,020->127.0.0.1 - - [09/Sep/2024 15:36:23] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 15:36:42,228->127.0.0.1 - - [09/Sep/2024 15:36:42] "[35m[1mPOST /submit HTTP/1.1[0m" 500 -->werkzeug
+INFO->2024-09-09 15:36:42,242->127.0.0.1 - - [09/Sep/2024 15:36:42] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 15:37:03,998-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-09 15:37:04,045-> * Restarting with stat->werkzeug
+WARNING->2024-09-09 15:37:05,333-> * Debugger is active!->werkzeug
+INFO->2024-09-09 15:37:05,336-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-09 15:37:06,722->127.0.0.1 - - [09/Sep/2024 15:37:06] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 15:37:06,763->127.0.0.1 - - [09/Sep/2024 15:37:06] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 15:37:06,888->127.0.0.1 - - [09/Sep/2024 15:37:06] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 15:37:06,902->127.0.0.1 - - [09/Sep/2024 15:37:06] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 15:37:06,902->127.0.0.1 - - [09/Sep/2024 15:37:06] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 15:37:06,920->127.0.0.1 - - [09/Sep/2024 15:37:06] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+ERROR->2024-09-09 15:37:20,827->'int' object is not callable->root
+INFO->2024-09-09 15:37:20,827->127.0.0.1 - - [09/Sep/2024 15:37:20] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 15:37:46,107-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-09 15:37:46,192-> * Restarting with stat->werkzeug
+WARNING->2024-09-09 15:37:47,446-> * Debugger is active!->werkzeug
+INFO->2024-09-09 15:37:47,446-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-09 15:39:19,410->127.0.0.1 - - [09/Sep/2024 15:39:19] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 15:39:19,446->127.0.0.1 - - [09/Sep/2024 15:39:19] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 15:39:19,539->127.0.0.1 - - [09/Sep/2024 15:39:19] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 15:39:19,546->127.0.0.1 - - [09/Sep/2024 15:39:19] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 15:39:19,546->127.0.0.1 - - [09/Sep/2024 15:39:19] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 15:39:19,560->127.0.0.1 - - [09/Sep/2024 15:39:19] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+ERROR->2024-09-09 15:39:23,017->'int' object is not callable->root
+INFO->2024-09-09 15:39:23,017->127.0.0.1 - - [09/Sep/2024 15:39:23] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 15:40:30,474->127.0.0.1 - - [09/Sep/2024 15:40:30] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 15:40:30,561->127.0.0.1 - - [09/Sep/2024 15:40:30] "GET /static/img/logo_jef.svg HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 15:40:30,564->127.0.0.1 - - [09/Sep/2024 15:40:30] "GET /static/img/logo_jbs.svg HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 15:40:30,566->127.0.0.1 - - [09/Sep/2024 15:40:30] "GET /static/img/reload.svg HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 15:40:30,798->127.0.0.1 - - [09/Sep/2024 15:40:30] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 15:40:53,568->127.0.0.1 - - [09/Sep/2024 15:40:53] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 15:40:53,609->127.0.0.1 - - [09/Sep/2024 15:40:53] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 15:40:53,609->127.0.0.1 - - [09/Sep/2024 15:40:53] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 15:40:53,614->127.0.0.1 - - [09/Sep/2024 15:40:53] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 15:40:53,786->127.0.0.1 - - [09/Sep/2024 15:40:53] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 15:41:17,429->[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000->werkzeug
+INFO->2024-09-09 15:41:17,430->[33mPress CTRL+C to quit[0m->werkzeug
+INFO->2024-09-09 15:41:17,433-> * Restarting with stat->werkzeug
+WARNING->2024-09-09 15:41:18,718-> * Debugger is active!->werkzeug
+INFO->2024-09-09 15:41:18,733-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-09 15:41:22,493->127.0.0.1 - - [09/Sep/2024 15:41:22] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 15:41:22,688->127.0.0.1 - - [09/Sep/2024 15:41:22] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 15:41:22,690->127.0.0.1 - - [09/Sep/2024 15:41:22] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 15:41:22,690->127.0.0.1 - - [09/Sep/2024 15:41:22] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 15:41:22,781->127.0.0.1 - - [09/Sep/2024 15:41:22] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 15:41:29,566->127.0.0.1 - - [09/Sep/2024 15:41:29] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 15:41:29,658->127.0.0.1 - - [09/Sep/2024 15:41:29] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 15:41:29,663->127.0.0.1 - - [09/Sep/2024 15:41:29] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 15:41:29,665->127.0.0.1 - - [09/Sep/2024 15:41:29] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 15:41:29,745->127.0.0.1 - - [09/Sep/2024 15:41:29] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 15:42:53,771-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-09 15:42:53,818-> * Restarting with stat->werkzeug
+WARNING->2024-09-09 15:42:54,700-> * Debugger is active!->werkzeug
+INFO->2024-09-09 15:42:54,700-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-09 15:43:06,499->127.0.0.1 - - [09/Sep/2024 15:43:06] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 15:43:06,544->127.0.0.1 - - [09/Sep/2024 15:43:06] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 15:43:06,615->127.0.0.1 - - [09/Sep/2024 15:43:06] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 15:43:06,630->127.0.0.1 - - [09/Sep/2024 15:43:06] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 15:43:06,630->127.0.0.1 - - [09/Sep/2024 15:43:06] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 15:43:06,665->127.0.0.1 - - [09/Sep/2024 15:43:06] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+ERROR->2024-09-09 15:43:23,149->'int' object is not callable->root
+INFO->2024-09-09 15:43:23,149->127.0.0.1 - - [09/Sep/2024 15:43:23] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 15:43:45,554-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-09 15:43:45,617-> * Restarting with stat->werkzeug
+WARNING->2024-09-09 15:43:46,410-> * Debugger is active!->werkzeug
+INFO->2024-09-09 15:43:46,410-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-09 15:45:45,645->127.0.0.1 - - [09/Sep/2024 15:45:45] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 15:45:45,681->127.0.0.1 - - [09/Sep/2024 15:45:45] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 15:45:45,773->127.0.0.1 - - [09/Sep/2024 15:45:45] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 15:45:45,780->127.0.0.1 - - [09/Sep/2024 15:45:45] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 15:45:45,782->127.0.0.1 - - [09/Sep/2024 15:45:45] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 15:45:45,791->127.0.0.1 - - [09/Sep/2024 15:45:45] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+ERROR->2024-09-09 15:45:50,388->'int' object is not callable->root
+INFO->2024-09-09 15:45:50,388->127.0.0.1 - - [09/Sep/2024 15:45:50] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 15:50:58,487-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-09 15:50:58,602-> * Restarting with stat->werkzeug
+WARNING->2024-09-09 15:51:00,390-> * Debugger is active!->werkzeug
+INFO->2024-09-09 15:51:00,394-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-09 15:51:02,572-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-09 15:51:02,667-> * Restarting with stat->werkzeug
+WARNING->2024-09-09 15:51:04,046-> * Debugger is active!->werkzeug
+INFO->2024-09-09 15:51:04,051-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-09 15:51:28,088-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-09 15:51:28,168-> * Restarting with stat->werkzeug
+WARNING->2024-09-09 15:51:29,271-> * Debugger is active!->werkzeug
+INFO->2024-09-09 15:51:29,271-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-09 15:51:39,549-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-09 15:51:39,625-> * Restarting with stat->werkzeug
+INFO->2024-09-09 15:54:01,101->[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000->werkzeug
+INFO->2024-09-09 15:54:01,101->[33mPress CTRL+C to quit[0m->werkzeug
+INFO->2024-09-09 15:54:01,101-> * Restarting with stat->werkzeug
+WARNING->2024-09-09 15:54:01,978-> * Debugger is active!->werkzeug
+INFO->2024-09-09 15:54:01,978-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-09 15:54:09,041->127.0.0.1 - - [09/Sep/2024 15:54:09] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 15:54:09,119->127.0.0.1 - - [09/Sep/2024 15:54:09] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 15:54:09,141->127.0.0.1 - - [09/Sep/2024 15:54:09] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 15:54:09,146->127.0.0.1 - - [09/Sep/2024 15:54:09] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 15:54:09,169->127.0.0.1 - - [09/Sep/2024 15:54:09] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 15:54:09,179->127.0.0.1 - - [09/Sep/2024 15:54:09] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+ERROR->2024-09-09 15:54:11,414->name 'categorizador' is not defined->root
+INFO->2024-09-09 15:54:11,414->127.0.0.1 - - [09/Sep/2024 15:54:11] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 16:17:18,930-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-09 16:17:19,199-> * Restarting with stat->werkzeug
+WARNING->2024-09-09 16:17:22,153-> * Debugger is active!->werkzeug
+INFO->2024-09-09 16:17:22,157-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-09 16:17:24,593-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-09 16:17:24,766-> * Restarting with stat->werkzeug
+WARNING->2024-09-09 16:17:27,719-> * Debugger is active!->werkzeug
+INFO->2024-09-09 16:17:27,742-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-09 16:17:55,792-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-09 16:17:55,905-> * Restarting with stat->werkzeug
+WARNING->2024-09-09 16:17:58,295-> * Debugger is active!->werkzeug
+INFO->2024-09-09 16:17:58,301-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-09 16:18:02,008-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-09 16:18:02,130-> * Restarting with stat->werkzeug
+WARNING->2024-09-09 16:18:04,942-> * Debugger is active!->werkzeug
+INFO->2024-09-09 16:18:04,945-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-09 16:33:00,815->127.0.0.1 - - [09/Sep/2024 16:33:00] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 16:33:00,965->127.0.0.1 - - [09/Sep/2024 16:33:00] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 16:33:01,055->127.0.0.1 - - [09/Sep/2024 16:33:01] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 16:33:01,065->127.0.0.1 - - [09/Sep/2024 16:33:01] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 16:33:01,074->127.0.0.1 - - [09/Sep/2024 16:33:01] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 16:33:01,079->127.0.0.1 - - [09/Sep/2024 16:33:01] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 16:33:05,306->127.0.0.1 - - [09/Sep/2024 16:33:05] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 16:37:18,214->127.0.0.1 - - [09/Sep/2024 16:37:18] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 16:40:37,205-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-09 16:40:37,296-> * Restarting with stat->werkzeug
+WARNING->2024-09-09 16:40:38,983-> * Debugger is active!->werkzeug
+INFO->2024-09-09 16:40:38,992-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-09 16:40:50,834-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-09 16:40:50,948-> * Restarting with stat->werkzeug
+WARNING->2024-09-09 16:40:53,111-> * Debugger is active!->werkzeug
+INFO->2024-09-09 16:40:53,118-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-09 16:40:55,951-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-09 16:40:56,072-> * Restarting with stat->werkzeug
+WARNING->2024-09-09 16:40:57,673-> * Debugger is active!->werkzeug
+INFO->2024-09-09 16:40:57,673-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-09 16:40:58,517-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-09 16:40:58,626-> * Restarting with stat->werkzeug
+WARNING->2024-09-09 16:41:00,626-> * Debugger is active!->werkzeug
+INFO->2024-09-09 16:41:00,626-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-09 16:41:15,053-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-09 16:41:15,141-> * Restarting with stat->werkzeug
+WARNING->2024-09-09 16:41:16,718-> * Debugger is active!->werkzeug
+INFO->2024-09-09 16:41:16,722-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-09 16:41:23,009-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-09 16:41:23,089-> * Restarting with stat->werkzeug
+WARNING->2024-09-09 16:41:24,377-> * Debugger is active!->werkzeug
+INFO->2024-09-09 16:41:24,377-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-09 16:41:26,670-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-09 16:41:26,736-> * Restarting with stat->werkzeug
+WARNING->2024-09-09 16:41:28,385-> * Debugger is active!->werkzeug
+INFO->2024-09-09 16:41:28,392-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-09 16:41:29,551-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-09 16:41:29,640-> * Restarting with stat->werkzeug
+WARNING->2024-09-09 16:41:30,869-> * Debugger is active!->werkzeug
+INFO->2024-09-09 16:41:30,869-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-09 16:41:48,749->127.0.0.1 - - [09/Sep/2024 16:41:48] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 16:42:14,861-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-09 16:42:14,949-> * Restarting with stat->werkzeug
+WARNING->2024-09-09 16:42:16,596-> * Debugger is active!->werkzeug
+INFO->2024-09-09 16:42:16,604-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-09 16:42:21,657->127.0.0.1 - - [09/Sep/2024 16:42:21] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 16:42:21,778->127.0.0.1 - - [09/Sep/2024 16:42:21] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 16:42:21,805->127.0.0.1 - - [09/Sep/2024 16:42:21] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 16:42:21,813->127.0.0.1 - - [09/Sep/2024 16:42:21] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 16:42:21,822->127.0.0.1 - - [09/Sep/2024 16:42:21] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 16:42:21,837->127.0.0.1 - - [09/Sep/2024 16:42:21] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 16:42:30,054->127.0.0.1 - - [09/Sep/2024 16:42:30] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 16:42:35,191-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-09 16:42:35,314-> * Restarting with stat->werkzeug
+WARNING->2024-09-09 16:42:36,859-> * Debugger is active!->werkzeug
+INFO->2024-09-09 16:42:36,870-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-09 16:42:42,446->127.0.0.1 - - [09/Sep/2024 16:42:42] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 16:45:06,476-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-09 16:45:06,561-> * Restarting with stat->werkzeug
+INFO->2024-09-09 16:45:28,357->[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000->werkzeug
+INFO->2024-09-09 16:45:28,358->[33mPress CTRL+C to quit[0m->werkzeug
+INFO->2024-09-09 16:45:28,358-> * Restarting with stat->werkzeug
+WARNING->2024-09-09 16:45:30,023-> * Debugger is active!->werkzeug
+INFO->2024-09-09 16:45:30,042-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-09 16:45:30,610->127.0.0.1 - - [09/Sep/2024 16:45:30] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 16:45:30,736->127.0.0.1 - - [09/Sep/2024 16:45:30] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 16:45:30,736->127.0.0.1 - - [09/Sep/2024 16:45:30] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 16:45:30,752->127.0.0.1 - - [09/Sep/2024 16:45:30] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 16:45:30,784->127.0.0.1 - - [09/Sep/2024 16:45:30] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 16:45:30,859->127.0.0.1 - - [09/Sep/2024 16:45:30] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 16:45:33,877->127.0.0.1 - - [09/Sep/2024 16:45:33] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 16:46:34,824-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-09 16:46:34,913-> * Restarting with stat->werkzeug
+WARNING->2024-09-09 16:46:37,091-> * Debugger is active!->werkzeug
+INFO->2024-09-09 16:46:37,098-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-09 16:46:40,103-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-09 16:46:40,186-> * Restarting with stat->werkzeug
+WARNING->2024-09-09 16:46:41,355-> * Debugger is active!->werkzeug
+INFO->2024-09-09 16:46:41,355-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-09 16:46:45,332-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-09 16:46:45,426-> * Restarting with stat->werkzeug
+WARNING->2024-09-09 16:46:47,604-> * Debugger is active!->werkzeug
+INFO->2024-09-09 16:46:47,604-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-09 16:46:50,086-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-09 16:46:50,304-> * Restarting with stat->werkzeug
+WARNING->2024-09-09 16:46:51,875-> * Debugger is active!->werkzeug
+INFO->2024-09-09 16:46:51,875-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-09 16:46:52,939-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-09 16:46:53,028-> * Restarting with stat->werkzeug
+WARNING->2024-09-09 16:46:55,388-> * Debugger is active!->werkzeug
+INFO->2024-09-09 16:46:55,408-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-09 16:46:56,477->127.0.0.1 - - [09/Sep/2024 16:46:56] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 16:46:56,547->127.0.0.1 - - [09/Sep/2024 16:46:56] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 16:46:56,705->127.0.0.1 - - [09/Sep/2024 16:46:56] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 16:46:56,782->127.0.0.1 - - [09/Sep/2024 16:46:56] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 16:46:56,791->127.0.0.1 - - [09/Sep/2024 16:46:56] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 16:46:56,812->127.0.0.1 - - [09/Sep/2024 16:46:56] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 16:47:00,070->127.0.0.1 - - [09/Sep/2024 16:47:00] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 16:47:30,599-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-09 16:47:30,692-> * Restarting with stat->werkzeug
+WARNING->2024-09-09 16:47:32,453-> * Debugger is active!->werkzeug
+INFO->2024-09-09 16:47:32,458-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-09 16:47:37,887-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-09 16:47:37,998-> * Restarting with stat->werkzeug
+WARNING->2024-09-09 16:47:39,325-> * Debugger is active!->werkzeug
+INFO->2024-09-09 16:47:39,341-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-09 16:47:42,135-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-09 16:47:42,222-> * Restarting with stat->werkzeug
+WARNING->2024-09-09 16:47:43,839-> * Debugger is active!->werkzeug
+INFO->2024-09-09 16:47:43,855-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-09 16:47:45,308->127.0.0.1 - - [09/Sep/2024 16:47:45] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 16:47:45,375->127.0.0.1 - - [09/Sep/2024 16:47:45] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 16:47:45,537->127.0.0.1 - - [09/Sep/2024 16:47:45] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 16:47:45,553->127.0.0.1 - - [09/Sep/2024 16:47:45] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 16:47:45,562->127.0.0.1 - - [09/Sep/2024 16:47:45] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 16:47:45,712->127.0.0.1 - - [09/Sep/2024 16:47:45] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+ERROR->2024-09-09 16:47:49,566->name 'pro' is not defined->root
+INFO->2024-09-09 16:47:49,569->127.0.0.1 - - [09/Sep/2024 16:47:49] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 16:47:59,345->127.0.0.1 - - [09/Sep/2024 16:47:59] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 16:47:59,361->127.0.0.1 - - [09/Sep/2024 16:47:59] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 16:47:59,377->127.0.0.1 - - [09/Sep/2024 16:47:59] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 16:47:59,393->127.0.0.1 - - [09/Sep/2024 16:47:59] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 16:47:59,402->127.0.0.1 - - [09/Sep/2024 16:47:59] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 16:47:59,441->127.0.0.1 - - [09/Sep/2024 16:47:59] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 16:48:00,398->127.0.0.1 - - [09/Sep/2024 16:48:00] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 16:48:00,432->127.0.0.1 - - [09/Sep/2024 16:48:00] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 16:48:00,439->127.0.0.1 - - [09/Sep/2024 16:48:00] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 16:48:00,458->127.0.0.1 - - [09/Sep/2024 16:48:00] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 16:48:00,471->127.0.0.1 - - [09/Sep/2024 16:48:00] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 16:48:00,509->127.0.0.1 - - [09/Sep/2024 16:48:00] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+ERROR->2024-09-09 16:48:02,749->name 'pro' is not defined->root
+INFO->2024-09-09 16:48:02,749->127.0.0.1 - - [09/Sep/2024 16:48:02] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 16:49:32,219-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-09 16:49:32,310-> * Restarting with stat->werkzeug
+WARNING->2024-09-09 16:49:33,704-> * Debugger is active!->werkzeug
+INFO->2024-09-09 16:49:33,719-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-09 16:49:45,380-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-09 16:49:45,532-> * Restarting with stat->werkzeug
+INFO->2024-09-09 16:52:36,866->[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000->werkzeug
+INFO->2024-09-09 16:52:36,872->[33mPress CTRL+C to quit[0m->werkzeug
+INFO->2024-09-09 16:52:36,875-> * Restarting with stat->werkzeug
+WARNING->2024-09-09 16:52:38,457-> * Debugger is active!->werkzeug
+INFO->2024-09-09 16:52:38,466-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-09 16:52:39,025->127.0.0.1 - - [09/Sep/2024 16:52:39] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 16:52:39,136->127.0.0.1 - - [09/Sep/2024 16:52:39] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 16:52:39,167->127.0.0.1 - - [09/Sep/2024 16:52:39] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 16:52:39,167->127.0.0.1 - - [09/Sep/2024 16:52:39] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 16:52:39,208->127.0.0.1 - - [09/Sep/2024 16:52:39] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 16:52:39,214->127.0.0.1 - - [09/Sep/2024 16:52:39] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 16:52:44,769->127.0.0.1 - - [09/Sep/2024 16:52:44] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 16:53:03,319->127.0.0.1 - - [09/Sep/2024 16:53:03] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 16:53:03,362->127.0.0.1 - - [09/Sep/2024 16:53:03] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 16:53:03,362->127.0.0.1 - - [09/Sep/2024 16:53:03] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 16:53:03,370->127.0.0.1 - - [09/Sep/2024 16:53:03] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 16:53:03,378->127.0.0.1 - - [09/Sep/2024 16:53:03] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 16:53:03,421->127.0.0.1 - - [09/Sep/2024 16:53:03] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 16:53:24,600->127.0.0.1 - - [09/Sep/2024 16:53:24] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 16:53:36,606->127.0.0.1 - - [09/Sep/2024 16:53:36] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 16:54:59,136->127.0.0.1 - - [09/Sep/2024 16:54:59] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 16:54:59,161->127.0.0.1 - - [09/Sep/2024 16:54:59] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 16:54:59,184->127.0.0.1 - - [09/Sep/2024 16:54:59] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 16:54:59,184->127.0.0.1 - - [09/Sep/2024 16:54:59] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 16:54:59,197->127.0.0.1 - - [09/Sep/2024 16:54:59] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 16:54:59,205->127.0.0.1 - - [09/Sep/2024 16:54:59] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 17:09:35,644->[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000->werkzeug
+INFO->2024-09-09 17:09:35,651->[33mPress CTRL+C to quit[0m->werkzeug
+INFO->2024-09-09 17:09:35,651-> * Restarting with stat->werkzeug
+WARNING->2024-09-09 17:09:36,954-> * Debugger is active!->werkzeug
+INFO->2024-09-09 17:09:36,961-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-09 17:11:11,297->127.0.0.1 - - [09/Sep/2024 17:11:11] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 17:12:55,141-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-09 17:12:55,253-> * Restarting with stat->werkzeug
+WARNING->2024-09-09 17:12:56,657-> * Debugger is active!->werkzeug
+INFO->2024-09-09 17:12:56,663-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-09 17:12:59,477-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-09 17:12:59,574-> * Restarting with stat->werkzeug
+WARNING->2024-09-09 17:13:01,299-> * Debugger is active!->werkzeug
+INFO->2024-09-09 17:13:01,300-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-09 17:13:03,789-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-09 17:13:03,876-> * Restarting with stat->werkzeug
+WARNING->2024-09-09 17:13:06,213-> * Debugger is active!->werkzeug
+INFO->2024-09-09 17:13:06,221-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-09 17:13:15,814-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-09 17:13:15,940-> * Restarting with stat->werkzeug
+WARNING->2024-09-09 17:13:17,139-> * Debugger is active!->werkzeug
+INFO->2024-09-09 17:13:17,139-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-09 17:13:32,809->127.0.0.1 - - [09/Sep/2024 17:13:32] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 17:14:38,987-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-09 17:14:39,106-> * Restarting with stat->werkzeug
+INFO->2024-09-09 17:15:08,863->[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000->werkzeug
+INFO->2024-09-09 17:15:08,863->[33mPress CTRL+C to quit[0m->werkzeug
+INFO->2024-09-09 17:15:08,863-> * Restarting with stat->werkzeug
+WARNING->2024-09-09 17:15:10,205-> * Debugger is active!->werkzeug
+INFO->2024-09-09 17:15:10,221-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-09 17:15:10,691->127.0.0.1 - - [09/Sep/2024 17:15:10] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 17:15:10,787->127.0.0.1 - - [09/Sep/2024 17:15:10] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 17:15:10,801->127.0.0.1 - - [09/Sep/2024 17:15:10] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 17:15:10,833->127.0.0.1 - - [09/Sep/2024 17:15:10] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 17:15:10,849->127.0.0.1 - - [09/Sep/2024 17:15:10] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 17:15:10,853->127.0.0.1 - - [09/Sep/2024 17:15:10] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-09 17:16:02,415->127.0.0.1 - - [09/Sep/2024 17:16:02] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-09 17:48:05,414->[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000->werkzeug
+INFO->2024-09-09 17:48:05,414->[33mPress CTRL+C to quit[0m->werkzeug
+INFO->2024-09-09 17:48:05,418-> * Restarting with stat->werkzeug
+WARNING->2024-09-09 17:48:06,228-> * Debugger is active!->werkzeug
+INFO->2024-09-09 17:48:06,228-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-09 17:48:19,349->127.0.0.1 - - [09/Sep/2024 17:48:19] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 07:53:53,394->127.0.0.1 - - [10/Sep/2024 07:53:53] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 07:54:45,608->127.0.0.1 - - [10/Sep/2024 07:54:45] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 07:54:45,761->127.0.0.1 - - [10/Sep/2024 07:54:45] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 07:54:45,771->127.0.0.1 - - [10/Sep/2024 07:54:45] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 07:54:45,771->127.0.0.1 - - [10/Sep/2024 07:54:45] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 07:54:45,782->127.0.0.1 - - [10/Sep/2024 07:54:45] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 07:54:45,800->127.0.0.1 - - [10/Sep/2024 07:54:45] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 07:54:55,322->127.0.0.1 - - [10/Sep/2024 07:54:55] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 07:55:06,825->127.0.0.1 - - [10/Sep/2024 07:55:06] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 07:55:24,664->127.0.0.1 - - [10/Sep/2024 07:55:24] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:07:12,987->[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000->werkzeug
+INFO->2024-09-10 14:07:12,996->[33mPress CTRL+C to quit[0m->werkzeug
+INFO->2024-09-10 14:07:13,020-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 14:07:14,403-> * Debugger is active!->werkzeug
+INFO->2024-09-10 14:07:14,403-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 14:07:48,541->127.0.0.1 - - [10/Sep/2024 14:07:48] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:07:48,692->127.0.0.1 - - [10/Sep/2024 14:07:48] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:07:48,910->127.0.0.1 - - [10/Sep/2024 14:07:48] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:07:48,910->127.0.0.1 - - [10/Sep/2024 14:07:48] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:07:48,920->127.0.0.1 - - [10/Sep/2024 14:07:48] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:07:48,930->127.0.0.1 - - [10/Sep/2024 14:07:48] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:08:02,234->127.0.0.1 - - [10/Sep/2024 14:08:02] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:08:37,643-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-10 14:08:37,728-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 14:08:39,283-> * Debugger is active!->werkzeug
+INFO->2024-09-10 14:08:39,283-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 14:08:45,260-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-10 14:08:45,351-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 14:08:46,984-> * Debugger is active!->werkzeug
+INFO->2024-09-10 14:08:46,991-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 14:08:52,794-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-10 14:08:52,909-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 14:08:54,289-> * Debugger is active!->werkzeug
+INFO->2024-09-10 14:08:54,292-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 14:09:03,082->127.0.0.1 - - [10/Sep/2024 14:09:03] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:09:03,131->127.0.0.1 - - [10/Sep/2024 14:09:03] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:09:03,209->127.0.0.1 - - [10/Sep/2024 14:09:03] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:09:03,223->127.0.0.1 - - [10/Sep/2024 14:09:03] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:09:03,226->127.0.0.1 - - [10/Sep/2024 14:09:03] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:09:03,241->127.0.0.1 - - [10/Sep/2024 14:09:03] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:09:12,746->127.0.0.1 - - [10/Sep/2024 14:09:12] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:10:39,478->[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000->werkzeug
+INFO->2024-09-10 14:10:39,478->[33mPress CTRL+C to quit[0m->werkzeug
+INFO->2024-09-10 14:10:39,497-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 14:10:40,857-> * Debugger is active!->werkzeug
+INFO->2024-09-10 14:10:40,857-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 14:11:16,563->127.0.0.1 - - [10/Sep/2024 14:11:16] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:11:16,622->127.0.0.1 - - [10/Sep/2024 14:11:16] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:11:16,720->127.0.0.1 - - [10/Sep/2024 14:11:16] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:11:16,724->127.0.0.1 - - [10/Sep/2024 14:11:16] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:11:16,733->127.0.0.1 - - [10/Sep/2024 14:11:16] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:11:16,744->127.0.0.1 - - [10/Sep/2024 14:11:16] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+ERROR->2024-09-10 14:11:27,817->'str' object is not callable->root
+INFO->2024-09-10 14:11:27,817->127.0.0.1 - - [10/Sep/2024 14:11:27] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:13:08,401-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-10 14:13:08,518-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 14:13:09,768-> * Debugger is active!->werkzeug
+INFO->2024-09-10 14:13:09,768-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 14:13:19,664->127.0.0.1 - - [10/Sep/2024 14:13:19] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:13:19,738->127.0.0.1 - - [10/Sep/2024 14:13:19] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:13:19,810->127.0.0.1 - - [10/Sep/2024 14:13:19] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:13:19,827->127.0.0.1 - - [10/Sep/2024 14:13:19] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:13:19,827->127.0.0.1 - - [10/Sep/2024 14:13:19] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:13:19,843->127.0.0.1 - - [10/Sep/2024 14:13:19] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+ERROR->2024-09-10 14:13:27,763->[WinError 3] O sistema n�o pode encontrar o caminho especificado: 'projeto_chat_suprimentos/basesViagens'->root
+INFO->2024-09-10 14:13:27,763->127.0.0.1 - - [10/Sep/2024 14:13:27] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:13:57,116-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-10 14:13:57,212-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 14:13:58,880-> * Debugger is active!->werkzeug
+INFO->2024-09-10 14:13:58,892-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 14:14:12,061-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-10 14:14:12,139-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 14:14:13,532-> * Debugger is active!->werkzeug
+INFO->2024-09-10 14:14:13,537-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 14:14:38,481-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-10 14:14:38,617-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 14:14:40,232-> * Debugger is active!->werkzeug
+INFO->2024-09-10 14:14:40,232-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 14:14:46,702->[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000->werkzeug
+INFO->2024-09-10 14:14:46,702->[33mPress CTRL+C to quit[0m->werkzeug
+INFO->2024-09-10 14:14:46,708-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 14:14:48,609-> * Debugger is active!->werkzeug
+INFO->2024-09-10 14:14:48,615-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 14:14:50,006->127.0.0.1 - - [10/Sep/2024 14:14:50] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:14:50,066->127.0.0.1 - - [10/Sep/2024 14:14:50] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:14:50,169->127.0.0.1 - - [10/Sep/2024 14:14:50] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:14:50,169->127.0.0.1 - - [10/Sep/2024 14:14:50] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:14:50,174->127.0.0.1 - - [10/Sep/2024 14:14:50] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:14:50,231->127.0.0.1 - - [10/Sep/2024 14:14:50] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+ERROR->2024-09-10 14:15:01,621->[WinError 3] O sistema n�o pode encontrar o caminho especificado: 'projeto_chat_suprimentos/basesViagens'->root
+INFO->2024-09-10 14:15:01,622->127.0.0.1 - - [10/Sep/2024 14:15:01] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:16:09,984-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-10 14:16:10,080-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 14:16:11,399-> * Debugger is active!->werkzeug
+INFO->2024-09-10 14:16:11,399-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 14:16:20,506-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-10 14:16:20,627-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 14:16:22,071-> * Debugger is active!->werkzeug
+INFO->2024-09-10 14:16:22,081-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 14:16:24,700->127.0.0.1 - - [10/Sep/2024 14:16:24] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:16:24,742->127.0.0.1 - - [10/Sep/2024 14:16:24] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:16:24,886->127.0.0.1 - - [10/Sep/2024 14:16:24] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:16:24,902->127.0.0.1 - - [10/Sep/2024 14:16:24] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:16:24,902->127.0.0.1 - - [10/Sep/2024 14:16:24] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:16:24,902->127.0.0.1 - - [10/Sep/2024 14:16:24] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+ERROR->2024-09-10 14:16:34,369->[WinError 3] O sistema n�o pode encontrar o caminho especificado: 'projeto_chat_suprimentos/basesViagens'->root
+INFO->2024-09-10 14:16:34,369->127.0.0.1 - - [10/Sep/2024 14:16:34] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:19:35,761-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-10 14:19:35,915-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 14:19:37,261-> * Debugger is active!->werkzeug
+INFO->2024-09-10 14:19:37,261-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 14:19:43,665-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-10 14:19:43,841-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 14:19:45,203-> * Debugger is active!->werkzeug
+INFO->2024-09-10 14:19:45,213-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 14:19:46,318->127.0.0.1 - - [10/Sep/2024 14:19:46] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:19:46,376->127.0.0.1 - - [10/Sep/2024 14:19:46] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:19:46,581->127.0.0.1 - - [10/Sep/2024 14:19:46] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:19:46,586->127.0.0.1 - - [10/Sep/2024 14:19:46] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:19:46,591->127.0.0.1 - - [10/Sep/2024 14:19:46] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:19:46,610->127.0.0.1 - - [10/Sep/2024 14:19:46] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+ERROR->2024-09-10 14:19:58,337->[WinError 3] O sistema n�o pode encontrar o caminho especificado: 'projeto_chat_suprimentos/basesViagens'->root
+INFO->2024-09-10 14:19:58,339->127.0.0.1 - - [10/Sep/2024 14:19:58] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:20:13,236-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-10 14:20:13,345-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 14:20:14,881-> * Debugger is active!->werkzeug
+INFO->2024-09-10 14:20:14,882-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 14:21:08,216-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-10 14:21:08,340-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 14:21:09,928-> * Debugger is active!->werkzeug
+INFO->2024-09-10 14:21:09,928-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 14:21:12,985->127.0.0.1 - - [10/Sep/2024 14:21:12] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:21:13,031->127.0.0.1 - - [10/Sep/2024 14:21:13] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:21:13,141->127.0.0.1 - - [10/Sep/2024 14:21:13] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:21:13,145->127.0.0.1 - - [10/Sep/2024 14:21:13] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:21:13,149->127.0.0.1 - - [10/Sep/2024 14:21:13] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:21:13,158->127.0.0.1 - - [10/Sep/2024 14:21:13] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+ERROR->2024-09-10 14:21:22,621->[WinError 3] O sistema n�o pode encontrar o caminho especificado: 'projeto_chat_suprimentos/basesViagens'->root
+INFO->2024-09-10 14:21:22,621->127.0.0.1 - - [10/Sep/2024 14:21:22] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:22:38,798-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-10 14:22:38,952-> * Restarting with stat->werkzeug
+INFO->2024-09-10 14:22:59,127->[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000->werkzeug
+INFO->2024-09-10 14:22:59,127->[33mPress CTRL+C to quit[0m->werkzeug
+INFO->2024-09-10 14:22:59,127-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 14:23:00,540-> * Debugger is active!->werkzeug
+INFO->2024-09-10 14:23:00,541-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 14:23:07,212->127.0.0.1 - - [10/Sep/2024 14:23:07] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:23:07,288->127.0.0.1 - - [10/Sep/2024 14:23:07] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:23:07,388->127.0.0.1 - - [10/Sep/2024 14:23:07] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:23:07,404->127.0.0.1 - - [10/Sep/2024 14:23:07] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:23:07,407->127.0.0.1 - - [10/Sep/2024 14:23:07] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:23:07,420->127.0.0.1 - - [10/Sep/2024 14:23:07] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+ERROR->2024-09-10 14:23:16,263->[WinError 3] O sistema n�o pode encontrar o caminho especificado: 'projeto_chat_suprimentos/basesViagens'->root
+INFO->2024-09-10 14:23:16,265->127.0.0.1 - - [10/Sep/2024 14:23:16] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:25:00,035-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-10 14:25:00,155-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 14:25:02,149-> * Debugger is active!->werkzeug
+INFO->2024-09-10 14:25:02,157-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 14:25:09,368-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-10 14:25:09,470-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 14:25:11,211-> * Debugger is active!->werkzeug
+INFO->2024-09-10 14:25:11,211-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 14:25:14,485-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-10 14:25:14,566-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 14:25:16,891-> * Debugger is active!->werkzeug
+INFO->2024-09-10 14:25:16,891-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 14:25:29,345-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-10 14:25:29,464-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 14:25:30,902-> * Debugger is active!->werkzeug
+INFO->2024-09-10 14:25:30,923-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 14:25:33,228-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-10 14:25:33,344-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 14:25:34,581-> * Debugger is active!->werkzeug
+INFO->2024-09-10 14:25:34,581-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 14:25:58,398->127.0.0.1 - - [10/Sep/2024 14:25:58] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:25:58,492->127.0.0.1 - - [10/Sep/2024 14:25:58] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:25:58,523->127.0.0.1 - - [10/Sep/2024 14:25:58] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:25:58,523->127.0.0.1 - - [10/Sep/2024 14:25:58] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:25:58,555->127.0.0.1 - - [10/Sep/2024 14:25:58] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:25:58,571->127.0.0.1 - - [10/Sep/2024 14:25:58] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+ERROR->2024-09-10 14:26:08,547->[WinError 3] O sistema n�o pode encontrar o caminho especificado: 'projeto_chat_suprimentos/basesViagens'->root
+INFO->2024-09-10 14:26:08,547->127.0.0.1 - - [10/Sep/2024 14:26:08] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:27:31,740-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-10 14:27:31,834-> * Restarting with stat->werkzeug
+INFO->2024-09-10 14:28:07,957->[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000->werkzeug
+INFO->2024-09-10 14:28:07,957->[33mPress CTRL+C to quit[0m->werkzeug
+INFO->2024-09-10 14:28:07,968-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 14:28:09,748-> * Debugger is active!->werkzeug
+INFO->2024-09-10 14:28:09,751-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 14:28:12,164->127.0.0.1 - - [10/Sep/2024 14:28:12] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:28:12,232->127.0.0.1 - - [10/Sep/2024 14:28:12] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:28:12,280->127.0.0.1 - - [10/Sep/2024 14:28:12] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:28:12,291->127.0.0.1 - - [10/Sep/2024 14:28:12] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:28:12,307->127.0.0.1 - - [10/Sep/2024 14:28:12] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:28:12,323->127.0.0.1 - - [10/Sep/2024 14:28:12] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+ERROR->2024-09-10 14:28:25,460->[WinError 3] O sistema n�o pode encontrar o caminho especificado: 'projeto_chat_suprimentos/basesViagens'->root
+INFO->2024-09-10 14:28:25,460->127.0.0.1 - - [10/Sep/2024 14:28:25] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:28:55,865-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-10 14:28:55,964-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 14:28:57,498-> * Debugger is active!->werkzeug
+INFO->2024-09-10 14:28:57,499-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 14:29:47,852-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-10 14:29:47,956-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 14:29:49,409-> * Debugger is active!->werkzeug
+INFO->2024-09-10 14:29:49,420-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 14:29:59,251->127.0.0.1 - - [10/Sep/2024 14:29:59] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:29:59,304->127.0.0.1 - - [10/Sep/2024 14:29:59] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:29:59,409->127.0.0.1 - - [10/Sep/2024 14:29:59] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:29:59,409->127.0.0.1 - - [10/Sep/2024 14:29:59] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:29:59,409->127.0.0.1 - - [10/Sep/2024 14:29:59] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:29:59,440->127.0.0.1 - - [10/Sep/2024 14:29:59] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+ERROR->2024-09-10 14:30:07,982->[WinError 3] O sistema n�o pode encontrar o caminho especificado: 'projeto_chat_suprimentos/basesViagens'->root
+INFO->2024-09-10 14:30:07,982->127.0.0.1 - - [10/Sep/2024 14:30:07] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:31:17,282-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-10 14:31:17,406-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 14:31:18,845-> * Debugger is active!->werkzeug
+INFO->2024-09-10 14:31:18,850-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 14:31:46,322-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-10 14:31:46,405-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 14:31:48,076-> * Debugger is active!->werkzeug
+INFO->2024-09-10 14:31:48,076-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 14:31:52,515-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-10 14:31:52,588-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 14:31:54,177-> * Debugger is active!->werkzeug
+INFO->2024-09-10 14:31:54,177-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 14:32:02,761->127.0.0.1 - - [10/Sep/2024 14:32:02] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:32:02,867->127.0.0.1 - - [10/Sep/2024 14:32:02] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:32:02,867->127.0.0.1 - - [10/Sep/2024 14:32:02] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:32:02,899->127.0.0.1 - - [10/Sep/2024 14:32:02] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:32:02,914->127.0.0.1 - - [10/Sep/2024 14:32:02] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:32:02,930->127.0.0.1 - - [10/Sep/2024 14:32:02] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:32:12,822->127.0.0.1 - - [10/Sep/2024 14:32:12] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:33:56,283-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-10 14:33:56,362-> * Restarting with stat->werkzeug
+INFO->2024-09-10 14:37:05,230->[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000->werkzeug
+INFO->2024-09-10 14:37:05,231->[33mPress CTRL+C to quit[0m->werkzeug
+INFO->2024-09-10 14:37:05,235-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 14:37:06,484-> * Debugger is active!->werkzeug
+INFO->2024-09-10 14:37:06,487-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 14:37:17,083->127.0.0.1 - - [10/Sep/2024 14:37:17] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:37:17,167->127.0.0.1 - - [10/Sep/2024 14:37:17] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:37:17,226->127.0.0.1 - - [10/Sep/2024 14:37:17] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:37:17,242->127.0.0.1 - - [10/Sep/2024 14:37:17] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:37:17,244->127.0.0.1 - - [10/Sep/2024 14:37:17] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:37:17,259->127.0.0.1 - - [10/Sep/2024 14:37:17] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:37:27,742->127.0.0.1 - - [10/Sep/2024 14:37:27] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:38:09,820->127.0.0.1 - - [10/Sep/2024 14:38:09] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:38:09,840->127.0.0.1 - - [10/Sep/2024 14:38:09] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:38:09,859->127.0.0.1 - - [10/Sep/2024 14:38:09] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:38:09,875->127.0.0.1 - - [10/Sep/2024 14:38:09] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:38:09,899->127.0.0.1 - - [10/Sep/2024 14:38:09] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:38:09,906->127.0.0.1 - - [10/Sep/2024 14:38:09] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:38:22,583->127.0.0.1 - - [10/Sep/2024 14:38:22] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:38:51,731-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-10 14:38:51,837-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 14:38:53,678-> * Debugger is active!->werkzeug
+INFO->2024-09-10 14:38:53,687-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 14:38:59,283->127.0.0.1 - - [10/Sep/2024 14:38:59] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:38:59,331->127.0.0.1 - - [10/Sep/2024 14:38:59] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:38:59,468->127.0.0.1 - - [10/Sep/2024 14:38:59] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:38:59,475->127.0.0.1 - - [10/Sep/2024 14:38:59] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:38:59,480->127.0.0.1 - - [10/Sep/2024 14:38:59] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:38:59,490->127.0.0.1 - - [10/Sep/2024 14:38:59] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:39:18,691->127.0.0.1 - - [10/Sep/2024 14:39:18] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:39:50,915-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-10 14:39:51,002-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 14:39:52,111-> * Debugger is active!->werkzeug
+INFO->2024-09-10 14:39:52,118-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 14:39:59,754-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-10 14:39:59,839-> * Restarting with stat->werkzeug
+INFO->2024-09-10 14:41:36,609->[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000->werkzeug
+INFO->2024-09-10 14:41:36,609->[33mPress CTRL+C to quit[0m->werkzeug
+INFO->2024-09-10 14:41:36,619-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 14:41:37,912-> * Debugger is active!->werkzeug
+INFO->2024-09-10 14:41:37,916-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 14:41:38,719->127.0.0.1 - - [10/Sep/2024 14:41:38] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:41:38,927->127.0.0.1 - - [10/Sep/2024 14:41:38] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:41:38,937->127.0.0.1 - - [10/Sep/2024 14:41:38] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:41:38,937->127.0.0.1 - - [10/Sep/2024 14:41:38] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:41:39,002->127.0.0.1 - - [10/Sep/2024 14:41:39] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:41:39,011->127.0.0.1 - - [10/Sep/2024 14:41:39] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:41:51,157->127.0.0.1 - - [10/Sep/2024 14:41:51] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:42:14,175-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-10 14:42:14,349-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 14:42:16,954-> * Debugger is active!->werkzeug
+INFO->2024-09-10 14:42:16,959-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 14:42:32,774->127.0.0.1 - - [10/Sep/2024 14:42:32] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:42:32,825->127.0.0.1 - - [10/Sep/2024 14:42:32] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:42:32,938->127.0.0.1 - - [10/Sep/2024 14:42:32] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:42:32,955->127.0.0.1 - - [10/Sep/2024 14:42:32] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:42:32,955->127.0.0.1 - - [10/Sep/2024 14:42:32] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:42:32,978->127.0.0.1 - - [10/Sep/2024 14:42:32] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:42:54,427->127.0.0.1 - - [10/Sep/2024 14:42:54] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:44:19,153-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-10 14:44:19,347-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 14:44:21,788-> * Debugger is active!->werkzeug
+INFO->2024-09-10 14:44:21,788-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 14:44:24,688-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-10 14:44:24,892-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 14:44:26,715-> * Debugger is active!->werkzeug
+INFO->2024-09-10 14:44:26,719-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 14:44:29,260-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-10 14:44:29,425-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 14:44:31,257-> * Debugger is active!->werkzeug
+INFO->2024-09-10 14:44:31,259-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 14:44:37,882->127.0.0.1 - - [10/Sep/2024 14:44:37] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:44:37,938->127.0.0.1 - - [10/Sep/2024 14:44:37] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:44:38,015->127.0.0.1 - - [10/Sep/2024 14:44:38] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:44:38,015->127.0.0.1 - - [10/Sep/2024 14:44:38] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:44:38,031->127.0.0.1 - - [10/Sep/2024 14:44:38] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:44:38,031->127.0.0.1 - - [10/Sep/2024 14:44:38] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+ERROR->2024-09-10 14:44:51,351->name 'pergunta' is not defined->root
+INFO->2024-09-10 14:44:51,353->127.0.0.1 - - [10/Sep/2024 14:44:51] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:45:07,790-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-10 14:45:07,899-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 14:45:09,238-> * Debugger is active!->werkzeug
+INFO->2024-09-10 14:45:09,239-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 14:45:15,991->127.0.0.1 - - [10/Sep/2024 14:45:15] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:45:16,082->127.0.0.1 - - [10/Sep/2024 14:45:16] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:45:16,115->127.0.0.1 - - [10/Sep/2024 14:45:16] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:45:16,153->127.0.0.1 - - [10/Sep/2024 14:45:16] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:45:16,153->127.0.0.1 - - [10/Sep/2024 14:45:16] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:45:16,170->127.0.0.1 - - [10/Sep/2024 14:45:16] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+ERROR->2024-09-10 14:45:31,775->[WinError 3] O sistema n�o pode encontrar o caminho especificado: 'projeto_chat_suprimentos/basesViagens'->root
+INFO->2024-09-10 14:45:31,777->127.0.0.1 - - [10/Sep/2024 14:45:31] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:47:03,823-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-10 14:47:04,014-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 14:47:05,401-> * Debugger is active!->werkzeug
+INFO->2024-09-10 14:47:05,406-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 14:47:07,066-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-10 14:47:07,187-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 14:47:09,096-> * Debugger is active!->werkzeug
+INFO->2024-09-10 14:47:09,096-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 14:47:12,154-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-10 14:47:12,294-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 14:47:13,997-> * Debugger is active!->werkzeug
+INFO->2024-09-10 14:47:13,997-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 14:47:14,863->127.0.0.1 - - [10/Sep/2024 14:47:14] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:47:14,901->127.0.0.1 - - [10/Sep/2024 14:47:14] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:47:15,018->127.0.0.1 - - [10/Sep/2024 14:47:15] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:47:15,026->127.0.0.1 - - [10/Sep/2024 14:47:15] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:47:15,032->127.0.0.1 - - [10/Sep/2024 14:47:15] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:47:15,047->127.0.0.1 - - [10/Sep/2024 14:47:15] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+ERROR->2024-09-10 14:47:22,778->[WinError 3] O sistema n�o pode encontrar o caminho especificado: 'projeto_chat_suprimentos/basesViagens'->root
+INFO->2024-09-10 14:47:22,779->127.0.0.1 - - [10/Sep/2024 14:47:22] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:48:08,693->127.0.0.1 - - [10/Sep/2024 14:48:08] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:48:08,708->127.0.0.1 - - [10/Sep/2024 14:48:08] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:48:08,708->127.0.0.1 - - [10/Sep/2024 14:48:08] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:48:08,723->127.0.0.1 - - [10/Sep/2024 14:48:08] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:48:08,726->127.0.0.1 - - [10/Sep/2024 14:48:08] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:48:08,754->127.0.0.1 - - [10/Sep/2024 14:48:08] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+ERROR->2024-09-10 14:48:21,437->[WinError 3] O sistema n�o pode encontrar o caminho especificado: 'projeto_chat_suprimentos/basesViagens'->root
+INFO->2024-09-10 14:48:21,437->127.0.0.1 - - [10/Sep/2024 14:48:21] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:53:42,444-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste3.py', reloading->werkzeug
+INFO->2024-09-10 14:53:42,621-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 14:53:45,190-> * Debugger is active!->werkzeug
+INFO->2024-09-10 14:53:45,190-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 14:54:28,417->[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000->werkzeug
+INFO->2024-09-10 14:54:28,417->[33mPress CTRL+C to quit[0m->werkzeug
+INFO->2024-09-10 14:54:28,417-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 14:54:30,194-> * Debugger is active!->werkzeug
+INFO->2024-09-10 14:54:30,194-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 14:54:35,095->127.0.0.1 - - [10/Sep/2024 14:54:35] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:54:35,249->127.0.0.1 - - [10/Sep/2024 14:54:35] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:54:35,249->127.0.0.1 - - [10/Sep/2024 14:54:35] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:54:35,256->127.0.0.1 - - [10/Sep/2024 14:54:35] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:54:35,274->127.0.0.1 - - [10/Sep/2024 14:54:35] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:54:35,280->127.0.0.1 - - [10/Sep/2024 14:54:35] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:54:48,101->127.0.0.1 - - [10/Sep/2024 14:54:48] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:55:03,564->127.0.0.1 - - [10/Sep/2024 14:55:03] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:58:49,341->127.0.0.1 - - [10/Sep/2024 14:58:49] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:58:49,383->127.0.0.1 - - [10/Sep/2024 14:58:49] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:58:49,396->127.0.0.1 - - [10/Sep/2024 14:58:49] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:58:49,417->127.0.0.1 - - [10/Sep/2024 14:58:49] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:58:49,433->127.0.0.1 - - [10/Sep/2024 14:58:49] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:58:49,465->127.0.0.1 - - [10/Sep/2024 14:58:49] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:59:03,072->127.0.0.1 - - [10/Sep/2024 14:59:03] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:59:46,889->127.0.0.1 - - [10/Sep/2024 14:59:46] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:59:46,902->127.0.0.1 - - [10/Sep/2024 14:59:46] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:59:46,910->127.0.0.1 - - [10/Sep/2024 14:59:46] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:59:46,910->127.0.0.1 - - [10/Sep/2024 14:59:46] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 14:59:46,931->127.0.0.1 - - [10/Sep/2024 14:59:46] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 14:59:46,940->127.0.0.1 - - [10/Sep/2024 14:59:46] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:00:00,081->127.0.0.1 - - [10/Sep/2024 15:00:00] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:00:13,790->127.0.0.1 - - [10/Sep/2024 15:00:13] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:01:07,756-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste3.py', reloading->werkzeug
+INFO->2024-09-10 15:01:07,903-> * Restarting with stat->werkzeug
+INFO->2024-09-10 15:02:21,293->[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000->werkzeug
+INFO->2024-09-10 15:02:21,293->[33mPress CTRL+C to quit[0m->werkzeug
+INFO->2024-09-10 15:02:21,293-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 15:02:22,803-> * Debugger is active!->werkzeug
+INFO->2024-09-10 15:02:22,808-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 15:02:24,067->127.0.0.1 - - [10/Sep/2024 15:02:24] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:02:24,183->127.0.0.1 - - [10/Sep/2024 15:02:24] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:02:24,227->127.0.0.1 - - [10/Sep/2024 15:02:24] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:02:24,228->127.0.0.1 - - [10/Sep/2024 15:02:24] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:02:37,851->127.0.0.1 - - [10/Sep/2024 15:02:37] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:02:37,875->127.0.0.1 - - [10/Sep/2024 15:02:37] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:02:37,902->127.0.0.1 - - [10/Sep/2024 15:02:37] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:02:37,907->127.0.0.1 - - [10/Sep/2024 15:02:37] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:02:37,914->127.0.0.1 - - [10/Sep/2024 15:02:37] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:02:37,930->127.0.0.1 - - [10/Sep/2024 15:02:37] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:02:48,819->127.0.0.1 - - [10/Sep/2024 15:02:48] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:03:52,623->127.0.0.1 - - [10/Sep/2024 15:03:52] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:03:52,654->127.0.0.1 - - [10/Sep/2024 15:03:52] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:03:52,662->127.0.0.1 - - [10/Sep/2024 15:03:52] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:03:52,677->127.0.0.1 - - [10/Sep/2024 15:03:52] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:03:52,688->127.0.0.1 - - [10/Sep/2024 15:03:52] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:03:52,698->127.0.0.1 - - [10/Sep/2024 15:03:52] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:04:04,885->127.0.0.1 - - [10/Sep/2024 15:04:04] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:04:28,388->127.0.0.1 - - [10/Sep/2024 15:04:28] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:05:21,485->127.0.0.1 - - [10/Sep/2024 15:05:21] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:06:41,901->127.0.0.1 - - [10/Sep/2024 15:06:41] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:06:41,924->127.0.0.1 - - [10/Sep/2024 15:06:41] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:06:42,030->127.0.0.1 - - [10/Sep/2024 15:06:42] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:06:42,234->127.0.0.1 - - [10/Sep/2024 15:06:42] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:06:42,234->127.0.0.1 - - [10/Sep/2024 15:06:42] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:06:42,259->127.0.0.1 - - [10/Sep/2024 15:06:42] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:06:53,969->127.0.0.1 - - [10/Sep/2024 15:06:53] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:07:45,005->127.0.0.1 - - [10/Sep/2024 15:07:45] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:07:45,043->127.0.0.1 - - [10/Sep/2024 15:07:45] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:07:45,045->127.0.0.1 - - [10/Sep/2024 15:07:45] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:07:45,045->127.0.0.1 - - [10/Sep/2024 15:07:45] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:07:45,089->127.0.0.1 - - [10/Sep/2024 15:07:45] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:07:45,089->127.0.0.1 - - [10/Sep/2024 15:07:45] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:07:56,475->127.0.0.1 - - [10/Sep/2024 15:07:56] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:09:01,099->127.0.0.1 - - [10/Sep/2024 15:09:01] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:09:01,117->127.0.0.1 - - [10/Sep/2024 15:09:01] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:09:01,117->127.0.0.1 - - [10/Sep/2024 15:09:01] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:09:01,130->127.0.0.1 - - [10/Sep/2024 15:09:01] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:09:01,141->127.0.0.1 - - [10/Sep/2024 15:09:01] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:09:01,157->127.0.0.1 - - [10/Sep/2024 15:09:01] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:09:14,081->127.0.0.1 - - [10/Sep/2024 15:09:14] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:09:30,560->127.0.0.1 - - [10/Sep/2024 15:09:30] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:11:34,963->127.0.0.1 - - [10/Sep/2024 15:11:34] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:11:34,990->127.0.0.1 - - [10/Sep/2024 15:11:34] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:11:35,028->127.0.0.1 - - [10/Sep/2024 15:11:35] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:11:35,038->127.0.0.1 - - [10/Sep/2024 15:11:35] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:11:35,048->127.0.0.1 - - [10/Sep/2024 15:11:35] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:11:35,073->127.0.0.1 - - [10/Sep/2024 15:11:35] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:11:45,741->127.0.0.1 - - [10/Sep/2024 15:11:45] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:12:06,312->127.0.0.1 - - [10/Sep/2024 15:12:06] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:15:15,289->127.0.0.1 - - [10/Sep/2024 15:15:15] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:15:15,330->127.0.0.1 - - [10/Sep/2024 15:15:15] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:15:15,331->127.0.0.1 - - [10/Sep/2024 15:15:15] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:15:15,345->127.0.0.1 - - [10/Sep/2024 15:15:15] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:15:15,375->127.0.0.1 - - [10/Sep/2024 15:15:15] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:15:15,416->127.0.0.1 - - [10/Sep/2024 15:15:15] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:15:28,957->127.0.0.1 - - [10/Sep/2024 15:15:28] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:16:55,378->127.0.0.1 - - [10/Sep/2024 15:16:55] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:16:55,395->127.0.0.1 - - [10/Sep/2024 15:16:55] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:16:55,400->127.0.0.1 - - [10/Sep/2024 15:16:55] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:16:55,407->127.0.0.1 - - [10/Sep/2024 15:16:55] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:16:55,428->127.0.0.1 - - [10/Sep/2024 15:16:55] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:16:55,443->127.0.0.1 - - [10/Sep/2024 15:16:55] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:22:46,510->127.0.0.1 - - [10/Sep/2024 15:22:46] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:25:42,321->127.0.0.1 - - [10/Sep/2024 15:25:42] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:25:42,354->127.0.0.1 - - [10/Sep/2024 15:25:42] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:25:42,362->127.0.0.1 - - [10/Sep/2024 15:25:42] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:25:42,432->127.0.0.1 - - [10/Sep/2024 15:25:42] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:25:42,453->127.0.0.1 - - [10/Sep/2024 15:25:42] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:25:42,469->127.0.0.1 - - [10/Sep/2024 15:25:42] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:25:57,742->127.0.0.1 - - [10/Sep/2024 15:25:57] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:27:43,668->127.0.0.1 - - [10/Sep/2024 15:27:43] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:32:49,306->127.0.0.1 - - [10/Sep/2024 15:32:49] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:32:49,552->127.0.0.1 - - [10/Sep/2024 15:32:49] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:32:49,703->127.0.0.1 - - [10/Sep/2024 15:32:49] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:32:49,735->127.0.0.1 - - [10/Sep/2024 15:32:49] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:32:49,745->127.0.0.1 - - [10/Sep/2024 15:32:49] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:32:49,786->127.0.0.1 - - [10/Sep/2024 15:32:49] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:35:49,586->127.0.0.1 - - [10/Sep/2024 15:35:49] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:36:12,272->127.0.0.1 - - [10/Sep/2024 15:36:12] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:40:32,982-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste3.py', reloading->werkzeug
+INFO->2024-09-10 15:40:33,141-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 15:40:34,541-> * Debugger is active!->werkzeug
+INFO->2024-09-10 15:40:34,541-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 15:40:41,708-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste3.py', reloading->werkzeug
+INFO->2024-09-10 15:40:41,855-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 15:40:43,377-> * Debugger is active!->werkzeug
+INFO->2024-09-10 15:40:43,381-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 15:40:49,155-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste3.py', reloading->werkzeug
+INFO->2024-09-10 15:40:49,229-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 15:40:50,364-> * Debugger is active!->werkzeug
+INFO->2024-09-10 15:40:50,364-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 15:41:24,582->127.0.0.1 - - [10/Sep/2024 15:41:24] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:41:24,659->127.0.0.1 - - [10/Sep/2024 15:41:24] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:41:24,775->127.0.0.1 - - [10/Sep/2024 15:41:24] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:41:24,797->127.0.0.1 - - [10/Sep/2024 15:41:24] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:41:24,811->127.0.0.1 - - [10/Sep/2024 15:41:24] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:41:24,848->127.0.0.1 - - [10/Sep/2024 15:41:24] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:41:40,271->127.0.0.1 - - [10/Sep/2024 15:41:40] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:43:56,281->127.0.0.1 - - [10/Sep/2024 15:43:56] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:43:56,369->127.0.0.1 - - [10/Sep/2024 15:43:56] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:43:56,384->127.0.0.1 - - [10/Sep/2024 15:43:56] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:43:56,388->127.0.0.1 - - [10/Sep/2024 15:43:56] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:43:56,402->127.0.0.1 - - [10/Sep/2024 15:43:56] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:43:56,409->127.0.0.1 - - [10/Sep/2024 15:43:56] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:44:07,838->127.0.0.1 - - [10/Sep/2024 15:44:07] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:45:31,788->[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000->werkzeug
+INFO->2024-09-10 15:45:31,788->[33mPress CTRL+C to quit[0m->werkzeug
+INFO->2024-09-10 15:45:31,791-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 15:45:32,859-> * Debugger is active!->werkzeug
+INFO->2024-09-10 15:45:32,859-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 15:45:35,916->127.0.0.1 - - [10/Sep/2024 15:45:35] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:45:35,960->127.0.0.1 - - [10/Sep/2024 15:45:35] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:45:36,027->127.0.0.1 - - [10/Sep/2024 15:45:36] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:45:36,027->127.0.0.1 - - [10/Sep/2024 15:45:36] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:45:36,027->127.0.0.1 - - [10/Sep/2024 15:45:36] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:45:36,042->127.0.0.1 - - [10/Sep/2024 15:45:36] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:45:50,865->127.0.0.1 - - [10/Sep/2024 15:45:50] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:46:30,879-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-10 15:46:30,944-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 15:46:32,843-> * Debugger is active!->werkzeug
+INFO->2024-09-10 15:46:32,865-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 15:46:56,519-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-10 15:46:56,595-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 15:46:58,139-> * Debugger is active!->werkzeug
+INFO->2024-09-10 15:46:58,139-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 15:47:08,187-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-10 15:47:08,283-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 15:47:09,449-> * Debugger is active!->werkzeug
+INFO->2024-09-10 15:47:09,454-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 15:47:13,149-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-10 15:47:13,239-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 15:47:14,881-> * Debugger is active!->werkzeug
+INFO->2024-09-10 15:47:14,890-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 15:48:27,976->[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000->werkzeug
+INFO->2024-09-10 15:48:27,976->[33mPress CTRL+C to quit[0m->werkzeug
+INFO->2024-09-10 15:48:27,987-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 15:48:29,839-> * Debugger is active!->werkzeug
+INFO->2024-09-10 15:48:29,844-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 15:48:30,811->127.0.0.1 - - [10/Sep/2024 15:48:30] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:48:30,911->127.0.0.1 - - [10/Sep/2024 15:48:30] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:48:30,929->127.0.0.1 - - [10/Sep/2024 15:48:30] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:48:30,938->127.0.0.1 - - [10/Sep/2024 15:48:30] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:48:30,938->127.0.0.1 - - [10/Sep/2024 15:48:30] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:48:30,954->127.0.0.1 - - [10/Sep/2024 15:48:30] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:48:41,107->127.0.0.1 - - [10/Sep/2024 15:48:41] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:49:07,252-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste3.py', reloading->werkzeug
+INFO->2024-09-10 15:49:07,351-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 15:49:09,316-> * Debugger is active!->werkzeug
+INFO->2024-09-10 15:49:09,316-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 15:49:24,346-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste3.py', reloading->werkzeug
+INFO->2024-09-10 15:49:24,433-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 15:49:25,787-> * Debugger is active!->werkzeug
+INFO->2024-09-10 15:49:25,787-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 15:49:30,209-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste3.py', reloading->werkzeug
+INFO->2024-09-10 15:49:30,293-> * Restarting with stat->werkzeug
+INFO->2024-09-10 15:49:44,595->[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000->werkzeug
+INFO->2024-09-10 15:49:44,595->[33mPress CTRL+C to quit[0m->werkzeug
+INFO->2024-09-10 15:49:44,600-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 15:49:45,794-> * Debugger is active!->werkzeug
+INFO->2024-09-10 15:49:45,794-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 15:49:52,646->127.0.0.1 - - [10/Sep/2024 15:49:52] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:49:52,736->127.0.0.1 - - [10/Sep/2024 15:49:52] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:49:52,793->127.0.0.1 - - [10/Sep/2024 15:49:52] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:49:52,803->127.0.0.1 - - [10/Sep/2024 15:49:52] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:49:52,818->127.0.0.1 - - [10/Sep/2024 15:49:52] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:49:52,818->127.0.0.1 - - [10/Sep/2024 15:49:52] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:50:07,876->127.0.0.1 - - [10/Sep/2024 15:50:07] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:52:03,855->127.0.0.1 - - [10/Sep/2024 15:52:03] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:52:03,874->127.0.0.1 - - [10/Sep/2024 15:52:03] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:52:03,910->127.0.0.1 - - [10/Sep/2024 15:52:03] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:52:03,917->127.0.0.1 - - [10/Sep/2024 15:52:03] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:52:03,946->127.0.0.1 - - [10/Sep/2024 15:52:03] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:52:03,950->127.0.0.1 - - [10/Sep/2024 15:52:03] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:52:18,004->127.0.0.1 - - [10/Sep/2024 15:52:18] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:53:21,709-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste3.py', reloading->werkzeug
+INFO->2024-09-10 15:53:21,866-> * Restarting with stat->werkzeug
+INFO->2024-09-10 15:53:53,312->[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000->werkzeug
+INFO->2024-09-10 15:53:53,312->[33mPress CTRL+C to quit[0m->werkzeug
+INFO->2024-09-10 15:53:53,317-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 15:53:55,837-> * Debugger is active!->werkzeug
+INFO->2024-09-10 15:53:55,845-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 15:53:56,429->127.0.0.1 - - [10/Sep/2024 15:53:56] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:53:56,547->127.0.0.1 - - [10/Sep/2024 15:53:56] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:53:56,566->127.0.0.1 - - [10/Sep/2024 15:53:56] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:53:56,600->127.0.0.1 - - [10/Sep/2024 15:53:56] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:53:56,620->127.0.0.1 - - [10/Sep/2024 15:53:56] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:53:56,639->127.0.0.1 - - [10/Sep/2024 15:53:56] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+ERROR->2024-09-10 15:54:04,038->cannot access local variable 'resposta' where it is not associated with a value->root
+INFO->2024-09-10 15:54:04,038->127.0.0.1 - - [10/Sep/2024 15:54:04] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:54:56,767->127.0.0.1 - - [10/Sep/2024 15:54:56] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:54:56,835->127.0.0.1 - - [10/Sep/2024 15:54:56] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:54:56,837->127.0.0.1 - - [10/Sep/2024 15:54:56] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:54:56,837->127.0.0.1 - - [10/Sep/2024 15:54:56] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:54:56,848->127.0.0.1 - - [10/Sep/2024 15:54:56] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:54:56,863->127.0.0.1 - - [10/Sep/2024 15:54:56] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+ERROR->2024-09-10 15:55:21,770->cannot access local variable 'resposta' where it is not associated with a value->root
+INFO->2024-09-10 15:55:21,774->127.0.0.1 - - [10/Sep/2024 15:55:21] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:56:02,138->127.0.0.1 - - [10/Sep/2024 15:56:02] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:56:02,160->127.0.0.1 - - [10/Sep/2024 15:56:02] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:56:02,160->127.0.0.1 - - [10/Sep/2024 15:56:02] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:56:02,203->127.0.0.1 - - [10/Sep/2024 15:56:02] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:56:02,203->127.0.0.1 - - [10/Sep/2024 15:56:02] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:56:02,229->127.0.0.1 - - [10/Sep/2024 15:56:02] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+ERROR->2024-09-10 15:56:16,339->cannot access local variable 'resposta' where it is not associated with a value->root
+INFO->2024-09-10 15:56:16,340->127.0.0.1 - - [10/Sep/2024 15:56:16] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:56:45,837-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste3.py', reloading->werkzeug
+INFO->2024-09-10 15:56:46,013-> * Restarting with stat->werkzeug
+INFO->2024-09-10 15:56:56,155->[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000->werkzeug
+INFO->2024-09-10 15:56:56,155->[33mPress CTRL+C to quit[0m->werkzeug
+INFO->2024-09-10 15:56:56,155-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 15:56:58,247-> * Debugger is active!->werkzeug
+INFO->2024-09-10 15:56:58,253-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 15:56:59,687->127.0.0.1 - - [10/Sep/2024 15:56:59] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:56:59,743->127.0.0.1 - - [10/Sep/2024 15:56:59] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:56:59,823->127.0.0.1 - - [10/Sep/2024 15:56:59] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:56:59,846->127.0.0.1 - - [10/Sep/2024 15:56:59] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:56:59,846->127.0.0.1 - - [10/Sep/2024 15:56:59] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 15:56:59,880->127.0.0.1 - - [10/Sep/2024 15:56:59] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+ERROR->2024-09-10 15:57:11,017->[WinError 3] O sistema n�o pode encontrar o caminho especificado: 'projeto_chat_suprimentos/basesViagens'->root
+INFO->2024-09-10 15:57:11,017->127.0.0.1 - - [10/Sep/2024 15:57:11] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 15:57:38,111-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste3.py', reloading->werkzeug
+INFO->2024-09-10 15:57:38,236-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 15:57:39,515-> * Debugger is active!->werkzeug
+INFO->2024-09-10 15:57:39,515-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 16:18:41,243->127.0.0.1 - - [10/Sep/2024 16:18:41] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 16:18:41,347->127.0.0.1 - - [10/Sep/2024 16:18:41] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 16:18:41,362->127.0.0.1 - - [10/Sep/2024 16:18:41] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 16:18:41,362->127.0.0.1 - - [10/Sep/2024 16:18:41] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 16:18:41,386->127.0.0.1 - - [10/Sep/2024 16:18:41] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 16:18:41,399->127.0.0.1 - - [10/Sep/2024 16:18:41] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+ERROR->2024-09-10 16:18:53,072->[WinError 3] O sistema n�o pode encontrar o caminho especificado: 'projeto_chat_suprimentos/basesViagens'->root
+INFO->2024-09-10 16:18:53,072->127.0.0.1 - - [10/Sep/2024 16:18:53] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 16:19:26,615-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste3.py', reloading->werkzeug
+INFO->2024-09-10 16:19:26,698-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 16:19:28,081-> * Debugger is active!->werkzeug
+INFO->2024-09-10 16:19:28,081-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 16:19:28,705-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste3.py', reloading->werkzeug
+INFO->2024-09-10 16:19:28,827-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 16:19:30,044-> * Debugger is active!->werkzeug
+INFO->2024-09-10 16:19:30,044-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 16:19:31,884-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste3.py', reloading->werkzeug
+INFO->2024-09-10 16:19:31,957-> * Restarting with stat->werkzeug
+INFO->2024-09-10 16:19:42,141->[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000->werkzeug
+INFO->2024-09-10 16:19:42,142->[33mPress CTRL+C to quit[0m->werkzeug
+INFO->2024-09-10 16:19:42,144-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 16:19:43,458-> * Debugger is active!->werkzeug
+INFO->2024-09-10 16:19:43,459-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 16:19:45,845->127.0.0.1 - - [10/Sep/2024 16:19:45] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 16:19:45,885->127.0.0.1 - - [10/Sep/2024 16:19:45] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 16:19:45,981->127.0.0.1 - - [10/Sep/2024 16:19:45] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 16:19:45,981->127.0.0.1 - - [10/Sep/2024 16:19:45] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 16:19:45,981->127.0.0.1 - - [10/Sep/2024 16:19:45] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 16:19:46,000->127.0.0.1 - - [10/Sep/2024 16:19:46] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+ERROR->2024-09-10 16:19:56,110->[WinError 3] O sistema n�o pode encontrar o caminho especificado: 'projeto_chat_suprimentos/basesViagens'->root
+INFO->2024-09-10 16:19:56,110->127.0.0.1 - - [10/Sep/2024 16:19:56] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 16:20:10,059-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste3.py', reloading->werkzeug
+INFO->2024-09-10 16:20:10,126-> * Restarting with stat->werkzeug
+INFO->2024-09-10 16:20:34,120->[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000->werkzeug
+INFO->2024-09-10 16:20:34,121->[33mPress CTRL+C to quit[0m->werkzeug
+INFO->2024-09-10 16:20:34,122-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 16:20:34,894-> * Debugger is active!->werkzeug
+INFO->2024-09-10 16:20:34,894-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 16:20:43,586->127.0.0.1 - - [10/Sep/2024 16:20:43] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 16:20:43,610->127.0.0.1 - - [10/Sep/2024 16:20:43] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 16:20:43,696->127.0.0.1 - - [10/Sep/2024 16:20:43] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 16:20:43,696->127.0.0.1 - - [10/Sep/2024 16:20:43] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 16:20:43,705->127.0.0.1 - - [10/Sep/2024 16:20:43] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 16:20:43,718->127.0.0.1 - - [10/Sep/2024 16:20:43] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+ERROR->2024-09-10 16:20:46,006->[WinError 3] O sistema n�o pode encontrar o caminho especificado: 'projeto_chat_suprimentos/basesViagens'->root
+INFO->2024-09-10 16:20:46,006->127.0.0.1 - - [10/Sep/2024 16:20:46] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 16:20:57,377-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste3.py', reloading->werkzeug
+INFO->2024-09-10 16:20:57,467-> * Restarting with stat->werkzeug
+INFO->2024-09-10 16:21:10,856->[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000->werkzeug
+INFO->2024-09-10 16:21:10,856->[33mPress CTRL+C to quit[0m->werkzeug
+INFO->2024-09-10 16:21:10,856-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 16:21:11,786-> * Debugger is active!->werkzeug
+INFO->2024-09-10 16:21:11,788-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 16:21:13,101->127.0.0.1 - - [10/Sep/2024 16:21:13] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 16:21:13,258->127.0.0.1 - - [10/Sep/2024 16:21:13] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 16:21:13,264->127.0.0.1 - - [10/Sep/2024 16:21:13] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 16:21:13,269->127.0.0.1 - - [10/Sep/2024 16:21:13] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 16:21:13,315->127.0.0.1 - - [10/Sep/2024 16:21:13] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 16:21:13,345->127.0.0.1 - - [10/Sep/2024 16:21:13] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+ERROR->2024-09-10 16:21:26,184->[WinError 3] O sistema n�o pode encontrar o caminho especificado: 'projeto_chat_suprimentos/basesViagens'->root
+INFO->2024-09-10 16:21:26,184->127.0.0.1 - - [10/Sep/2024 16:21:26] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 16:28:29,942-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste4.py', reloading->werkzeug
+INFO->2024-09-10 16:28:30,133-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 16:28:31,830-> * Debugger is active!->werkzeug
+INFO->2024-09-10 16:28:31,836-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 16:28:37,008->[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000->werkzeug
+INFO->2024-09-10 16:28:37,024->[33mPress CTRL+C to quit[0m->werkzeug
+INFO->2024-09-10 16:28:37,026-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 16:28:37,904-> * Debugger is active!->werkzeug
+INFO->2024-09-10 16:28:37,904-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 16:28:44,868->127.0.0.1 - - [10/Sep/2024 16:28:44] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 16:28:46,174->127.0.0.1 - - [10/Sep/2024 16:28:46] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 16:31:34,008->[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000->werkzeug
+INFO->2024-09-10 16:31:34,008->[33mPress CTRL+C to quit[0m->werkzeug
+INFO->2024-09-10 16:31:34,008-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 16:31:34,780-> * Debugger is active!->werkzeug
+INFO->2024-09-10 16:31:34,796-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 16:31:43,608->127.0.0.1 - - [10/Sep/2024 16:31:43] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 16:31:43,688->127.0.0.1 - - [10/Sep/2024 16:31:43] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 16:31:43,741->127.0.0.1 - - [10/Sep/2024 16:31:43] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 16:31:43,756->127.0.0.1 - - [10/Sep/2024 16:31:43] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 16:31:43,759->127.0.0.1 - - [10/Sep/2024 16:31:43] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 16:31:43,769->127.0.0.1 - - [10/Sep/2024 16:31:43] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+ERROR->2024-09-10 16:31:53,315->[WinError 3] O sistema n�o pode encontrar o caminho especificado: 'projeto_chat_suprimentos/basesViagens'->root
+INFO->2024-09-10 16:31:53,316->127.0.0.1 - - [10/Sep/2024 16:31:53] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 16:32:14,212-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste3.py', reloading->werkzeug
+INFO->2024-09-10 16:32:14,340-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 16:32:15,809-> * Debugger is active!->werkzeug
+INFO->2024-09-10 16:32:15,825-> * Debugger PIN: 139-196-948->werkzeug
+ERROR->2024-09-10 16:32:24,634->[WinError 3] O sistema n�o pode encontrar o caminho especificado: 'projeto_chat_suprimentos/basesViagens'->root
+INFO->2024-09-10 16:32:24,634->127.0.0.1 - - [10/Sep/2024 16:32:24] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 16:32:38,117-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste3.py', reloading->werkzeug
+INFO->2024-09-10 16:32:38,215-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 16:32:39,380-> * Debugger is active!->werkzeug
+INFO->2024-09-10 16:32:39,382-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 16:32:46,671-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste3.py', reloading->werkzeug
+INFO->2024-09-10 16:32:46,736-> * Restarting with stat->werkzeug
+INFO->2024-09-10 16:32:56,603->[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000->werkzeug
+INFO->2024-09-10 16:32:56,603->[33mPress CTRL+C to quit[0m->werkzeug
+INFO->2024-09-10 16:32:56,605-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 16:32:57,585-> * Debugger is active!->werkzeug
+INFO->2024-09-10 16:32:57,585-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 16:32:57,900->127.0.0.1 - - [10/Sep/2024 16:32:57] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 16:32:57,919->127.0.0.1 - - [10/Sep/2024 16:32:57] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 16:32:58,014->127.0.0.1 - - [10/Sep/2024 16:32:58] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 16:32:58,026->127.0.0.1 - - [10/Sep/2024 16:32:58] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 16:32:58,026->127.0.0.1 - - [10/Sep/2024 16:32:58] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 16:32:58,039->127.0.0.1 - - [10/Sep/2024 16:32:58] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+ERROR->2024-09-10 16:33:10,209->[WinError 3] O sistema n�o pode encontrar o caminho especificado: 'projeto_chat_suprimentos/basesViagens'->root
+INFO->2024-09-10 16:33:10,213->127.0.0.1 - - [10/Sep/2024 16:33:10] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 16:47:34,854-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste3.py', reloading->werkzeug
+INFO->2024-09-10 16:47:34,919-> * Restarting with stat->werkzeug
+INFO->2024-09-10 16:49:06,097->[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000->werkzeug
+INFO->2024-09-10 16:49:06,098->[33mPress CTRL+C to quit[0m->werkzeug
+INFO->2024-09-10 16:49:06,100-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 16:49:07,268-> * Debugger is active!->werkzeug
+INFO->2024-09-10 16:49:07,275-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 16:49:10,840-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste2.py', reloading->werkzeug
+INFO->2024-09-10 16:49:10,904-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 16:49:11,920-> * Debugger is active!->werkzeug
+INFO->2024-09-10 16:49:11,923-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 16:49:14,592->127.0.0.1 - - [10/Sep/2024 16:49:14] "GET / HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 16:49:14,650->127.0.0.1 - - [10/Sep/2024 16:49:14] "POST /limparTerminal HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 16:49:14,691->127.0.0.1 - - [10/Sep/2024 16:49:14] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 16:49:14,696->127.0.0.1 - - [10/Sep/2024 16:49:14] "[36mGET /static/img/logo_jef.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 16:49:14,716->127.0.0.1 - - [10/Sep/2024 16:49:14] "[36mGET /static/img/reload.svg HTTP/1.1[0m" 304 -->werkzeug
+INFO->2024-09-10 16:49:14,756->127.0.0.1 - - [10/Sep/2024 16:49:14] "[36mGET /static/img/logo_jbs.svg HTTP/1.1[0m" 304 -->werkzeug
+ERROR->2024-09-10 16:49:22,841->[WinError 3] O sistema n�o pode encontrar o caminho especificado: 'projeto_chat_suprimentos/basesViagens'->root
+INFO->2024-09-10 16:49:22,841->127.0.0.1 - - [10/Sep/2024 16:49:22] "POST /submit HTTP/1.1" 200 -->werkzeug
+INFO->2024-09-10 16:50:01,618-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\validacao.py', reloading->werkzeug
+INFO->2024-09-10 16:50:01,718-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 16:50:02,950-> * Debugger is active!->werkzeug
+INFO->2024-09-10 16:50:02,950-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 16:52:55,787-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\app_main.py', reloading->werkzeug
+INFO->2024-09-10 16:52:55,905-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 16:52:57,790-> * Debugger is active!->werkzeug
+INFO->2024-09-10 16:52:57,792-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 16:53:36,051-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste3.py', reloading->werkzeug
+INFO->2024-09-10 16:53:36,115-> * Restarting with stat->werkzeug
+WARNING->2024-09-10 16:53:37,440-> * Debugger is active!->werkzeug
+INFO->2024-09-10 16:53:37,440-> * Debugger PIN: 139-196-948->werkzeug
+INFO->2024-09-10 16:53:40,709-> * Detected change in 'c:\\Users\\sophiaragusa-ieg\\OneDrive - Instituto Germinare\\GEDAI\\Suprimentos\\projeto_chat_suprimentos\\teste3.py', reloading->werkzeug
+INFO->2024-09-10 16:53:40,784-> * Restarting with stat->werkzeug
+ERROR->2024-09-10 16:58:17,580->[WinError 3] O sistema n�o pode encontrar o caminho especificado: 'projeto_chat_suprimentos/basesViagens'->root
+ERROR->2024-09-10 17:00:00,985->cannot access local variable 'resposta' where it is not associated with a value->root
+ERROR->2024-09-10 17:00:59,301->can only concatenate str (not "Response") to str->root
+ERROR->2024-09-11 17:46:07,944->cannot access local variable 'tokens2' where it is not associated with a value->root
+ERROR->2024-09-11 17:46:40,321->cannot access local variable 'tokens2' where it is not associated with a value->root
+ERROR->2024-09-13 16:19:18,787->module 'openai' has no attribute 'error'->root
+ERROR->2024-09-13 16:19:38,269->module 'openai' has no attribute 'error'->root
+ERROR->2024-09-13 16:28:50,883->can only concatenate str (not "NoneType") to str->root
+ERROR->2024-09-13 17:04:19,262->Unsupported message type: <class 'dict'>->root
+ERROR->2024-09-13 17:25:21,366->Unsupported message type: <class 'dict'>->root
+>>>>>>> bad32626a74f8d56e24d7cd7b3f085e57b286ecd
+ERROR->2024-09-24 14:30:01,132->400 Bad Request: The browser (or proxy) sent a request that this server could not understand.->root
+ERROR->2024-09-24 15:37:46,618->400 Bad Request: The browser (or proxy) sent a request that this server could not understand.->root
