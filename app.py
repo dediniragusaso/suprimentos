@@ -8,7 +8,6 @@ from logging import ERROR
 from logging import basicConfig #configurações para os comportamentos dos logs
 from logging import error
 from logging import getLogger
-import tiktoken
 
 basicConfig(
     level = ERROR  , #Todas as informações com maior ou prioridade igual ao DEBUG serão armazenadas
