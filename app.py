@@ -295,6 +295,7 @@ def submit():
         else: 
             print("Erro")
     except Exception as e:
+        
         error(e)
         return Response(stream_with_context(algo_ocorreu_de_errado()), content_type='text/plain')
     

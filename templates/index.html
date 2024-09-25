@@ -313,9 +313,90 @@
     .cor_10:hover {
         background-color: #2c8f54;
     }
+
+    /* Estilos para a sobreposição do login */
+    .login-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .login-container {
+        position: relative;
+        background-color: #1e1e1e;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        width: 300px;
+        z-index: 1001; /* Coloca o container acima do blur */
+    }
+
+    .login-container h1 {
+        color: #f1f1f1;
+        margin-bottom: 20px;
+    }
+
+    .login-container input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 5px;
+        background-color: #f1f1f1;
+    }
+
+    .login-container button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        background-color: #11254F;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .login-container button:hover {
+        background-color: #0E5269;
+    }
+
+    .login-container .error {
+        color: #FF4C4C;
+        margin-top: 10px;
+        display: none;
+    }
+
+
 </style>
 </head>
 <body class="flex flex-col md:flex-row h-screen w-screen">
+
+        <!-- Adicionando a caixa de login diretamente no index -->
+    <div id="loginOverlay" class="login-overlay hidden">
+        <div class="login-container">
+            <h1>Login</h1>
+            <form id="loginForm">
+                <input type="password" id="password" placeholder="Digite sua senha" required>
+                <button type="submit">Entrar</button>
+                <p class="error" id="errorMessage">Senha incorreta. Tente novamente.</p>
+            </form>
+        </div>
+    </div>
+
  
     <div id="hamburger" class= "md:hidden flex items-center justify-between text-white py-4 px-6">
         <button id="hamburgerBtn" class="text-white focus:outline-none">
@@ -407,6 +488,29 @@
     </div>
  
     <script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+        // Verificar se o login já foi feito na sessão atual
+        if (!sessionStorage.getItem('loggedIn')) {
+            document.getElementById('loginOverlay').classList.remove('hidden');
+            document.body.classList.add('blurred');
+        }
+
+        // Evento de envio do formulário de login
+        document.getElementById('loginForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const password = document.getElementById('password').value;
+            const correctPassword = "12345"; // Defina a senha correta aqui
+
+            if (password === correctPassword) {
+                sessionStorage.setItem('loggedIn', true); // Usa sessionStorage para expirar com o fechamento da aba
+                document.getElementById('loginOverlay').classList.add('hidden');
+                document.body.classList.remove('blurred'); // Remove o efeito de blur ao fazer login
+            } else {
+                document.getElementById('errorMessage').style.display = 'block';
+            }
+        });
+    });
 
         let isResponseIncreased = false;
         let cont_requisicao = 0
@@ -531,7 +635,6 @@
 
                             // atualizar histórico front
 
-bad32626a74f8d56e24d7cd7b3f085e57b286ecd
                             atualizarVariavel(responseText, inputMessage);
                             return;
                         }
@@ -700,7 +803,6 @@ bad32626a74f8d56e24d7cd7b3f085e57b286ecd
 
 
             mensagem += "human: " + atualPergunta + "\nai: " + atualResposta + "\n"
-bad32626a74f8d56e24d7cd7b3f085e57b286ecd
             console.log(mensagem)
             sessionStorage.setItem('Historico', mensagem)          
         }
