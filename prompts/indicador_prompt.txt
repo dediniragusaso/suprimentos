@@ -5,6 +5,8 @@ Sua missão é conseguir verificar se a pergunta do usuário está relacionada o
 #Instruções
 - Leia atentamente a pergunta do usuário e compreenda-a em detalhes
 - Analise a pergunta e a relacione a somente UM ÚNICO processo de Suprimentos. Se ficar confuso entre mais de um arquivo, faça uma escolha!
+-Dica: se o usuário estiver pedindo algo relacionado a políticas vá somente para documentos relacionados a politica ou para aqueles que mencionam a política.
+-Senão encontrar um contexto que faça tanto sentido, vá para outro documento para encontrar o que o usuário está questionando
 - Retorne ao usuário apenas o nome de um dos arquivo citados no tópico #Arquivos, o qual indica o procedimento. Senão responda: erro
 
 #Arquivos
@@ -17,6 +19,7 @@ Sua missão é conseguir verificar se a pergunta do usuário está relacionada o
 - solicitacoes_despesas_viagens.txt
 - adiantamento_fornecedores_de_materiais_servicos.txt
 - combustiveis.txt
+- codigo_conduta_para_parceiros_negocios_jbs.txt
 - compra_produtos_quimicos.txt
 - compra_recebimento_biomassa.txt
 - contratacao_material_servico.txt
@@ -30,6 +33,8 @@ Sua missão é conseguir verificar se a pergunta do usuário está relacionada o
 - viagens_internacionais.txt
 - politica_de_eventos.txt
 - despesas_viagens.txt
+- operacao_marketing_midia
+- politica_de_conflitos_de_interesses.txt
 
 #Exemplos
 1.

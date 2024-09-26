@@ -1295,3 +1295,14 @@ ERROR->2024-09-19 17:33:50,907->replace expected at least 2 arguments, got 1->ro
 ERROR->2024-09-20 14:49:38,925->[Errno 2] No such file or directory: './bases/erro'->root
 ERROR->2024-09-20 15:29:59,790->[Errno 22] Invalid argument: './bases/"erro"'->root
 ERROR->2024-09-20 15:58:01,625->[Errno 22] Invalid argument: './bases/"erro"'->root
+ERROR->2024-09-25 14:36:58,771->unsupported operand type(s) for +=: 'function' and 'str'->root
+ERROR->2024-09-25 14:40:44,133->unsupported operand type(s) for +=: 'function' and 'str'->root
+ERROR->2024-09-25 17:22:10,815->[WinError 3] O sistema não pode encontrar o caminho especificado: './basesViagens'->root
+ERROR->2024-09-25 17:22:22,018->[WinError 3] O sistema não pode encontrar o caminho especificado: './basesViagens'->root
+ERROR->2024-09-25 17:22:37,644->[WinError 3] O sistema não pode encontrar o caminho especificado: './basesViagens'->root
+ERROR->2024-09-25 17:27:27,218->[WinError 3] O sistema não pode encontrar o caminho especificado: './basesViagens'->root
+ERROR->2024-09-25 17:28:27,169->[WinError 3] O sistema não pode encontrar o caminho especificado: './basesViagens'->root
+ERROR->2024-09-25 17:29:23,047->[WinError 3] O sistema não pode encontrar o caminho especificado: './basesViagens'->root
+ERROR->2024-09-25 17:30:24,642->[WinError 3] O sistema não pode encontrar o caminho especificado: './basesViagens'->root
+ERROR->2024-09-25 17:52:18,811->cannot access local variable 'resposta' where it is not associated with a value->root
+ERROR->2024-09-25 17:53:08,239->cannot access local variable 'resposta' where it is not associated with a value->root
