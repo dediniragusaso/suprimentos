@@ -385,6 +385,8 @@
 </head>
 <body class="flex flex-col md:flex-row h-screen w-screen">
 
+    <p id=pswd_login style="display: none;">{{password}}</p>
+
         <!-- Adicionando a caixa de login diretamente no index -->
     <div id="loginOverlay" class="login-overlay hidden">
         <div class="login-container">
@@ -488,8 +490,8 @@
     </div>
  
     <script>
-
-    document.addEventListener('DOMContentLoaded', function () {
+    
+        document.addEventListener('DOMContentLoaded', function () {
         // Verificar se o login já foi feito na sessão atual
         if (!sessionStorage.getItem('loggedIn')) {
             document.getElementById('loginOverlay').classList.remove('hidden');
@@ -500,7 +502,7 @@
         document.getElementById('loginForm').addEventListener('submit', function (e) {
             e.preventDefault();
             const password = document.getElementById('password').value;
-            const correctPassword = "Suprimentos2024"; // Defina a senha correta aqui
+            const correctPassword = document.getElementById('pswd_login').innerHTML// Defina a senha correta aqui
 
             if (password === correctPassword) {
                 sessionStorage.setItem('loggedIn', true); // Usa sessionStorage para expirar com o fechamento da aba

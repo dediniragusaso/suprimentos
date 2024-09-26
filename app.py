@@ -21,6 +21,7 @@ getLogger('werkzeug').setLevel(ERROR)
 
 load_dotenv()
 api_key = os.getenv("openai_api_key")
+senha = os.getenv("senha")
 if not api_key:
     raise ValueError("Chave API não encontrada. Verifique se 'openai_api_key' está definida no ambiente.")
 
@@ -38,7 +39,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('index.html', password=senha)
 
 @app.route("/limparTerminal", methods=["POST"])
 def limparTerminal():
