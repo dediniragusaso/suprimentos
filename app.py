@@ -21,7 +21,7 @@ getLogger('werkzeug').setLevel(ERROR)
 
 load_dotenv()
 api_key = os.getenv("openai_api_key")
-senha = os.getenv("senha")
+correct_password = os.getenv("senha")
 if not api_key:
     raise ValueError("Chave API não encontrada. Verifique se 'openai_api_key' está definida no ambiente.")
 
@@ -39,10 +39,23 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('index.html', password=senha)
+    return render_template('index.html')
+
+@app.route('/login', methods=["POST"])
+def login():
+    try:
+        password =request.json["password"]
+        if password == correct_password:
+            return jsonify({"status": "success"})
+        else:
+            return jsonify({"status": "error"}), 401  # Retorna erro 401 se a senha estiver incorreta
+    except Exception as e:
+        return jsonify({"status": "error", "message": str(e)}), 500  # Retorna erro 500 em caso de exceções
+
 
 @app.route("/limparTerminal", methods=["POST"])
 def limparTerminal():
+
     global cont_requisicao
     reiniciar = request.json["recarregadoPorBotao"]
     if reiniciar == True:
@@ -52,12 +65,9 @@ def limparTerminal():
         return jsonify({"status": "success"})
     
 
-
 # função quando dá erro
 def algo_ocorreu_de_errado():
     yield "Algo ocorreu de errado, tente novamente"
-
-
 
 
 def identificaArquivo(prompt_usuario):
