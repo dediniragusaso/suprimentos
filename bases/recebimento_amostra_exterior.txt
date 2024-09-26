@@ -1,0 +1,239 @@
+*PROCEDIMENTO DE RECEBIMENTO DE AMOSTRA DO EXTERIOR*
+
+---
+
+**OBJETIVO**
+
+Definir o processo para recebimento e importação de amostras de fornecedores da JBS ou da Seara situados no exterior.
+
+**RESPONSABILIDADE QUANTO AO CUMPRIMENTO**
+
+Cabe a todas as áreas envolvidas no processo e citadas neste documento a responsabilidade pelo cumprimento deste procedimento.
+
+**DISPOSIÇÕES GERAIS**
+
+**Conceito de amostra**
+
+Amostra é uma parte representativa de uma mercadoria/produto utilizado para análise ou testes;
+
+Existem amostras com e sem valor comercial. Em geral amostras são consideradas como produtos que não podem ser comercializados apenas com a finalidade de testes;
+
+As amostras devem conter quantidade estritamente necessária para conhecer a natureza espécie e qualidade de um produto;
+
+A amostra pode ter ou não cobertura cambial ou seja pode haver ou não o pagamento ao fornecedor no exterior por sua entrega dependendo do acordo entre a área solicitante e o fornecedor.
+
+Qualquer importação deverá ser realizada através do processo de importação formal da amostra;
+
+As diretrizes fiscais e tributárias para o processo de recebimento de amostra do exterior estão descritas no PROC-PRESI-SUP-0007 – Procedimento de Importação.
+
+**PROCEDIMENTOS**
+
+**Amostra formal com processos de importação**
+
+A área solicitante deverá negociar com o fornecedor a quantidade condições e data para o envio da amostra e abrir um pedido de compra (JBS) ou uma ordem de fornecimento - OF (Seara) anexando a proforma no sistema para que a área de Importação conduza o processo;
+
+Deverá ser definida a responsabilidade sobre os custos de envio. Se for da JBS ou da Seara deverá ser informando no pedido de compra e na invoice proforma;
+
+A amostra poderá ser com ou sem cobertura cambial. Em ambos os casos o valor deverá ser declarado na invoice para fins Aduaneiros visto que os impostos devem ser recolhidos ainda que não haja pagamento para o fornecedor;
+
+No caso da amostra sem cobertura cambial mencionar na invoice: “Samples no commercial value” ou “Samples without commercial value”. Se a amostra tiver cobertura cambial basta informar o valor e o prazo negociado e demais condições. O valor também deve estar de acordo com o pedido comercial (JBS) ou ordem de fornecimento (Seara);
+
+A amostra formal de até USD 3 mil poderá ser despachada por courier. Os custos envolvidos são: frete internacional imposto de importação (60%) e o ICMS de acordo com o estado de destino.
+
+**Amostra informal recebida através de courier**
+
+Processo para recebimento de amostra sem valor comercial;
+
+São chamados courier os parceiros de postagens internacionais como DHL, Fedex e UPS;
+
+A amostra é solicitada diretamente pelo demandante em acordo com o fornecedor sem intervenção da área de Importação;
+
+Após acertar o envio da amostra o solicitante informa ao fornecedor os dados completos do destinatário (razão social, endereço, CNPJ da unidade e nome de quem deverá receber a amostra);
+
+O fornecedor enviará a amostra através de um courier diretamente para o destino acordado com o solicitante;
+
+A amostra deverá estar acompanhada dos documentos de embarque: invoice, packing list e AWB e também do Certificado de Análise quando o produto for controlado pela ANVISA. Neste caso, data de produção e lote devem ser informados nos documentos;
+
+A invoice deverá informar um valor para o produto mesmo que estimado;
+
+Deve-se incluir na invoice o seguinte texto: tributos isentos sob amparo da IN RFB nº 1737/2017 art. 43 inciso 1 parágrafo único;
+
+Mesmo tratando-se de amostra sem valor comercial há despesas a serem pagas em sua chegada ao Brasil: frete de envio ICMS e imposto de importação de 60% sobre o valor base (valor do produto somado ao frete). A responsabilidade pelos custos deve ser acordada previamente entre as partes;
+
+É recomendável que seja acordado com o fornecedor o envio na modalidade free domicilie na qual os custos são pagos pelo fornecedor no exterior;
+
+Na chegada ao Brasil a amostra poderá ser retida pela Receita Federal e direcionada para análise do órgão competente. Isto ocorre geralmente com produtos que tenham anuência da ANVISA (ingredientes, produtos processados, massas, conservas, industrializados, saneantes, medicamentos etc.) e produtos com anuência do MAPA (de origem animal ou vegetal);
+
+Orientações de Tributos Corporativos sobre o processo de importação via courier estão disponíveis no Comunicado 196/2020.
+
+**Amostra retida pela Receita Federal**
+
+A área solicitante deverá preencher os formulários exigidos pela ANVISA conforme regulamentação da RDC 81/2008 com todas as informações pertinentes aos testes a serem realizados (anexos A - declaração de uso e finalidade, B - termo de não anuência da ANVISA e C - Termo de responsabilidade ANVISA e a Petição para Fiscalização disponibilizada no site da ANVISA);
+
+Os formulários devem ser assinados por um responsável técnico com registro de Entidade de Classe e vínculo com a empresa importadora;
+
+Um despachante aduaneiro credenciado pela JBS deverá ser envolvido para recolher a GRU e protocolar o processo contendo os formulários preenchidos e assinados para análise da ANVISA. É importante considerar que tanto a GRU quanto os serviços do despachante terão custos que serão de responsabilidade da área recebedora da amostra;
+
+A ANVISA tem até 60 dias para analisar os documentos e liberar a amostra. Após a análise e liberação o courier providenciará o envio para o endereço informado.
+
+**Amostra retida pelo MAPA**
+
+A área solicitante deverá preencher o formulário do MAPA/SVA com a identificação da amostra (Requerimento MAPA/SVA disponibilizado no site do Ministério da Agricultura);
+
+Um despachante aduaneiro credenciado deverá ser envolvido para dar ingresso ao processo junto ao MAPA/SVA no aeroporto de entrada para análise e liberação da amostra. Os serviços do despachante terão custos que serão de responsabilidade da área recebedora da amostra.
+
+Tanto a ANVISA quanto o MAPA concedem prazo de 30 dias para apresentação dos documentos para análise e liberação da amostra. Findado este prazo a amostra é devolvida para o remetente no exterior;
+
+Após análise a amostra poderá ser descaracterizada pela Receita Federal se entendido que configura comércio e passará a ser uma importação formal.
+
+---
+
+**Revisão**
+
+| Revisão | Responsáveis                             | Área                                | Ação    |
+|---------|------------------------------------------|-------------------------------------|---------|
+| 00      | Anderson Oliveira de Souza, Luiz Jandir Guilherme Zeferino | Diretoria de Suprimentos - Importação | Criação |
+| 00      | Jerson José do Nascimento Junior         | Diretoria de Suprimentos Mercosul   | Aprovação |
+
+---
+
+**ANEXO A – Declaração de Uso e Finalidade**
+
+AO  
+MINISTÉRIO DA SAÚDE  
+AGÊNCIA NACIONAL DE VIGILÂNCIA SANITÁRIA  
+PAF DO AEROPORTO INTERNACIONAL DE VIRACOPOS
+
+Prezado(a)  Sr.(a) Fiscal Sanitário
+
+**DECLARAÇÃO DE USO E FINALIDADE**
+
+PESSOA JURÍDICA
+
+NOME EMPRESA situada na (endereço completo com CEP) devidamente inscrita no CNPJ sob o número xx.xxx.xxx/xxxx-xx por seu responsável técnico e representante legal subscritos vem respeitosamente à presença de V. Sa. nos termos da Seção VI artigo 14 da RDC 208/2018 declarar que os produtos e/ou substâncias (preencher com o nome dos produtos em português) constantes do conhecimento aéreo de carga UPS Nº ____________________________ importado pela empresa supramencionada destinam-se a:
+
+Finalidade da importação
+
+Quantidade total
+
+Detalhamento qualitativo (exceto produtos médicos)
+
+Detalhamento quantitativo (exceto produtos médicos)
+
+Especificações técnicas da amostra
+
+Números de lote ou partidas
+
+Números de unidades produzidas por lote
+
+Descrição dos testes a serem realizados no território nacional
+
+Descrição da metodologia de pesquisa se for o caso
+
+Ocorrência de resíduos resultantes da operacionalização da finalidade de importação proposta metodologia de tratamento adequados de inativação
+
+Sendo o que nos reserva para o momento e ficando à disposição para quaisquer outros esclarecimentos subscrevemo-nos.
+
+Atenciosamente
+
+EMPRESA  
+Local e data.
+
+____________________________  
+Nome completo do responsável técnico  
+CPF:  
+Número do registro profissional
+
+**ANEXO B – Termo de Não Anuência da ANVISA**
+
+AO  
+MINISTÉRIO DA SAÚDE  
+AGÊNCIA NACIONAL DE VIGILÂNCIA SANITÁRIA  
+PAF DO AEROPORTO INTERNACIONAL DE VIRACOPOS
+
+Prezado(a)  Sr.(a) Fiscal Sanitário
+
+CAPÍTULO XXXVIII da RDC 81/2008
+
+**TERMO DE RESPONSABILIDADE**  
+IMPORTAÇÃO NÃO SUJEITA À INTERVENÇÃO SANITÁRIA DA ANVISA
+
+A pessoa Jurídica (preencher com o nome completo) declara que o(s) produto(s) abaixo relacionado(s) (amostras) será(ão) importado(s) constante(s) no conhecimento aéreo de número ________________ com finalidade ________________________________________________não sujeito à intervenção fiscal da ANVISA e será armazenado em área externa ao recinto alfandegado no seguinte endereço: (pre
+
+encher com o endereço da unidade e pessoa de contato).
+
+| Item | Nome comercial | Nome comum ou químico (se couber) | Nº lote | Quantidade | Nº e órgão de regularização (se couber) |
+|------|----------------|-----------------------------------|---------|------------|----------------------------------------|
+| 1    |                |                                   |         |            |                                        |
+| 2    |                |                                   |         |            |                                        |
+
+Os abaixo-assinados assumem a responsabilidade sanitária pelos danos à saúde individual ou coletiva e ao meio ambiente decorrente da alteração da finalidade de ingresso do produto no território nacional.
+
+EMPRESA  
+Local e data.
+
+____________________________  
+Nome completo do responsável técnico  
+CPF:  
+Número do registro profissional
+
+**ANEXO C - Termo de Responsabilidade ANVISA**
+
+**TERMO DE RESPONSABILIDADE**
+
+Anexo XXII da Resolução da Diretoria Colegiada - RDC nº 81 de 05/11/2008
+
+À ANVISA  
+Agência Nacional de Vigilância Sanitária  
+Posto Aeroporto Internacional de _______________ (informar o aeroporto)
+
+(    ) MEDICAMENTOS - SEÇÃO I  
+(    ) PRODUTOS MÉDICOS E PRODUTOS PARA DIAGNÓSTICO IN VITRO – SEÇÃO II  
+(    ) SANEANTES – SEÇÃO III  
+(    ) COSMÉTICOS PERFUMES E PRODUTO DE HIGIENE PESSOAL – SEÇÃO IV  
+( X ) ALIMENTOS
+
+Número rastreio Remessa Courier: _____________________  
+A pessoa jurídica _______________________________ CNPJ______________ devidamente regularizada perante a Agência Nacional de Vigilância Sanitária declara que o(s) produto(s) abaixo relacionado(s) será(ão) importado(s) sem fins comerciais ou industriais e destina(m)-se exclusivamente a ________________(identificar finalidade)___________.
+
+| Item | Nome Comercial | Grupo ou categoria a que pertence | Nº de lote ou partida | Quantidade |
+|------|----------------|-----------------------------------|-----------------------|------------|
+| 01   |                |                                   |                       |            |
+| 02   |                |                                   |                       |            |
+
+Atesto que o(s) produto(s) supracitado(s) atende(m) aos dispositivos legais relacionados às boas práticas de fabricação e controle de produto acabado bem como os ingredientes de sua formulação integram as listas de matérias-primas autorizadas em legislação sanitária pertinente.  
+Os abaixo-assinados assumem a responsabilidade sanitária referente ao conhecimento aéreo importação (informar o courier) ________________________ pelos danos à saúde individual ou coletiva e ao meio ambiente decorrente da alteração da finalidade de ingresso do produto no território nacional.
+
+| Nome completo do responsável técnico | Nome completo do representante legal |
+|--------------------------------------|--------------------------------------|
+| CR No.:                              | CPF.:                                |
+
+**RESPONSÁVEL TÉCNICO**
+
+**REPRESENTANTE LEGAL**
+
+Local e data.
+
+---
+
+**PROCEDIMENTO INTERNO**
+
+PROC-PRESI-SUP-0015
+
+29 de março de 2022
+
+Revisão: 00
+
+**Recebimento de Amostra do Exterior**
+
+**DESTINATÁRIOS:** Todos os colaboradores da JBS da Seara.
+
+---
+
+Processos Organizacionais
+
+Documento confidencial para uso da JBS
+
+Página 6 de 6
+
+---

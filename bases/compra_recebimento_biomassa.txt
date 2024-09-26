@@ -1,0 +1,338 @@
+*PROCEDIMENTO DE COMPRA E RECEBIMENTO DE BIOMASSA*
+
+---
+
+**OBJETIVO**
+
+Orientar a originação de biomassa para a compra energética, recebimento, armazenamento e consumo da Biomassa utilizada em processos de geração de energia térmica e cogeração de energia elétrica para a Companhia.
+
+**RESPONSABILIDADE QUANTO AO CUMPRIMENTO**
+
+Cabe a todas as áreas envolvidas no processo e citadas neste documento a responsabilidade pelo cumprimento deste procedimento.
+
+**DEFINIÇÕES**
+
+Biomassa, também denominada biocombustível, é o material orgânico produzido por sistemas florestais, agrícolas e urbanos ou aquele considerado como produto derivado de origem vegetal ou animal a partir de manufatura, logo sendo produto ou subproduto utilizado para geração térmica a partir da combustão em caldeira, tal como:
+- Bagaço de cana (resíduos da industrialização da cana-de-açúcar);
+- Briquete/pellet (compactação de serragem e outros);
+- Gramíneas (bambu); 
+- Resíduo animal (gordura ou subproduto animal para fins energéticos); 
+- Resíduo industrial (subproduto não-contaminante para fins energéticos); 
+- Derivados não madeireiros (casca, extrativos, fibras e outros);
+- Derivados madeireiros:
+  - Cavaco (estilhas de madeira picada de granulometria heterogênea); 
+  - Maravalha (resíduo de aplainamento de madeiras); 
+  - Refile (aproveitamento dos resíduos do processamento mecânico de toras); 
+  - Toros de lenha (troncos de árvores cortadas ainda com casca e com comprimento e diâmetro diversos); 
+  - Over (resíduos de tambores descascadores, toras de indústrias de celulose, picadores diversos, processo industrial de serrados, peneiras e outros).
+
+**PC – Poder calorífico:** é a quantidade de calor desprendida quando se queima completamente a unidade de massa desse combustível sob determinadas condições:
+
+O PC se subdivide em:
+- PCS: Poder calorifico superior;
+- PCI: Poder calorifico inferior;
+- PCU: Poder calorifico útil.
+
+Sempre PCS > PCI > PCU (Litro);
+
+O PC não varia significativamente de uma espécie para outra (em mesmas condições), porém pode ser afetado por estas condições, tais como:
+- Teor de umidade (%):  quantidade de água ou umidade presente na biomassa – Base Úmida (Verde), que é a quantidade total de água no peso total da amostra observada (ex.: carga caminhão);
+- Densidade aparente: a densidade é influenciada pelo teor de umidade da madeira, assim está relacionada com este teor e é influenciada pela massa específica aparente a granel;
+- Teor de cinza: as cinzas são formadas por todo material que não queima, resíduo do processo de combustão.
+
+**Compra energética ou compra técnica:** compra pelo melhor potencial energético total conforme oferta regional (local);
+
+Custo Total (CT) = Custos Diretos (CD) + Custos Indiretos (CI) + Custos Fixos (CF) + Custos Variáveis (CV).
+
+**DISPOSIÇÕES GERAIS**
+
+O objetivo do planejamento de suprimentos é definir critérios técnicos para execução de compra energética garantindo a melhor e mais barata disponibilidade de energia térmica através de compra técnica instituindo o uso do potencial energético determinado pelo = Poder Calorífico (PCI > PCU (L)) X Custo Total (Preço, Impostos, Créditos, Prazos de pagamento etc.);
+
+Cabe a todos os envolvidos no processo de compra conhecer e seguir as diretrizes da IN-PRESI-SUP-0094 - Política de Suprimentos América do Sul, do Código de Conduta e Ética da JBS e do PROC-PRESI-SUP-0004 - Contratação de Materiais e Serviços;
+
+Para assuntos que não forem tratados neste procedimento prevalecerão as disposições dos documentos citados no item 5.2;
+
+Os critérios para cadastro, homologação e manutenção de fornecedores aptos para comercialização de biomassa devem respeitar o programa de Compliance de acordo com Código de Conduta de Parceiros de Negócios;
+
+Os responsáveis pelo cadastro e negociação devem evidenciar via documentação disposta em F-PRESI-SUP-0021 - Padronização de Solicitação de Documentos a Fornecedores o atendimento de critérios administrativos e socioambientais para aquisição de produtos e contratação de fornecedores e prestadores de serviços terceiros florestais;
+
+A JBS S.A., assim como seus negócios, somente poderá adquirir biomassa legalizada perante os órgãos ambientais competentes nas esferas federal, estaduais e municipais quando a estes se aplicarem;
+
+A JBS S.A. não adquirirá nem originará em hipótese alguma caso fique evidenciado:
+- Biomassa explorada ilegalmente;
+- Biomassa explorada em violação de direitos tradicionais e humanos;
+- Biomassa oriunda de locais nas quais sejam previamente identificados altos valores de conservação aos quais estejam ameaçados por atividades de manejo sem regulamentação e ou autorização dos órgãos competentes;
+- Biomassa oriunda de locais as quais se verifiquem a utilização de mão de obra infantil ou trabalho análogo à escravidão;
+- Biomassa oriunda de florestas as quais se verifiquem a origem de áreas embargadas por órgãos competentes.
+
+A JBS S.A. sempre envidará esforços para que todos os fornecedores de biomassa possam evidenciar e atestar o cumprimento aos requisitos que garantam a procedência responsável da floresta ou biomassa comercializada;
+
+A JBS S.A. não adquirirá biomassa fora das premissas e especificações técnicas definidas em matriz energética e apontadas pela compra energética descritas neste documento;
+
+A JBS S.A., vindo a identificar incompatibilidades ou desvios entre o negociado/acordado e o realizado por parte do fornecedor, suspenderá imediatamente a compra e bloqueará o cadastro do fornecedor até que este apresente documentação compatível com as premissas de compras adotadas.
+
+**PLANEJAMENTO DE ORIGINAÇÃO, COMPRA E ABASTECIMENTO**
+
+**Planejamento estratégico**
+
+Cabe às áreas de Engenharia regionais e corporativas, aos CIEX dos negócios, as gerências e coordenações de Manutenção e de Utilidades, além das gerências Industriais, Administrativas, Florestais e de Suprimentos locais e corporativo, atender ao modelo de integração no atendimento de orientações do Trabalho Consultoria – Situação Atual e Futura Biomassa (Projeto Stock);
+
+Além disso, devem definir um plano de ação em consonância com parâmetros definidos para originação de biomassa da JBS S.A. e seus negócios, levando em consideração particularidades regionais quanto a oferta de biomassa e parâmetros de criticidade de oferta de biomassa (“porta para fora”), limitações de abastecimento ou gargalos internos (“porta para dentro”) que deverão ser equalizados para então definir estratégias a fim de garantir a execução da originação de biomassa e o abastecimento das fábricas;
+
+Os parâmetros para resolução e equalização gargalos internos (“porta para dentro”) de aquisição de equipamentos para geração de vapor deverão observar em primeiro plano a restrição do mercado à biomassa inteira (toros de lenha), devendo priorizar equipamentos com sistema de alimentação para resíduos (excluindo do escopo sistemas com roscas de alimentação);
+
+Para unidades que inevitavelmente mantiverem em operação a biomassa lenha em toros, deverão primar pela competitividade no mercado ajustando seus pátios de estoque garantindo a trafegabilidade (todo o tempo) e manutenção de giro contínuo de estoque, bem como descarga preferencialmente mecanizada;
+
+Em regiões de implantação florestal (reflorestamento) próprios ou em parceria, garantir a máxima produtividade (conforme Índice de Sítio) em diretrizes apontadas pela área de Originação de Biomassa pertencente à Diretoria de Suprimentos Corporativa.
+
+**Planejamento tático**
+
+A originação de biomassa deve ser efetuada pelos agentes de compra (Suprimentos Local ou Corporativo) observando o que é ofertado localmente, buscando as fábricas se adequarem à realidade competitiva do fornecimento e cenário regional;
+
+Cabe às unidades consumidoras buscarem garantir condições para a máxima eficiência de originação através de processos dinâmicos de recebimento e aferição, parâmetros de controle e qualidade de forma objetiva e rápida, além da descarga facilitada;
+
+A originação deve considerar novos modelos de compra buscando estabelecer fornecimento a médio prazo (considerando financiamento de operações florestais de colheita e picagem, compra de ativo florestal em pé, compra de ativo florestal para entrega futura, etc.);
+
+A originação deve ser efetuada estabelecendo o comparativo de biomassas a partir do potencial energético (PCI) versus o custo total (CT) da biomassa ofertada (podendo indicar mudança na matriz energética da unidade) através do menor R$/Gcal (mcal) obtido.
+
+**Planejamento operacional**
+
+Pré-requisitos para elaboração do planejamento:
+- Demanda de vapor ou energia térmica; 
+- Levantamento e determinação da disponibilidade de biomassa regional (tipo, origem, % umidade, PCI>PCU (L) (teórico), volumes, garantia de fornecimento);
+- Seleção da biomassa conforme cadastro de itens (cenário atual de consumo);
+- Levantamento cenário atual (restrições internas “porta para dentro” referentes a equipamentos e logística):
+  - Modelo equipamento caldeira e periféricos (sistema de
+
+ recebimento, movimentação, alimentação e consumo da biomassa);
+  - Tamanho da balança rodoviária unidade requisitante (compra em tonelada);
+  - Área para manobra (pode ser limitante a veículos de maior volume de transporte);
+  - Estoque regulador - determinação do potencial de estocagem e qualidade na estocagem (drenagem, pátio, tipo de movimentação, etc.).
+
+A aprovação do planejamento de abastecimento do estoque mensal e da modalidade de compra serão acordados com a Gerência Industrial e a Gerência Administrativa de cada unidade/divisão, com a Gerência de Engenharia – Utilidades e a Gerência de Suprimentos Corporativo junto ao orçamento anual.
+
+A originação de biomassa deve ser efetuada pelos agentes de compra observando as demandas das fábricas por consumo adequando a realidade da originação ao fornecimento e consumo fábrica apresentando o custo conforme drive de custos;
+
+A originação deverá se dar sempre a partir de contratos com fornecedores com potencial de fornecimento comprovado em planilha aberta “Mapa de Negociação” com estratégia de garantia de abastecimento.
+
+**PROCEDIMENTOS**
+
+**Homologação e cadastro de fornecedores (documentos administrativos e socioambientais)**
+
+Conforme IN-PRESI-SUP-0094 - Política de Suprimentos América do Sul e PROC-PRESI-SUP-0004 - Contratação de Materiais e Serviços, todos representantes comerciais que quiserem negociar com a Companhia deverão comprovar através da documentação adequada (comprovação do registro no Conselho Regional dos Representantes Comerciais do respectivo estado em que estiver fazendo a representação) que podem atuar em nome da empresa representada;
+
+Cabe ao fornecedor titular da negociação a apresentação de documentação e o checklist preenchido conforme F-PRESI-SUP-0021 - Padronização de Solicitação de Documentos a Fornecedores;
+
+Caberá aos colaboradores de Suprimentos titular da negociação e a abertura de chamado fluxo JBS SA » 01 - Cadastro ERP » 3 – Fornecedor para posterior cadastro sistema (SRP ERP ou SAP) anexando a documentação do fornecedor;
+
+Caberá aos Suprimentos locais e corporativo a verificação e manutenção atualizada de informações de fornecedores conforme F-PRESI-SUP-0022 - Gestão de Contatos de Fornecedores;
+
+Para casos de fornecimento não contemplados nesse documento deverá ser realizado estudo prévio pela área de Meio Ambiente da unidade para direcionamento de ações e listagem da documentação obrigatória devendo posteriormente à análise liberar o fornecedor (SIM ou NÃO);
+
+Caberá à área Ambiental da unidade a gestão de documentação ambiental operacional dos fornecedores tais como: crédito florestal, gestão ofertas e aceites, Documento de Origem Florestal (DOF), aceite de DOF, cadastramento e homologação de pátios de recebimento, diligências a áreas de origem da biomassa para verificação de possíveis desvios quando necessária.
+
+**Itens cadastrados - consumo (Almoxarifado)**
+
+O recebimento e o registro de material deverão seguir os códigos discriminados em F-PRESI-SUP-0006 - Códigos Cadastrados de Biomassa;
+ 
+As unidades de medidas habilitadas para aquisição de biomassa são: 
+
+| Grandeza   | Unidade               | Símbolo | Obs.                     |
+|------------|-----------------------|---------|--------------------------|
+| Volumétrico| Metro cúbico estéreo  | m.st    | Não oficial (INMETRO)    |
+| Volumétrico| Metro cúbico sólido   | m³      | -                        |
+| Massa      | Tonelada              | t       | -                        |
+| Massa      | Quilograma            | kg      | -                        |
+
+Para compra de materiais não cadastrados ou alteração de homologados, os mesmos devem ser previamente homologados pelos usuários/requisitantes seguindo orientação do Suprimentos Corporativo Utilidades Biomassas para coleta amostra e caracterização e determinação em laboratório credenciado;
+
+**Orçamentação – formação de preço unitário de biomassa**
+
+O preço de mercado será acompanhado pela Gerência de Utilidades Biomassas – Suprimentos Corporativo (Suprimentos Utilidades) e pelos Suprimentos locais através de coleta in loco e determinação de drivers de custos;
+
+Ferramentas de levantamento de custos:
+- Boletim de preços de Suprimentos Utilidades;
+- Boletim de preços (ex.: CEPEA/Esalq);
+- Levantamentos, cotações locais ou regionais;
+- Determinação drivers de custos unitários;
+- Determinação e equivalência energética (Gcal) entre diferentes biomassas/materiais X custo total.
+
+O orçamento de biomassa será formado pelo preço base (ano corrente de setembro a outubro) somado à variação inflacionária percentual (%) sobre o driver de custos da cadeia de abastecimento de biomassa, objetivando a indicação do custo total madeireira ou não madeireira (que se forma regionalmente/localmente);
+
+Deverão ser considerados no orçamento os custos:
+- Matéria-prima (biomassa, floresta, resíduo, etc.);
+- Mão de obra;
+- Transporte (logística);
+- Custos de carga e descarga;
+- Custos de armazenamento e movimentação;
+- Custos administrativos e financeiros;
+- Prazo de pagamento;
+- Variação de impostos e taxas;
+- Atendimento às especificidades do requisitante.
+
+A responsabilidade pelo orçado em preços será do Suprimentos Utilidades local e corporativo;
+
+Todos os materiais ou biomassas (propostas de compra) deverão ser avaliados em base comparativa (R$/Gcal) menos o custo energético determinado pelo poder calorífico (PCI>PCU (L)) observando o % de umidade do combustível;
+
+O preço negociado “a mercado” será o preço balcão ou o preço do dia do material o que poderá sofrer as variações de oferta principalmente em compra spot.
+
+**Modalidades de compra – determinação frete**
+
+Todas as modalidades de fretes estão liberadas para cotação tais como:
+
+| INCOTERMS  | Carga | Seguro | Transporte | Descarga |
+|------------|-------|--------|------------|----------|
+| EXW        | C     | C      | C          | C        |
+| FCA        | V     | C      | C          | C        |
+| CPT        | V     | V      | V          | C        |
+| CIP        | V     | V      | V          | C        |
+| DAP        | V     | C      | V          | C        |
+| DPU        | V     | V      | V          | V        |
+| FOB        | V     | C      | C          | C        |
+| CIF        | V     | V      | V          | C        |
+
+**C – Comprador**
+**V – Vendedor**
+**CIF/FOB – Marítimo e/ou Fluvial (Usualmente)**
+
+Para cotação FOB, o custo deverá ser determinado unitariamente de forma a permitir a comparação e determinação de melhor preço (R$/unidade prévio);
+
+Para compra FOB, a gestão operacional de inserção de frete e o cadastro transportador (SRP ERP SAP ou outro) são de responsabilidade do requisitante junto à Logística local e pelo responsável por cadastro rotas em sistema.
+
+**Requisição de consumo**
+
+Cabe ao requisitante a formalização de consumo material do estoque, sendo de responsabilidade deste a verificação de existência de material para baixa/consumo diário.
+
+**Solicitação de compra**
+
+Observada a necessidade, procede-se com a requisição de compra devendo esta ser direcionada ao Suprimentos local que procederá com a orçamentação e geração de compra quando não automática em contrato de forma spot orientada pelo Suprimentos Utilidades Corporativo;
+
+A solicitação de compra deverá ser feita exclusivamente via sistema (SRP ERP ou SAP) de acordo com código biomassa histórico ou o informado pelo requisitante ou especialista da área de Suprimentos e deverá ser aprovada de acordo com a política de alçada de compra do negócio;
+
+Deve haver segregação de função para requisição e compra (“quem requisita não compra” e “quem compra não requisita”).
+
+**Cotação**
+
+Poderá a biomassa quanto à sua cotação ser enquadrada em exceções conforme IN-PRESI-SUP-0094 - Política de Suprimentos América do Sul e PROC-PRESI-SUP-0004 - Contratação de Materiais e Serviços;
+
+Caberá ao comprador titular o envio a mercado de formulário para coleta de preços identificando qual o item a ser cotado, quantidade mensal, unidade de medida e os dados da unidade conforme disposto no F-PRESI-SUP-0023 - Proposta Comercial Mercado/Fornecedor;
+
+Caberá então ao comprador titular da negociação o preenchimento da equalização de proposta em F-PRESI-SUP-0024 - Mapa Negociação de Biomassa, posterior anexo à cotação eletrônica e comparativo R$/Gcal respondida internamente pelo negociador devendo estas estarem assinadas pelos solicitantes/requisitantes e coordenadores/gerentes das áreas Administrativo e Manutenção.
+
+**Pré-pedido**
+
+Quando gerado a partir de contrato, será gerado de forma automática conforme contrato vinculado ao Mercado Eletrônico;
+
+Quando gerado a partir de compra spot deverá ser gerado em volume não superior ao consumo de 1 trimestre (conforme histórico de consumo) podendo o Mapa de Negociação ser utilizado para até 4 compras em 12 meses desde que não ocorram alterações na negociação em preço e prazo;
+
+Todos os anexos (Mapa de Negociação, propostas, etc.) deverão estar inseridos no pré-pedido.
+
+**Pedido de compra**
+
+Gerado o pedido de compra, o mesmo seguirá para alçada de aprovação conforme IN-P
+
+RESI-SUP-0094 - Política de Suprimentos América do Sul;
+
+Caberá ao Suprimentos local fazer o acompanhamento da entrega verificando o recebimento e confirmando com o Almoxarifado o cumprimento do acordado quanto ao código da biomassa adquirida e suas particularidades técnicas.
+
+**Contratos**
+
+Deverão os envolvidos no processo de originação, compra e recebimento de biomassa observar as diretrizes dos documentos IN-PRESI-JUR-0017 – Política de Contratos e PROC-PRESI-SUP-0004 - Contratação de Materiais e Serviços quanto a requisição de modelos, chancela e as alçadas de assinaturas;
+
+Todo e qualquer contrato de biomassa deverá levar em consideração possíveis paralisações de atividades estando contemplada margem de segurança na compra, não podendo em hipótese alguma exercer 100% do volume de consumo histórico pela unidade;
+
+A aprovação e a assinatura do contrato serão de responsabilidade das diretorias envolvidas;
+
+A solicitação dos contratos de longo prazo de biomassa é de responsabilidade da Gerência de Utilidades;
+
+Compete à Gerência de Utilidades inserir a tabela de preços acordada entre as partes e cadastrar o acordo comercial do fornecedor no sistema de suprimentos Mercado Eletrônico.
+
+**Compras em contrato**
+
+Conforme planejamento anual limitada a volume não superior a 80% do total de consumo histórico da unidade. Fica a cargo da unidade a compra dos 20% restantes;
+
+Todos os contratos devem ser respeitados, sendo a unidade obrigada a receber o material desde que o mesmo esteja de acordo com as características previstas;
+
+Para negociações onde o pedido de compra é amarrado a contrato de fornecimento, tais como floresta em pé, estes deverão ter uma cláusula específica negociada para abastecimento exclusivo da JBS S.A. ou seus negócios (cláusula take or pay).
+
+**Compras spot**
+
+Deverá ser negociada pelos Suprimentos locais seguindo os mesmos critérios da compra energética para negociação e validação de fornecedor, de preço e de custo total;
+
+Os preços de contrato poderão servir de balizador de preço e prazo de pagamento para negociações locais de compra spot não devendo esta ser maior em preço ou menor em prazo de pagamento do que os valores já contratados;
+
+Em locais onde não ocorra a contratação de fornecedores seja por indisponibilidade ou outros motivos o volume total poderá ficar em contratação spot ficando o processo de compra 100% sob responsabilidade da unidade. Suprimentos Corporativo auxiliará no balizamento de drivers de custo e na determinação de custo total médio;
+
+Quando a unidade que possuir contrato receber uma proposta de fornecimento spot com 15% abaixo do drive de preço utilizado como base para o mesmo produto será necessário realizar uma avaliação junto ao fornecedor para entender a composição dos custos (em planilha aberta) podendo este ser entendido como preço/proposta temerária não oferendo passividade de ser realizada trazendo riscos à segurança do abastecimento da unidade.
+
+**Taxas e penalidades no processo de biomassa**
+
+Todos os custos envolvendo o processo de compra (taxas, licenças, multas, etc.) serão debitados no centro de custo da caldeira da unidade.
+
+**Recebimento e aferição da carga**
+
+O recebimento físico é de responsabilidade do Almoxarifado que deverá observar o acordo comercial e as características descritas nos cadastros dos itens e neste procedimento, identificando o material recebido;
+
+Os apontamentos sistêmicos de recebimento devem ser realizados pelo Almoxarifado seguindo os seguintes critérios:
+- Altura (A);
+- Largura (L);
+- Comprimento (C);
+- Direita (Dir.);
+- Esquerda (Esq.);
+- Multiplicação (*);
+- Média aritmética (X).
+
+**Aferições**
+
+Para determinação da metragem, seja ela estéreo (m.st) ou metragem cúbica (m³) ou ainda em tonelada (t), deverá o aferidor utilizar o formulário padrão de medição por tipo de recebimento F-PRESI-SUP-0008 - Recebimento de Biomassa;
+
+Para determinar o fator de conversão de lenha e a relação peso/volume para auditorias internas deverá ser aferido 5% do volume de caminhões pela metodologia:
+- M.st (metro estéreo) – em caso de aferição lenha;
+- M³ (metro cúbico) – em caso de aferição de cavaco.
+
+No momento do recebimento caso verificado que a biomassa não atende a especificação negociada (descrição relativa ao código do produto) esta deverá ser recebida, fotografada gerando relatório de não conformidade/notificação de não conformidade (RNC/NNC) via e-mail apontando o desvio encaminhado imediatamente ao comprador responsável;
+
+Durante a aferição no caso de compra e recebimento de lenha em m.st, se ficar evidenciada a “cama de gato” ou “gaiola” o medidor deverá aplicar um percentual (%) de desconto da carga evidenciar na planilha cega F-PRESI-SUP-0008 - Recebimento de Biomassa e devolver integralmente a carga gerando RNC/NNC, devendo esta ser encaminhada ao comprador responsável;
+
+Também deverão constar na planilha cega os pesos dos caminhões carregados e as taras correspondentes para a obtenção do peso do material transportado;
+
+Para divergências no volume ou peso da mercadoria devem ser considerados os seguintes critérios:
+- Para aferição a maior que NF-e gera-se complemento para cada nota fiscal;
+- Para aferição a menor que NF-e gera-se devolução para cada nota fiscal.
+
+É de responsabilidade do Almoxarifado manter sistematicamente atualizada a coleta dos dados na planilha cega F-PRESI-SUP-0008 - Recebimento de Biomassa e preenchimento da planilha de controle F-PRESI-SUP-0009 – Acompanhamento e Controle Biomassa.
+
+**Controle de umidade**
+
+Para definição da umidade poderão ser utilizadas ferramentas, estufas laboratoriais, aparelho de medição de umidade e outros aspectos visuais e históricos de relação peso x volume;
+
+O controle será aplicado com base em umidade (%) máxima aceitável balizada em 40% de umidade base úmida repassada pela negociação da Gerência de Utilidades acordada via Termo de Compromisso;
+
+A metodologia de aferição de umidade está disponível no manual M-PRESI-SUP-0150 - Aferição de Umidade.
+
+| Revisão | Responsáveis              | Área                   | Ação    |
+|---------|---------------------------|------------------------|---------|
+| 03      | Lari Barbosa Junior       | Gerência de Utilidades | Revisão |
+| 03      | Maximiliano Granada Limberger | Diretoria de Suprimentos | Aprovação |
+
+---
+
+**PROCEDIMENTO INTERNO**
+
+PROC-PRESI-SUP-0005
+
+5 de março de 2024
+
+Revisão: 03
+
+**Compra e Recebimento de Biomassa**
+
+**DESTINATÁRIOS:** Todos os envolvidos no processo de compras, recebimento e consumo de Biomassa na JBS S.A.
+
+Processos Organizacionais
+
+Documento confidencial para uso da JBS
+
+Página 1 de 10
+
+---

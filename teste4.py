@@ -29,6 +29,7 @@ openai.api_key = api_key
 # variáveis globais
 categorizador_prompt= open('./prompts/indicador_prompt.txt', "r", encoding="utf8").read()
 escritor= open('./prompts/escritor_prompt.txt',"r",encoding="utf8").read() 
+erro = open('./erro.txt',"r",encoding="utf8").read() 
 
 encoding = tiktoken.encoding_for_model("gpt-4o-2024-08-06")
 
@@ -149,6 +150,58 @@ def resposta (prompt_usuario, historico, nome_arquivo):
             tempo_de_espera *=2
 
 
+
+def respostaErro (prompt_usuario, historico):
+    prompt=erro
+    prompt += historico
+    
+    tentativas = 0
+    tempo_de_espera = 5
+    while tentativas <3:
+        tentativas+=1
+        print(f"Tentativa {tentativas}")
+        try:
+            print(f"Iniciando a análise")
+            resposta = openai.ChatCompletion.create(
+                model = "gpt-4o-2024-08-06",
+                messages = [
+                    {
+                        "role": "system",
+                        "content": prompt
+                    },
+                    {
+                        "role": "user",
+                        "content": prompt_usuario
+                    }
+                ],
+                temperature=0.,
+                max_tokens=5000,
+                top_p=1,
+                frequency_penalty=0,
+                presence_penalty=0,
+                stream=True
+            )
+            
+            print("Resposta feita com sucesso")
+            for chunk in resposta:
+                    if 'choices' in chunk and 'delta' in chunk['choices'][0] and 'content' in chunk['choices'][0]['delta']:
+                        text = chunk['choices'][0]['delta']['content']
+                        if text:
+                            print(text, end="")
+                            yield text
+
+            return
+        except openai.error.AuthenticationError as e:
+            print(f"Erro de autentificação {e}")
+        except openai.error.APIError as e:
+            print(f"Erro de API {e}")
+            time.sleep(5)
+        except openai.error.RateLimitError as e:
+            print(f"Erro de limite de taxa: {e}")
+            time.sleep(tempo_de_espera)
+            tempo_de_espera *=2
+
+
 arquivos=[]
 for arq in (os.listdir("./bases")):
         arquivos.append(arq) 
@@ -183,7 +236,7 @@ def submit():
             return Response(stream_with_context(resposta(pergunta_usuario,historico,base)), content_type='text/plain')
         
         else: 
-             print("Erro")
+            return Response(stream_with_context(respostaErro(pergunta_usuario,historico)), content_type='text/plain')
     except Exception as e:
         error(e)
         return Response(stream_with_context(algo_ocorreu_de_errado()), content_type='text/plain')
