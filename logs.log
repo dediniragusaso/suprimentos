@@ -1309,3 +1309,5 @@ ERROR->2024-09-25 17:53:08,239->cannot access local variable 'resposta' where it
 ERROR->2024-09-26 15:39:54,269->resposta() missing 1 required positional argument: 'nome_arquivo'->root
 ERROR->2024-09-26 15:40:53,812->resposta() missing 1 required positional argument: 'nome_arquivo'->root
 ERROR->2024-09-26 15:44:31,115->resposta() missing 1 required positional argument: 'nome_arquivo'->root
+ERROR->2024-10-02 15:33:30,421->[WinError 3] O sistema não pode encontrar o caminho especificado: './basesViagens'->root
+ERROR->2024-10-02 15:33:55,949->[WinError 3] O sistema não pode encontrar o caminho especificado: './basesViagens'->root

@@ -142,11 +142,17 @@ def respostaArquivo (prompt_usuario, arquivo, historico):
             
             modelo = PromptTemplate(template=prompt, input_variables=["input"])
             cadeia = modelo | llm | StrOutputParser()
-            resposta_stream = cadeia.invoke(input=prompt_usuario)
+            # resposta_stream = cadeia.invoke(input=prompt_usuario)
             
+            print(cadeia)
+            for chunk in llm.stream(cadeia):
+                print(chunk)
+                yield chunk
+
             print("Resposta feita com sucesso")
-            print(resposta_stream)
-            return resposta_stream
+            # print(resposta_stream)
+            # return resposta_stream
+            return
         except TracerException as e:
             print(f"Erro de rastreamento: {e}")
         except OutputParserException as e:
