@@ -20,8 +20,9 @@ getLogger('openai').setLevel(ERROR)
 getLogger('werkzeug').setLevel(ERROR)
 
 load_dotenv()
-api_key = os.getenv("openai_api_key")
-correct_password = os.getenv("senha")
+api_key = os.getenv("OPENAI_API_KEY")
+correct_password = os.getenv("CORRECT_PASSWORD")
+print(correct_password)
 if not api_key:
     raise ValueError("Chave API não encontrada. Verifique se 'openai_api_key' está definida no ambiente.")
 
@@ -44,13 +45,13 @@ def index():
 @app.route('/login', methods=["POST"])
 def login():
     try:
-        password =request.json["password"]
+        password = request.json["password"]
         if password == correct_password:
-            return jsonify({"status": "success"})
+            return jsonify({"status": "success"}),200
         else:
-            return jsonify({"status": "error"}), 401  # Retorna erro 401 se a senha estiver incorreta
+            return jsonify({"status": "error"}),401
     except Exception as e:
-        return jsonify({"status": "error", "message": str(e)}), 500  # Retorna erro 500 em caso de exceções
+        return jsonify({"status": "error", "message": str(e)}),500
 
 
 @app.route("/limparTerminal", methods=["POST"])
