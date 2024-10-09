@@ -3,6 +3,7 @@ import time
 import tiktoken
 from dotenv import load_dotenv
 import os
+import re
 from flask import Flask, render_template,  request, jsonify, Response, stream_with_context
 from logging import ERROR
 # #Funções
@@ -30,6 +31,7 @@ openai.api_key = api_key
 categorizador_prompt= open('./prompts/indicador_prompt.txt', "r", encoding="utf8").read()
 escritor= open('./prompts/escritor_prompt.txt',"r",encoding="utf8").read() 
 erro = open('./erro.txt',"r",encoding="utf8").read() 
+normas= open('./prompts/prompt_normas.txt', "r", encoding="utf8").read()
 
 encoding = tiktoken.encoding_for_model("gpt-4o-2024-08-06")
 
@@ -55,6 +57,9 @@ def limparTerminal():
 def algo_ocorreu_de_errado():
     yield "Algo ocorreu de errado, tente novamente"
 
+def contar_tokens(texto):
+    return len(encoding.encode(texto))
+
 def categorizador(prompt_usuario):
     prompt=categorizador_prompt
     print (type(prompt))
@@ -62,6 +67,8 @@ def categorizador(prompt_usuario):
         prompt += open(f"./bases/{arq}","r",encoding="utf8").read()  
     tentativas = 0
     tempo_de_espera = 5
+    tokens_input= contar_tokens(prompt)
+    print(f"Entrada:{tokens_input}")
     while tentativas <3:
         tentativas+=1
         try:
@@ -104,6 +111,8 @@ def resposta (prompt_usuario, historico, nome_arquivo):
     prompt += historico
     tentativas = 0
     tempo_de_espera = 5
+    tokens_input= contar_tokens(prompt)
+    print(f"Entrada:{tokens_input}")
     while tentativas <3:
         tentativas+=1
         print(f"Tentativa {tentativas}")
@@ -131,12 +140,16 @@ def resposta (prompt_usuario, historico, nome_arquivo):
             )
             
             print("Resposta feita com sucesso")
+            output=""
             for chunk in resposta:
                     if 'choices' in chunk and 'delta' in chunk['choices'][0] and 'content' in chunk['choices'][0]['delta']:
                         text = chunk['choices'][0]['delta']['content']
                         if text:
-                            print(text, end="")
+                            output+=text
                             yield text
+
+            tokens_output = contar_tokens(output)
+            print(f"Tokens de saída: {tokens_output}")               
 
             return
         except openai.error.AuthenticationError as e:
@@ -154,7 +167,8 @@ def resposta (prompt_usuario, historico, nome_arquivo):
 def respostaErro (prompt_usuario, historico):
     prompt=erro
     prompt += historico
-    
+    tokens_input= contar_tokens(prompt)
+    print(f"Entrada:{tokens_input}")
     tentativas = 0
     tempo_de_espera = 5
     while tentativas <3:
@@ -183,12 +197,16 @@ def respostaErro (prompt_usuario, historico):
             )
             
             print("Resposta feita com sucesso")
+            output=""
             for chunk in resposta:
                     if 'choices' in chunk and 'delta' in chunk['choices'][0] and 'content' in chunk['choices'][0]['delta']:
                         text = chunk['choices'][0]['delta']['content']
                         if text:
-                            print(text, end="")
+                            output+=text
                             yield text
+
+            tokens_output = contar_tokens(output)
+            print(f"Tokens de saída: {tokens_output}") 
 
             return
         except openai.error.AuthenticationError as e:
@@ -201,40 +219,106 @@ def respostaErro (prompt_usuario, historico):
             time.sleep(tempo_de_espera)
             tempo_de_espera *=2
 
+def substituidorNormas (resp,historico,pergunta_usuario,norma):
+    prompt=normas
+    prompt += historico
+    prompt += ''.join(resp)  # junta todas as strings geradas por 'resp'
+    prompt += open(f"./bases_normas/{norma}.txt","r",encoding="utf8").read() 
+    tokens_input= contar_tokens(prompt)
+    print(f"Entrada:{tokens_input}")
+    tentativas = 0
+    tempo_de_espera = 5
+    while tentativas <3:
+        tentativas+=1
+        print(f"Tentativa {tentativas}")
+        try:
+            print(f"Iniciando a análise")
+            resposta = openai.ChatCompletion.create(
+                model = "gpt-4o-2024-08-06",
+                messages = [
+                    {
+                        "role": "system",
+                        "content": prompt
+                    },
+                    {
+                        "role": "user",
+                        "content": pergunta_usuario
+                    }
+                ],
+                temperature=0.,
+                max_tokens=5000,
+                top_p=1,
+                frequency_penalty=0,
+                presence_penalty=0,
+                stream=True
+            )
+            
+            print("Resposta feita com sucesso")
+            output=""
+            for chunk in resposta:
+                    if 'choices' in chunk and 'delta' in chunk['choices'][0] and 'content' in chunk['choices'][0]['delta']:
+                        text = chunk['choices'][0]['delta']['content']
+                        if text:
+                            output+=text
+                            yield text
+
+            tokens_output = contar_tokens(output)
+            print(f"Tokens de saída: {tokens_output}") 
+
+            return
+        except openai.error.AuthenticationError as e:
+            print(f"Erro de autentificação {e}")
+        except openai.error.APIError as e:
+            print(f"Erro de API {e}")
+            time.sleep(5)
+        except openai.error.RateLimitError as e:
+            print(f"Erro de limite de taxa: {e}")
+            time.sleep(tempo_de_espera)
+            tempo_de_espera *=2
 
 arquivos=[]
 for arq in (os.listdir("./bases")):
         arquivos.append(arq) 
-@app.route("/submit", methods=["POST"])
 
+
+
+@app.route("/submit", methods=["POST"])
+ 
 def submit():
     
     try:
+        # custo_input = 0.0025
+        # custo_output = 0.01
         historico = request.form['historico']
         pergunta_usuario = request.form['inputMessage']
         base = categorizador(pergunta_usuario)
-        if ( base in arquivos ):
-            # model ='gpt-4o-2024-08-06'
-            # enc = tiktoken.encoding_for_model(model)
-            # input= pergunta_usuario
-            # arquivo=open(f'./bases/{base}', "r", encoding="utf8").read()
-            # output= resposta+arquivo
-            # for arq in (os.listdir("./bases")):
-            #     output += open(f"./bases/{arq}","r",encoding="utf8").read() 
-            # resposta= Response(stream_with_context(resposta(pergunta_usuario,historico,base)), content_type='text/plain')
-
-            # #contagem
-            # tokens_input = len(enc.encode(input))
-            # tokens_output = len(enc.encode(output))
-            # custo_input = 0.0025
- 
-            # custo_output = 0.01
- 
-            # custo_total = tokens_input/1000*custo_input + tokens_output/1000*custo_output
- 
-            # print(custo_total)
-            return Response(stream_with_context(resposta(pergunta_usuario,historico,base)), content_type='text/plain')
+        resposta_sem_normas = resposta(pergunta_usuario, historico, base)
+        print(base)
+        # model ='gpt-4o-2024-08-06'
+        # enc = tiktoken.encoding_for_model(model)
         
+        if ( base in arquivos ):
+            print("Base encontrada")
+            prompt = historico + pergunta_usuario
+            for arq in (os.listdir("./bases")):
+                prompt += open(f"./bases/{arq}","r",encoding="utf8").read() 
+            string_sem_espacos = ''
+            
+            for parte in resposta_sem_normas:
+                string_sem_espacos += parte.replace(" ", "").replace("\n", "")
+            norma = re.search(r'(IN|M)-.*[0-9]{4}', string_sem_espacos, re.IGNORECASE)
+            if norma:
+                print("Baseado em norma")
+                regra = norma.group()  
+                print(regra)
+                
+                return Response(stream_with_context(substituidorNormas(resposta_sem_normas, historico, pergunta_usuario,regra)), content_type='text/plain')
+            
+            else:
+                print("nope")
+                print(type(resposta_sem_normas))
+                return Response(stream_with_context(resposta(pergunta_usuario, historico, base)), content_type='text/plain')
+     
         else: 
             return Response(stream_with_context(respostaErro(pergunta_usuario,historico)), content_type='text/plain')
     except Exception as e:

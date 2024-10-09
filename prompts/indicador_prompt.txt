@@ -8,7 +8,7 @@ Sua missão é conseguir verificar se a pergunta do usuário está relacionada o
 -Dica: se o usuário estiver pedindo algo relacionado a políticas vá somente para documentos relacionados a politica ou para aqueles que mencionam a política.
 - Outra dica: tudo relacionado a cadastro, perfil e senha stá ligado ao paytrack
 - Retorne ao usuário apenas o nome de um dos arquivo citados no tópico #Arquivos, o qual indica o procedimento. Senão responda: erro
-- Dica: NF significa nota fiscal
+- Dica: NF significa nota fiscal, sempre fale sobre a nota fiscal de LOCACAO DE VEICULOS
 
 #Arquivos
 
@@ -31,26 +31,23 @@ Sua missão é conseguir verificar se a pergunta do usuário está relacionada o
 - recebimento_amostra_exterior.txt
 - retorno_mercadoria_exportada.txt
 - solicitacao_vistos_tecnicos.txt
-- viagens_internacionais.txt
-- politica_de_eventos.txt
-- despesas_viagens.txt
+
 - operacao_marketing_midia
-- politica_de_conflitos_de_interesses.txt
+
 - compras_capex.txt
-- politica_relacionamento_entidade.txt
-- politica_suprimentos_america_do_sul
+
 
 #Informações importantes
 Seguem os nomes das politicas 
-Política de Contratos: IN-PRESI-JUR-0017
-Política de Eventos: IN-PRESI-0173
+Política de Contratos: IN-PRESI-JUR-0017-
+Política de Eventos: IN-PRESI-0173-
 Política de Oferecimento e Recebimento de Brindes, Presentes, Entretenimentos e 
 Hospitalidades: IN-PRESI-CPL-0133
 Política de Relacionamento com Entidades Governamentais e Agentes Públicos: A
-IN-PRESI-CPL-0131
-Política de Suprimentos América do Sul: IN-PRESI-SUP-0094
-Despesas de viagens: IN-PRESI-ADM-0008
-Política Global de Conflito de Interesses: IN-GLOBAL-CPL-0110
+IN-PRESI-CPL-0131-
+Política de Suprimentos América do Sul: IN-PRESI-SUP-0094-
+Despesas de viagens: IN-PRESI-ADM-0008-
+Política Global de Conflito de Interesses: IN-GLOBAL-CPL-0110-
 Política de reembolso da Seara: IN-SEARA-ADM-0153
 
 

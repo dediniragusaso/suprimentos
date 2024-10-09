@@ -70,15 +70,10 @@ def limparTerminal():
         return jsonify({"status": "success"})
     else:
         return jsonify({"status": "success"})
-    
-
 
 # função quando dá erro
 def algo_ocorreu_de_errado():
-    yield "Algo ocorreu de errado, tente novamente"
-
-
-
+    yield "Ocorreu um erro. Por favor, tente novamente mais tarde ou entre em contato com um de nossos desenvolvedores pelo e-mail: <a emailto:gedaijef@gmail.com>gedaijef@gmail.com</a>."
 
 def identificaArquivo(prompt_usuario):
     prompt = indicador
@@ -122,11 +117,13 @@ def respostaArquivo (prompt_usuario, arquivo, historico):
     #     prompt += "\n\n" + open(f"./bases/{arq}","r",encoding="utf8").read() 
     
     if arquivo == "erro":
-        return algo_ocorreu_de_errado()
-    
-    prompt=escritor
-    prompt += "\n\n" + open(f"./bases/{arquivo}","r",encoding="utf8").read()
-    prompt += historico
+        yield "Por favor, informe mais detalhes para que eu possa te ajudar."
+        return
+
+    # Carrega o conteúdo do arquivo especificado na base
+    prompt = escritor
+    prompt += "\n\n" + open(f"./bases/{arquivo}", "r", encoding="utf8").read()
+    prompt += historico  # Adiciona o histórico ao prompt
     
     tentativas = 0
     tempo_de_espera = 5
@@ -142,16 +139,14 @@ def respostaArquivo (prompt_usuario, arquivo, historico):
             
             modelo = PromptTemplate(template=prompt, input_variables=["input"])
             cadeia = modelo | llm | StrOutputParser()
+            cadeia = cadeia.invoke(input=prompt_usuario)
             # resposta_stream = cadeia.invoke(input=prompt_usuario)
             
-            print(cadeia)
             for chunk in llm.stream(cadeia):
                 print(chunk)
                 yield chunk
 
             print("Resposta feita com sucesso")
-            # print(resposta_stream)
-            # return resposta_stream
             return
         except TracerException as e:
             print(f"Erro de rastreamento: {e}")
