@@ -12,7 +12,6 @@ from logging import error
 from logging import getLogger
 import tiktoken
 import requests 
-import psycopg2
 
 basicConfig(
     level = ERROR  , #Todas as informações com maior ou prioridade igual ao DEBUG serão armazenadas
