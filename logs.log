@@ -1329,10 +1329,10 @@ ERROR->2024-10-09 15:01:39,004->[Errno 2] No such file or directory: './prompts/
 ERROR->2024-10-09 15:09:37,493->categorizador() missing 1 required positional argument: 'api_key'->root
 ERROR->2024-10-09 15:18:11,804->[Errno 2] No such file or directory: './prompts/palavras_chaves.txt'->root
 ERROR->2024-10-09 15:19:48,683->[Errno 2] No such file or directory: './prompts/palavras_chaves.txt'->root
-ERROR->2024-10-09 15:27:58,967->[WinError 3] O sistema não pode encontrar o caminho especificado: './bases_60'->root
-ERROR->2024-10-09 15:29:14,500->[WinError 3] O sistema não pode encontrar o caminho especificado: './bases_60'->root
-ERROR->2024-10-09 15:35:28,916->[WinError 3] O sistema não pode encontrar o caminho especificado: './bases_60'->root
-ERROR->2024-10-09 15:36:19,846->[WinError 3] O sistema não pode encontrar o caminho especificado: './bases_60'->root
+ERROR->2024-10-09 15:27:58,967->[WinError 3] O sistema nï¿½o pode encontrar o caminho especificado: './bases_60'->root
+ERROR->2024-10-09 15:29:14,500->[WinError 3] O sistema nï¿½o pode encontrar o caminho especificado: './bases_60'->root
+ERROR->2024-10-09 15:35:28,916->[WinError 3] O sistema nï¿½o pode encontrar o caminho especificado: './bases_60'->root
+ERROR->2024-10-09 15:36:19,846->[WinError 3] O sistema nï¿½o pode encontrar o caminho especificado: './bases_60'->root
 ERROR->2024-10-09 17:15:23,006->categorizador() takes 3 positional arguments but 4 were given->root
 ERROR->2024-10-09 17:16:18,869->categorizador() takes 3 positional arguments but 4 were given->root
 ERROR->2024-10-09 17:19:21,471->cannot access local variable 'resposta' where it is not associated with a value->root
