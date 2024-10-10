@@ -23,7 +23,7 @@ getLogger('openai').setLevel(ERROR)
 getLogger('werkzeug').setLevel(ERROR)
 
 load_dotenv()
-api_key = os.getenv("openai_api_key")
+api_key = os.getenv("OPENAI_API_KEY")
 correct_password = os.getenv("CORRECT_PASSWORD")
 if not api_key:
     raise ValueError("Chave API não encontrada. Verifique se 'openai_api_key' está definida no ambiente.")
