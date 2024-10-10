@@ -49,7 +49,8 @@ def inserir_banco(query):
 # variáveis globais
 categorizador_prompt= open('./prompts/indicador_prompt.txt', "r", encoding="utf8").read()
 escritor= open('./prompts/escritor_prompt.txt',"r",encoding="utf8").read() 
-erro = open('./erro.txt',"r",encoding="utf8").read() 
+erro = open('./prompts/
+erro.txt',"r",encoding="utf8").read() 
 normas= open('./prompts/prompt_normas.txt', "r", encoding="utf8").read()
 
 encoding = tiktoken.encoding_for_model("gpt-4o-2024-08-06")
