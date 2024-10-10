@@ -20,11 +20,11 @@ strong {
     font-weight: 500;
 }
 
-#hamburger{
-    background-color: #1e1e1e;
+#hamburger {
+    background-color: #0F3B67;
 }
 
-#sidebar{
+#sidebar {
     background-color: #0F3B67;
 }
 
@@ -74,6 +74,13 @@ strong {
     border-radius: 8px;
 }
 
+.container-processos {
+    padding-right: 5%;
+    overflow-y: scroll;
+    scrollbar-color: #566677 #f1f1f1;
+    height: 30rem;
+}
+
 @media screen and (min-width: 768px) {
     .logo-container {
         margin-left: 10%;
@@ -88,7 +95,7 @@ strong {
         height: auto;
     }
 
-    #container-prompt{
+    #container-prompt {
         padding-left: 10px;
         padding-right: 10px;
     }
@@ -168,7 +175,6 @@ strong {
     background: #f1f1f1;
 }
 
-
 .spinner {
     height: 75px;
     width: 100%;
@@ -212,7 +218,6 @@ strong {
 }
 
 @keyframes loading6454 {
-
     0%,
     100% {
         transform: translateY(0);
@@ -224,50 +229,144 @@ strong {
 }
 
 .cor_1 {
-    background-color: #116581;
-}.cor_1:hover{
-    background-color: #0E5871;
+    background-color: #11254F;
+}
+
+.cor_1:hover {
+    background-color: #0e1e40;
 }
 
 .cor_2 {
-    background-color: #197FA1;
-}.cor_2:hover{
-    background-color: #14708E;
+    background-color: #0E5269;
+}
+
+.cor_2:hover {
+    background-color: rgb(16, 89, 113);
 }
 
 .cor_3 {
-    background-color: #3DA1C2;
-}.cor_3:hover{
-    background-color: #338EAC;
+    background-color: #2C768F;
+}
+
+.cor_3:hover {
+    background-color: #25667b;
 }
 
 .cor_4 {
-    background-color: #46B7DC;
-}.cor_4:hover{
-    background-color: #3DADD2;
+    background-color: #338EAC;
+}
+
+.cor_4:hover {
+    background-color: #2c7b95;
 }
 
 .cor_5 {
-    background-color: #31C9C9;
-}.cor_5:hover{
-    background-color: #2ABBBB;
+    background-color: #369EC0;
+}
+
+.cor_5:hover {
+    background-color: #2c8cac;
 }
 
 .cor_6 {
-    background-color: #38CE98;
-}.cor_6:hover{
-    background-color: #31C18E;
+    background-color: #3DADD2;
+}
+
+.cor_6:hover {
+    background-color: #349cbf;
 }
 
 .cor_7 {
-    background-color: #37C06E;
-}.cor_7:hover{
-    background-color: #36B76A;
+    background-color: #2ABBBB;
 }
 
-.container-processos {
-    padding-right: 5%;
-    overflow-y: scroll;
-    scrollbar-color: #566677 #f1f1f1;
-    height: 300px;
+.cor_7:hover {
+    background-color: #23a5a5;
+}
+.cor_8 {
+    background-color: #31C18E;
+}
+
+.cor_8:hover {
+    background-color: #2aaa7d;
+}
+.cor_9 {
+    background-color: #24AB7B;
+}
+
+.cor_9:hover {
+    background-color: #24a276;
+}
+.cor_10 {
+    background-color: #33A15F;
+}
+
+.cor_10:hover {
+    background-color: #2c8f54;
+}
+
+/* Estilos para a sobreposição do login */
+.login-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.hidden {
+    display: none;
+}
+
+.login-container {
+    position: relative;
+    background-color: #1e1e1e;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 300px;
+    z-index: 1001; /* Coloca o container acima do blur */
+}
+
+.login-container h1 {
+    color: #f1f1f1;
+    margin-bottom: 20px;
+}
+
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #11254F;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-container button:hover {
+    background-color: #0E5269;
+}
+
+.login-container .error {
+    color: #FF4C4C;
+    margin-top: 10px;
+    display: none;
 }

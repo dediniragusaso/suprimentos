@@ -1337,3 +1337,43 @@ ERROR->2024-10-09 17:15:23,006->categorizador() takes 3 positional arguments but
 ERROR->2024-10-09 17:16:18,869->categorizador() takes 3 positional arguments but 4 were given->root
 ERROR->2024-10-09 17:19:21,471->cannot access local variable 'resposta' where it is not associated with a value->root
 ERROR->2024-10-09 17:21:32,527->cannot access local variable 'resposta' where it is not associated with a value->root
+ERROR->2024-10-10 14:12:14,073->categorizador() takes 1 positional argument but 2 were given->root
+ERROR->2024-10-10 14:13:18,594->categorizador() takes 1 positional argument but 2 were given->root
+ERROR->2024-10-10 14:14:43,813->finish_reason: SAFETY
+index: 0
+safety_ratings {
+  category: HARM_CATEGORY_SEXUALLY_EXPLICIT
+  probability: NEGLIGIBLE
+}
+safety_ratings {
+  category: HARM_CATEGORY_HATE_SPEECH
+  probability: NEGLIGIBLE
+}
+safety_ratings {
+  category: HARM_CATEGORY_HARASSMENT
+  probability: NEGLIGIBLE
+}
+safety_ratings {
+  category: HARM_CATEGORY_DANGEROUS_CONTENT
+  probability: MEDIUM
+}
+->root
+ERROR->2024-10-10 14:34:50,597->finish_reason: SAFETY
+index: 0
+safety_ratings {
+  category: HARM_CATEGORY_SEXUALLY_EXPLICIT
+  probability: NEGLIGIBLE
+}
+safety_ratings {
+  category: HARM_CATEGORY_HATE_SPEECH
+  probability: NEGLIGIBLE
+}
+safety_ratings {
+  category: HARM_CATEGORY_HARASSMENT
+  probability: NEGLIGIBLE
+}
+safety_ratings {
+  category: HARM_CATEGORY_DANGEROUS_CONTENT
+  probability: MEDIUM
+}
+->root

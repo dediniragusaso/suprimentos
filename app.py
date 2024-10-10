@@ -12,6 +12,8 @@ from logging import error
 from logging import getLogger
 import tiktoken
 import requests 
+import psycopg2
+
 basicConfig(
     level = ERROR  , #Todas as informações com maior ou prioridade igual ao DEBUG serão armazenadas
     filename= "logs.log", #Onde serão armazenadas as informações
@@ -23,10 +25,27 @@ getLogger('werkzeug').setLevel(ERROR)
 
 load_dotenv()
 api_key = os.getenv("openai_api_key")
+correct_password = os.getenv("CORRECT_PASSWORD")
 if not api_key:
     raise ValueError("Chave API não encontrada. Verifique se 'openai_api_key' está definida no ambiente.")
 
 openai.api_key = api_key
+
+def inserir_banco(query):
+
+    conn = psycopg2.connect(
+        host=os.getenv("DB_HOST"),
+        database=os.getenv("DB_NAME"),
+        user=os.getenv("DB_USER"),
+        password=os.getenv("DB_PASSWORD"),
+        port=os.getenv("DB_PORT")
+    )
+
+    cursor = conn.cursor()
+    cursor.execute(query)
+    conn.commit()
+    cursor.close()
+    conn.close()
 
 # variáveis globais
 categorizador_prompt= open('./prompts/indicador_prompt.txt', "r", encoding="utf8").read()
@@ -41,6 +60,17 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     return render_template('index.html')
+
+@app.route('/login', methods=["POST"])
+def login():
+    try:
+        password = request.json["password"]
+        if password == correct_password:
+            return jsonify({"status": "success"}),200
+        else:
+            return jsonify({"status": "error"}),401
+    except Exception as e:
+        return jsonify({"status": "error", "message": str(e)}),500
 
 @app.route("/limparTerminal", methods=["POST"])
 def limparTerminal():
@@ -314,5 +344,4 @@ def submit():
         error(e)
         return Response(stream_with_context(algo_ocorreu_de_errado()), content_type='text/plain')
     
-app.run(debug=True, port=5000)
-
+app.run(debug=True, port=5000, host="0.0.0.0")
