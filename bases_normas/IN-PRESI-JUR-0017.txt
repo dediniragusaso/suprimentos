@@ -1,0 +1,404 @@
+1.	OBJETIVO
+
+Definir diretrizes e procedimentos para análise e elaboração de contratos pela Diretoria Jurídica, bem como definir fluxo de aprovação, assinatura e guarda desses instrumentos.
+
+
+2.	RESPONSABILIDADE QUANTO AO CUMPRIMENTO
+
+Cabe a todas as áreas envolvidas no processo e citadas neste documento a responsabilidade pelo cumprimento desta instrução normativa.
+
+
+3.	DEFINIÇÕES
+
+3.1.	Contrato é um acordo celebrado entre as partes que visam um objetivo comum;
+
+3.2.	Os contratos devem conter obrigatoriamente os seguintes elementos e informações:
+
+3.2.1.	Partes: identificação precisa e completa das partes, contendo (i) denominação social, CNPJ, endereço com CEP da sede em caso de empresa; e (ii) nome completo, estado civil, nacionalidade, CPF, RG com UF e endereço com CEP em caso de pessoa física;
+
+3.2.2.	Objeto: descrição clara do que se pretende contratar;
+
+3.2.3.	Prazo: prazo para cumprimento das obrigações assumidas no contrato;
+3.2.4.	Valor: preço e forma de pagamento. Se o valor for parcelado, fazer constar o valor das parcelas com os prazos de vencimento especificados;
+
+3.2.5.	Multa: previsão de multa à parte contrária, no caso de não cumprimento das condições contratadas, e a possibilidade de retenção de valor ainda não pago;
+
+3.2.6.	Reajuste: quando aplicável, definição do momento, forma e índice a ser aplicado no valor do contrato;
+
+3.2.7.	Rescisão: a Companhia deve ter a possibilidade de cancelar o contrato a qualquer momento, preferencialmente mediante simples comunicação e sem multa ou indenização;
+3.2.8.	Riscos trabalhistas: para os casos aplicáveis, no ato da contratação e periodicamente, é necessário requisitar ao contratado os documentos listados no F-PRESI-RH-0200 - Documentação de Terceiros para verificar sua idoneidade fiscal, trabalhista e previdenciária, principalmente quando o trabalho é realizado nas dependências da Companhia.
+3.3.	Nos casos de prestação de serviço, empreitada, fornecimento de materiais ou insumos, deverão ser observadas também as condições descritas no procedimento PROC-PRESI-SUP- 0004 - Procedimento de Contratação de Materiais e Serviços.
+ 
+4.	DISPOSIÇÕES GERAIS
+
+4.1.	Transações com partes relacionadas devem observar a IN-PRESI-JUR-0021 - Transações Com Partes Relacionadas e, tendo suas aprovações prévias pelo Comitê de Partes Relacionadas e/ou pelo Conselho de Administração da Companhia, conforme a política. Após aprovação da transação, o contrato poderá ser chancelado pelo Jurídico;
+
+4.2.	Contratações que envolvam terceiros de risco, patrocínios ou doações, conforme instruções normativas IN-PRESI-CPL-0141 – Política de Doações e IN-PRESI-CPL-0143 – Política de Patrocínios, devem ser analisadas previamente pela área de Compliance e, após a análise reputacional aprovada, os respectivos instrumentos serão revisados e chancelados pela Diretoria Jurídica;
+
+4.3.	É obrigatória a inclusão das cláusulas padrão de Compliance e de Privacidade e Proteção de Dados em todos os contratos, sendo certo que eventuais alterações nestas cláusulas serão realizadas mediante a autorização prévia e expressa da Diretoria de Compliance ou do Escritório de Privacidade da Companhia;
+
+4.4.	A Diretoria Jurídica terá prazo de até 6 dias úteis para a análise de quaisquer documentos ou emissão de pareceres, contados a partir do recebimento da abertura da solicitação no ProJuris. Caso seja necessária nova análise do mesmo documento, o prazo para atendimento será reiniciado.
+
+5.	PROCEDIMENTOS
+
+5.1.	Formalização
+
+5.1.1.	Todas as contratações devem ser formalizadas por meio de um contrato, salvo nos casos em que houver dispensa estabelecida em política própria;
+5.1.2.	Antes de iniciar a formalização do contrato, todos os fornecedores e prestadores de serviços deverão estar previamente cadastrados nos sistemas internos da Companhia (ERP, SRP ou SAP);
+
+5.1.3.	O requerente deverá, obrigatoriamente, abrir uma requisição de análise de contrato  via  sistema  ProJuris,	https://projuris.jbs.com.br/projuris, independentemente da necessidade de análise e chancela pela Diretoria Jurídica;
+
+5.1.4.	As instruções para utilização do ProJuris estão disponíveis em M-PRESI-JUR-0138
+– ProJuris – Manual Operacional Requisitante;
+5.1.5.	As minutas padrão podem ser consultadas diretamente no ProJuris, na aba Biblioteca Jurídica, e devem ser priorizadas para fins de formalização do contrato;
+
+5.1.6.	A atualização e manutenção dos documentos jurídicos (contratos padrão, acordos, pequeno porte, aditivos, etc.) são de responsabilidade da Diretoria Jurídica.
+5.2.	Obrigatoriedade de análise e chancela
+
+5.2.1.	Somente poderão ser celebrados os contratos e aditivos dos temas listados a seguir após prévia análise e chancela da Diretoria Jurídica, independentemente do valor:
+ 
+•	Imobiliário;
+•	Doação;
+•	Financeiro;
+•	Termo de confidencialidade;
+•	Memorando de entendimento;
+•	Partes relacionadas;
+•	Integração;
+•	Ambientais;
+•	Apanha de aves;
+•	Transporte de animais vivos, ovos e ração (insumos);
+•	Patrocínio;
+•	Cessão, transferência ou licenciamento de uso de marca;
+•	Cessão de direitos autorais;
+•	Autorização de uso de imagem, nome ou voz;
+•	Campanhas	publicitárias,	agências	de	publicidade	e	serviços	de talentos/celebridades;
+•	Representação comercial;
+•	Mão de obra temporária.
+5.2.2.	Aditivos e distratos vinculados a contratos cuja obrigatoriedade de chancela não foi observada inicialmente somente serão chancelados mediante decisão exclusiva da Diretoria Jurídica, após a análise do caso.
+
+5.3.	Dispensa de análise e chancela
+
+5.3.1.	Desde que sejam celebrados utilizando as minutas padrão da Companhia e que não constem da lista de temas previstos no item 5.2.1, é dispensada a análise e chancela do Jurídico nos contratos e aditivos com valor:
+•	Até R$ 150.000,00 (preço anual) para os contratos requisitados pelas divisões de negócio Friboi e Seara;
+•	Até R$ 100.000,00 (preço anual) pelos demais negócios da Companhia.
+5.3.2.	Os casos descritos no item 5.3.1 ficam sob a inteira responsabilidade do gestor da unidade ou do gestor solicitante, respeitando, todavia, abertura de requisição de contrato via ProJuris;
+5.3.3.	Nos termos do PROC-SEARA-AGRO-0004 - Compra de Grãos e Insumos Agropecuários, a chancela das minutas padrão e simplificadas para aquisição de commodities está dispensada para as compras de insumos agropecuários pela Seara;
+
+5.3.4.	Contratações que tenham por objeto atividades que não sejam necessárias para a operação da Companhia, como locação de equipamentos para lazer, convênios, parceria com instituições de ensino privado, entre outros, não serão revisadas e chanceladas pelo Jurídico. Outros tipos de contratos serão avaliados pela Diretoria caso a caso;
+
+5.3.5.	A Diretoria Jurídica não chancelará contratos de adesão de qualquer natureza, nos quais não é possível negociar as condições e cláusulas contratuais. As orientações acerca dos riscos da contratação serão enviadas ao solicitante;
+5.3.6.	A Diretoria Jurídica não chancelará contratos cujas cláusulas estejam em desacordo com os processos e procedimentos estabelecidos nas políticas e instruções
+ 
+normativas da Companhia, incluindo, mas não limitado às políticas de Compliance e de Privacidade de Dados.
+
+5.4.	Diretrizes para aquisição de materiais e insumos
+5.4.1.	A Diretoria de Suprimentos Corporativa poderá utilizar o documento Acordo Comercial, definido e aprovado pela Diretoria Jurídica, para as contratações geridas pela área, limitadas a R$ 5.000.000,00 (preço anual);
+
+5.4.2.	Nos casos em que o valor exceda essa quantia, o requisitante deverá celebrar um contrato, conforme item 5.1.5.
+5.5.	Diretrizes para contratação de serviços
+5.5.1.	O instrumento para a contratação deve ser definido conforme critérios abaixo:
+
+5.5.1.1.	Modelo geral de prestação de serviços: deve ser utilizado para todas as contratações de serviços, exceto na existência de modelo de contrato específico;
+5.5.1.2.	Modelo para contrato de serviços de pequeno porte: pode ser utilizado desde que preenchidos os seguintes requisitos: (i) que sejam eventuais;
+(ii) de baixo risco, conforme definido pelo SESMT; e (iii) não excedam os valores de alçada, conforme disposto na cláusula 5.3.1 acima, por operação.
+5.6.	Diretrizes para operações com derivativos financeiros
+
+5.6.1.	Contratações sobre as quais recaia a suspeita que contenham um derivativo financeiro embutido deverão ser submetidas à avaliação da Diretoria de Gerenciamento de Risco para análise prévia;
+5.6.2.	Caso a Diretoria de Gerenciamento de Risco emita parecer negativo a respeito da contratação, esta deverá ser interrompida, podendo ser efetivada apenas após ajuste de seus termos e mediante nova avaliação da área.
+5.7.	Cessão de crédito em favor de terceiros
+
+5.7.1.	A previsão contratual autorizando a cessão ou desconto de créditos oriundos de quaisquer contratos firmados pela Companhia é excepcional e somente será permitida mediante a autorização prévia e expressa da Diretoria de Controladoria e Finanças Operacionais, que deverá acompanhar a requisição de contrato no ProJuris;
+5.7.2.	As assinaturas de notificações posteriores ao contrato que prevejam anuência da Companhia à cessão ou desconto dos créditos também deverão ser prévia e expressamente aprovadas pela Diretoria de Controladoria e Finanças Operacionais e devidamente requisitadas no ProJuris para chancela da Diretoria Jurídica.
+
+5.8.	Renovação, alteração ou prorrogação do contrato ou proposta comercial
+5.8.1.	São proibidas cláusulas de contrato por prazo indeterminado ou de prorrogações automáticas de vigência. Em caso de prorrogação, é obrigatória a formalização a
+ 
+cada término do prazo de vigência, através de aditivo contratual. Exceções serão autorizadas exclusivamente pela Diretoria Jurídica;
+
+5.8.2.	Os contratos de integração e transporte de animais vivos, ovos e ração poderão ser firmados por prazo indeterminado pela essencialidade de manutenção dos animais vivos e cumprimento das normas de bem-estar animal (BEA). Quaisquer outras exceções serão avaliadas pelo Jurídico caso a caso;
+
+5.8.3.	Os contratos cuja vigência necessite ser prorrogada deverão ter o respectivo aditivo assinado antes do término do prazo original.
+
+5.9.	Notificação por descumprimento de contrato
+
+Recomenda-se que o descumprimento de contrato durante a sua vigência seja devidamente documentado através do envio de notificação extrajudicial ao contratado, que poderá ser solicitada mediante a abertura de requisição no ProJuris.
+5.10.	Extinção do contrato ou proposta comercial
+
+5.10.1.	O término do contrato está vinculado ao cumprimento das obrigações assumidas pelas partes ou à expiração do prazo pactuado;
+
+5.10.2.	Caso haja a necessidade de rescisão do contrato antes do término do prazo de vigência, na hipótese de concordância das partes, deverá ser requisitado o distrato via ProJuris;
+
+5.10.3.	Na hipótese de não concordância das partes:
+
+5.10.3.1.	Em caso de rescisão sem justa causa ou sem descumprimento do contrato, deverá ser feita a comunicação prévia nos termos previstos no contrato mediante requisição via ProJuris de “Notificação de Resilição de Contrato”. Após o cumprimento do prazo previsto, deve ser firmado o distrato;
+5.10.3.2.	Em caso de rescisão com justa causa ou com descumprimento do contrato, as minutas de notificação deverão ser submetidas para a revisão do Jurídico.
+
+5.10.4.	Sempre que um contrato for rescindido antes do término do prazo de vigência deverá ser verificado se existe qualquer pendência entre as partes, ou seja, se a Companhia deve algo ao contratado e se o contratado deve algo à Companhia;
+5.10.5.	Em caso de pendências do contratado para com a Companhia e sendo necessário exigir o seu cumprimento, ainda que judicialmente, o distrato não deve ser assinado até que todas as pendências tenham sido resolvidas.
+5.11.	Coleta de assinaturas
+5.11.1.	A Companhia utiliza sistema de assinaturas digitais ou eletrônicas, devendo o requisitante, preferencialmente, utilizar este método para assinatura de qualquer documento;
+
+5.11.2.	Assinaturas digitais, eletrônicas ou físicas devem seguir as regras:
+ 
+5.11.2.1.	O solicitante deverá obter a assinatura dos representantes das partes e também de duas testemunhas. As assinaturas e CPFs das duas testemunhas são imprescindíveis, sendo obrigatório uma das testemunhas ser da Companhia, preferencialmente quem realizou a negociação, e a outra do contratado;
+
+5.11.2.2.	Caberá ao requisitante conferir os poderes e regras de assinatura pelos representantes conforme procuração outorgada ou estatuto/contrato social;
+
+5.11.2.3.	A assinatura de contratos por parte dos negócios deverá seguir as alçadas do Anexo A.
+
+5.11.3.	Todo contrato deverá ser emitido no mínimo em duas vias, ambas sempre com os respectivos anexos;
+
+5.11.4.	Todas as páginas do contrato devem ser rubricadas, no caso de vias físicas;
+
+5.11.5.	Deve-se evitar página sem nenhuma cláusula, apenas com assinaturas;
+5.11.6.	Sempre que possível, os contratos deverão ser assinados primeiro pela parte contratada e posteriormente pela Companhia;
+
+5.11.7.	Os contratos só terão validade após a assinatura de ambas as partes, sendo devido o recebimento de bens ou início da prestação de serviços somente após sua assinatura;
+
+5.11.8.	É recomendado ao solicitante verificar, através de análise dos documentos constitutivos e eventualmente poderes outorgados por meio de procurações, se o contrato foi assinado por parte do contratado por um representante legal que possui os devidos poderes;
+
+5.11.9.	Para os casos de documentos solicitados via ProJuris e assinados fisicamente, a área solicitante deverá armazenar uma via digital neste portal, sendo responsável pela guarda da via original pelo prazo de seis anos. Para os casos de documentos assinados eletronicamente, a área requisitante deverá armazenar a via digital tão somente no sistema. O prazo passa a ser contado após o término ou rescisão do respectivo contrato;
+
+5.11.10.	Para os contratos requisitados via ProJuris, é obrigatório que o solicitante inclua a via digital assinada no sistema em até 30 dias contados da chancela do Jurídico;
+
+5.11.11.	É responsabilidade da área solicitante a gestão dos contratos.
+
+
+Gilberto Meirelles Xandó Baptista Presidente Brasil
+ 
+ANEXO A: Alçadas de Aprovação de Contratos
+
+Negócio	Diretoria	Tipo de contrato	Alçada	Procuradores	Tipo de representação
+BioTech	Todas	Todos os contratos	Qualquer valor	Vice-presidente de Divisão + Global Chief Procurement
+and Innovation Officer	Agindo sempre em conjunto
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Corporativo JBS	
+Assuntos Corporativos	
+
+Todos	Até R$ 50.000,00	Diretor Executivo de Assuntos Corporativos	Agindo isoladamente
+			Acima de R$ 50.000,00	Diretor Executivo de Assuntos Corporativos + Presidente Brasil	Agindo sempre em conjunto
+	
+
+
+
+Contabilidade e Administração	
+
+
+
+
+Contratação de serviços	
+
+
+Até R$ 300.000,00	Gerente de Patrimônio ou Gerente de Contabilidade ou Gerente de Tributos Diretos ou
+Gerente Administrativo ou Gerente de Aeronaves + Diretor de Contabilidade e
+Administração	
+
+Agindo sempre em conjunto
+			
+Acima de R$ 300.000,00	Diretor de Contabilidade e Administração +
+Diretor Executivo de Administração e Controle	Agindo sempre em conjunto
+	Financeira	Financeiros	Qualquer valor	2 procuradores da Diretoria Financeira	Agindo sempre em conjunto
+	
+Jurídica	Contratação de serviços jurídicos	Até R$ 1.000.000,00	2 Diretores Jurídicos	Agindo sempre em conjunto
+			Qualquer valor	Diretor Executivo Jurídico	Agindo isoladamente
+	Jurídica Empresarial	Contratação de serviços jurídicos	Qualquer valor	Diretor Jurídico	Agindo isoladamente
+	
+
+
+RH	
+
+
+Todos	
+Até R$ 200.000,00	Gerente de Recursos Humanos +
+Diretor Executivo de Recursos Humanos	
+Agindo sempre em conjunto
+			Acima de R$ 200.000,00	Diretor Executivo de
+Recursos Humanos + Presidente Brasil	Agindo sempre em conjunto
+	
+
+Suprimentos	
+
+Todos	Até R$ 15.000.000,00	Gerente de Suprimentos + Diretor de Suprimentos	Agindo sempre em conjunto
+			Acima de R$ 15.000.000,00	Diretor de Suprimentos + Diretor Executivo de
+Administração e Controle	Agindo sempre em conjunto
+	
+
+TI	
+
+Todos	Até R$ 150.000,00	Diretor de TI +
+Diretor Executivo de TI	Agindo sempre em conjunto
+			
+Acima de R$ 150.000,00	Diretor de TI +
+Diretor Executivo de TI + Diretor Executivo de
+Administração e Controle	Agindo sempre em conjunto
+
+
+Couros	
+
+Todas	
+
+Todos	Até R$ 100.000,00	Gestor Administrativo	Agindo isoladamente
+			
+Até R$ 1.000.000,00	Diretor do Negócio +
+Diretor de Administração e Controle	Agindo sempre em conjunto
+			Acima de R$ 1.000.000,00	Diretor do Negócio + Presidente do Negócio	Agindo sempre em conjunto
+
+
+
+Friboi	Vendas	Vendas	Qualquer valor	Diretor Executivo de Vendas ou
+Diretor de Exportação	Agindo isoladamente
+	
+Todas	
+Demais contratos	Até R$ 150.000,00	Gestor Administrativo	Agindo isoladamente
+			Acima de R$ 150.000,00	Diretor de Administração e Controle +
+Presidente do Negócio	Agindo sempre em conjunto
+ 
+
+Negócio	Diretoria	Tipo de contrato	Alçada	Procuradores	Tipo de representação
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Novos Negócios	
+
+
+
+
+
+
+
+
+
+
+Biodiesel	
+Aquisição de mercadorias	Até R$ 15.000.000,00	Gerente Administrativo + Diretor de Negócio	Agindo sempre em conjunto
+			Acima de R$ 15.000.000,00	Diretor de Administração e Controle +
+Presidente do Negócio	Agindo sempre em conjunto
+		
+Comercialização de mercadorias	Até R$ 50.000.000,00	Diretor Comercial + Diretor do Negócio	Agindo sempre em conjunto
+			Acima de R$ 50.000.000,00	Diretor de Administração e Controle +
+Presidente do Negócio	Agindo sempre em conjunto
+		
+
+
+
+Prestação de serviços e compras em geral	
+
+Até R$ 100.000,00	Diretor Comercial ou Diretor de Negócio ou Gerente Administrativo ou Gerente Industrial ou
+¹Gerente de Planejamento e Gestão	
+
+Agindo isoladamente
+			
+Até R$ 500.000,00	Diretor de Administração e Controle +
+Diretor do Negócio ou Gerente Administrativo	Agindo sempre em conjunto
+			Acima de R$ 500.000,00	Diretor de Administração e Controle +
+Presidente do Negócio	Agindo sempre em conjunto
+	
+
+
+
+
+
+Trading	
+Aquisição de mercadorias	Até R$ 15.000.000,00	Diretor do Negócio	Agindo isoladamente
+			Acima de R$ 15.000.000,00	Diretor de Administração e Controle +
+Presidente do Negócio	Agindo sempre em conjunto
+		
+Comercialização de mercadorias	Até R$ 20.000.000,00	Diretor do Negócio	Agindo isoladamente
+			Acima de R$ 20.000.000,00	Diretor de Administração e Controle +
+Presidente do Negócio	Agindo sempre em conjunto
+		
+Prestação de serviços	Até R$ 500.000,00	Diretor do Negócio	Agindo isoladamente
+			Acima de R$ 500.000,00	Diretor de Administração e Controle +
+Presidente do Negócio	Agindo sempre em conjunto
+	
+
+Demais diretorias	
+
+
+Todos	Até R$ 100.000,00	Gestor Administrativo	Agindo isoladamente
+			Até R$ 500.000,00	Gestor Administrativo + Diretor de Administração e
+Controle	Agindo sempre em conjunto
+			Acima de R$ 500.000,00	Diretor de Administração e Controle +
+Presidente do Negócio	Agindo sempre em conjunto
+
+
+
+
+
+Seara	Agropecuária	Parceria e integração	Qualquer valor	Gestor Administrativo + Gestor de Agropecuária da unidade	Agindo sempre em conjunto
+	
+
+
+Todas	
+
+
+Demais contratos	Até R$ 150.000,00	Gerente geral + Gestor Administrativo	Agindo sempre em conjunto
+			Até R$ 5.000.000,00	Diretor Executivo + Diretor de Negócio	Agindo sempre em conjunto
+			Até R$ 10.000.000,00	2 procuradores da Diretoria
+Executiva	Agindo sempre em
+conjunto
+			Acima de R$ 10.000.000,00	Diretor Executivo + Presidente do Negócio	Agindo sempre em conjunto
+
+
+
+
+
+Swift	
+
+
+
+
+Todas	
+
+
+
+
+Todos	
+Até R$ 10.000.000,00	Diretor de Administração e Controle +
+Diretor Executivo de Operações	Agindo sempre em conjunto
+			
+
+Acima de R$ 10.000.000,00	Diretor de Administração e Controle +
+Presidente do Negócio Ou
+Diretor Executivo de Operações +
+Presidente do Negócio	
+
+Agindo sempre em conjunto
+¹Não aplicável à estrutura Biodiesel Mafra/SC.

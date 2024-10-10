@@ -1,0 +1,157 @@
+PROCEDIMENTO INTERNO
+PROC-PRESI-SUP-0001 
+25 de outubro de 2023
+Revisão: 02
+Compras CAPEX
+DESTINATÁRIOS: Todos os colaboradores da JBS S.A.
+Processos Organizacionais DOCUMENTO CONFIDENCIAL PARA USO DA JBS Página 1 de 5
+1. OBJETIVO
+Definir critérios e responsabilidades para os processos de compras de CAPEX.
+2. RESPONSABILIDADE QUANTO AO CUMPRIMENTO
+Cabe a todas as áreas envolvidas no processo e citadas neste documento a responsabilidade pelo 
+cumprimento deste documento.
+3. DISPOSIÇÕES GERAIS
+3.1. CAPEX é a sigla da expressão inglesa capital expenditure (em português, despesas de capital 
+ou investimento em bens de capital), que designa um montante de dinheiro na aquisição ou 
+grandes reformas de máquinas, equipamentos, instalações e serviços de obra civil de uma 
+determinada empresa;
+3.2. Informações sobre o fluxo ou alçada de aprovação, política de cotações e outras informações 
+relacionadas ao processo de compra estão na IN-PRESI-ADM-0094 - Política de Suprimentos 
+América do Sul;
+3.3. O fluxo de compras para os processos de CAPEX está ilustrado no anexo A;
+3.4. É responsabilidade da área de Suprimentos Corporativo CAPEX realizar a negociação de todo 
+processo de compra de CAPEX que ultrapasse R$ 150.000,00;
+3.5. A gestão dos contratos de CAPEX negociados pelo Corporativo é de responsabilidade da 
+gerência ou coordenação Administrativa da unidade, de acordo com a estrutura, juntamente 
+à Engenharia Corporativa ou local responsável por realizar a contratação;
+3.6. As responsabilidades gerais dos compradores corporativos estão listadas no procedimento 
+PROC-PRESI-SUP-0004 - Contratação de Materiais e Serviços;
+3.7. Outras responsabilidades do comprador corporativo de CAPEX:
+• Gerar os pedidos de CAPEX em até 3 dias úteis após a finalização da negociação,
+considerando a proposta assinada, o fornecedor cadastrado em sistema (ERP/SRP) e a 
+requisição/solicitação gerada e aprovada;
+• Enviar o pedido de CAPEX à Administração e Controle de Suprimentos para abertura de 
+requisição no ProJuris em até 3 dias úteis.
+3.8. A Administração e Controle de Suprimentos terá 4 dias úteis para gerar a requisição no 
+ProJuris.
+4. PROCEDIMENTOS 
+4.1. Memorial descritivo
+4.1.1. Entende-se por memorial descritivo as especificações técnicas da obra, serviço ou 
+equipamento, como medidas, layouts, tipo de material a ser utilizado, etc.;
+PROCEDIMENTO INTERNO
+PROC-PRESI-SUP-0001 
+25 de outubro de 2023
+Revisão: 02
+Compras CAPEX
+DESTINATÁRIOS: Todos os colaboradores da JBS S.A.
+Processos Organizacionais DOCUMENTO CONFIDENCIAL PARA USO DA JBS Página 2 de 5
+4.1.2. Para realizar a compra de máquinas e equipamentos, o usuário deve criar um 
+memorial descritivo contendo as especificações e definições que descrevam a sua 
+necessidade. O memorial se faz necessário quando o requisitante não souber o 
+modelo e marca do equipamento a ser comprado, ou em caso de equipamentos mais 
+complexos. Equipamentos dentro do padrão ou considerados de "prateleira" não 
+precisam desse documento;
+4.1.3. Para todas as compras de serviços, é necessário o preenchimento do memorial 
+descritivo;
+4.1.4. Abaixo estão os modelos de memorial descritivo de acordo com o tipo de compra:
+• F-PRESI-SUP-0001 - Memorial descritivo para compra de máquinas e 
+equipamentos; 
+• F-PRESI-SUP-0002 - Memorial descritivo para compra de serviços diversos;
+• Serviço civil:
+o F-PRESI-SUP-0003 - Memorial descritivo para compra de serviço civil;
+o F-PRESI-SUP-0004 - Modelo planilha quantitativa para compra de serviço civil.
+4.2. Solicitação de orçamento 
+4.2.1. O solicitante deverá abrir um chamado no Service Desk, caminho JBS SA » 09 -
+Suprimentos Corporativo América do Sul » Suprimentos CAPEX anexando o memorial 
+descritivo e, se necessário, demais documentos que suportem o orçamento;
+4.2.2. De acordo com o memorial descritivo e os demais documentos anexos, a área de 
+Suprimentos responsável deve realizar o processo de cotação junto aos 
+fornecedores, considerando a divisão de atividades entre local e corporativo definido 
+no item 3.4;
+4.2.3. Cabe a Suprimentos Corporativo enviar, via Service Desk, as propostas técnicas
+recebidas para validação técnica (unidade ou Engenharia Corporativa, caso 
+necessário). Não é obrigatório o envio da proposta comercial antes de finalizado o 
+processo de negociação.
+4.3. Validação técnica
+4.3.1. Após receber as propostas enviadas por Suprimentos, o solicitante ou, se necessário, 
+a Engenharia Corporativa, realizará a validação técnica dos equipamentos e serviços;
+4.3.2. Em caso de alterações nas propostas, o solicitante retornará para Suprimentos via
+Service Desk;
+4.3.3. No caso de compra de equipamentos, o solicitante deverá informar via chamado a 
+área de Suprimentos quais são as propostas que estão validadas tecnicamente. Cabe 
+ao Suprimentos realizar as negociações e definir qual equipamento será comprado
+para que a requisição/solicitação de compra seja criada com o código 
+correspondente.
+4.4. Abertura da obra
+Com base nas propostas recebidas e validadas tecnicamente é responsabilidade do 
+solicitante realizar a solicitação de abertura de obra no sistema.
+PROCEDIMENTO INTERNO
+PROC-PRESI-SUP-0001 
+25 de outubro de 2023
+Revisão: 02
+Compras CAPEX
+DESTINATÁRIOS: Todos os colaboradores da JBS S.A.
+Processos Organizacionais DOCUMENTO CONFIDENCIAL PARA USO DA JBS Página 3 de 5
+4.5. Requisição/Solicitação de Compra (SC)
+4.5.1. Serviços
+Após recebimento das propostas e abertura da obra, o solicitante deverá incluir uma 
+requisição no sistema de acordo com o serviço que será executado.
+4.5.2. Equipamentos
+• O solicitante deverá acionar área de Cadastro de Materiais solicitando a inclusão
+do produto no sistema, caso o equipamento não esteja cadastrado;
+• Em seguida, o solicitante deverá lançar a requisição com os itens de acordo com 
+as devidas especificações.
+4.5.3. O solicitante poderá informar a área de Suprimentos o número da 
+requisição/solicitação de compra (SC), via chamado, antes ou após as aprovações;
+4.5.4. Após a aprovação da requisição, cabe a Suprimentos acessar a solicitação de compra 
+pertinente e gerar o pedido de compra no Mercado Eletrônico (ME) conforme INPRESI-ADM-0094 - Política de Suprimentos América do Sul.
+4.6. Mapa de negociação
+4.6.1. Para compra de equipamentos, a cotação respondida pelo comprador deverá ser 
+anexada à proposta comercial inicial e à final, assim como indicado o motivo desta 
+ação. Para compra que exija mais de uma cotação, é obrigatório responder no ME 
+às cotações de todos os fornecedores participantes ou anexar o mapa de negociação
+assinado pelas áreas envolvidas;
+4.6.2. Para compra de serviços (civil, elétrico ou mecânico) além da cotação respondida 
+pelo comprador ou pelo fornecedor no ME, deverão ser anexadas as propostas
+comerciais inicial e final de todos os participantes no pré-pedido, além do mapa de 
+negociação assinado pelas áreas envolvidas. 
+4.7. Contrato jurídico e aditivos
+4.7.1. É responsabilidade da área de Suprimentos firmar contrato para:
+• Serviços técnicos realizados dentro das unidades;
+• Serviços civis realizados dentro das unidades;
+• Equipamentos – a definição de formalização de contrato fica a critério da área de 
+Suprimentos.
+4.7.2. É de responsabilidade da área de Administração e Controle de Suprimentos a criação 
+de requisições de contratos jurídicos na plataforma ProJuris solicitadas pelo 
+comprador corporativo de Suprimentos CAPEX;
+4.7.3. Caso seja necessário realizar aditivo, distrato ou qualquer alteração comercial em 
+contratos de CAPEX, solicitar via chamado no Service Desk ao time de CAPEX 
+Corporativo:
+PROCEDIMENTO INTERNO
+PROC-PRESI-SUP-0001 
+25 de outubro de 2023
+Revisão: 02
+Compras CAPEX
+DESTINATÁRIOS: Todos os colaboradores da JBS S.A.
+Processos Organizacionais DOCUMENTO CONFIDENCIAL PARA USO DA JBS Página 4 de 5
+4.7.3.1. Para ajuste de prazo: JBS SA » 09 - Suprimentos Corporativo América do 
+Sul » Suprimentos Capex » 10 - Solicitação de Aditivo;
+4.7.3.2. Para ajuste de escopo, abrir um novo chamado de acordo com a categoria 
+do processo:: JBS SA » 09 - Suprimentos Corporativo América do 
+Sul » Suprimentos Capex.
+Revisão Responsáveis Área Ação
+02
+Bárbara Ventura
+Denis Peres
+Administração e Controle de Suprimentos
+Revisão Claudenir Donizeti Boni 
+Denis Bispo De Freitas Gerência de Suprimentos - CAPEX
+02 Maximiliano Granada Limberger Diretoria de Suprimentos Aprovação
+PROCEDIMENTO INTERNO
+PROC-PRESI-SUP-0001 
+16 de novembro de 2020
+Revisão: 01
+Compras CAPEX
+DESTINATÁRIOS: Todos os colaboradores da JBS e da Seara.
+Processos Organizacionais DOCUMENTO CONFIDENCIAL PARA USO DA JBS Página 5 de 5
+ANEXO A - Fluxo de Compra CAPEX
