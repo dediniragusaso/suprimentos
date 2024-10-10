@@ -43,28 +43,6 @@ normas= open('./prompts/prompt_normas.txt', "r", encoding="utf8").read()
 for arq in os.listdir("./bases"):
     prompt_indicador += "\n\n" + open(f"./bases/{arq}", "r", encoding="utf8").read()
 
-def algo_ocorreu_de_errado():
-    yield "Algo ocorreu de errado, tente novamente"
-
-
-encoding = tiktoken.encoding_for_model("gpt-4o-2024-08-06")
-
-app = Flask(__name__)
-
-@app.route('/')
-def index():
-    return render_template('index.html')
-
-@app.route("/limparTerminal", methods=["POST"])
-def limparTerminal():
-    global cont_requisicao
-    reiniciar = request.json["recarregadoPorBotao"]
-    if reiniciar == True:
-        cont_requisicao = 0
-        return jsonify({"status": "success"})
-    else:
-        return jsonify({"status": "success"})
-    
 
 # Add user input to the prompt as a new message
 user_input = "Como posso me cadastrar no paytrack"
@@ -104,16 +82,4 @@ def categorizador(prompt_usuario,historico):
 
 
 
-
-@app.route("/submit", methods=["POST"])
-
-def submit():
-    try:
-
-    
-    except Exception as e:
-        error(e)
-        return Response(stream_with_context(algo_ocorreu_de_errado()), content_type='text/plain')
-    
-app.run(debug=True, port=5000)
 
