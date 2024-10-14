@@ -1329,10 +1329,10 @@ ERROR->2024-10-09 15:01:39,004->[Errno 2] No such file or directory: './prompts/
 ERROR->2024-10-09 15:09:37,493->categorizador() missing 1 required positional argument: 'api_key'->root
 ERROR->2024-10-09 15:18:11,804->[Errno 2] No such file or directory: './prompts/palavras_chaves.txt'->root
 ERROR->2024-10-09 15:19:48,683->[Errno 2] No such file or directory: './prompts/palavras_chaves.txt'->root
-ERROR->2024-10-09 15:27:58,967->[WinError 3] O sistema não pode encontrar o caminho especificado: './bases_60'->root
-ERROR->2024-10-09 15:29:14,500->[WinError 3] O sistema não pode encontrar o caminho especificado: './bases_60'->root
-ERROR->2024-10-09 15:35:28,916->[WinError 3] O sistema não pode encontrar o caminho especificado: './bases_60'->root
-ERROR->2024-10-09 15:36:19,846->[WinError 3] O sistema não pode encontrar o caminho especificado: './bases_60'->root
+ERROR->2024-10-09 15:27:58,967->[WinError 3] O sistema nï¿½o pode encontrar o caminho especificado: './bases_60'->root
+ERROR->2024-10-09 15:29:14,500->[WinError 3] O sistema nï¿½o pode encontrar o caminho especificado: './bases_60'->root
+ERROR->2024-10-09 15:35:28,916->[WinError 3] O sistema nï¿½o pode encontrar o caminho especificado: './bases_60'->root
+ERROR->2024-10-09 15:36:19,846->[WinError 3] O sistema nï¿½o pode encontrar o caminho especificado: './bases_60'->root
 ERROR->2024-10-09 17:15:23,006->categorizador() takes 3 positional arguments but 4 were given->root
 ERROR->2024-10-09 17:16:18,869->categorizador() takes 3 positional arguments but 4 were given->root
 ERROR->2024-10-09 17:19:21,471->cannot access local variable 'resposta' where it is not associated with a value->root
@@ -1377,3 +1377,30 @@ safety_ratings {
   probability: MEDIUM
 }
 ->root
+ERROR->2024-10-11 14:57:35,442->categorizador() takes 1 positional argument but 2 were given->root
+ERROR->2024-10-11 14:58:25,946->'AIMessage' object is not subscriptable->root
+ERROR->2024-10-11 14:59:36,091->'AIMessage' object is not subscriptable->root
+ERROR->2024-10-11 15:02:37,856->can only concatenate str (not "AIMessage") to str->root
+ERROR->2024-10-11 15:03:51,573->'AIMessage' object is not subscriptable->root
+ERROR->2024-10-11 15:06:53,734->module 'openai' has no attribute 'error'->root
+ERROR->2024-10-11 15:37:04,654->Object of type Schema is not JSON serializable->root
+ERROR->2024-10-11 15:37:48,614->Object of type Schema is not JSON serializable->root
+ERROR->2024-10-11 15:53:35,866->("Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 3. The candidate's safety_ratings are: [category: HARM_CATEGORY_SEXUALLY_EXPLICIT\nprobability: MEDIUM\n, category: HARM_CATEGORY_HATE_SPEECH\nprobability: NEGLIGIBLE\n, category: HARM_CATEGORY_HARASSMENT\nprobability: NEGLIGIBLE\n, category: HARM_CATEGORY_DANGEROUS_CONTENT\nprobability: NEGLIGIBLE\n].", [category: HARM_CATEGORY_SEXUALLY_EXPLICIT
+probability: MEDIUM
+, category: HARM_CATEGORY_HATE_SPEECH
+probability: NEGLIGIBLE
+, category: HARM_CATEGORY_HARASSMENT
+probability: NEGLIGIBLE
+, category: HARM_CATEGORY_DANGEROUS_CONTENT
+probability: NEGLIGIBLE
+])->root
+ERROR->2024-10-11 17:21:59,519->1 validation error for ConversationChain
+prompt
+  Input should be a valid dictionary or instance of BasePromptTemplate [type=model_type, input_value='#Contexto\nVocï¿½ ï¿½ um a...\nPï¿½gina 5 de 6\n\n---', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.8/v/model_type->root
+ERROR->2024-10-11 17:35:34,784->RunnableWithMessageHistory.__init__() missing 2 required positional arguments: 'runnable' and 'get_session_history'->root
+ERROR->2024-10-11 18:10:34,829->'RunnableWithMessageHistory' object has no attribute 'predict'->root
+ERROR->2024-10-11 18:12:05,358->'ConversationSummaryMemory' object has no attribute 'messages'->root
+ERROR->2024-10-11 18:15:27,359->'ConversationSummaryMemory' object has no attribute 'messages'->root
+ERROR->2024-10-14 11:10:01,967->'ChatOpenAI' object has no attribute 'call'->root
+ERROR->2024-10-14 11:13:09,869->variable history should be a list of base messages, got  of type <class 'str'>->root
