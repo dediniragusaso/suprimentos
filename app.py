@@ -37,13 +37,16 @@ openai.api_key = api_key
 # Método para conectar no banco
 def conexao_banco():
     try:
-        conn = psycopg2.connect(os.getenv("DB_LINK"))
+        db_link = os.getenv("DB_LINK")
+        if not db_link:
+            raise ValueError("Variável de ambiente DB_LINK não definida.")
+        
+        conn = psycopg2.connect(db_link)
         print("Conexão feita com sucesso!")
         return conn
-    except psycopg2.Error as e:
+    except Exception as e:
         print(f"Erro ao conectar no banco de dados: {e}")
         return None
-
 
 # Variáveis Globais
 categorizador_prompt= open('./prompts/indicador_prompt.txt', "r", encoding="utf8").read()
