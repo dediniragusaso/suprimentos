@@ -17,7 +17,7 @@ import psycopg2
 # langchain
 from langchain_openai.llms import OpenAI
 from langchain_openai.chat_models import ChatOpenAI
-from langchain_core.messages import (HumanMessage, SystemMessage)
+from langchain_core.messages import HumanMessage, SystemMessage, AIMessage
 from langchain.chains.conversation.memory import ConversationBufferMemory, ConversationSummaryMemory
 from langchain_core.runnables.history import RunnableWithMessageHistory
 from langchain_core.exceptions import LangChainException, OutputParserException, TracerException 
@@ -130,7 +130,7 @@ def categorizador(prompt_usuario):
     prompt_100 += prompt_usuario
          
     categoria = llm.invoke([HumanMessage(content=prompt_100)])
-    print("tipo" + categoria.content)
+    print("tipo: " + categoria.content)
     
     return categoria.content
 
@@ -157,8 +157,14 @@ def resposta (prompt_usuario, historico, nome_arquivo):
                 HumanMessagePromptTemplate.from_template("{prompt_usuario}")
             ])
 
-            # Gerar a resposta do modelo de linguagem
+            # Adiciona a mensagem do usuário ao histórico
+            memory.save_context({"input": HumanMessage(content=prompt_usuario)}, {"output": AIMessage(content="")})
+
+            # Gera a resposta do modelo
             resposta = llm.predict(prompt_template.format_prompt(history=memory.load_memory_variables({})["history"], prompt_usuario=prompt_usuario))
+
+            # Atualiza o histórico com a resposta gerada
+            memory.save_context({"input": HumanMessage(content=prompt_usuario)}, {"output": AIMessage(content=resposta)})
 
 
             output = ""

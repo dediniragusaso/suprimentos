@@ -1404,3 +1404,51 @@ ERROR->2024-10-11 18:12:05,358->'ConversationSummaryMemory' object has no attrib
 ERROR->2024-10-11 18:15:27,359->'ConversationSummaryMemory' object has no attribute 'messages'->root
 ERROR->2024-10-14 11:10:01,967->'ChatOpenAI' object has no attribute 'call'->root
 ERROR->2024-10-14 11:13:09,869->variable history should be a list of base messages, got  of type <class 'str'>->root
+ERROR->2024-10-14 11:18:49,162->variable history should be a list of base messages, got Human: caso meu carro pegasse fogo o que eu poderia fazer?
+AI:  of type <class 'str'>->root
+ERROR->2024-10-14 11:23:26,207->15 validation errors for HumanMessage
+content.str
+  Input should be a valid string [type=string_type, input_value=HumanMessage(content='cas...}, response_metadata={}), input_type=HumanMessage]
+    For further information visit https://errors.pydantic.dev/2.8/v/string_type
+content.list[union[str,dict[any,any]]].0.str
+  Input should be a valid string [type=string_type, input_value=('content', 'caso meu car... que eu poderia fazer?'), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.8/v/string_type
+content.list[union[str,dict[any,any]]].0.dict[any,any]
+  Input should be a valid dictionary [type=dict_type, input_value=('content', 'caso meu car... que eu poderia fazer?'), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.8/v/dict_type
+content.list[union[str,dict[any,any]]].1.str
+  Input should be a valid string [type=string_type, input_value=('additional_kwargs', {}), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.8/v/string_type
+content.list[union[str,dict[any,any]]].1.dict[any,any]
+  Input should be a valid dictionary [type=dict_type, input_value=('additional_kwargs', {}), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.8/v/dict_type
+content.list[union[str,dict[any,any]]].2.str
+  Input should be a valid string [type=string_type, input_value=('response_metadata', {}), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.8/v/string_type
+content.list[union[str,dict[any,any]]].2.dict[any,any]
+  Input should be a valid dictionary [type=dict_type, input_value=('response_metadata', {}), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.8/v/dict_type
+content.list[union[str,dict[any,any]]].3.str
+  Input should be a valid string [type=string_type, input_value=('type', 'human'), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.8/v/string_type
+content.list[union[str,dict[any,any]]].3.dict[any,any]
+  Input should be a valid dictionary [type=dict_type, input_value=('type', 'human'), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.8/v/dict_type
+content.list[union[str,dict[any,any]]].4.str
+  Input should be a valid string [type=string_type, input_value=('name', None), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.8/v/string_type
+content.list[union[str,dict[any,any]]].4.dict[any,any]
+  Input should be a valid dictionary [type=dict_type, input_value=('name', None), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.8/v/dict_type
+content.list[union[str,dict[any,any]]].5.str
+  Input should be a valid string [type=string_type, input_value=('id', None), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.8/v/string_type
+content.list[union[str,dict[any,any]]].5.dict[any,any]
+  Input should be a valid dictionary [type=dict_type, input_value=('id', None), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.8/v/dict_type
+content.list[union[str,dict[any,any]]].6.str
+  Input should be a valid string [type=string_type, input_value=('example', False), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.8/v/string_type
+content.list[union[str,dict[any,any]]].6.dict[any,any]
+  Input should be a valid dictionary [type=dict_type, input_value=('example', False), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.8/v/dict_type->root
