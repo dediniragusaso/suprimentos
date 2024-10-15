@@ -70,12 +70,7 @@ Para efetuar o acesso, deve ser efetuado o download do
 informações de usuário. aplicativo pelo Play Store. 
 Utilize-as para entrar no Paytrack através do link: clique em “Próximo” e insira sua senha . Em seguida, o sistema
 https://login.paytrack.com.br/. solicitará a sua senha. Digite-a e clique em “Entrar”.
-Na página inicial, digite o seu usuário
-'./imagens/manual_adiantamento_jbs_2024/cadastro1.png'
-e clique em “Próximo” e
-insira sua senha.
-'./imagens/manual_adiantamento_jbs_2024/cadastro2.png'
-'./imagens/manual_adiantamento_jbs_2024/cadastro3.png'
+Na página inicial, digite o seu usuário e clique em “Próximo” e insira sua senha.
 Em seguida, o sistema solicitará a sua senha.
 Digite-a e clique em “Entrar”.
 OBS: O primeiro acesso deve ser efetuado via WEB, para que
