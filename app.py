@@ -41,12 +41,18 @@ def conexao_banco():
         if not db_link:
             raise ValueError("Variável de ambiente DB_LINK não definida.")
         
-        conn = psycopg2.connect(db_link)
+        # Adicionar parâmetros de SSL
+        conn = psycopg2.connect(
+            db_link,
+            sslmode='require',
+            sslrootcert='ca.pem'
+        )
         print("Conexão feita com sucesso!")
         return conn
     except Exception as e:
         print(f"Erro ao conectar no banco de dados: {e}")
         return None
+
 
 # Variáveis Globais
 categorizador_prompt= open('./prompts/indicador_prompt.txt', "r", encoding="utf8").read()
