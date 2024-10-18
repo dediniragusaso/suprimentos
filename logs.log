@@ -1800,3 +1800,27 @@ content.list[union[str,dict[any,any]]].9.dict[any,any]
   Input should be a valid dictionary [type=dict_type, input_value=('usage_metadata', None), input_type=tuple]
     For further information visit https://errors.pydantic.dev/2.8/v/dict_type->root
 ERROR->2024-10-18 15:56:50,144->unhashable type: 'HumanMessage'->root
+ERROR->2024-10-18 16:02:35,453->unhashable type: 'HumanMessage'->root
+ERROR->2024-10-18 16:05:47,622->'list' object has no attribute 'keys'->root
+ERROR->2024-10-18 16:08:23,643->unhashable type: 'dict'->root
+ERROR->2024-10-18 16:12:10,878->'list' object has no attribute 'keys'->root
+ERROR->2024-10-18 16:13:53,452->unhashable type: 'dict'->root
+ERROR->2024-10-18 16:19:53,894->'NoneType' object is not iterable->root
+ERROR->2024-10-18 17:11:38,291->'NoneType' object is not iterable->root
+ERROR->2024-10-18 17:23:08,606->'generator' object has no attribute 'content'->root
+ERROR->2024-10-18 17:23:47,550->can only concatenate str (not "AIMessageChunk") to str->root
+ERROR->2024-10-18 17:25:36,839->can only concatenate str (not "AIMessageChunk") to str->root
+ERROR->2024-10-18 17:26:38,655->'AIMessageChunk' object has no attribute 'replace'->root
+ERROR->2024-10-18 17:31:00,562->'AIMessageChunk' object has no attribute 'replace'->root
+ERROR->2024-10-18 17:31:57,645->Error on request:
+Traceback (most recent call last):
+  File "C:\Users\sophiekumagai-ieg\AppData\Roaming\Python\Python312\site-packages\werkzeug\serving.py", line 363, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\sophiekumagai-ieg\AppData\Roaming\Python\Python312\site-packages\werkzeug\serving.py", line 327, in execute
+    write(data)
+  File "C:\Users\sophiekumagai-ieg\AppData\Roaming\Python\Python312\site-packages\werkzeug\serving.py", line 295, in write
+    assert isinstance(data, bytes), "applications must write bytes"
+AssertionError: applications must write bytes->werkzeug
+ERROR->2024-10-18 17:35:29,137->'AIMessageChunk' object has no attribute 'replace'->root
+ERROR->2024-10-18 17:40:14,476->can only concatenate str (not "int") to str->root
+ERROR->2024-10-18 17:41:02,232->can only concatenate str (not "int") to str->root

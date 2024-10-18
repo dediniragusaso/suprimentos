@@ -158,25 +158,23 @@ def resposta (prompt_usuario, historico, nome_arquivo):
             ])
 
             # Gera a resposta do modelo
-            resposta = llm.invoke(prompt_template.format_prompt(history=memory.buffer_as_messages, prompt_usuario=prompt_usuario))
+            resposta = llm.stream(prompt_template.format_prompt(history=memory.buffer_as_messages, prompt_usuario=prompt_usuario))
 
-            # Atualiza o histórico com a resposta gerada
-            print(resposta.content)
-            memory.save_context(inputs=[HumanMessage(content=prompt_usuario)], outputs=[AIMessage(content=resposta.content)])
-            
             print("Resposta feita com sucesso")
-            print(resposta)
-            output=""
-            # for chunk in resposta:
-            #         if 'choices' in chunk and 'delta' in chunk['choices'][0] and 'content' in chunk['choices'][0]['delta']:
-            #             text = chunk['choices'][0]['delta']['content']
-            #             if text:
-            #                 output+=text
-            #                 yield text
-
+            
+            output = ""
+            for chunk in resposta:
+                if hasattr(chunk, 'content'):
+                    text_chunk = chunk.content
+                    output += text_chunk
+                    yield text_chunk
+                    
             tokens_output = contar_tokens(output)
-            print(f"Tokens de saída: {tokens_output}")               
-
+            print(tokens_output) 
+            
+             # Atualiza o histórico com a resposta gerada
+            memory.save_context(inputs={"human": prompt_usuario}, outputs={"ai": output})              
+            
             return
         except TracerException as e:
             print(f"Erro no  módulo de rastreadores: {e}")
@@ -211,23 +209,22 @@ def respostaErro (prompt_usuario, historico):
             ])
 
             # Gera a resposta do modelo
-            resposta = llm.invoke(prompt_template.format_prompt(history=memory.buffer_as_messages, prompt_usuario=prompt_usuario))
+            resposta = llm.stream(prompt_template.format_prompt(history=memory.buffer_as_messages, prompt_usuario=prompt_usuario))
 
-            # Atualiza o histórico com a resposta gerada
-            memory.save_context(inputs=[HumanMessage(content=prompt_usuario)], outputs=[AIMessage(content=resposta)])
-            
             print("Resposta feita com sucesso")
-            print(resposta)
-            output=""
+            
+            output = ""
             for chunk in resposta:
-                    if 'choices' in chunk and 'delta' in chunk['choices'][0] and 'content' in chunk['choices'][0]['delta']:
-                        text = chunk['choices'][0]['delta']['content']
-                        if text:
-                            output+=text
-                            yield text
+                if hasattr(chunk, 'content'):
+                    text_chunk = chunk.content
+                    output += text_chunk
+                    yield text_chunk
 
             tokens_output = contar_tokens(output)
-            print(f"Tokens de saída: {tokens_output}") 
+            print(tokens_output)  
+            
+            # Atualiza o histórico com a resposta gerada
+            memory.save_context(inputs={"human": prompt_usuario}, outputs={"ai": output})
 
             return
         except TracerException as e:
@@ -263,22 +260,22 @@ def substituidorNormas (resp,historico,pergunta_usuario,norma):
             ])
 
             # Gera a resposta do modelo
-            resposta = llm.invoke(prompt_template.format_prompt(history=memory.buffer_as_messages, pergunta_usuario=pergunta_usuario))
+            resposta = llm.stream(prompt_template.format_prompt(history=memory.buffer_as_messages, pergunta_usuario=pergunta_usuario))
 
-            # Atualiza o histórico com a resposta gerada
-            memory.save_context(inputs=[HumanMessage(content=pergunta_usuario)], outputs=[AIMessage(content=resposta)])
-            
             print("Resposta feita com sucesso")
-            output=""
+            
+            output = ""
             for chunk in resposta:
-                    if 'choices' in chunk and 'delta' in chunk['choices'][0] and 'content' in chunk['choices'][0]['delta']:
-                        text = chunk['choices'][0]['delta']['content']
-                        if text:
-                            output+=text
-                            yield text
+                if hasattr(chunk, 'content'):
+                    text_chunk = chunk.content
+                    output += text_chunk
+                    yield text_chunk
 
             tokens_output = contar_tokens(output)
-            print(f"Tokens de saída: {tokens_output}") 
+            print(tokens_output) 
+            
+            # Atualiza o histórico com a resposta gerada
+            memory.save_context(inputs={"human": pergunta_usuario}, outputs={"ai": output})
 
             return
         except TracerException as e:
@@ -294,6 +291,8 @@ def substituidorNormas (resp,historico,pergunta_usuario,norma):
 arquivos=[]
 for arq in (os.listdir("./bases")):
         arquivos.append(arq) 
+        
+print(arquivos)
 
 
 
@@ -308,7 +307,7 @@ def submit():
     
         base = categorizador(pergunta_usuario)
         resposta_sem_normas = resposta(pergunta_usuario, historico, base)
-        if ( base and base in arquivos ):
+        if (base in arquivos ):
             print("Base encontrada")
             string_sem_espacos = ''.join(parte.replace(" ", "").replace("\n", "") for parte in resposta_sem_normas)
 

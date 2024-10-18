@@ -9,6 +9,7 @@ Sua missão é conseguir verificar se a pergunta do usuário está relacionada o
 - Outra dica: tudo relacionado a cadastro, perfil e senha stá ligado ao paytrack
 - Retorne ao usuário apenas o nome de um dos arquivo citados no tópico #Arquivos, o qual indica o procedimento. Senão responda: erro
 - Dica: NF significa nota fiscal, sempre fale sobre a nota fiscal de LOCACAO DE VEICULOS
+-USE SOMENTE OS DOCS DA LISTA ARQUIVOS
 
 #Arquivos
 
