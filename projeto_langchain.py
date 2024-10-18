@@ -161,21 +161,18 @@ def resposta (prompt_usuario, historico, nome_arquivo):
             resposta = llm.invoke(prompt_template.format_prompt(history=memory.buffer_as_messages, prompt_usuario=prompt_usuario))
 
             # Atualiza o histórico com a resposta gerada
-            memory.save_context(inputs=[HumanMessage(content=prompt_usuario), AIMessage(content="")], outputs=[HumanMessage(content=prompt_usuario), AIMessage(content=resposta)])
-
-            output = ""
-            for chunk in resposta:
-                output += chunk
+            print(resposta.content)
+            memory.save_context(inputs=[HumanMessage(content=prompt_usuario)], outputs=[AIMessage(content=resposta.content)])
             
             print("Resposta feita com sucesso")
             print(resposta)
             output=""
-            for chunk in resposta:
-                    if 'choices' in chunk and 'delta' in chunk['choices'][0] and 'content' in chunk['choices'][0]['delta']:
-                        text = chunk['choices'][0]['delta']['content']
-                        if text:
-                            output+=text
-                            yield text
+            # for chunk in resposta:
+            #         if 'choices' in chunk and 'delta' in chunk['choices'][0] and 'content' in chunk['choices'][0]['delta']:
+            #             text = chunk['choices'][0]['delta']['content']
+            #             if text:
+            #                 output+=text
+            #                 yield text
 
             tokens_output = contar_tokens(output)
             print(f"Tokens de saída: {tokens_output}")               
@@ -217,7 +214,7 @@ def respostaErro (prompt_usuario, historico):
             resposta = llm.invoke(prompt_template.format_prompt(history=memory.buffer_as_messages, prompt_usuario=prompt_usuario))
 
             # Atualiza o histórico com a resposta gerada
-            memory.save_context(inputs=[HumanMessage(content=prompt_usuario), AIMessage(content="")], outputs=[HumanMessage(content=prompt_usuario), AIMessage(content=resposta)])
+            memory.save_context(inputs=[HumanMessage(content=prompt_usuario)], outputs=[AIMessage(content=resposta)])
             
             print("Resposta feita com sucesso")
             print(resposta)
@@ -269,7 +266,7 @@ def substituidorNormas (resp,historico,pergunta_usuario,norma):
             resposta = llm.invoke(prompt_template.format_prompt(history=memory.buffer_as_messages, pergunta_usuario=pergunta_usuario))
 
             # Atualiza o histórico com a resposta gerada
-            memory.save_context(inputs=[HumanMessage(content=pergunta_usuario), AIMessage(content="")], outputs=[HumanMessage(content=pergunta_usuario), AIMessage(content=resposta)])
+            memory.save_context(inputs=[HumanMessage(content=pergunta_usuario)], outputs=[AIMessage(content=resposta)])
             
             print("Resposta feita com sucesso")
             output=""
