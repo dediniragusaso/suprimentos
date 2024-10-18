@@ -81,7 +81,7 @@ erro = open('./prompts/erro.txt',"r",encoding="utf8").read()
 normas= open('./prompts/prompt_normas.txt', "r", encoding="utf8").read()
 
 # Inicializar a memória de conversação
-memory = ConversationBufferMemory()
+memory = ConversationBufferMemory(memory_key="history", return_messages=True)
 
 encoding = tiktoken.encoding_for_model("gpt-4o-2024-08-06")
 
@@ -157,15 +157,11 @@ def resposta (prompt_usuario, historico, nome_arquivo):
                 HumanMessagePromptTemplate.from_template("{prompt_usuario}")
             ])
 
-            # Adiciona a mensagem do usuário ao histórico
-            memory.save_context({"input": HumanMessage(content=prompt_usuario)}, {"output": AIMessage(content="")})
-
             # Gera a resposta do modelo
-            resposta = llm.predict(prompt_template.format_prompt(history=memory.load_memory_variables({})["history"], prompt_usuario=prompt_usuario))
+            resposta = llm.predict(prompt_template.format_prompt(history=memory.load_memory_variables({}), prompt_usuario=prompt_usuario))
 
             # Atualiza o histórico com a resposta gerada
-            memory.save_context({"input": HumanMessage(content=prompt_usuario)}, {"output": AIMessage(content=resposta)})
-
+            memory.save_context(inputs=[HumanMessage(content=prompt_usuario), AIMessage(content="")], outputs=[HumanMessage(content=prompt_usuario), AIMessage(content=resposta)])
 
             output = ""
             for chunk in resposta:
@@ -218,7 +214,7 @@ def respostaErro (prompt_usuario, historico):
             ])
 
             # Gerar a resposta do modelo de linguagem
-            resposta = llm.predict(prompt_template.format_prompt(history=memory.load_memory_variables({})["history"], prompt_usuario=prompt_usuario))
+            resposta = llm.invoke(prompt_template.format_prompt(history=memory.load_memory_variables({})["history"], prompt_usuario=prompt_usuario))
             
             print("Resposta feita com sucesso")
             print(resposta)
