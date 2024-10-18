@@ -1595,3 +1595,79 @@ ERROR->2024-10-18 14:49:20,247->variable history should be a list of base messag
 ERROR->2024-10-18 14:57:02,248->variable history should be a list of base messages, got  of type <class 'str'>->root
 ERROR->2024-10-18 14:59:27,373->variable history should be a list of base messages, got  of type <class 'str'>->root
 ERROR->2024-10-18 15:00:42,855->variable history should be a list of base messages, got  of type <class 'str'>->root
+ERROR->2024-10-18 15:28:39,251->variable history should be a list of base messages, got {'history': []} of type <class 'dict'>->root
+ERROR->2024-10-18 15:34:31,880->'list' object is not callable->root
+ERROR->2024-10-18 15:36:47,472->3 validation errors for HumanMessage
+content.str
+  Input should be a valid string [type=string_type, input_value=ChatPromptValue(messages=... response_metadata={})]), input_type=ChatPromptValue]
+    For further information visit https://errors.pydantic.dev/2.8/v/string_type
+content.list[union[str,dict[any,any]]].0.str
+  Input should be a valid string [type=string_type, input_value=('messages', [SystemMessa... response_metadata={})]), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.8/v/string_type
+content.list[union[str,dict[any,any]]].0.dict[any,any]
+  Input should be a valid dictionary [type=dict_type, input_value=('messages', [SystemMessa... response_metadata={})]), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.8/v/dict_type->root
+ERROR->2024-10-18 15:39:20,798->21 validation errors for AIMessage
+content.str
+  Input should be a valid string [type=string_type, input_value=AIMessage(content='**Proc...5e-8e2b-4f973c6f74cd-0'), input_type=AIMessage]
+    For further information visit https://errors.pydantic.dev/2.8/v/string_type
+content.list[union[str,dict[any,any]]].0.str
+  Input should be a valid string [type=string_type, input_value=('content', '**Procedimen...aqui para te auxiliar!'), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.8/v/string_type
+content.list[union[str,dict[any,any]]].0.dict[any,any]
+  Input should be a valid dictionary [type=dict_type, input_value=('content', '**Procedimen...aqui para te auxiliar!'), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.8/v/dict_type
+content.list[union[str,dict[any,any]]].1.str
+  Input should be a valid string [type=string_type, input_value=('additional_kwargs', {}), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.8/v/string_type
+content.list[union[str,dict[any,any]]].1.dict[any,any]
+  Input should be a valid dictionary [type=dict_type, input_value=('additional_kwargs', {}), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.8/v/dict_type
+content.list[union[str,dict[any,any]]].2.str
+  Input should be a valid string [type=string_type, input_value=('response_metadata', {'f...rint': 'fp_6b68a8204b'}), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.8/v/string_type
+content.list[union[str,dict[any,any]]].2.dict[any,any]
+  Input should be a valid dictionary [type=dict_type, input_value=('response_metadata', {'f...rint': 'fp_6b68a8204b'}), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.8/v/dict_type
+content.list[union[str,dict[any,any]]].3.str
+  Input should be a valid string [type=string_type, input_value=('type', 'ai'), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.8/v/string_type
+content.list[union[str,dict[any,any]]].3.dict[any,any]
+  Input should be a valid dictionary [type=dict_type, input_value=('type', 'ai'), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.8/v/dict_type
+content.list[union[str,dict[any,any]]].4.str
+  Input should be a valid string [type=string_type, input_value=('name', None), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.8/v/string_type
+content.list[union[str,dict[any,any]]].4.dict[any,any]
+  Input should be a valid dictionary [type=dict_type, input_value=('name', None), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.8/v/dict_type
+content.list[union[str,dict[any,any]]].5.str
+  Input should be a valid string [type=string_type, input_value=('id', 'run-89eb64fd-b3ab...5e-8e2b-4f973c6f74cd-0'), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.8/v/string_type
+content.list[union[str,dict[any,any]]].5.dict[any,any]
+  Input should be a valid dictionary [type=dict_type, input_value=('id', 'run-89eb64fd-b3ab...5e-8e2b-4f973c6f74cd-0'), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.8/v/dict_type
+content.list[union[str,dict[any,any]]].6.str
+  Input should be a valid string [type=string_type, input_value=('example', False), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.8/v/string_type
+content.list[union[str,dict[any,any]]].6.dict[any,any]
+  Input should be a valid dictionary [type=dict_type, input_value=('example', False), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.8/v/dict_type
+content.list[union[str,dict[any,any]]].7.str
+  Input should be a valid string [type=string_type, input_value=('tool_calls', []), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.8/v/string_type
+content.list[union[str,dict[any,any]]].7.dict[any,any]
+  Input should be a valid dictionary [type=dict_type, input_value=('tool_calls', []), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.8/v/dict_type
+content.list[union[str,dict[any,any]]].8.str
+  Input should be a valid string [type=string_type, input_value=('invalid_tool_calls', []), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.8/v/string_type
+content.list[union[str,dict[any,any]]].8.dict[any,any]
+  Input should be a valid dictionary [type=dict_type, input_value=('invalid_tool_calls', []), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.8/v/dict_type
+content.list[union[str,dict[any,any]]].9.str
+  Input should be a valid string [type=string_type, input_value=('usage_metadata', None), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.8/v/string_type
+content.list[union[str,dict[any,any]]].9.dict[any,any]
+  Input should be a valid dictionary [type=dict_type, input_value=('usage_metadata', None), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.8/v/dict_type->root
