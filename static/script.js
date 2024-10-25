@@ -136,8 +136,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
                 },
-                // body: `inputMessage=${encodeURIComponent(inputMessage)}&historico=${encodeURIComponent(sessionStorage.getItem("Historico"))}`,
-                body: `inputMessage=${encodeURIComponent(inputMessage)}`,
+                body: `inputMessage=${encodeURIComponent(inputMessage)}&historico=${encodeURIComponent(sessionStorage.getItem("Historico"))}`,
 
 
             }).then(response => {
@@ -159,7 +158,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
                             // atualizar histórico front
-                            // atualizarVariavel(responseText, inputMessage);
+                            atualizarVariavel(responseText, inputMessage);
                             return;
                         }
     
@@ -304,25 +303,25 @@ document.addEventListener('DOMContentLoaded', function () {
             event.stopPropagation();
         });
 
-        // function criarVariavel() {
-        //     sessionStorage.setItem('Historico', '')
-        // }
+        function criarVariavel() {
+            sessionStorage.setItem('Historico', '')
+        }
 
-        // function atualizarVariavel(resposta, pergunta) {
-        //     // mensagens do sessionStorage
-        //     let atualPergunta = pergunta
-        //     let atualResposta = resposta
+        function atualizarVariavel(resposta, pergunta) {
+            // mensagens do sessionStorage
+            let atualPergunta = pergunta
+            let atualResposta = resposta
 
-        //     let mensagem = ""
-        //     let historico = sessionStorage.getItem("Historico")
-        //     if (historico != undefined) {
-        //         mensagem += historico
-        //     }
+            let mensagem = ""
+            let historico = sessionStorage.getItem("Historico")
+            if (historico != undefined) {
+                mensagem += historico
+            }
 
 
-        //     mensagem += "human: " + atualPergunta + "\nai: " + atualResposta + "\n"
-        //     console.log(mensagem)
-        //     sessionStorage.setItem('Historico', mensagem)     
-        // }
+            mensagem += "human: " + atualPergunta + "\nai: " + atualResposta + "\n"
+            console.log(mensagem)
+            sessionStorage.setItem('Historico', mensagem)          
+        }
 
-        // window.addEventListener('load', criarVariavel())
+        window.addEventListener('load', criarVariavel())
