@@ -11,11 +11,9 @@ from logging import ERROR
 from logging import basicConfig
 from logging import error
 from logging import getLogger
-import tiktoken
 import psycopg2
 
 # langchain
-from langchain_openai.llms import OpenAI
 from langchain_openai.chat_models import ChatOpenAI
 from langchain_core.messages import HumanMessage
 from langchain.chains.conversation.memory import ConversationBufferMemory
