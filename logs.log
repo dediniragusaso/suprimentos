@@ -1824,3 +1824,8 @@ AssertionError: applications must write bytes->werkzeug
 ERROR->2024-10-18 17:35:29,137->'AIMessageChunk' object has no attribute 'replace'->root
 ERROR->2024-10-18 17:40:14,476->can only concatenate str (not "int") to str->root
 ERROR->2024-10-18 17:41:02,232->can only concatenate str (not "int") to str->root
+ERROR->2024-10-25 15:37:46,192->[Errno 13] Permission denied: './prompts/palavras_chaves/bases_100'->root
+ERROR->2024-10-25 15:38:30,718->[Errno 13] Permission denied: './prompts/palavras_chaves/bases_100'->root
+ERROR->2024-10-25 15:40:28,425->[Errno 13] Permission denied: './prompts/palavras_chaves/bases_100'->root
+ERROR->2024-10-25 15:44:05,945->can only concatenate str (not "AIMessage") to str->root
+ERROR->2024-10-25 17:02:45,658->can only concatenate str (not "int") to str->root
