@@ -63,7 +63,6 @@ encoding = tiktoken.encoding_for_model("gpt-4o-2024-08-06")
 app = Flask(__name__)
 
 @app.route('/')
-@app.route('/')
 def index():
     global chat_id
     
