@@ -43,9 +43,9 @@ def conexao_banco():
         
         # Adicionar parâmetros de SSL
         conn = psycopg2.connect(
-            db_link,
-            sslmode='require',
-            sslrootcert='/etc/secrets/ca.pem'
+            db_link
+            # sslmode='require',
+            # sslrootcert='/etc/secrets/ca.pem'
         )
         print("Conexão feita com sucesso!")
         return conn
@@ -79,6 +79,7 @@ def index():
                         VALUES (NOW(), 0, 0)
                         RETURNING ID_CHAT;""")
         chat_id = cursor.fetchone()[0]
+        print(chat_id)
         
         cursor.execute("""INSERT INTO CONTROLE(CD_CHAT, NR_TOKENS_PERG, NR_TOKENS_RESP, VL_DOLAR)
                         VALUES(%s, 0, 0, 0)""",(chat_id,))

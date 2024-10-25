@@ -1377,3 +1377,7 @@ safety_ratings {
   probability: MEDIUM
 }
 ->root
+ERROR->2024-10-24 15:03:13,035->module 'openai' has no attribute 'error'->root
+ERROR->2024-10-24 15:04:13,092->module 'openai' has no attribute 'error'->root
+ERROR->2024-10-24 15:07:47,192->module 'openai' has no attribute 'error'->root
+ERROR->2024-10-24 15:14:45,043->module 'openai' has no attribute 'error'->root
