@@ -17,17 +17,11 @@ import psycopg2
 # langchain
 from langchain_openai.llms import OpenAI
 from langchain_openai.chat_models import ChatOpenAI
-from langchain_core.messages import HumanMessage, SystemMessage, AIMessage
-from langchain.chains.conversation.memory import ConversationBufferMemory, ConversationSummaryMemory
-from langchain_core.runnables.history import RunnableWithMessageHistory
-from langchain_core.exceptions import LangChainException, OutputParserException, TracerException 
-from langchain_core.prompts.prompt import PromptTemplate
+from langchain_core.messages import HumanMessage
+from langchain.chains.conversation.memory import ConversationBufferMemory
+from langchain_core.exceptions import LangChainException, OutputParserException, TracerException
 from langchain_core.prompts.chat import ChatPromptTemplate, SystemMessagePromptTemplate, HumanMessagePromptTemplate
-from langchain_core.chat_history import BaseChatMessageHistory
-from langchain_core.messages import BaseMessage
-from langchain_core.pydantic_v1 import BaseModel, Field
 from langchain_core.prompts.chat import MessagesPlaceholder
-# from langchain_community.document_loaders import PyPDFLoader
 
 basicConfig(
     level = ERROR  , #Todas as informações com maior ou prioridade igual ao DEBUG serão armazenadas
@@ -135,7 +129,7 @@ def categorizador(prompt_usuario):
     return categoria.content
 
 
-def resposta (prompt_usuario, historico, nome_arquivo):
+def resposta (prompt_usuario, nome_arquivo):
     prompt=escritor
     prompt+= open(f"./bases/{nome_arquivo}","r",encoding="utf8").read()
     #prompt += historico
@@ -188,7 +182,7 @@ def resposta (prompt_usuario, historico, nome_arquivo):
 
 
 
-def respostaErro (prompt_usuario, historico):
+def respostaErro (prompt_usuario):
     prompt=erro
     # prompt += historico
     tokens_input= contar_tokens(prompt)
@@ -237,7 +231,7 @@ def respostaErro (prompt_usuario, historico):
             time.sleep(tempo_de_espera)
             tempo_de_espera *=2
 
-def substituidorNormas (resp,historico,pergunta_usuario,norma):
+def substituidorNormas (resp, pergunta_usuario, norma):
     prompt=normas
     # prompt += historico
     prompt += ''.join(resp)  # junta todas as strings geradas por 'resp'
@@ -302,11 +296,11 @@ def submit():
     
     try:
     
-        historico = request.form['historico']
+        # historico = request.form['historico']
         pergunta_usuario = request.form['inputMessage']
     
         base = categorizador(pergunta_usuario)
-        resposta_sem_normas = resposta(pergunta_usuario, historico, base)
+        resposta_sem_normas = resposta(pergunta_usuario, base)
         if (base in arquivos ):
             print("Base encontrada")
             string_sem_espacos = ''.join(parte.replace(" ", "").replace("\n", "") for parte in resposta_sem_normas)
@@ -317,18 +311,18 @@ def submit():
                 regra = norma.group()  
                 print(regra)
                 
-                return Response(stream_with_context(substituidorNormas(resposta_sem_normas, historico, pergunta_usuario,regra,)), content_type='text/plain')
+                return Response(stream_with_context(substituidorNormas(resposta_sem_normas, pergunta_usuario,regra)), content_type='text/plain')
             
             else:
                 print("nope")
                 print(type(resposta_sem_normas))
             
-                return Response(stream_with_context(resposta(pergunta_usuario, historico, base)), content_type='text/plain')
+                return Response(stream_with_context(resposta(pergunta_usuario, base)), content_type='text/plain')
             
            
      
         else: 
-            return Response(stream_with_context(respostaErro(pergunta_usuario,historico)), content_type='text/plain')
+            return Response(stream_with_context(respostaErro(pergunta_usuario)), content_type='text/plain')
     except Exception as e:
         error(e)
         return Response(stream_with_context(algo_ocorreu_de_errado()), content_type='text/plain')
