@@ -451,7 +451,7 @@ def submit():
             
             # Verificar se há norma
             string_sem_espacos = ''.join(parte.replace(" ", "").replace("\n", "") for parte in resposta_sem_normas)
-            norma = re.search(r'^(IN|M)-.*[0-9]{4}$', string_sem_espacos, re.IGNORECASE)
+            norma = re.search(r'(IN|M)-.*[0-9]{4}', string_sem_espacos, re.IGNORECASE)
             if norma:
                 print("Baseado em norma")
                 regra = norma.group()  
