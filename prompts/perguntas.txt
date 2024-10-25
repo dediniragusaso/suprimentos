@@ -1,0 +1,41 @@
+1-Como posso acessar o paytrack?
+Resposta esperada: 
+Para acessar a plataforma você receberá um e-mail com as suas
+informações de usuário.
+Utilize-as para entrar no Paytrack através do link:
+https://login.paytrack.com.br/.
+Na página inicial, digite o seu usuário e clique em “Próximo” e
+insira sua senha . Em seguida, o sistema solicitará a sua senha.
+Digite-a e clique em “Entrar”.
+
+
+2-Como eu crio um relatório de reembolso?
+Resposta esperada: 
+
+WEB
+Para solicitar um reembolso no site do Paytrack, clique na opção de reembolso que melhor se encaixa, conforme descrição na página
+inicial, de acordo com sua empresa. Para iniciar o relatório, insira a “Descrição”. O objetivo é explicar o motivo da solicitação do seu
+reembolso. Selecione o motivo que melhor se identifica com seu relatório de despesa e clique em “Confirmar”. Caso você seja
+solicitante de um relatório, haverá um terceiro campo a ser preenchido, informando para quem será o relatório que está sendo
+criado.
+
+APP
+
+Para começar o lançamento das despesas que precisar ser solicitadas o reembolso para a empresa, você precisar criar o relatório
+dentro do APP Paytrack. Para isso, bastar clicar em “Minhas Viagens e Despesas” e em seguida, clique no “+”.
+Após a escolhe o fluxo de reembolso da sua unidade, você deve preencher as informações solicitadas, como “Descrição”, “Motivo”,
+“Data” e clicar em “Salvar”, para gerar o número do seu relatório
+
+
+3-Como eu posso concluir meu relatório?
+Resposta esperada:
+Após a inclusão dos serviços solicitados e verificação do Centro de Custo, 
+o relatório será enviado para a próxima etapa do fluxo, como Aprovação e
+Emissão dos Serviços, no caso da criação Online. Para os casos offline
+(cotado pela agência), a mesma fará a cotação, retornando o relatório em
+“Seleção”, para que o colaborador, escolha a opção desejada e envie o
+relatório para a aprovação e confirmação da reserva.
+Acompanhe o seu andamento através de Meus Pedidos e Relatórios, na
+tela inicial.
+
+

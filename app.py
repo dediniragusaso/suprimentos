@@ -1,4 +1,4 @@
-# Importações
+#importação bibliotecas
 import openai
 import time
 import tiktoken
@@ -6,28 +6,26 @@ from dotenv import load_dotenv
 import os
 import re
 from flask import Flask, render_template,  request, jsonify, Response, stream_with_context
+from logging import ERROR
+from logging import basicConfig
+from logging import error
+from logging import getLogger
 import tiktoken
 import requests 
 import psycopg2
-
-# LOG
-from logging import ERROR
-from logging import basicConfig #configurações para os comportamentos dos logs
-from logging import error
-from logging import getLogger
+import PyPDF2
 
 basicConfig(
-    level = ERROR  , #Todas as informações com maior ou prioridade igual ao DEBUG serão armazenadas
-    filename= "logs.log", #Onde serão armazenadas as informações
-    filemode= "a", # Permissões do arquivo [se poderá editar, apenas ler ...]
-    format= '%(levelname)s->%(asctime)s->%(message)s->%(name)s' # Formatação da informação
+    level = ERROR  , 
+    filename= "logs.log", 
+    filemode= "a", 
+    format= '%(levelname)s->%(asctime)s->%(message)s->%(name)s' 
 )
 getLogger('openai').setLevel(ERROR)
 getLogger('werkzeug').setLevel(ERROR)
 
-# Variáveis de ambiente
 load_dotenv()
-api_key = os.getenv("OPENAI_API_KEY")
+api_key = os.getenv("openai_api_key")
 correct_password = os.getenv("CORRECT_PASSWORD")
 if not api_key:
     raise ValueError("Chave API não encontrada. Verifique se 'openai_api_key' está definida no ambiente.")
@@ -53,25 +51,29 @@ def conexao_banco():
         print(f"Erro ao conectar no banco de dados: {e}")
         return None
 
-
-# Variáveis Globais
 categorizador_prompt= open('./prompts/indicador_prompt.txt', "r", encoding="utf8").read()
 escritor= open('./prompts/escritor_prompt.txt',"r",encoding="utf8").read() 
 erro = open('./prompts/erro.txt',"r",encoding="utf8").read() 
 normas= open('./prompts/prompt_normas.txt', "r", encoding="utf8").read()
-chat_id = 0
+custo=0
+chat_id=0
 
 encoding = tiktoken.encoding_for_model("gpt-4o-2024-08-06")
 
 app = Flask(__name__)
 
-# Página Raiz
+@app.route('/')
 @app.route('/')
 def index():
     global chat_id
     
+    conn = None
+    cursor = None
     try:
         conn = conexao_banco()
+        if conn is None:
+            raise Exception("Conexão com o banco de dados não foi estabelecida.")
+        
         cursor = conn.cursor()
         
         # inserindo um novo chat
@@ -81,23 +83,26 @@ def index():
         chat_id = cursor.fetchone()[0]
         
         cursor.execute("""INSERT INTO CONTROLE(CD_CHAT, NR_TOKENS_PERG, NR_TOKENS_RESP, VL_DOLAR)
-                        VALUES(%s, 0, 0, 0)""",(chat_id,))
+                        VALUES(%s, 0, 0, 0)""", (chat_id,))
         
         conn.commit()
     except Exception as e:
-        conn.rollback()
+        if conn:
+            conn.rollback()
         print(f"Erro: {e}")
     finally:
-        cursor.close()
-        conn.close()
+        if cursor:
+            cursor.close()
+        if conn:
+            conn.close()
         
     return render_template('index.html')
 
-# Forms de Login
+
+
 @app.route('/login', methods=["POST"])
 def login():
     try:
-        # verificação de senha
         password = request.json["password"]
         if password == correct_password:
             return jsonify({"status": "success"}),200
@@ -106,7 +111,6 @@ def login():
     except Exception as e:
         return jsonify({"status": "error", "message": str(e)}),500
 
-# Recarregar página
 @app.route("/limparTerminal", methods=["POST"])
 def limparTerminal():
     global cont_requisicao
@@ -118,24 +122,22 @@ def limparTerminal():
         return jsonify({"status": "success"})
     
 
-# Mensagem de erro para o usuário
+
+# função quando dá erro
 def algo_ocorreu_de_errado():
     yield "Algo ocorreu de errado, tente novamente"
 
-# Contar o número de tokens
+
 def contar_tokens(texto):
     return len(encoding.encode(texto))
 
-# Categorizar mensagem em apenas um procedimento
 def categorizador(prompt_usuario, api_key):
-    global chat_id
     prompt_100 = open('./prompts/indicador_prompt.txt', "r", encoding="utf8").read()
+    global custo
+    for arq in os.listdir("./prompts/palavras_chaves/bases_100"):
+        prompt_100 += f"\n\n{arq}\n" + open(f"./prompts/palavras_chaves/bases_100/{arq}", "r", encoding="utf8").read()
 
-
-    for arq in os.listdir("./prompts/palavras_chaves"):
-        prompt_100 += f"\n\n{arq}\n" + open(f"./prompts/palavras_chaves/{arq}", "r", encoding="utf8").read()
-
-
+    custo+= (contar_tokens(prompt_100)/1000)*0.0025
     headers = {
         "Content-Type": "application/json",
         "Authorization": f"Bearer {api_key}"
@@ -160,13 +162,10 @@ def categorizador(prompt_usuario, api_key):
 
     payload["messages"][0]["content"] = prompt_100
     resposta = requests.post("https://api.openai.com/v1/chat/completions",headers=headers, json=payload)
-    
+    print(resposta.json())
     nr_tokens_perg, nr_tokens_resp = resposta.json()["usage"]["prompt_tokens"], resposta.json()["usage"]["completion_tokens"]
     chat_custo = (nr_tokens_perg/1000*0.0025) + (nr_tokens_resp/1000*0.01)
-    resposta = resposta.json()["choices"][0]["message"]["content"]  
-    print(chat_custo)   
-    print(resposta)
-    
+    custo+=  (contar_tokens( resposta.json()["choices"][0]["message"]["content"])/1000)*0.01
     try:
         conn = conexao_banco()
         cursor = conn.cursor()
@@ -191,22 +190,31 @@ def categorizador(prompt_usuario, api_key):
     finally:
         cursor.close()
         conn.close()
+    return resposta.json()["choices"][0]["message"]["content"]
 
-    return resposta
+       
 
-# Responder a pergunta baseado no procedimento       
+
 def resposta (prompt_usuario, historico, nome_arquivo):
-    global chat_id
     prompt=escritor
-    prompt+= open(f"./bases/{nome_arquivo}","r",encoding="utf8").read()
     prompt += historico
-    
+    nr_tokens_perg= contar_tokens(prompt)
+    global custo
+    arquivoInput = (f"./pdfs_bases/procedimentos/{nome_arquivo}")
+    pdf = open(arquivoInput, "rb")
+    pdf_reader = PyPDF2.PdfReader(pdf)
+    total_paginas=len(pdf_reader.pages)
+    for i in range (total_paginas):
+        pagina = pdf_reader.pages[i]
+        prompt+=pagina.extract_text()
+    print("Prompt de resposta")
     tentativas = 0
     tempo_de_espera = 5
-    nr_tokens_perg= contar_tokens(prompt)
+    custo+= (contar_tokens(prompt)/1000)*0.0025
     while tentativas <3:
         tentativas+=1
         print(f"Tentativa {tentativas}")
+        print(prompt)
         try:
             print(f"Iniciando a análise")
             resposta = openai.ChatCompletion.create(
@@ -238,10 +246,12 @@ def resposta (prompt_usuario, historico, nome_arquivo):
                             output+=text
                             yield text
 
+            tokens_output = contar_tokens(output)
+            custo+= (contar_tokens(output)/1000)*0.01
+            print(f"Tokens de saída: {tokens_output}")
             nr_tokens_resp = contar_tokens(output)
             chat_custo = (nr_tokens_perg/1000*0.0025) + (nr_tokens_resp/1000*0.01)
-            print(chat_custo)
-            
+            print(chat_custo)   
             try:
                 conn = conexao_banco()
                 cursor = conn.cursor()
@@ -272,16 +282,21 @@ def resposta (prompt_usuario, historico, nome_arquivo):
             tempo_de_espera *=2
 
 
-# Pedir mais informações ao usuário
+
 def respostaErro (prompt_usuario, historico):
     prompt=erro
     prompt += historico
+    tokens_input= contar_tokens(prompt)
+    global custo
     nr_tokens_perg= contar_tokens(prompt)
+    print(f"Entrada:{tokens_input}")
+    custo+= (contar_tokens(prompt)/1000)*0.0025
     tentativas = 0
     tempo_de_espera = 5
     while tentativas <3:
         tentativas+=1
         print(f"Tentativa {tentativas}")
+        print("Prompt de erro")
         try:
             print(f"Iniciando a análise")
             resposta = openai.ChatCompletion.create(
@@ -312,16 +327,19 @@ def respostaErro (prompt_usuario, historico):
                         if text:
                             output+=text
                             yield text
-            
+
+            tokens_output = contar_tokens(output)
+            custo+= (contar_tokens(output)/1000)*0.01
+            print(f"Tokens de saída: {tokens_output}")
+
             nr_tokens_resp = contar_tokens(output)
             chat_custo = (nr_tokens_perg/1000*0.0025) + (nr_tokens_resp/1000*0.01)
-            print(chat_custo)
-            
+            print(chat_custo)   
             try:
                 conn = conexao_banco()
                 cursor = conn.cursor()
-
-                # Atualizar custo do chat
+            
+                #Atualizar custo do chat
                 cursor.execute("""UPDATE CONTROLE SET 
                                 NR_TOKENS_PERG = NR_TOKENS_PERG + %s, 
                                 NR_TOKENS_RESP = NR_TOKENS_RESP + %s,
@@ -333,8 +351,7 @@ def respostaErro (prompt_usuario, historico):
                 print(f"Erro: {e}")
             finally:
                 cursor.close()
-                conn.close()    
-            
+                conn.close() 
 
             return
         except openai.error.AuthenticationError as e:
@@ -347,13 +364,22 @@ def respostaErro (prompt_usuario, historico):
             time.sleep(tempo_de_espera)
             tempo_de_espera *=2
 
-# Substituir normas pelo conteúdo correspondente
 def substituidorNormas (resp,historico,pergunta_usuario,norma):
     prompt=normas
     prompt += historico
-    prompt += ''.join(resp)  # junta todas as strings geradas por 'resp'
-    prompt += open(f"./bases_normas/{norma}.txt","r",encoding="utf8").read() 
+    prompt += resp
+    global custo
     nr_tokens_perg= contar_tokens(prompt)
+    arquivoInput = (f"./pdfs_bases/politicas/{norma}.pdf")
+    pdf = open(arquivoInput, "rb")
+    pdf_reader = PyPDF2.PdfReader(pdf)
+    total_paginas=len(pdf_reader.pages)
+    for i in range (total_paginas):
+        pagina = pdf_reader.pages[i]
+        prompt+=pagina.extract_text()
+    tokens_input= contar_tokens(prompt)
+    custo+= (contar_tokens(prompt)/1000)*0.0025
+    print(f"Entrada:{tokens_input}")
     tentativas = 0
     tempo_de_espera = 5
     while tentativas <3:
@@ -389,7 +415,12 @@ def substituidorNormas (resp,historico,pergunta_usuario,norma):
                         if text:
                             output+=text
                             yield text
+
             
+
+            tokens_output = contar_tokens(output)
+            custo+= (contar_tokens(output)/1000)*0.01
+            print(f"Tokens de saída: {tokens_output}") 
             nr_tokens_resp = contar_tokens(output)
             chat_custo = (nr_tokens_perg/1000*0.0025) + (nr_tokens_resp/1000*0.01)
             print(chat_custo)
@@ -410,8 +441,7 @@ def substituidorNormas (resp,historico,pergunta_usuario,norma):
                 print(f"Erro: {e}")
             finally:
                 cursor.close()
-                conn.close()    
-        
+                conn.close()
             return
         except openai.error.AuthenticationError as e:
             print(f"Erro de autentificação {e}")
@@ -424,45 +454,47 @@ def substituidorNormas (resp,historico,pergunta_usuario,norma):
             tempo_de_espera *=2
 
 arquivos=[]
-for arq in (os.listdir("./bases")):
+for arq in (os.listdir("./pdfs_bases/procedimentos")):
         arquivos.append(arq) 
 
 
-# Resposta do usuário
 @app.route("/submit", methods=["POST"])
  
 def submit():
     
     try:
-        
-        global chat_id
-        
-        # Obter historico e pergunta do usuário
+    
         historico = request.form['historico']
         pergunta_usuario = request.form['inputMessage']
-    
-        # Categorizar a pergunta
+        global custo
         base = categorizador(pergunta_usuario, api_key)
-        
-        # Gerar a resposta
         resposta_sem_normas = resposta(pergunta_usuario, historico, base)
-        if ( base and base in arquivos ):
+        if (base in arquivos ):
             print("Base encontrada")
-            
-            # Verificar se há norma
+            print(base)
             string_sem_espacos = ''.join(parte.replace(" ", "").replace("\n", "") for parte in resposta_sem_normas)
-            norma = re.search(r'(IN|M)-.*[0-9]{4}', string_sem_espacos, re.IGNORECASE)
+            norma = re.search(r'(IN|M)-.{5,9}-[0-9]{4}', string_sem_espacos, re.IGNORECASE)
             if norma:
                 print("Baseado em norma")
                 regra = norma.group()  
-                
-                return Response(stream_with_context(substituidorNormas(resposta_sem_normas, historico, pergunta_usuario,regra)), content_type='text/plain')
+                print(regra)
+                reais= custo * 5.60
+                print(f"Custo: {reais} reais pela pergunta")
+                return Response(stream_with_context(substituidorNormas(string_sem_espacos, historico, pergunta_usuario,regra,)), content_type='text/plain')
             
             else:
-            
+                print("nope")
+                print(type(resposta_sem_normas))
+                reais= custo * 5.60
+                print(f"Custo: {reais} reais pela pergunta")
                 return Response(stream_with_context(resposta(pergunta_usuario, historico, base)), content_type='text/plain')
             
+           
+     
         else: 
+            reais= custo * 5.60
+            print(f"Custo em dólares: {custo}")
+            print(f"Custo: {reais} reais pela pergunta")
             return Response(stream_with_context(respostaErro(pergunta_usuario,historico)), content_type='text/plain')
     except Exception as e:
         error(e)
@@ -484,6 +516,5 @@ def submit():
         finally:
             cursor.close()
             conn.close()
-
-# Executar o servidor
-app.run(debug=True, port=5000, host="0.0.0.0")
+    
+app.run(debug=True, port=5000)
