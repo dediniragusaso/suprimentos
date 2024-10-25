@@ -1,46 +1,55 @@
 import openai
 import time
-import tiktoken
 from dotenv import load_dotenv
 import os
-from flask import Flask, render_template,  request, jsonify, Response, stream_with_context
-from logging import ERROR
-#Funções
-from logging import basicConfig #configurações para os comportamentos dos logs
-from logging import error
-from logging import getLogger
-import tiktoken
+from flask import Flask, render_template, request, jsonify, Response, stream_with_context
+import google.generativeai as genai
+import logging
 import base64
 import requests
 import json
+import psycopg2
+import PyPDF2
 
-basicConfig(
-    level = ERROR  , #Todas as informações com maior ou prioridade igual ao DEBUG serão armazenadas
-    filename= "logs.log", #Onde serão armazenadas as informações
-    filemode= "a", # Permissões do arquivo [se poderá editar, apenas ler ...]
-    format= '%(levelname)s->%(asctime)s->%(message)s->%(name)s' # Formatação da informação
+# Logging configuration
+logging.basicConfig(
+    level=logging.ERROR,
+    filename="logs.log",
+    filemode="a",
+    format='%(levelname)s->%(asctime)s->%(message)s->%(name)s'
 )
 
-getLogger('openai').setLevel(ERROR)
-getLogger('werkzeug').setLevel(ERROR)
+logging.getLogger('openai').setLevel(logging.ERROR)
+logging.getLogger('werkzeug').setLevel(logging.ERROR)
 
+# Load environment variables
 load_dotenv()
 api_key = os.getenv("openai_api_key")
+correct_password = os.getenv("CORRECT_PASSWORD")
+genai.configure(api_key=os.environ["GEMINI_API_KEY"])
 if not api_key:
-    raise ValueError("Chave API não encontrada. Verifique se 'openai_api_key' está definida no ambiente.")
+    raise ValueError("API key not found. Make sure 'openai_api_key' is set in the environment.")
 
-# variáveis globais
-indicador= open('./prompts/indicador_prompt.txt',"r",encoding="utf8").read() 
-escritor = open('./prompts/escritor_prompt.txt',"r",encoding="utf8").read() 
-
-encoding = tiktoken.encoding_for_model("gpt-4o-2024-08-06")
-
+# Global variables
+indicador = open('./prompts/indicador_prompt.txt', "r", encoding="utf8").read()
+escritor = open('./prompts/escritor_prompt.txt', "r", encoding="utf8").read()
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
     return render_template('index.html')
+
+@app.route('/login', methods=["POST"])
+def login():
+    try:
+        password = request.json["password"]
+        if password == correct_password:
+            return jsonify({"status": "success"}),200
+        else:
+            return jsonify({"status": "error"}),401
+    except Exception as e:
+        return jsonify({"status": "error", "message": str(e)}),500
 
 @app.route("/limparTerminal", methods=["POST"])
 def limparTerminal():
@@ -54,167 +63,158 @@ def limparTerminal():
     
 
 
-# função quando dá erro
 def algo_ocorreu_de_errado():
-    yield "Ocorreu um erro. Por favor, tente novamente mais tarde ou entre em contato com um de nossos desenvolvedores pelo e-mail: gedaijef@gmail.com."    
+    yield "Um erro ocorreu. Por favor, tente novamente ou entre em contato conosco se o problema persistir por meio do e-mail <a href='mailto:gedaijef@gmail.com' class='link_resposta'>gedaijef@gmail.com</a>"
 
 
-def identificaArquivo(prompt_usuario):
-    prompt = indicador
-    for arq in (os.listdir("./bases")):
-        prompt += "\n\n" + open(f"./bases/{arq}","r",encoding="utf8").read() 
-  
-    tentativas = 0
-    tempo_de_espera = 5
-    while tentativas <3:
-        tentativas+=1
-        try:
-            resposta = openai.ChatCompletion.create(
-                model = "gpt-4o-2024-08-06",
-                messages = [
-                    {
-                        "role": "system",
-                        "content": prompt
-                    },
-                    {
-                        "role": "user",
-                        "content": prompt_usuario
-                    }
-                ],
-                temperature=0.7,
-                max_tokens=1000,
-                top_p=1,
-                frequency_penalty=0,
-                presence_penalty=0
-            )
-            
-            print(resposta.choices[0].message.content)
-            return resposta.choices[0].message.content
-        except openai.error.AuthenticationError as e:
-            print(f"Erro de autentificação {e}")
-        except openai.error.APIError as e:
-            print(f"Erro de API {e}")
-            time.sleep(5)
-        except openai.error.RateLimitError as e:
-            print(f"Erro de limite de taxa: {e}")
-            time.sleep(tempo_de_espera)
-            tempo_de_espera *=2
+def categorizador(prompt_usuario, api_key):
+    prompt_100 = open('./prompts/indicador_prompt.txt', "r", encoding="utf8").read()
+    global custo
+    for arq in os.listdir("./prompts/palavras_chaves/bases_100"):
+        prompt_100 += f"\n\n{arq}\n" + open(f"./prompts/palavras_chaves/bases_100/{arq}", "r", encoding="utf8").read()
 
+    headers = {
+        "Content-Type": "application/json",
+        "Authorization": f"Bearer {api_key}"
+    }
+
+    payload = {
+        "model": "gpt-4o-2024-08-06",
+        "messages": [
+            {
+                "role": "system",
+                "content": ""
+            },
+            {
+                "role": "user",
+                "content": prompt_usuario
+            }
+        ],
+        "max_tokens": 1000,
+        "seed": 42
+    }
+   
+
+    payload["messages"][0]["content"] = prompt_100
+    resposta = requests.post("https://api.openai.com/v1/chat/completions",headers=headers, json=payload)
+    # print(resposta.json())
+
+    return resposta.json()["choices"][0]["message"]["content"]
 
 def imagem_para_base64(image_path):
     with open(image_path, "rb") as image_file:
         return base64.b64encode(image_file.read()).decode('utf-8')
 
-""
-def respostaArquivo (prompt_usuario, arquivo, historico):
-    
-    if arquivo=="erro":
-        yield "Por favor, informe mais detalhes para que eu possa te ajudar!"
-    
+def respostaArquivo(prompt_usuario, arquivo, historico):
+    if arquivo == "erro":
+        yield "Please provide more details so I can assist you!"
+
     prompt = escritor
-    prompt += "\n\n" + open(f"./bases/{arquivo}","r",encoding="utf8").read() 
-    
+    prompt+= f"Nome do arquivo: {arquivo}"
+    arquivoInput = (f"./pdfs_bases/procedimentos/{arquivo}")
+    pdf = open(arquivoInput, "rb")
+    pdf_reader = PyPDF2.PdfReader(pdf)
+    total_paginas=len(pdf_reader.pages)
+    for i in range (total_paginas):
+        pagina = pdf_reader.pages[i]
+        prompt+=pagina.extract_text()
     prompt += historico
-    tentativas = 0
-    tempo_de_espera = 5
-    
+
     headers = {
-    "Content-Type": "application/json",
-    "Authorization": f"Bearer {api_key}"
+        "Content-Type": "application/json",
+        "Authorization": f"Bearer {api_key}"
     }
+
     
-    payload = '''{{
-    "model": "gpt-4o-2024-08-06",
-    "messages": [
-        {{
-        "role": "system",
-        "content":[
-            {{
-            "type": "text",
-            "text": "{}"
-            }}
-        ]}},
-        {{
-        "role": "user",
-        "content": [
-            {{
-            "type": "text",
-            "text": "{}"
-            }}'''.format(prompt.replace("\n", "\\n").replace('"', '\\"'), 
-                        prompt_usuario.replace("\n", "\\n").replace('"', '\\"'))
+    payload = {
+        "model": "gpt-4o-2024-08-06",
+        "messages": [
+            {
+                "role": "system",
+                "content": prompt
+            },
+            {
+                "role": "user",
+                "content": [
+                    {"type":"text",
+                     "text":prompt_usuario
+                    }
+                ]
+            }
+        ],
+        "max_tokens": 1000,
+        "stream": True,
+        "seed": 42
+    }
+
+    if os.path.exists(f"imagens_certa/{arquivo.replace('.pdf', '')}"):
+        imagens = os.listdir(f"imagens_certa/{arquivo.replace('.pdf', '')}")
+        
+        imagens_map = map(lambda x: 
+            {
+            "type": "image_url",
+            "image_url": {"url": "data:image/jpeg;base64,"+imagem_para_base64(f'imagens_certa/{arquivo.replace(".pdf", "")}/'+x)}
+            },imagens)
+        print(imagens_map)
+        payload["messages"][1]["content"].extend(list(imagens_map))
+        
+        print(payload)
+
+    try:
     
-    if os.path.exists("imagens/"+arquivo.replace(".txt","")):
-        imagens = os.listdir("imagens/"+arquivo.replace(".txt",""))
-        for img in imagens:
-            base64_img =imagem_para_base64("./imagens/"+arquivo.replace(".txt","")+"/"+img)
-            payload+=f'''
-                ,{{
-                        "type": "image_url",
-                        "image_url": {{
-                            "url": "data:image/jpeg;base64,{base64_img}"
-                        }}
-                        }}'''
-    
-    payload+= '''        
-        ]
-        }
-    ],
-    "max_tokens": 1000
-    }'''
+        resposta = requests.post("https://api.openai.com/v1/chat/completions",
+                                 headers=headers, json=payload, stream=True)
+        
+        
+        
+        if resposta.status_code != 200:
+            logging.error(f"Erro na requisição: {resposta.status_code} - {resposta.text}")
+            return
+        
+        logging.info(f"Conexão bem-sucedida: {resposta.status_code}")
 
-    while tentativas <3:
-        tentativas+=1
-        print(f"Tentativa {tentativas}")
-        try:
-            
-            
-            resposta = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, json=json.loads(payload))
-            resposta_json = resposta.json()['choices'][0]['message']['content']
-            print(resposta)
-            print(resposta_json)
 
-            # model ='gpt-4o-2024-08-06'
-            # enc = tiktoken.encoding_for_model(model)
-            # print(f"Quantidade de tokens:{len(enc.encode(payload))} - ${len(payload[:payload.find('ai:')])/1000*0.0025+len(payload[:payload.find('ai:')])/1000*0.01}")
+        
+      
+        for line in resposta.iter_lines(decode_unicode=True):
+              
+            if line.startswith('data: '):  
+                line = line[len('data: '):]  
+                    
+                if line.strip() == '[DONE]':  
+                    logging.info("Recebido [DONE], finalizando.")
+                    break
+                    
+                try:   
+                    chunk = json.loads(line)
+                    logging.debug(f"Chunk recebido: {chunk}")  # Log detalhado do chunk recebido
+                    delta = chunk.get('choices', [])[0].get('delta', {}).get('content', '')
+                    if delta:
+                        yield delta  
+                        
+                except json.JSONDecodeError as e:
+                        logging.error(f"Erro ao decodificar JSON: {e} - Linha: {line}")
+                        continue  
+        
+    except requests.exceptions.RequestException as e:
+        logging.error(f"Erro na requisição: {e}") 
 
-            # print("Resposta feita com sucesso")
-            # for chunk in resposta:
-            #     print(resposta_json)
-            #     if 'choices' in chunk and 'delta' in chunk['choices'][0] and 'content' in chunk['choices'][0]['delta']:
-            #         text = chunk['choices'][0]['delta']['content']
-            #         if text:
-            #             print(text, end="")
-            #             yield text
-            return resposta_json
-        except openai.error.AuthenticationError as e:
-            print(f"Erro de autentificação {e}")
-        except openai.error.APIError as e:
-            print(f"Erro de API {e}")
-            time.sleep(5)
-        except openai.error.RateLimitError as e:
-            print(f"Erro de limite de taxa: {e}")
-            time.sleep(tempo_de_espera)
-            tempo_de_espera *=2
-
+   
+  
 
 @app.route("/submit", methods=["POST"])
 def submit():
-    
     try:
         historico = request.form['historico']
         pergunta_usuario = request.form['inputMessage']
-        arquivo = identificaArquivo(pergunta_usuario)
+        arquivo = categorizador(pergunta_usuario,api_key)
         
-        print(historico + "\n")
-        print("-="*30)
-        
-        return Response(stream_with_context(respostaArquivo(pergunta_usuario,arquivo, historico)), content_type='text/plain')
-        
+        return Response(stream_with_context(respostaArquivo(pergunta_usuario, arquivo, historico)), content_type='text/plain')
+
     except Exception as e:
-        print(error)
-        error(e)
-        return Response(stream_with_context(algo_ocorreu_de_errado()), content_type='text/plain')
-    
+        logging.error(e)
+
+
 app.run(debug=True, port=5000)
 
 

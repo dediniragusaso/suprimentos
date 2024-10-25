@@ -50,7 +50,7 @@ def inserir_banco(query):
 # variáveis globais
 categorizador_prompt= open('./prompts/indicador_prompt.txt', "r", encoding="utf8").read()
 escritor= open('./prompts/escritor_prompt.txt',"r",encoding="utf8").read() 
-erro = open('./erro.txt',"r",encoding="utf8").read() 
+erro = open('./prompts/erro.txt',"r",encoding="utf8").read() 
 normas= open('./prompts/prompt_normas.txt', "r", encoding="utf8").read()
 
 encoding = tiktoken.encoding_for_model("gpt-4o-2024-08-06")
@@ -305,6 +305,8 @@ arquivos=[]
 for arq in (os.listdir("./bases")):
         arquivos.append(arq) 
 
+print(arquivos)
+
 
 
 @app.route("/submit", methods=["POST"])
@@ -342,6 +344,7 @@ def submit():
             return Response(stream_with_context(respostaErro(pergunta_usuario,historico)), content_type='text/plain')
     except Exception as e:
         error(e)
+        print("erro na resposta")
         return Response(stream_with_context(algo_ocorreu_de_errado()), content_type='text/plain')
     
 app.run(debug=True, port=5000, host="0.0.0.0")
