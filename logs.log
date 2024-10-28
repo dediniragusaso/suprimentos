@@ -1408,3 +1408,5 @@ ERROR->2024-10-24 15:04:13,092->module 'openai' has no attribute 'error'->root
 ERROR->2024-10-24 15:07:47,192->module 'openai' has no attribute 'error'->root
 ERROR->2024-10-24 15:14:45,043->module 'openai' has no attribute 'error'->root
 ERROR->2024-10-25 15:38:00,011->cannot access local variable 'cursor' where it is not associated with a value->root
+ERROR->2024-10-25 18:11:21,329->[WinError 3] O sistema não pode encontrar o caminho especificado: './prompts/palavras_chaves/bases_100'->root
+ERROR->2024-10-25 18:12:34,003->module 'openai' has no attribute 'error'->root
