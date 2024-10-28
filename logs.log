@@ -1377,7 +1377,34 @@ safety_ratings {
   probability: MEDIUM
 }
 ->root
+ERROR->2024-10-11 17:00:05,845->[Errno 2] No such file or directory: './pdfs_bases/procedimentos/manual_adiantamento_jbs.pdf.pdf'->root
+ERROR->2024-10-16 15:08:15,379->Request error: Expecting value: line 1 column 1 (char 0)->root
+ERROR->2024-10-16 17:47:01,642->Request error: Expecting value: line 1 column 1 (char 0)->root
+ERROR->2024-10-17 14:31:17,472->Request error: Expecting value: line 1 column 1 (char 0)->root
+ERROR->2024-10-17 14:38:11,357->Request error: Expecting value: line 1 column 1 (char 0)->root
+ERROR->2024-10-17 16:20:25,932->Request error: Expecting value: line 1 column 1 (char 0)->root
+ERROR->2024-10-17 16:51:19,306->Request error: Expecting value: line 1 column 1 (char 0)->root
+ERROR->2024-10-18 15:15:39,946->Erro na requisi��o: Expecting value: line 1 column 1 (char 0)->root
+ERROR->2024-10-21 14:29:31,516->Erro na requisi��o: 500 - {
+  "error": {
+    "message": "The server had an error while processing your request. Sorry about that!",
+    "type": "server_error",
+    "param": null,
+    "code": null
+  }
+}->root
+ERROR->2024-10-21 16:54:48,546->Erro na requisi��o: 500 - {
+  "error": {
+    "message": "The server had an error while processing your request. Sorry about that!",
+    "type": "server_error",
+    "param": null,
+    "code": null
+  }
+}->root
+ERROR->2024-10-23 15:39:10,846->HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001E66B80CF50>: Failed to resolve 'api.openai.com' ([Errno 11001] getaddrinfo failed)"))->root
+ERROR->2024-10-23 15:42:19,017->HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001E66B80FAA0>: Failed to resolve 'api.openai.com' ([Errno 11001] getaddrinfo failed)"))->root
 ERROR->2024-10-24 15:03:13,035->module 'openai' has no attribute 'error'->root
 ERROR->2024-10-24 15:04:13,092->module 'openai' has no attribute 'error'->root
 ERROR->2024-10-24 15:07:47,192->module 'openai' has no attribute 'error'->root
 ERROR->2024-10-24 15:14:45,043->module 'openai' has no attribute 'error'->root
+ERROR->2024-10-25 15:38:00,011->cannot access local variable 'cursor' where it is not associated with a value->root
