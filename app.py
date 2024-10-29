@@ -76,15 +76,9 @@ def index():
         cursor = conn.cursor()
         
         # inserindo um novo chat
-        cursor.execute("""INSERT INTO CHATS(DT_CHAT, NR_PERGUNTAS, NR_RESPOSTAS) 
-                        VALUES (NOW(), 0, 0)
-                        RETURNING ID_CHAT;""")
+        cursor.execute("CALL prc_inserir_chat(%s)", (None,))
         chat_id = cursor.fetchone()[0]
-        print(chat_id)
-        
-        cursor.execute("""INSERT INTO CONTROLE(CD_CHAT, NR_TOKENS_PERG, NR_TOKENS_RESP, VL_DOLAR)
-                        VALUES(%s, 0, 0, 0)""", (chat_id,))
-        
+
         conn.commit()
     except Exception as e:
         if conn:
@@ -162,7 +156,6 @@ def categorizador(prompt_usuario, api_key):
 
     payload["messages"][0]["content"] = prompt_100
     resposta = requests.post("https://api.openai.com/v1/chat/completions",headers=headers, json=payload)
-    print(resposta.json())
     nr_tokens_perg, nr_tokens_resp = resposta.json()["usage"]["prompt_tokens"], resposta.json()["usage"]["completion_tokens"]
     chat_custo = (nr_tokens_perg/1000*0.0025) + (nr_tokens_resp/1000*0.01)
     custo+=  (contar_tokens( resposta.json()["choices"][0]["message"]["content"])/1000)*0.01
@@ -171,18 +164,10 @@ def categorizador(prompt_usuario, api_key):
         cursor = conn.cursor()
     
         # Associar o procedimento ao chat
-        cursor.execute("""SELECT ID_PROCEDIMENTO FROM PROCEDIMENTOS
-                            WHERE NM_PROCEDIMENTO = %s;""", (resposta.replace(".txt",""),)) 
-        procedimento_id =  cursor.fetchone()[0]
-        cursor.execute("""INSERT INTO PROCEDIMENTOS_CHAT(CD_CHAT, CD_PROCEDIMENTO)
-                            VALUES (%s, %s);""", (chat_id, procedimento_id))
+        cursor.execute("CALL prc_procedimento_chat(%s, %s)",(resposta.json()["choices"][0]["message"]["content"].replace(".pdf",""),chat_id))
         
         # Atualizar o custo do chat
-        cursor.execute("""UPDATE CONTROLE SET 
-                          NR_TOKENS_PERG = NR_TOKENS_PERG + %s, 
-                          NR_TOKENS_RESP = NR_TOKENS_RESP + %s,
-                          VL_DOLAR = VL_DOLAR + %s
-                          WHERE CD_CHAT = %s;""", (nr_tokens_perg, nr_tokens_resp, chat_custo, chat_id))
+        cursor.execute("SELECT fnc_atualizar_controle(%s,%s,%s,%s)", (nr_tokens_perg, nr_tokens_resp, chat_custo, chat_id))
         conn.commit()
     except Exception as e:
         conn.rollback()
@@ -214,7 +199,6 @@ def resposta (prompt_usuario, historico, nome_arquivo):
     while tentativas <3:
         tentativas+=1
         print(f"Tentativa {tentativas}")
-        print(prompt)
         try:
             print(f"Iniciando a análise")
             resposta = openai.ChatCompletion.create(
@@ -257,11 +241,7 @@ def resposta (prompt_usuario, historico, nome_arquivo):
                 cursor = conn.cursor()
             
                 #Atualizar custo do chat
-                cursor.execute("""UPDATE CONTROLE SET 
-                                NR_TOKENS_PERG = NR_TOKENS_PERG + %s, 
-                                NR_TOKENS_RESP = NR_TOKENS_RESP + %s,
-                                VL_DOLAR = VL_DOLAR + %s
-                                WHERE CD_CHAT = %s;""", (nr_tokens_perg, nr_tokens_resp, chat_custo, chat_id))
+                cursor.execute("SELECT fnc_atualizar_controle(%s,%s,%s,%s)", (nr_tokens_perg, nr_tokens_resp, chat_custo, chat_id))
                 conn.commit()
             except Exception as e:
                 conn.rollback()
@@ -340,11 +320,7 @@ def respostaErro (prompt_usuario, historico):
                 cursor = conn.cursor()
             
                 #Atualizar custo do chat
-                cursor.execute("""UPDATE CONTROLE SET 
-                                NR_TOKENS_PERG = NR_TOKENS_PERG + %s, 
-                                NR_TOKENS_RESP = NR_TOKENS_RESP + %s,
-                                VL_DOLAR = VL_DOLAR + %s
-                                WHERE CD_CHAT = %s;""", (nr_tokens_perg, nr_tokens_resp, chat_custo, chat_id))
+                cursor.execute("SELECT fnc_atualizar_controle(%s,%s,%s,%s)", (nr_tokens_perg, nr_tokens_resp, chat_custo, chat_id))
                 conn.commit()
             except Exception as e:
                 conn.rollback()
@@ -430,11 +406,7 @@ def substituidorNormas (resp,historico,pergunta_usuario,norma):
                 cursor = conn.cursor()
             
                 # Atualizar custo do chat
-                cursor.execute("""UPDATE CONTROLE SET 
-                                NR_TOKENS_PERG = NR_TOKENS_PERG + %s, 
-                                NR_TOKENS_RESP = NR_TOKENS_RESP + %s,
-                                VL_DOLAR = VL_DOLAR + %s
-                                WHERE CD_CHAT = %s;""", (nr_tokens_perg, nr_tokens_resp, chat_custo, chat_id))
+                cursor.execute("SELECT fnc_atualizar_controle(%s,%s,%s,%s)", (nr_tokens_perg, nr_tokens_resp, chat_custo, chat_id))
                 conn.commit()
             except Exception as e:
                 conn.rollback()
@@ -477,7 +449,6 @@ def submit():
             if norma:
                 print("Baseado em norma")
                 regra = norma.group()  
-                print(regra)
                 reais= custo * 5.60
                 print(f"Custo: {reais} reais pela pergunta")
                 return Response(stream_with_context(substituidorNormas(string_sem_espacos, historico, pergunta_usuario,regra,)), content_type='text/plain')
@@ -505,10 +476,7 @@ def submit():
             conn = conexao_banco()
             cursor = conn.cursor()
             # Atualizar fluxo do chat
-            cursor.execute("""UPDATE CHATS SET 
-                            NR_PERGUNTAS = NR_PERGUNTAS + %s,  
-                            NR_RESPOSTAS = NR_RESPOSTAS + %s 
-                            WHERE ID_CHAT = %s;""", (1,1,chat_id))
+            cursor.execute("SELECT fnc_atualizar_chat(%s)", (chat_id,))
             conn.commit()
         except Exception as e:
             conn.rollback()
