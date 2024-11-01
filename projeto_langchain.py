@@ -485,15 +485,25 @@ def submit():
                 print("Baseado em norma")
                 regra = norma.group()  
                 print(regra)
+                reais= custo * 5.60
+                print(f"Custo em dólares: {custo}")
+                print(f"Custo: {reais} reais pela pergunta")
                 
                 return Response(stream_with_context(substituidorNormas(resposta_sem_normas, pergunta_usuario,regra)), content_type='text/plain')
             
             else:
                 print("nope")
                 print(type(resposta_sem_normas))
-            
+                reais= custo * 5.60
+                print(f"Custo em dólares: {custo}")
+                print(f"Custo: {reais} reais pela pergunta")
+                
                 return Response(stream_with_context(resposta(pergunta_usuario, base)), content_type='text/plain')
         else: 
+            reais= custo * 5.60
+            print(f"Custo em dólares: {custo}")
+            print(f"Custo: {reais} reais pela pergunta")
+            
             return Response(stream_with_context(respostaErro(pergunta_usuario)), content_type='text/plain')
     except Exception as e:
         error(e)
