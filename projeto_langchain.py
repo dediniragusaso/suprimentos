@@ -77,6 +77,7 @@ erro = open('./prompts/erro.txt',"r",encoding="utf8").read()
 normas= open('./prompts/prompt_normas.txt', "r", encoding="utf8").read()
 chat_id = 0
 custo = 0
+respostaFinal = ""
 
 # Inicializar a memória de conversação
 memory = ConversationBufferMemory(memory_key="history")
@@ -203,6 +204,7 @@ def categorizador(prompt_usuario):
 def resposta (prompt_usuario, nome_arquivo):
     global chat_id
     global custo
+    global respostaFinal
     
     prompt=escritor
     arquivoInput = (f"./pdfs_bases/procedimentos/{nome_arquivo}")
@@ -250,6 +252,7 @@ def resposta (prompt_usuario, nome_arquivo):
                     
             # tokens do retorno da api
             tokens_output = contar_tokens(output)
+            respostaFinal = output
             custo += tokens_output*0.01
             print(tokens_output) 
             
@@ -294,6 +297,8 @@ def resposta (prompt_usuario, nome_arquivo):
 
 def respostaErro (prompt_usuario):
     global custo
+    global respostaFinal
+    
     prompt=erro
     # prompt += historico
     
@@ -332,6 +337,7 @@ def respostaErro (prompt_usuario):
 
             # tokens do retorno da api
             tokens_output = contar_tokens(output)
+            respostaFinal = output
             custo += tokens_output*0.01
             print(tokens_output)  
             
@@ -375,6 +381,8 @@ def respostaErro (prompt_usuario):
 def substituidorNormas (resp, pergunta_usuario, norma):
     prompt=normas
     global custo
+    global respostaFinal
+    
     # prompt += historico
     prompt += ''.join(resp)  # junta todas as strings geradas por 'resp'
     prompt += open(f"./bases_normas/{norma}.txt","r",encoding="utf8").read() 
@@ -413,6 +421,7 @@ def substituidorNormas (resp, pergunta_usuario, norma):
 
             # tokens do retorno da api
             tokens_output = contar_tokens(output)
+            respostaFinal = output
             custo += tokens_output*0.01
             print(tokens_output) 
             
@@ -479,7 +488,8 @@ def submit():
             print("Base encontrada")
             
             # Verificar se há norma
-            string_sem_espacos = ''.join(parte.replace(" ", "").replace("\n", "") for parte in resposta_sem_normas)
+            # string_sem_espacos = ''.join(parte.replace(" ", "").replace("\n", "") for parte in resposta_sem_normas)
+            string_sem_espacos = respostaFinal.replace(" ", "").replace("\n", "")
             norma = re.search(r'(IN|M)-.{5,9}-[0-9]{4}', string_sem_espacos, re.IGNORECASE)
             if norma:
                 print("Baseado em norma")

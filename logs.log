@@ -1829,3 +1829,11 @@ ERROR->2024-10-25 15:38:30,718->[Errno 13] Permission denied: './prompts/palavra
 ERROR->2024-10-25 15:40:28,425->[Errno 13] Permission denied: './prompts/palavras_chaves/bases_100'->root
 ERROR->2024-10-25 15:44:05,945->can only concatenate str (not "AIMessage") to str->root
 ERROR->2024-10-25 17:02:45,658->can only concatenate str (not "int") to str->root
+ERROR->2024-11-01 15:56:32,379->[Errno 2] No such file or directory: './pdfs_bases/procedimentos/manual_viagens_WEB_paytrack.txt'->root
+ERROR->2024-11-01 15:59:45,686->[Errno 2] No such file or directory: './pdfs_bases/procedimentos/manual_viagens_WEB_paytrack.txt'->root
+ERROR->2024-11-01 16:02:11,376->[Errno 2] No such file or directory: './pdfs_bases/procedimentos/manual_viagens_WEB_paytrack.txt'->root
+ERROR->2024-11-01 16:05:02,193->'generator' object has no attribute 'replace'->root
+ERROR->2024-11-01 16:05:37,069->'generator' object has no attribute 'replace'->root
+ERROR->2024-11-01 16:06:14,145->'generator' object has no attribute 'content'->root
+ERROR->2024-11-01 16:10:29,791->'generator' object has no attribute 'replace'->root
+ERROR->2024-11-01 16:11:25,134->[Errno 2] No such file or directory: './pdfs_bases/procedimentos/manual_viagens_WEB_paytrack.txt'->root
