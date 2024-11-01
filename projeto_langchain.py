@@ -207,7 +207,8 @@ def resposta (prompt_usuario, nome_arquivo):
     global respostaFinal
     
     prompt=escritor
-    arquivoInput = (f"./pdfs_bases/procedimentos/{nome_arquivo}")
+    nome = nome_arquivo.replace(".txt", ".pdf")
+    arquivoInput = (f"./pdfs_bases/procedimentos/{nome}")
     pdf = open(arquivoInput, "rb")
     pdf_reader = PyPDF2.PdfReader(pdf)
     total_paginas=len(pdf_reader.pages)
