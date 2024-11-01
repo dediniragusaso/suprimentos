@@ -5,13 +5,14 @@ from dotenv import load_dotenv
 import os
 import re
 from flask import Flask, render_template,  request, jsonify, Response, stream_with_context
+import PyPDF2
+import psycopg2
 
 # configurações para os comportamentos dos logs
 from logging import ERROR
 from logging import basicConfig
 from logging import error
 from logging import getLogger
-import psycopg2
 
 # langchain
 from langchain_openai.chat_models import ChatOpenAI
@@ -75,6 +76,7 @@ escritor= open('./prompts/escritor_prompt.txt',"r",encoding="utf8").read()
 erro = open('./prompts/erro.txt',"r",encoding="utf8").read() 
 normas= open('./prompts/prompt_normas.txt', "r", encoding="utf8").read()
 chat_id = 0
+custo = 0
 
 # Inicializar a memória de conversação
 memory = ConversationBufferMemory(memory_key="history")
@@ -144,7 +146,7 @@ def contar_tokens(texto):
 
 def categorizador(prompt_usuario):
     prompt_100 = open('./prompts/indicador_prompt.txt', "r", encoding="utf8").read()
-
+    global custo
     for arq in os.listdir("./prompts/palavras_chaves/bases_100"):
         prompt_100 += f"\n\n{arq}\n" + open(f"./prompts/palavras_chaves/bases_100/{arq}", "r", encoding="utf8").read()
         
@@ -152,7 +154,8 @@ def categorizador(prompt_usuario):
     
     # tokens do input
     tokens_input = contar_tokens(prompt_100)
-    print(f"Entrada: {tokens_input}")
+    
+    custo = tokens_input*0.0025
     
     # categoria
     categoria = llm.invoke([HumanMessage(content=prompt_100)])
@@ -161,7 +164,8 @@ def categorizador(prompt_usuario):
     # tokens do retorno da api
     output = categoria.content     
     tokens_output = contar_tokens(output)
-    print(tokens_output)
+    
+    custo += tokens_output*0.01
     
     # custo do chat
     chat_custo = (tokens_input/1000*0.0025) + (tokens_output/1000*0.01)
@@ -171,6 +175,14 @@ def categorizador(prompt_usuario):
         conn = conexao_banco()
         cursor = conn.cursor()
     
+        # Associar o procedimento ao chat
+        cursor.execute("""SELECT ID_PROCEDIMENTO FROM PROCEDIMENTOS
+                            WHERE NM_PROCEDIMENTO = %s;""", (resposta.replace(".txt",""),)) 
+        procedimento_id =  cursor.fetchone()[0]
+        
+        cursor.execute("""INSERT INTO PROCEDIMENTOS_CHAT(CD_CHAT, CD_PROCEDIMENTO)
+                            VALUES (%s, %s);""", (chat_id, procedimento_id))
+        
         #Atualizar custo do chat
         cursor.execute("""UPDATE CONTROLE SET 
                         NR_TOKENS_PERG = NR_TOKENS_PERG + %s, 
@@ -190,8 +202,16 @@ def categorizador(prompt_usuario):
 
 def resposta (prompt_usuario, nome_arquivo):
     global chat_id
+    global custo
+    
     prompt=escritor
-    prompt+= open(f"./bases/{nome_arquivo}","r",encoding="utf8").read()
+    arquivoInput = (f"./pdfs_bases/procedimentos/{nome_arquivo}")
+    pdf = open(arquivoInput, "rb")
+    pdf_reader = PyPDF2.PdfReader(pdf)
+    total_paginas=len(pdf_reader.pages)
+    for i in range (total_paginas):
+        pagina = pdf_reader.pages[i]
+        prompt+=pagina.extract_text()
     #prompt += historico
     
     tentativas = 0
@@ -199,6 +219,8 @@ def resposta (prompt_usuario, nome_arquivo):
     
     # tokens do input
     tokens_input = contar_tokens(prompt)
+    tokens_input += contar_tokens(prompt_usuario)
+    custo += tokens_input*0.0025
     print(f"Entrada: {tokens_input}")
     
     while tentativas <3:
@@ -228,6 +250,7 @@ def resposta (prompt_usuario, nome_arquivo):
                     
             # tokens do retorno da api
             tokens_output = contar_tokens(output)
+            custo += tokens_output*0.01
             print(tokens_output) 
             
             # valor do chat
@@ -270,11 +293,14 @@ def resposta (prompt_usuario, nome_arquivo):
 
 
 def respostaErro (prompt_usuario):
+    global custo
     prompt=erro
     # prompt += historico
     
     # tokens de entrada
-    tokens_input= contar_tokens(prompt)
+    tokens_input = contar_tokens(prompt)
+    tokens_input += contar_tokens(prompt_usuario)
+    custo += tokens_input*0.0025
     print(f"Entrada:{tokens_input}")
     
     tentativas = 0
@@ -306,6 +332,7 @@ def respostaErro (prompt_usuario):
 
             # tokens do retorno da api
             tokens_output = contar_tokens(output)
+            custo += tokens_output*0.01
             print(tokens_output)  
             
             # valor do chat
@@ -347,12 +374,14 @@ def respostaErro (prompt_usuario):
 
 def substituidorNormas (resp, pergunta_usuario, norma):
     prompt=normas
+    global custo
     # prompt += historico
     prompt += ''.join(resp)  # junta todas as strings geradas por 'resp'
     prompt += open(f"./bases_normas/{norma}.txt","r",encoding="utf8").read() 
     
     # tokens do input
-    tokens_input= contar_tokens(prompt)
+    tokens_input = contar_tokens(prompt)
+    custo += tokens_input*0.0025
     print(f"Entrada:{tokens_input}")
     
     tentativas = 0
@@ -384,6 +413,7 @@ def substituidorNormas (resp, pergunta_usuario, norma):
 
             # tokens do retorno da api
             tokens_output = contar_tokens(output)
+            custo += tokens_output*0.01
             print(tokens_output) 
             
             # valor do chat
@@ -450,7 +480,7 @@ def submit():
             
             # Verificar se há norma
             string_sem_espacos = ''.join(parte.replace(" ", "").replace("\n", "") for parte in resposta_sem_normas)
-            norma = re.search(r'(IN|M)-.*[0-9]{4}', string_sem_espacos, re.IGNORECASE)
+            norma = re.search(r'(IN|M)-.{5,9}-[0-9]{4}', string_sem_espacos, re.IGNORECASE)
             if norma:
                 print("Baseado em norma")
                 regra = norma.group()  
