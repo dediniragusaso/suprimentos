@@ -1,10 +1,10 @@
-openai==0.28.0
-tiktoken==0.7.0
-python-dotenv==1.0.1
-Flask==3.0.3
+openai>=0.28.0
+tiktoken>=0.7.0
+python-dotenv>=1.0.1
+Flask>=3.0.3
 psycopg2-binary
 PyPDF2
 langchain
 langchain_openai
 langchain_core
-tiktoken==0.7.0
+tiktoken>=0.7.0
