@@ -14,7 +14,7 @@ from logging import basicConfig
 from logging import error
 from logging import getLogger
 
-# langchain
+# para langchain
 from langchain_openai.chat_models import ChatOpenAI
 from langchain_core.messages import HumanMessage
 from langchain.chains.conversation.memory import ConversationBufferMemory
