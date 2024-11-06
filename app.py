@@ -148,8 +148,8 @@ def contar_tokens(texto):
 def categorizador(prompt_usuario):
     prompt_100 = open('./prompts/indicador_prompt.txt', "r", encoding="utf8").read()
     global custo
-    for arq in os.listdir("./prompts/palavras_chaves"):
-        prompt_100 += f"\n\n{arq}\n" + open(f"./prompts/palavras_chaves/{arq}", "r", encoding="utf8").read()
+    for arq in os.listdir("./prompts/palavras_chaves/bases_100"):
+        prompt_100 += f"\n\n{arq}\n" + open(f"./prompts/palavras_chaves/bases_100/{arq}", "r", encoding="utf8").read()
         
     prompt_100 += prompt_usuario
     
