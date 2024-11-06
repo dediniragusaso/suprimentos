@@ -60,9 +60,9 @@ def conexao_banco():
         
         # Adicionar parâmetros de SSL
         conn = psycopg2.connect(
-            db_link
-            # sslmode='require',
-            # sslrootcert='/etc/secrets/ca.pem'
+            db_link,
+            sslmode='require',
+            sslrootcert='/etc/secrets/ca.pem'
         )
         print("Conexão feita com sucesso!")
         return conn

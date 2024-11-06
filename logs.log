@@ -1406,7 +1406,12 @@ ERROR->2024-10-21 16:54:48,546->Erro na requisiï¿½ï¿½o: 500 - {
 }->root
 ERROR->2024-10-23 15:39:10,846->HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001E66B80CF50>: Failed to resolve 'api.openai.com' ([Errno 11001] getaddrinfo failed)"))->root
 ERROR->2024-10-23 15:42:19,017->HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001E66B80FAA0>: Failed to resolve 'api.openai.com' ([Errno 11001] getaddrinfo failed)"))->root
+ERROR->2024-10-24 15:03:13,035->module 'openai' has no attribute 'error'->root
+ERROR->2024-10-24 15:04:13,092->module 'openai' has no attribute 'error'->root
+ERROR->2024-10-24 15:07:47,192->module 'openai' has no attribute 'error'->root
+ERROR->2024-10-24 15:14:45,043->module 'openai' has no attribute 'error'->root
 ERROR->2024-10-25 15:38:00,011->cannot access local variable 'cursor' where it is not associated with a value->root
+<<<<<<< HEAD
 ERROR->2024-10-28 16:56:10,593->categorizador() missing 1 required positional argument: 'api_key'->root
 ERROR->2024-10-28 16:57:39,515->name 'custo' is not defined->root
 ERROR->2024-10-28 16:59:54,949->Request error: Expecting value: line 1 column 1 (char 0)->root
@@ -1423,3 +1428,8 @@ ERROR->2024-11-04 16:23:00,588->[Errno 13] Permission denied: './prompts/palavra
 ERROR->2024-11-05 15:58:02,560->[Errno 13] Permission denied: './prompts/palavras_chaves/bases_100'->root
 ERROR->2024-11-06 14:30:01,865->[Errno 13] Permission denied: './prompts/palavras_chaves/bases_100'->root
 ERROR->2024-11-06 14:48:16,421->'generator' object has no attribute 'replace'->root
+=======
+ERROR->2024-10-25 18:11:21,329->[WinError 3] O sistema não pode encontrar o caminho especificado: './prompts/palavras_chaves/bases_100'->root
+ERROR->2024-10-25 18:12:34,003->module 'openai' has no attribute 'error'->root
+ERROR->2024-10-28 15:58:32,006->Expecting value: line 1 column 1 (char 0)->root
+>>>>>>> eaf99bb90392b20159edc72775b1aac158a9c213
