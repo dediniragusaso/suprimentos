@@ -1279,4 +1279,147 @@ ERROR->2024-09-24 14:30:01,132->400 Bad Request: The browser (or proxy) sent a r
 ERROR->2024-09-24 15:37:46,618->400 Bad Request: The browser (or proxy) sent a request that this server could not understand.->root
 ERROR->2024-09-25 16:10:24,401->[WinError 3] O sistema n�o pode encontrar o caminho especificado: './bases'->root
 ERROR->2024-09-25 16:15:27,307->[WinError 3] O sistema n�o pode encontrar o caminho especificado: './bases'->root
+<<<<<<< HEAD
 ERROR->2024-09-25 16:15:38,459->[WinError 3] O sistema n�o pode encontrar o caminho especificado: './bases'->root
+=======
+ERROR->2024-09-25 16:15:38,459->[WinError 3] O sistema n�o pode encontrar o caminho especificado: './bases'->rootERROR->2024-10-04 15:54:21,708->Error on request:
+Traceback (most recent call last):
+  File "C:\Users\sophiekumagai-ieg\AppData\Roaming\Python\Python312\site-packages\werkzeug\serving.py", line 363, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\sophiekumagai-ieg\AppData\Roaming\Python\Python312\site-packages\werkzeug\serving.py", line 327, in execute
+    write(data)
+  File "C:\Users\sophiekumagai-ieg\AppData\Roaming\Python\Python312\site-packages\werkzeug\serving.py", line 295, in write
+    assert isinstance(data, bytes), "applications must write bytes"
+AssertionError: applications must write bytes->werkzeug
+ERROR->2024-10-04 16:44:51,993->expected string or bytes-like object, got 'generator'->root
+ERROR->2024-10-04 16:46:23,635->expected string or bytes-like object, got 'generator'->root
+ERROR->2024-10-04 16:47:25,400->expected string or bytes-like object, got 'generator'->root
+ERROR->2024-10-04 16:48:20,513->expected string or bytes-like object, got 'generator'->root
+ERROR->2024-10-04 16:59:58,455->'generator' object has no attribute 'replace'->root
+ERROR->2024-10-04 17:12:16,722->'generator' object has no attribute 'replace'->root
+ERROR->2024-10-04 17:21:30,487->name 'res' is not defined->root
+ERROR->2024-10-04 17:52:16,625->Error on request:
+Traceback (most recent call last):
+  File "C:\Users\sophiekumagai-ieg\AppData\Roaming\Python\Python312\site-packages\werkzeug\serving.py", line 363, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\sophiekumagai-ieg\AppData\Roaming\Python\Python312\site-packages\werkzeug\serving.py", line 327, in execute
+    write(data)
+  File "C:\Users\sophiekumagai-ieg\AppData\Roaming\Python\Python312\site-packages\werkzeug\serving.py", line 295, in write
+    assert isinstance(data, bytes), "applications must write bytes"
+AssertionError: applications must write bytes->werkzeug
+ERROR->2024-10-04 17:54:07,841->Error on request:
+Traceback (most recent call last):
+  File "C:\Users\sophiekumagai-ieg\AppData\Roaming\Python\Python312\site-packages\werkzeug\serving.py", line 363, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\sophiekumagai-ieg\AppData\Roaming\Python\Python312\site-packages\werkzeug\serving.py", line 327, in execute
+    write(data)
+  File "C:\Users\sophiekumagai-ieg\AppData\Roaming\Python\Python312\site-packages\werkzeug\serving.py", line 295, in write
+    assert isinstance(data, bytes), "applications must write bytes"
+AssertionError: applications must write bytes->werkzeug
+ERROR->2024-10-08 15:47:31,021->cannot access local variable 'prompt' where it is not associated with a value->root
+ERROR->2024-10-08 15:50:06,782->cannot access local variable 'prompt' where it is not associated with a value->root
+ERROR->2024-10-08 15:54:52,525->[Errno 2] No such file or directory: './bases/solicitacoes_despesas_viagens.txt.txt'->root
+ERROR->2024-10-08 15:55:34,747->[Errno 2] No such file or directory: './bases/solicitacoes_despesas_viagens.txt.txt'->root
+ERROR->2024-10-08 16:48:33,370->[Errno 2] No such file or directory: './bases/solicitacoes_despesas_viagens.txt.txt'->root
+ERROR->2024-10-08 16:52:05,430->[Errno 2] No such file or directory: './bases/solicitacoes_despesas_viagens.txt.txt'->root
+ERROR->2024-10-08 16:53:51,769->[Errno 2] No such file or directory: './bases/solicitacoes_despesas_viagens.txt.txt'->root
+ERROR->2024-10-08 17:01:29,107->[Errno 2] No such file or directory: './bases/solicitacoes_despesas_viagens.txt.txt'->root
+ERROR->2024-10-08 17:08:41,725->[Errno 2] No such file or directory: './bases/solicitacoes_despesas_viagens.txt.txt'->root
+ERROR->2024-10-08 17:23:40,664->can only concatenate str (not "int") to str->root
+ERROR->2024-10-08 17:23:48,623->can only concatenate str (not "int") to str->root
+ERROR->2024-10-09 14:59:50,464->[Errno 2] No such file or directory: './prompts/palavras_chaves.txt'->root
+ERROR->2024-10-09 15:01:39,004->[Errno 2] No such file or directory: './prompts/palavras_chaves.txt'->root
+ERROR->2024-10-09 15:09:37,493->categorizador() missing 1 required positional argument: 'api_key'->root
+ERROR->2024-10-09 15:18:11,804->[Errno 2] No such file or directory: './prompts/palavras_chaves.txt'->root
+ERROR->2024-10-09 15:19:48,683->[Errno 2] No such file or directory: './prompts/palavras_chaves.txt'->root
+ERROR->2024-10-09 15:27:58,967->[WinError 3] O sistema n�o pode encontrar o caminho especificado: './bases_60'->root
+ERROR->2024-10-09 15:29:14,500->[WinError 3] O sistema n�o pode encontrar o caminho especificado: './bases_60'->root
+ERROR->2024-10-09 15:35:28,916->[WinError 3] O sistema n�o pode encontrar o caminho especificado: './bases_60'->root
+ERROR->2024-10-09 15:36:19,846->[WinError 3] O sistema n�o pode encontrar o caminho especificado: './bases_60'->root
+ERROR->2024-10-09 17:15:23,006->categorizador() takes 3 positional arguments but 4 were given->root
+ERROR->2024-10-09 17:16:18,869->categorizador() takes 3 positional arguments but 4 were given->root
+ERROR->2024-10-09 17:19:21,471->cannot access local variable 'resposta' where it is not associated with a value->root
+ERROR->2024-10-09 17:21:32,527->cannot access local variable 'resposta' where it is not associated with a value->root
+ERROR->2024-10-10 14:12:14,073->categorizador() takes 1 positional argument but 2 were given->root
+ERROR->2024-10-10 14:13:18,594->categorizador() takes 1 positional argument but 2 were given->root
+ERROR->2024-10-10 14:14:43,813->finish_reason: SAFETY
+index: 0
+safety_ratings {
+  category: HARM_CATEGORY_SEXUALLY_EXPLICIT
+  probability: NEGLIGIBLE
+}
+safety_ratings {
+  category: HARM_CATEGORY_HATE_SPEECH
+  probability: NEGLIGIBLE
+}
+safety_ratings {
+  category: HARM_CATEGORY_HARASSMENT
+  probability: NEGLIGIBLE
+}
+safety_ratings {
+  category: HARM_CATEGORY_DANGEROUS_CONTENT
+  probability: MEDIUM
+}
+->root
+ERROR->2024-10-10 14:34:50,597->finish_reason: SAFETY
+index: 0
+safety_ratings {
+  category: HARM_CATEGORY_SEXUALLY_EXPLICIT
+  probability: NEGLIGIBLE
+}
+safety_ratings {
+  category: HARM_CATEGORY_HATE_SPEECH
+  probability: NEGLIGIBLE
+}
+safety_ratings {
+  category: HARM_CATEGORY_HARASSMENT
+  probability: NEGLIGIBLE
+}
+safety_ratings {
+  category: HARM_CATEGORY_DANGEROUS_CONTENT
+  probability: MEDIUM
+}
+->root
+ERROR->2024-10-11 17:00:05,845->[Errno 2] No such file or directory: './pdfs_bases/procedimentos/manual_adiantamento_jbs.pdf.pdf'->root
+ERROR->2024-10-16 15:08:15,379->Request error: Expecting value: line 1 column 1 (char 0)->root
+ERROR->2024-10-16 17:47:01,642->Request error: Expecting value: line 1 column 1 (char 0)->root
+ERROR->2024-10-17 14:31:17,472->Request error: Expecting value: line 1 column 1 (char 0)->root
+ERROR->2024-10-17 14:38:11,357->Request error: Expecting value: line 1 column 1 (char 0)->root
+ERROR->2024-10-17 16:20:25,932->Request error: Expecting value: line 1 column 1 (char 0)->root
+ERROR->2024-10-17 16:51:19,306->Request error: Expecting value: line 1 column 1 (char 0)->root
+ERROR->2024-10-18 15:15:39,946->Erro na requisi��o: Expecting value: line 1 column 1 (char 0)->root
+ERROR->2024-10-21 14:29:31,516->Erro na requisi��o: 500 - {
+  "error": {
+    "message": "The server had an error while processing your request. Sorry about that!",
+    "type": "server_error",
+    "param": null,
+    "code": null
+  }
+}->root
+ERROR->2024-10-21 16:54:48,546->Erro na requisi��o: 500 - {
+  "error": {
+    "message": "The server had an error while processing your request. Sorry about that!",
+    "type": "server_error",
+    "param": null,
+    "code": null
+  }
+}->root
+ERROR->2024-10-23 15:39:10,846->HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001E66B80CF50>: Failed to resolve 'api.openai.com' ([Errno 11001] getaddrinfo failed)"))->root
+ERROR->2024-10-23 15:42:19,017->HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001E66B80FAA0>: Failed to resolve 'api.openai.com' ([Errno 11001] getaddrinfo failed)"))->root
+ERROR->2024-10-25 15:38:00,011->cannot access local variable 'cursor' where it is not associated with a value->root
+ERROR->2024-10-28 16:56:10,593->categorizador() missing 1 required positional argument: 'api_key'->root
+ERROR->2024-10-28 16:57:39,515->name 'custo' is not defined->root
+ERROR->2024-10-28 16:59:54,949->Request error: Expecting value: line 1 column 1 (char 0)->root
+ERROR->2024-10-29 14:29:46,503->Request error: Expecting value: line 1 column 1 (char 0)->root
+ERROR->2024-10-29 14:34:31,233->Request error: Expecting value: line 1 column 1 (char 0)->root
+ERROR->2024-10-29 16:52:24,995->Request error: Expecting value: line 1 column 1 (char 0)->root
+ERROR->2024-11-04 15:09:30,290->[Errno 13] Permission denied: './prompts/palavras_chaves/bases_100'->root
+ERROR->2024-11-04 15:10:21,001->[Errno 13] Permission denied: './prompts/palavras_chaves/bases_100'->root
+ERROR->2024-11-04 15:18:01,844->[Errno 13] Permission denied: './prompts/palavras_chaves/bases_100'->root
+ERROR->2024-11-04 15:19:22,400->[Errno 13] Permission denied: './prompts/palavras_chaves/bases_100'->root
+ERROR->2024-11-04 15:50:30,135->[Errno 13] Permission denied: './prompts/palavras_chaves/bases_100'->root
+ERROR->2024-11-04 15:52:19,951->[Errno 13] Permission denied: './prompts/palavras_chaves/bases_100'->root
+ERROR->2024-11-04 16:23:00,588->[Errno 13] Permission denied: './prompts/palavras_chaves/bases_100'->root
+ERROR->2024-11-05 15:58:02,560->[Errno 13] Permission denied: './prompts/palavras_chaves/bases_100'->root
+ERROR->2024-11-06 14:30:01,865->[Errno 13] Permission denied: './prompts/palavras_chaves/bases_100'->root
+ERROR->2024-11-06 14:48:16,421->'generator' object has no attribute 'replace'->root
