@@ -1279,6 +1279,9 @@ ERROR->2024-09-24 14:30:01,132->400 Bad Request: The browser (or proxy) sent a r
 ERROR->2024-09-24 15:37:46,618->400 Bad Request: The browser (or proxy) sent a request that this server could not understand.->root
 ERROR->2024-09-25 16:10:24,401->[WinError 3] O sistema nï¿½o pode encontrar o caminho especificado: './bases'->root
 ERROR->2024-09-25 16:15:27,307->[WinError 3] O sistema nï¿½o pode encontrar o caminho especificado: './bases'->root
+<<<<<<< HEAD
+ERROR->2024-09-25 16:15:38,459->[WinError 3] O sistema nï¿½o pode encontrar o caminho especificado: './bases'->root
+=======
 ERROR->2024-09-25 16:15:38,459->[WinError 3] O sistema nï¿½o pode encontrar o caminho especificado: './bases'->rootERROR->2024-10-04 15:54:21,708->Error on request:
 Traceback (most recent call last):
   File "C:\Users\sophiekumagai-ieg\AppData\Roaming\Python\Python312\site-packages\werkzeug\serving.py", line 363, in run_wsgi
@@ -1408,9 +1411,28 @@ ERROR->2024-10-24 15:04:13,092->module 'openai' has no attribute 'error'->root
 ERROR->2024-10-24 15:07:47,192->module 'openai' has no attribute 'error'->root
 ERROR->2024-10-24 15:14:45,043->module 'openai' has no attribute 'error'->root
 ERROR->2024-10-25 15:38:00,011->cannot access local variable 'cursor' where it is not associated with a value->root
+<<<<<<< HEAD
+ERROR->2024-10-28 16:56:10,593->categorizador() missing 1 required positional argument: 'api_key'->root
+ERROR->2024-10-28 16:57:39,515->name 'custo' is not defined->root
+ERROR->2024-10-28 16:59:54,949->Request error: Expecting value: line 1 column 1 (char 0)->root
+ERROR->2024-10-29 14:29:46,503->Request error: Expecting value: line 1 column 1 (char 0)->root
+ERROR->2024-10-29 14:34:31,233->Request error: Expecting value: line 1 column 1 (char 0)->root
+ERROR->2024-10-29 16:52:24,995->Request error: Expecting value: line 1 column 1 (char 0)->root
+ERROR->2024-11-04 15:09:30,290->[Errno 13] Permission denied: './prompts/palavras_chaves/bases_100'->root
+ERROR->2024-11-04 15:10:21,001->[Errno 13] Permission denied: './prompts/palavras_chaves/bases_100'->root
+ERROR->2024-11-04 15:18:01,844->[Errno 13] Permission denied: './prompts/palavras_chaves/bases_100'->root
+ERROR->2024-11-04 15:19:22,400->[Errno 13] Permission denied: './prompts/palavras_chaves/bases_100'->root
+ERROR->2024-11-04 15:50:30,135->[Errno 13] Permission denied: './prompts/palavras_chaves/bases_100'->root
+ERROR->2024-11-04 15:52:19,951->[Errno 13] Permission denied: './prompts/palavras_chaves/bases_100'->root
+ERROR->2024-11-04 16:23:00,588->[Errno 13] Permission denied: './prompts/palavras_chaves/bases_100'->root
+ERROR->2024-11-05 15:58:02,560->[Errno 13] Permission denied: './prompts/palavras_chaves/bases_100'->root
+ERROR->2024-11-06 14:30:01,865->[Errno 13] Permission denied: './prompts/palavras_chaves/bases_100'->root
+ERROR->2024-11-06 14:48:16,421->'generator' object has no attribute 'replace'->root
+=======
 ERROR->2024-10-25 18:11:21,329->[WinError 3] O sistema não pode encontrar o caminho especificado: './prompts/palavras_chaves/bases_100'->root
 ERROR->2024-10-25 18:12:34,003->module 'openai' has no attribute 'error'->root
 ERROR->2024-10-28 15:58:32,006->Expecting value: line 1 column 1 (char 0)->root
+<<<<<<< HEAD
 ERROR->2024-10-31 17:54:38,448->cannot access local variable 'array_procedimentos' where it is not associated with a value->root
 ERROR->2024-10-31 17:55:52,482->cannot access local variable 'array_procedimentos' where it is not associated with a value->root
 ERROR->2024-10-31 17:58:00,916->'NoneType' object is not iterable->root
@@ -1418,3 +1440,6 @@ ERROR->2024-10-31 17:59:38,872->'NoneType' object is not iterable->root
 ERROR->2024-10-31 18:02:01,900->'NoneType' object is not iterable->root
 ERROR->2024-11-01 14:44:24,556->cannot access local variable 'array_procedimentos' where it is not associated with a value->root
 ERROR->2024-11-01 14:48:08,622->cannot access local variable 'array_procedimentos' where it is not associated with a value->root
+=======
+>>>>>>> eaf99bb90392b20159edc72775b1aac158a9c213
+>>>>>>> 81ad3700091c4edb9a30ef18aab82693d81e478f

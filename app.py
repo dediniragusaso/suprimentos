@@ -1,36 +1,55 @@
-#importação bibliotecas
-import openai
+# funções
 import time
 import tiktoken
 from dotenv import load_dotenv
 import os
 import re
 from flask import Flask, render_template,  request, jsonify, Response, stream_with_context
+import PyPDF2
+import psycopg2
+
+# configurações para os comportamentos dos logs
 from logging import ERROR
 from logging import basicConfig
 from logging import error
 from logging import getLogger
-import tiktoken
-import requests 
-import psycopg2
-import PyPDF2
+
+# para langchain
+from langchain_openai.chat_models import ChatOpenAI
+from langchain_core.messages import HumanMessage
+from langchain.chains.conversation.memory import ConversationBufferMemory
+from langchain_core.exceptions import LangChainException, OutputParserException, TracerException
+from langchain_core.prompts.chat import ChatPromptTemplate, SystemMessagePromptTemplate, HumanMessagePromptTemplate
+from langchain_core.prompts.chat import MessagesPlaceholder
 
 basicConfig(
-    level = ERROR  , 
-    filename= "logs.log", 
-    filemode= "a", 
-    format= '%(levelname)s->%(asctime)s->%(message)s->%(name)s' 
+    level = ERROR  , #Todas as informações com maior ou prioridade igual ao DEBUG serão armazenadas
+    filename= "logs.log", #Onde serão armazenadas as informações
+    filemode= "a", # Permissões do arquivo [se poderá editar, apenas ler ...]
+    format= '%(levelname)s->%(asctime)s->%(message)s->%(name)s' # Formatação da informação
 )
-getLogger('openai').setLevel(ERROR)
+getLogger('langchain').setLevel(ERROR)
 getLogger('werkzeug').setLevel(ERROR)
 
 load_dotenv()
 api_key = os.getenv("OPENAI_API_KEY")
 correct_password = os.getenv("CORRECT_PASSWORD")
-if not api_key:
-    raise ValueError("Chave API não encontrada. Verifique se 'openai_api_key' está definida no ambiente.")
 
-openai.api_key = api_key
+if not api_key:
+    raise ValueError("Chave API não encontrada. Verifique se 'OPENAI_API_KEY' está definida no ambiente.")
+
+if not correct_password:
+    raise ValueError("Chave API não encontrada. Verifique se 'GEMINI_API_KEY' está definida no ambiente.")
+
+# definindo llm
+llm = ChatOpenAI(api_key = api_key,
+                 temperature=0.,
+                 max_tokens=5000,
+                 top_p=1,
+                 frequency_penalty=0,
+                 presence_penalty=0,
+                 streaming=True,
+                 model="gpt-4o-2024-08-06")
 
 # Método para conectar no banco
 def conexao_banco():
@@ -41,9 +60,9 @@ def conexao_banco():
         
         # Adicionar parâmetros de SSL
         conn = psycopg2.connect(
-            db_link
-            # sslmode='require',
-            # sslrootcert='/etc/secrets/ca.pem'
+            db_link,
+            sslmode='require',
+            sslrootcert='/etc/secrets/ca.pem'
         )
         print("Conexão feita com sucesso!")
         return conn
@@ -51,17 +70,23 @@ def conexao_banco():
         print(f"Erro ao conectar no banco de dados: {e}")
         return None
 
+# variáveis globais
 categorizador_prompt= open('./prompts/indicador_prompt.txt', "r", encoding="utf8").read()
 escritor= open('./prompts/escritor_prompt.txt',"r",encoding="utf8").read() 
 erro = open('./prompts/erro.txt',"r",encoding="utf8").read() 
 normas= open('./prompts/prompt_normas.txt', "r", encoding="utf8").read()
-custo=0
-chat_id=0
+chat_id = 0
+custo = 0
+respostaFinal = ""
+
+# Inicializar a memória de conversação
+memory = ConversationBufferMemory(memory_key="history")
 
 encoding = tiktoken.encoding_for_model("gpt-4o-2024-08-06")
 
 app = Flask(__name__)
 
+# Página Raíz
 @app.route('/')
 def index():
     global chat_id
@@ -70,41 +95,36 @@ def index():
     cursor = None
     try:
         conn = conexao_banco()
-        if conn is None:
-            raise Exception("Conexão com o banco de dados não foi estabelecida.")
-        
         cursor = conn.cursor()
         
-        # inserindo um novo chat
         cursor.execute("CALL prc_inserir_chat(%s)", (None,))
         chat_id = cursor.fetchone()[0]
-
+        cursor.commit()       
+        
         conn.commit()
     except Exception as e:
-        if conn:
-            conn.rollback()
+        conn.rollback()
         print(f"Erro: {e}")
     finally:
-        if cursor:
-            cursor.close()
-        if conn:
-            conn.close()
+        cursor.close()
+        conn.close()
         
     return render_template('index.html')
 
-
-
+# Forms de Login
 @app.route('/login', methods=["POST"])
 def login():
     try:
+        # verificação de senha
         password = request.json["password"]
         if password == correct_password:
             return jsonify({"status": "success"}),200
         else:
             return jsonify({"status": "error"}),401
     except Exception as e:
-        return jsonify({"status": "error", "message": str(e)}),500
+        return jsonify({"status": "error", "message": str(e)}), 500
 
+# Recarregar página
 @app.route("/limparTerminal", methods=["POST"])
 def limparTerminal():
     global cont_requisicao
@@ -115,12 +135,10 @@ def limparTerminal():
     else:
         return jsonify({"status": "success"})
     
-
-
-# função quando dá erro
+# Mensagem de erro para o usuário
 def algo_ocorreu_de_errado():
-    yield "Algo ocorreu de errado, tente novamente"
-    
+    yield "Ocorreu um erro. Por favor, tente novamente mais tarde ou entre em contato com um de nossos desenvolvedores pelo e-mail: gedaijef@gmail.com."
+
 def procure_seu_gestor():
     yield "Desculpe! Não consegui responder sua pergunta com as informações infornecidas. Procure seu gestor ou o RH mais próximo."
 
@@ -128,50 +146,43 @@ def procure_seu_gestor():
 def contar_tokens(texto):
     return len(encoding.encode(texto))
 
-def categorizador(prompt_usuario, api_key):
+def categorizador(prompt_usuario):
     prompt_100 = open('./prompts/indicador_prompt.txt', "r", encoding="utf8").read()
     global custo
     for arq in os.listdir("./prompts/palavras_chaves/bases_100"):
         prompt_100 += f"\n\n{arq}\n" + open(f"./prompts/palavras_chaves/bases_100/{arq}", "r", encoding="utf8").read()
 
-    custo+= (contar_tokens(prompt_100)/1000)*0.0025
-    headers = {
-        "Content-Type": "application/json",
-        "Authorization": f"Bearer {api_key}"
-    }
+    prompt_100 += prompt_usuario
+    
+    # tokens do input
+    tokens_input = contar_tokens(prompt_100)
+    
+    custo = tokens_input*0.0025
+    
+    # categoria
+    categoria = llm.invoke([HumanMessage(content=prompt_100)])
+    print("tipo: " + categoria.content)
+    
+    # tokens do retorno da api
+    output = categoria.content     
+    tokens_output = contar_tokens(output)
+    custo += tokens_output*0.01
+    
+    # custo do chat
+    chat_custo = (tokens_input/1000*0.0025) + (tokens_output/1000*0.01)
 
-    payload = {
-        "model": "gpt-4o-2024-08-06",
-        "messages": [
-            {
-                "role": "system",
-                "content": ""
-            },
-            {
-                "role": "user",
-                "content": prompt_usuario
-            }
-        ],
-        "max_tokens": 1000,
-        "seed": 42
-    }
-   
-
-    payload["messages"][0]["content"] = prompt_100
-    resposta = requests.post("https://api.openai.com/v1/chat/completions",headers=headers, json=payload)
-    nr_tokens_perg, nr_tokens_resp = resposta.json()["usage"]["prompt_tokens"], resposta.json()["usage"]["completion_tokens"]
-    chat_custo = (nr_tokens_perg/1000*0.0025) + (nr_tokens_resp/1000*0.01)
-    custo+=  (contar_tokens( resposta.json()["choices"][0]["message"]["content"])/1000)*0.01
-    print(resposta.json()["choices"][0]["message"]["content"].replace(".pdf",""))
+  
+    
     try:
         conn = conexao_banco()
         cursor = conn.cursor()
     
         # Associar o procedimento ao chat
-        cursor.execute("CALL prc_procedimento_chat(%s, %s, %s)",(chat_id,resposta.json()["choices"][0]["message"]["content"].replace(".pdf",""),prompt_usuario))
+        cursor.execute("CALL prc_procedimento_chat(%s, %s, %s)",(chat_id,output,prompt_usuario))
         
         # Atualizar o custo do chat
-        cursor.execute("SELECT fnc_atualizar_controle(%s,%s,%s,%s)", (nr_tokens_perg, nr_tokens_resp, chat_custo, chat_id))
+        cursor.execute("SELECT fnc_atualizar_controle(%s,%s,%s,%s)", (tokens_input, tokens_output, chat_custo, chat_id))
+
         conn.commit()
     except Exception as e:
         conn.rollback()
@@ -179,152 +190,161 @@ def categorizador(prompt_usuario, api_key):
     finally:
         cursor.close()
         conn.close()
-    return resposta.json()["choices"][0]["message"]["content"]
+    
+    return categoria.content
 
-       
 
-
-def resposta (prompt_usuario, historico, nome_arquivo):
-    prompt=escritor
-    prompt += historico
-    nr_tokens_perg= contar_tokens(prompt)
+def resposta (prompt_usuario, nome_arquivo):
+    global chat_id
     global custo
-    arquivoInput = (f"./pdfs_bases/procedimentos/{nome_arquivo}")
+    global respostaFinal
+    
+    prompt=escritor
+    nome = nome_arquivo.replace(".txt", ".pdf")
+    arquivoInput = (f"./pdfs_bases/procedimentos/{nome}")
     pdf = open(arquivoInput, "rb")
     pdf_reader = PyPDF2.PdfReader(pdf)
     total_paginas=len(pdf_reader.pages)
     for i in range (total_paginas):
         pagina = pdf_reader.pages[i]
         prompt+=pagina.extract_text()
-    print("Prompt de resposta")
+    #prompt += historico
+    
     tentativas = 0
     tempo_de_espera = 5
-    custo+= (contar_tokens(prompt)/1000)*0.0025
+    
+    # tokens do input
+    tokens_input = contar_tokens(prompt)
+    tokens_input += contar_tokens(prompt_usuario)
+    custo += tokens_input*0.0025
+    print(f"Entrada: {tokens_input}")
+    
     while tentativas <3:
         tentativas+=1
         print(f"Tentativa {tentativas}")
         try:
             print(f"Iniciando a análise")
-            resposta = openai.ChatCompletion.create(
-                model = "gpt-4o-2024-08-06",
-                messages = [
-                    {
-                        "role": "system",
-                        "content": prompt
-                    },
-                    {
-                        "role": "user",
-                        "content": prompt_usuario
-                    }
-                ],
-                temperature=0.,
-                max_tokens=5000,
-                top_p=1,
-                frequency_penalty=0,
-                presence_penalty=0,
-                stream=True
-            )
-            
-            print("Resposta feita com sucesso")
-            output=""
-            for chunk in resposta:
-                    if 'choices' in chunk and 'delta' in chunk['choices'][0] and 'content' in chunk['choices'][0]['delta']:
-                        text = chunk['choices'][0]['delta']['content']
-                        if text:
-                            output+=text
-                            yield text
 
+            # Criar o template de prompt baseado em chat
+            prompt_template = ChatPromptTemplate.from_messages([
+                SystemMessagePromptTemplate.from_template(prompt),
+                MessagesPlaceholder(variable_name="history"),
+                HumanMessagePromptTemplate.from_template("{prompt_usuario}")
+            ])
+
+            # Gera a resposta do modelo
+            resposta = llm.stream(prompt_template.format_prompt(history=memory.buffer_as_messages, prompt_usuario=prompt_usuario))
+
+            print("Resposta feita com sucesso")
+            
+            output = ""
+            for chunk in resposta:
+                if hasattr(chunk, 'content'):
+                    text_chunk = chunk.content
+                    output += text_chunk
+                    yield text_chunk
+                    
+            # tokens do retorno da api
             tokens_output = contar_tokens(output)
-            custo+= (contar_tokens(output)/1000)*0.01
-            print(f"Tokens de saída: {tokens_output}")
-            nr_tokens_resp = contar_tokens(output)
-            chat_custo = (nr_tokens_perg/1000*0.0025) + (nr_tokens_resp/1000*0.01)
-            print(chat_custo)   
+            respostaFinal = output
+            custo += tokens_output*0.01
+            print(tokens_output) 
+            
+            # valor do chat
+            chat_custo = (tokens_input/1000*0.0025) + (tokens_output/1000*0.01)
+            print(chat_custo)
+            
+             # Atualiza o histórico com a resposta gerada
+            memory.save_context(inputs={"human": prompt_usuario}, outputs={"ai": output})              
+            
+            # salva no banco
             try:
                 conn = conexao_banco()
                 cursor = conn.cursor()
             
                 #Atualizar custo do chat
-                cursor.execute("SELECT fnc_atualizar_controle(%s,%s,%s,%s)", (nr_tokens_perg, nr_tokens_resp, chat_custo, chat_id))
+                cursor.execute("SELECT fnc_atualizar_controle(%s,%s,%s,%s)", (tokens_input, tokens_output, chat_custo, chat_id))
                 conn.commit()
             except Exception as e:
                 conn.rollback()
                 print(f"Erro: {e}")
             finally:
                 cursor.close()
-                conn.close()            
+                conn.close()     
 
+            
             return
-        except openai.error.AuthenticationError as e:
-            print(f"Erro de autentificação {e}")
-        except openai.error.APIError as e:
+        except TracerException as e:
+            print(f"Erro no  módulo de rastreadores: {e}")
+        except OutputParserException as e:
             print(f"Erro de API {e}")
             time.sleep(5)
-        except openai.error.RateLimitError as e:
-            print(f"Erro de limite de taxa: {e}")
+        except LangChainException as e:
+            print(f"Erro geral: {e}")
             time.sleep(tempo_de_espera)
             tempo_de_espera *=2
 
 
-
-def respostaErro (prompt_usuario, historico):
-    prompt=erro
-    prompt += historico
-    tokens_input= contar_tokens(prompt)
+def respostaErro (prompt_usuario):
     global custo
-    nr_tokens_perg= contar_tokens(prompt)
+    global respostaFinal
+    
+    prompt=erro
+    # prompt += historico
+    
+    # tokens de entrada
+    tokens_input = contar_tokens(prompt)
+    tokens_input += contar_tokens(prompt_usuario)
+    custo += tokens_input*0.0025
     print(f"Entrada:{tokens_input}")
-    custo+= (contar_tokens(prompt)/1000)*0.0025
+    
     tentativas = 0
     tempo_de_espera = 5
     while tentativas <3:
         tentativas+=1
         print(f"Tentativa {tentativas}")
-        print("Prompt de erro")
         try:
             print(f"Iniciando a análise")
-            resposta = openai.ChatCompletion.create(
-                model = "gpt-4o-2024-08-06",
-                messages = [
-                    {
-                        "role": "system",
-                        "content": prompt
-                    },
-                    {
-                        "role": "user",
-                        "content": prompt_usuario
-                    }
-                ],
-                temperature=0.,
-                max_tokens=5000,
-                top_p=1,
-                frequency_penalty=0,
-                presence_penalty=0,
-                stream=True
-            )
             
+            # Criar o template de prompt baseado em chat
+            prompt_template = ChatPromptTemplate.from_messages([
+                SystemMessagePromptTemplate.from_template(prompt),
+                MessagesPlaceholder(variable_name="history"),
+                HumanMessagePromptTemplate.from_template("{prompt_usuario}")
+            ])
+
+            # Gera a resposta do modelo
+            resposta = llm.stream(prompt_template.format_prompt(history=memory.buffer_as_messages, prompt_usuario=prompt_usuario))
+
             print("Resposta feita com sucesso")
-            output=""
+            
+            output = ""
             for chunk in resposta:
-                    if 'choices' in chunk and 'delta' in chunk['choices'][0] and 'content' in chunk['choices'][0]['delta']:
-                        text = chunk['choices'][0]['delta']['content']
-                        if text:
-                            output+=text
-                            yield text
+                if hasattr(chunk, 'content'):
+                    text_chunk = chunk.content
+                    output += text_chunk
+                    yield text_chunk
 
+            # tokens do retorno da api
             tokens_output = contar_tokens(output)
-            custo+= (contar_tokens(output)/1000)*0.01
-            print(f"Tokens de saída: {tokens_output}")
-
-            nr_tokens_resp = contar_tokens(output)
-            chat_custo = (nr_tokens_perg/1000*0.0025) + (nr_tokens_resp/1000*0.01)
-            print(chat_custo)   
+            respostaFinal = output
+            custo += tokens_output*0.01
+            print(tokens_output)  
+            
+            # valor do chat
+            chat_custo = (tokens_input/1000*0.0025) + (tokens_output/1000*0.01)
+            print(chat_custo)
+            
+            # Atualiza o histórico com a resposta gerada
+            memory.save_context(inputs={"human": prompt_usuario}, outputs={"ai": output})
+            
+            # salvar no banco
             try:
                 conn = conexao_banco()
                 cursor = conn.cursor()
             
                 #Atualizar custo do chat
-                cursor.execute("SELECT fnc_atualizar_controle(%s,%s,%s,%s)", (nr_tokens_perg, nr_tokens_resp, chat_custo, chat_id))
+                cursor.execute("SELECT fnc_atualizar_controle(%s,%s,%s,%s)", (tokens_input, tokens_output, chat_custo, chat_id))
                 conn.commit()
             except Exception as e:
                 conn.rollback()
@@ -333,20 +353,20 @@ def respostaErro (prompt_usuario, historico):
                 cursor.close()
                 conn.close() 
 
+            
             return
-        except openai.error.AuthenticationError as e:
-            print(f"Erro de autentificação {e}")
-        except openai.error.APIError as e:
+        except TracerException as e:
+            print(f"Erro no  módulo de rastreadores: {e}")
+        except OutputParserException as e:
             print(f"Erro de API {e}")
             time.sleep(5)
-        except openai.error.RateLimitError as e:
-            print(f"Erro de limite de taxa: {e}")
+        except LangChainException as e:
+            print(f"Erro geral: {e}")
             time.sleep(tempo_de_espera)
             tempo_de_espera *=2
-
-def substituidorNormas (resp,historico,pergunta_usuario,norma):
+            
+def substituidorNormas (resp, pergunta_usuario, norma):
     prompt=normas
-    prompt += historico
     prompt += resp
     global custo
     nr_tokens_perg= contar_tokens(prompt)
@@ -359,7 +379,7 @@ def substituidorNormas (resp,historico,pergunta_usuario,norma):
         prompt+=pagina.extract_text()
     tokens_input= contar_tokens(prompt)
     custo+= (contar_tokens(prompt)/1000)*0.0025
-    print(f"Entrada:{tokens_input}")
+    
     tentativas = 0
     tempo_de_espera = 5
     while tentativas <3:
@@ -367,85 +387,88 @@ def substituidorNormas (resp,historico,pergunta_usuario,norma):
         print(f"Tentativa {tentativas}")
         try:
             print(f"Iniciando a análise")
-            resposta = openai.ChatCompletion.create(
-                model = "gpt-4o-2024-08-06",
-                messages = [
-                    {
-                        "role": "system",
-                        "content": prompt
-                    },
-                    {
-                        "role": "user",
-                        "content": pergunta_usuario
-                    }
-                ],
-                temperature=0.,
-                max_tokens=5000,
-                top_p=1,
-                frequency_penalty=0,
-                presence_penalty=0,
-                stream=True
-            )
             
+            # Criar o template de prompt baseado em chat
+            prompt_template = ChatPromptTemplate.from_messages([
+                SystemMessagePromptTemplate.from_template(prompt),
+                MessagesPlaceholder(variable_name="history"),
+                HumanMessagePromptTemplate.from_template("{pergunta_usuario}")
+            ])
+
+            # Gera a resposta do modelo
+            resposta = llm.stream(prompt_template.format_prompt(history=memory.buffer_as_messages, pergunta_usuario=pergunta_usuario))
+
             print("Resposta feita com sucesso")
-            output=""
-            for chunk in resposta:
-                    if 'choices' in chunk and 'delta' in chunk['choices'][0] and 'content' in chunk['choices'][0]['delta']:
-                        text = chunk['choices'][0]['delta']['content']
-                        if text:
-                            output+=text
-                            yield text
-
             
+            output = ""
+            for chunk in resposta:
+                if hasattr(chunk, 'content'):
+                    text_chunk = chunk.content
+                    output += text_chunk
+                    yield text_chunk
 
+            # tokens do retorno da api
             tokens_output = contar_tokens(output)
-            custo+= (contar_tokens(output)/1000)*0.01
-            print(f"Tokens de saída: {tokens_output}") 
-            nr_tokens_resp = contar_tokens(output)
-            chat_custo = (nr_tokens_perg/1000*0.0025) + (nr_tokens_resp/1000*0.01)
+            respostaFinal = output
+            custo += tokens_output*0.01
+            print(tokens_output) 
+            
+            # valor do chat
+            chat_custo = (tokens_input/1000*0.0025) + (tokens_output/1000*0.01)
             print(chat_custo)
             
+            # Atualiza o histórico com a resposta gerada
+            memory.save_context(inputs={"human": pergunta_usuario}, outputs={"ai": output})
+            
+            # salvar no banco
             try:
                 conn = conexao_banco()
                 cursor = conn.cursor()
             
-                # Atualizar custo do chat
-                cursor.execute("SELECT fnc_atualizar_controle(%s,%s,%s,%s)", (nr_tokens_perg, nr_tokens_resp, chat_custo, chat_id))
+                #Atualizar custo do chat
+                cursor.execute("SELECT fnc_atualizar_controle(%s,%s,%s,%s)", (tokens_input, tokens_output, chat_custo, chat_id))
                 conn.commit()
             except Exception as e:
                 conn.rollback()
                 print(f"Erro: {e}")
             finally:
                 cursor.close()
-                conn.close()
+                conn.close() 
+
+
             return
-        except openai.error.AuthenticationError as e:
-            print(f"Erro de autentificação {e}")
-        except openai.error.APIError as e:
+        except TracerException as e:
+            print(f"Erro no  módulo de rastreadores: {e}")
+        except OutputParserException as e:
             print(f"Erro de API {e}")
             time.sleep(5)
-        except openai.error.RateLimitError as e:
-            print(f"Erro de limite de taxa: {e}")
+        except LangChainException as e:
+            print(f"Erro geral: {e}")
             time.sleep(tempo_de_espera)
-            tempo_de_espera *=2
+            tempo_de_espera *=2            
+
 
 arquivos=[]
 for arq in (os.listdir("./pdfs_bases/procedimentos")):
         arquivos.append(arq) 
-
+ 
 
 @app.route("/submit", methods=["POST"])
- 
 def submit():
-    
     try:
+    
+        global chat_id 
         
-        print(chat_id)
-        historico = request.form['historico']
+        # historico = request.form['historico']
+        print("P 1")
+        # obter pergunta do usuário
         pergunta_usuario = request.form['inputMessage']
-        global custo
-        base = categorizador(pergunta_usuario, api_key)
-        
+        print("P 2")
+        # Categorizar a pergunta
+        base = categorizador(pergunta_usuario)
+        print("P 3")
+        print(base)
+        # Gerar a resposta
         try:
             conn = conexao_banco()
             cursor = conn.cursor()
@@ -467,36 +490,54 @@ def submit():
                 if proc==21:
                     if array_procedimentos[idx-1]==21 and  array_procedimentos[idx-2]==21:
                         return Response(stream_with_context(procure_seu_gestor()),content_type='text/plain')
-                    
-        resposta_sem_normas = resposta(pergunta_usuario, historico, base)
+        
+
         if (base in arquivos ):
             print("Base encontrada")
-            print(base)
+            
+            resposta_sem_normas = resposta(pergunta_usuario, base)
+            
+            # Verificar se há norma
             string_sem_espacos = ''.join(parte.replace(" ", "").replace("\n", "") for parte in resposta_sem_normas)
+            
+
             norma = re.search(r'(IN|M)-.{5,9}-[0-9]{4}', string_sem_espacos, re.IGNORECASE)
             if norma:
                 print("Baseado em norma")
                 regra = norma.group()  
+                print(regra)
                 reais= custo * 5.60
+                print(f"Custo em dólares: {custo}")
                 print(f"Custo: {reais} reais pela pergunta")
-                return Response(stream_with_context(substituidorNormas(string_sem_espacos, historico, pergunta_usuario,regra,)), content_type='text/plain')
+                
+                return Response(stream_with_context(substituidorNormas(string_sem_espacos, pergunta_usuario,regra)), content_type='text/plain')
             
             else:
                 print("nope")
                 print(type(resposta_sem_normas))
                 reais= custo * 5.60
+                print(f"Custo em dólares: {custo}")
                 print(f"Custo: {reais} reais pela pergunta")
-                return Response(stream_with_context(resposta(pergunta_usuario, historico, base)), content_type='text/plain')
-            
-           
-     
+                
+                return Response(stream_with_context(resposta(pergunta_usuario, base)), content_type='text/plain')
         else: 
             reais= custo * 5.60
             print(f"Custo em dólares: {custo}")
             print(f"Custo: {reais} reais pela pergunta")
-            return Response(stream_with_context(respostaErro(pergunta_usuario,historico)), content_type='text/plain')
+        
+
+            
+            return Response(stream_with_context(respostaErro(pergunta_usuario)), content_type='text/plain')
     except Exception as e:
         error(e)
         return Response(stream_with_context(algo_ocorreu_de_errado()), content_type='text/plain')
+
+# @app.errorhandler(404)
+# @app.errorhandler(500)
+# @app.errorhandler(400)
+# def handle_error(error, message):
+#     return render_template("error.html",message=message), error.code
     
-app.run(debug=True, port=5000, host='0.0.0.0')
+app.run(debug=True, port=5000, host="0.0.0.0")
+
+
