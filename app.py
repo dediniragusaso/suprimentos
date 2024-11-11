@@ -120,6 +120,9 @@ def limparTerminal():
 # função quando dá erro
 def algo_ocorreu_de_errado():
     yield "Algo ocorreu de errado, tente novamente"
+    
+def procure_seu_gestor():
+    yield "Desculpe! Não consegui responder sua pergunta com as informações infornecidas. Procure seu gestor ou o RH mais próximo."
 
 
 def contar_tokens(texto):
@@ -159,12 +162,13 @@ def categorizador(prompt_usuario, api_key):
     nr_tokens_perg, nr_tokens_resp = resposta.json()["usage"]["prompt_tokens"], resposta.json()["usage"]["completion_tokens"]
     chat_custo = (nr_tokens_perg/1000*0.0025) + (nr_tokens_resp/1000*0.01)
     custo+=  (contar_tokens( resposta.json()["choices"][0]["message"]["content"])/1000)*0.01
+    print(resposta.json()["choices"][0]["message"]["content"].replace(".pdf",""))
     try:
         conn = conexao_banco()
         cursor = conn.cursor()
     
         # Associar o procedimento ao chat
-        cursor.execute("CALL prc_procedimento_chat(%s, %s)",(resposta.json()["choices"][0]["message"]["content"].replace(".pdf",""),chat_id))
+        cursor.execute("CALL prc_procedimento_chat(%s, %s, %s)",(chat_id,resposta.json()["choices"][0]["message"]["content"].replace(".pdf",""),prompt_usuario))
         
         # Atualizar o custo do chat
         cursor.execute("SELECT fnc_atualizar_controle(%s,%s,%s,%s)", (nr_tokens_perg, nr_tokens_resp, chat_custo, chat_id))
@@ -435,11 +439,35 @@ for arq in (os.listdir("./pdfs_bases/procedimentos")):
 def submit():
     
     try:
-    
+        
+        print(chat_id)
         historico = request.form['historico']
         pergunta_usuario = request.form['inputMessage']
         global custo
         base = categorizador(pergunta_usuario, api_key)
+        
+        try:
+            conn = conexao_banco()
+            cursor = conn.cursor()
+            # Atualizar fluxo do chat
+            cursor.execute("SELECT fnc_atualizar_chat(%s)", (chat_id,))
+            array_procedimentos = cursor.fetchone()[0]
+            conn.commit()
+            print(array_procedimentos)
+            
+        except Exception as e:
+            conn.rollback()
+            print(f"Erro: {e}")
+        finally:
+            cursor.close()
+            conn.close()
+        
+        if array_procedimentos:
+            for idx,proc in enumerate(array_procedimentos):
+                if proc==21:
+                    if array_procedimentos[idx-1]==21 and  array_procedimentos[idx-2]==21:
+                        return Response(stream_with_context(procure_seu_gestor()),content_type='text/plain')
+                    
         resposta_sem_normas = resposta(pergunta_usuario, historico, base)
         if (base in arquivos ):
             print("Base encontrada")
@@ -470,19 +498,5 @@ def submit():
     except Exception as e:
         error(e)
         return Response(stream_with_context(algo_ocorreu_de_errado()), content_type='text/plain')
-    finally:
-        
-        try:
-            conn = conexao_banco()
-            cursor = conn.cursor()
-            # Atualizar fluxo do chat
-            cursor.execute("SELECT fnc_atualizar_chat(%s)", (chat_id,))
-            conn.commit()
-        except Exception as e:
-            conn.rollback()
-            print(f"Erro: {e}")
-        finally:
-            cursor.close()
-            conn.close()
     
 app.run(debug=True, port=5000, host='0.0.0.0')

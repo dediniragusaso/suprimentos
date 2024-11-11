@@ -1411,3 +1411,10 @@ ERROR->2024-10-25 15:38:00,011->cannot access local variable 'cursor' where it i
 ERROR->2024-10-25 18:11:21,329->[WinError 3] O sistema não pode encontrar o caminho especificado: './prompts/palavras_chaves/bases_100'->root
 ERROR->2024-10-25 18:12:34,003->module 'openai' has no attribute 'error'->root
 ERROR->2024-10-28 15:58:32,006->Expecting value: line 1 column 1 (char 0)->root
+ERROR->2024-10-31 17:54:38,448->cannot access local variable 'array_procedimentos' where it is not associated with a value->root
+ERROR->2024-10-31 17:55:52,482->cannot access local variable 'array_procedimentos' where it is not associated with a value->root
+ERROR->2024-10-31 17:58:00,916->'NoneType' object is not iterable->root
+ERROR->2024-10-31 17:59:38,872->'NoneType' object is not iterable->root
+ERROR->2024-10-31 18:02:01,900->'NoneType' object is not iterable->root
+ERROR->2024-11-01 14:44:24,556->cannot access local variable 'array_procedimentos' where it is not associated with a value->root
+ERROR->2024-11-01 14:48:08,622->cannot access local variable 'array_procedimentos' where it is not associated with a value->root

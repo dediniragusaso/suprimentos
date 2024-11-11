@@ -49,17 +49,34 @@ LANGUAGE 'plpgsql';
 
 
 -- Function para atualizar chat
-CREATE OR REPLACE FUNCTION fnc_atualizar_chat(p_id_chat INT)
-RETURNS VOID AS
+CREATE OR REPLACE FUNCTION fnc_atualizar_chat(p_id_chat INT) 
+RETURNS INTEGER[] AS 
 $$
+DECLARE
+    v_nr_perguntas INTEGER;
+    v_array_procedimentos INTEGER[];
 BEGIN
-	
-	UPDATE CHATS SET 
-    nr_perguntas = nr_perguntas + 1,  
-    nr_respostas = nr_respostas + 1 
-    WHERE id_chat = p_id_chat;
+    UPDATE CHATS 
+    SET 
+        nr_perguntas = nr_perguntas + 1,  
+        nr_respostas = nr_respostas + 1 
+    WHERE id_chat = p_id_chat
+    RETURNING nr_perguntas INTO v_nr_perguntas;
+
+    IF v_nr_perguntas >= 3 THEN
+        SELECT ARRAY_AGG(cd_procedimento) 
+        INTO v_array_procedimentos
+        FROM procedimentos_chat 
+        WHERE cd_chat = p_id_chat;
+    ELSE
+        v_array_procedimentos := NULL;
+    END IF;
+
+    RETURN v_array_procedimentos;
 END;$$
 LANGUAGE 'plpgsql';
+
+
 
 -- Procedure para inserir chat e controle
 CREATE OR REPLACE PROCEDURE prc_inserir_chat(OUT v_id_chat INT)
@@ -78,17 +95,26 @@ $$;
 
 
 -- Procedure para inserir procedimentos por chat
-CREATE OR REPLACE PROCEDURE prc_procedimento_chat(p_nm_procedimento VARCHAR, p_id_chat INT)
+CREATE OR REPLACE PROCEDURE prc_procedimento_chat(p_cd_chat INT, p_nm_procedimento VARCHAR, p_ds_pergunta TEXT)
 LANGUAGE 'plpgsql'
 AS $$
 DECLARE
-	v_id_procedimento INT;
+	v_cd_procedimento INT;
 BEGIN 
 	
 	SELECT id_procedimento FROM procedimentos 
     WHERE nm_procedimento = p_nm_procedimento
-	INTO v_id_procedimento;
-	
-	INSERT INTO procedimentos_chat(cd_chat, cd_procedimento)
-    VALUES(p_id_chat, v_id_procedimento);
-END;$$;
+	INTO v_cd_procedimento;
+
+	IF (SELECT v_cd_procedimento = 21) THEN
+
+		INSERT INTO procedimentos_chat(cd_chat, cd_procedimento, ds_pergunta)
+		VALUES(p_cd_chat, v_cd_procedimento, p_ds_pergunta);
+	ELSE
+
+		INSERT INTO procedimentos_chat(cd_chat, cd_procedimento)
+		VALUES(p_cd_chat, v_cd_procedimento);
+	END IF;
+
+END;
+$$;
