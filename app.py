@@ -99,9 +99,8 @@ def index():
         
         cursor.execute("CALL prc_inserir_chat(%s)", (None,))
         chat_id = cursor.fetchone()[0]
-        cursor.commit()       
+        conn.commit()       
         
-        conn.commit()
     except Exception as e:
         conn.rollback()
         print(f"Erro: {e}")
