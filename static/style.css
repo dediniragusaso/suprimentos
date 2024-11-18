@@ -305,23 +305,16 @@ strong {
     background-color: #2c8f54;
 }
 
-/* Estilos para a sobreposição do login */
-.login-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
 
 .hidden {
     display: none;
+}
+.botao_erro{
+    background-color: rgb(204, 17, 17);
+    width: 15px; 
+    height: 15px;
+    list-style: none;
+    margin-right: 5px;
 }
 
 .login-container {
@@ -333,6 +326,82 @@ strong {
     text-align: center;
     width: 300px;
     z-index: 1001; /* Coloca o container acima do blur */
+}
+
+/* Centraliza o overlay em toda a tela */
+.div-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo semi-transparente */
+    z-index: 9999; /* Garante que o overlay fique sobre os outros elementos */
+}
+
+/* Estiliza a caixa de erro */
+.erro-container {
+    position: relative;
+    background-color: #1e1e1e;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo do título */
+.erro-container h1 {
+    color: rgb(204, 17, 17);
+    font-weight: bold;
+    margin: 0 0 20px 0; /* Espaço abaixo do título */
+}
+
+/* Estilo do parágrafo */
+.erro-container p {
+    color: white;
+    margin: 0 0 20px 0; /* Espaço abaixo do parágrafo */
+}
+
+/* Container do botão */
+.button-container {
+    display: flex;
+    justify-content: center; /* Garante que o botão fique centralizado */
+    width: 100%;
+}
+
+/* Estilo do botão */
+#tente_novamente {
+    background-color: rgb(204, 17, 17);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 100%; /* Faz o botão ocupar toda a largura disponível */
+    max-width: 200px; /* Limita o tamanho máximo do botão */
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* Efeito de hover no botão */
+#tente_novamente:hover {
+    background-color: #a61313;
+}
+
+
+#novo_chat{
+    background-color: transparent;
+    color: black;
+    display: flex;
+    justify-content: start;
 }
 
 .login-container h1 {

@@ -4,7 +4,7 @@ import tiktoken
 from dotenv import load_dotenv
 import os
 import re
-from flask import Flask, render_template,  request, jsonify, Response, stream_with_context
+from flask import Flask, render_template,  request, jsonify, Response, stream_with_context, abort
 import PyPDF2
 import psycopg2
 
@@ -68,7 +68,7 @@ def conexao_banco():
         return conn
     except Exception as e:
         print(f"Erro ao conectar no banco de dados: {e}")
-        return None
+    
 
 # variáveis globais
 categorizador_prompt= open('./prompts/indicador_prompt.txt', "r", encoding="utf8").read()
@@ -102,9 +102,10 @@ def index():
         conn.commit()       
         
     except Exception as e:
+        abort(500)
         conn.rollback()
         print(f"Erro: {e}")
-    finally:
+    else:
         cursor.close()
         conn.close()
         
@@ -186,7 +187,7 @@ def categorizador(prompt_usuario):
     except Exception as e:
         conn.rollback()
         print(f"Erro: {e}")
-    finally:
+    else:
         cursor.close()
         conn.close()
     
@@ -267,7 +268,7 @@ def resposta (prompt_usuario, nome_arquivo):
             except Exception as e:
                 conn.rollback()
                 print(f"Erro: {e}")
-            finally:
+            else:
                 cursor.close()
                 conn.close()     
 
@@ -348,7 +349,7 @@ def respostaErro (prompt_usuario):
             except Exception as e:
                 conn.rollback()
                 print(f"Erro: {e}")
-            finally:
+            else:
                 cursor.close()
                 conn.close() 
 
@@ -430,7 +431,7 @@ def substituidorNormas (resp, pergunta_usuario, norma):
             except Exception as e:
                 conn.rollback()
                 print(f"Erro: {e}")
-            finally:
+            else:
                 cursor.close()
                 conn.close() 
 
@@ -480,7 +481,7 @@ def submit():
         except Exception as e:
             conn.rollback()
             print(f"Erro: {e}")
-        finally:
+        else:
             cursor.close()
             conn.close()
         
@@ -531,11 +532,12 @@ def submit():
         error(e)
         return Response(stream_with_context(algo_ocorreu_de_errado()), content_type='text/plain')
 
-# @app.errorhandler(404)
-# @app.errorhandler(500)
-# @app.errorhandler(400)
-# def handle_error(error, message):
-#     return render_template("error.html",message=message), error.code
+@app.errorhandler(400)
+@app.errorhandler(404)
+@app.errorhandler(405)
+@app.errorhandler(500)
+def handle_error(error):
+    return render_template('error.html',error=error), error.code
     
 app.run(debug=True, port=5000, host="0.0.0.0")
 

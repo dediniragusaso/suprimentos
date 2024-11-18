@@ -9,18 +9,18 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"">
 </head>
 <body class="flex flex-col md:flex-row h-screen w-screen">
-
-        <!-- Adicionando a caixa de login diretamente no index -->
-    <div id="loginOverlay" class="div-overlay ">
-        <div class="login-container">
-            <h1>Login</h1>
-            <form id="loginForm" action="/login" method="post">
-                <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
-                <button type="submit">Entrar</button>
-                <p class="error" id="errorMessage">Senha incorreta. Tente novamente.</p>
-            </form>
+    
+    <div id="erroOverlay" class="div-overlay">
+        <div class="erro-container">
+            <h1>Ocorreu um erro</h1>
+            <p>O chat não está funcionando no momento</p>
+            <div class="button-container">
+                <button id="tente_novamente">Tente novamente</button>
+            </div>
         </div>
     </div>
+    
+
  
     <div id="hamburger" class= "md:hidden flex items-center justify-between text-white py-4 px-6">
         <button id="hamburgerBtn" class="text-white focus:outline-none">
@@ -105,12 +105,27 @@
                 </div>
             </form>
             <div class="mt-1 mb-3 text-start ml-7">
-                <a href="#" id="novo_chat" class="text-grey-300 underline"><img src="static/img/reload.svg" alt="Nova conversa" class="inline-block ml-2" style="width: 15px; height: 15px; margin-right: 5px;">Clique aqui para iniciar um novo chat</a>
+                <a href="#" id="novo_chat_2" class="text-grey-300 underline"><img src="static/img/reload.svg" alt="Nova conversa" class="inline-block ml-2" style="width: 15px; height: 15px; margin-right: 5px;">Clique aqui para iniciar um novo chat</a>
             </div>
         </div>
     </div>
  
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script>
+        // Exibir erro se a requisição falhar
+   
+        document.body.classList.add('blurred');
+
+        // Função para esconder a div de erro quando o botão "Tente novamente" for clicado
+        document.getElementById('tente_novamente').addEventListener('click', () => {
+            document.getElementById('erroOverlay').classList.add('hidden');
+            document.getElementById('erroOverlay').classList.remove('blurred');
+
+            window.location.href = '/';
+        });
+
+        document.getElementById('loanding_container').style.display = "none";
+
+    </script>
             
 </body>
 </html>

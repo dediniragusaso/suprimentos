@@ -366,4 +366,3 @@ function atualizarVariavel(resposta, pergunta) {
 
 window.addEventListener('load', criarVariavel())
 
-
