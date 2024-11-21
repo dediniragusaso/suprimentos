@@ -8,7 +8,9 @@ Um chatbot desenvolvido para que os colaboradores das empresas do Grupo J&F poss
 
 Segue um vídeo com uma breve demonstração do chat em funcionamento e, logo abaixo, uma imagem de como está o front do chat atualmente.
 
-https://institutogerminare-my.sharepoint.com/:v:/g/personal/sophia_ragusa_germinare_org_br/EfkKqiInZRdDmLf7JK6G0dQB2_O74O_hr4f_DimJYR_Yrw
+https://institutogerminare-my.sharepoint.com/:v:/g/personal/sophia_ragusa_germinare_org_br/EQrBp5eUFGRLqTmwGs3TRgEBUTePl7TWxIfEoJtPrtjekQ
+
+No vídeo, a primeira pergunta é relacionada diretamente com um dos documentos. Já a segunda pergunta é baseada em uma norma. Por fim, a terceira pergunta não está relacionada ao objetivo principal da ferramenta, ou seja, não deve ser respondida.
 
 ![Descrição da imagem](https://drive.google.com/uc?id=10vBjFOgrmwkd51Y9MCb2UVeljR_MAXT8)
 
