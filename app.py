@@ -140,7 +140,7 @@ def algo_ocorreu_de_errado():
     yield "Ocorreu um erro. Por favor, tente novamente mais tarde ou entre em contato com um de nossos desenvolvedores pelo e-mail: gedaijef@gmail.com."
 
 def procure_seu_gestor():
-    yield "Desculpe! Não consegui responder sua pergunta com as informações infornecidas. Procure seu gestor ou o RH mais próximo."
+    yield "Você já fez três perguntas que eu não consegui responder. Para maior agilidade, procure seu gestor ou RH mais próximo. Caso queira falar sobre outros assuntos, inicie uma nova conversa"
 
 
 def contar_tokens(texto):
