@@ -1,8 +1,43 @@
-
+document.addEventListener('DOMContentLoaded', function () {
+    // Verificar se o login já foi feito na sessão atual
+    if (!sessionStorage.getItem('loggedIn')) {
+        document.getElementById('loginOverlay').classList.remove('hidden');
+        document.body.classList.add('blurred');
+    }
+ 
+    // Evento de envio do formulário de login
+    document.getElementById('loginForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+       
+        let password = document.getElementById('password').value;
+ 
+        fetch('/login', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json', // Mantenha o tipo de conteúdo como JSON
+        },
+        body: JSON.stringify({ password: password }), // Enviando como JSON
+        }).then(response => {
+            if (response.ok) { // Verifica se a resposta foi bem-sucedida
+                sessionStorage.setItem('loggedIn', true); // Usa sessionStorage para expirar com o fechamento da aba
+                document.getElementById('loginOverlay').classList.add('hidden');
+                document.body.classList.remove('blurred'); // Remove o efeito de blur ao fazer login
+            } else {
+                return response.json().then(err => { // Captura o erro detalhado do servidor
+                throw new Error(err.status || 'Falha ao fazer login'); // Lança erro com mensagem detalhada
+            });
+        }
+        }) .catch((error) => {
+            document.getElementById('errorMessage').style.display = 'block';
+            console.error(error); // Log do erro para depuração
+            });
+        });
+});
 
 
 let isResponseIncreased = false;
 let cont_requisicao = 0
+
 
 // Ajusta a altura do input de mensagem conforme o conteúdo
 document.getElementById("messageInput").addEventListener("input", function() {

@@ -4,7 +4,7 @@ import tiktoken
 from dotenv import load_dotenv
 import os
 import re
-from flask import Flask, render_template,  request, jsonify, Response, stream_with_context
+from flask import Flask, render_template,  request, jsonify, Response, stream_with_context, abort
 import PyPDF2
 import psycopg2
 
@@ -14,7 +14,7 @@ from logging import basicConfig
 from logging import error
 from logging import getLogger
 
-# langchain
+# para langchain
 from langchain_openai.chat_models import ChatOpenAI
 from langchain_core.messages import HumanMessage
 from langchain.chains.conversation.memory import ConversationBufferMemory
@@ -68,7 +68,7 @@ def conexao_banco():
         return conn
     except Exception as e:
         print(f"Erro ao conectar no banco de dados: {e}")
-        return None
+    
 
 # variáveis globais
 categorizador_prompt= open('./prompts/indicador_prompt.txt', "r", encoding="utf8").read()
@@ -91,24 +91,21 @@ app = Flask(__name__)
 def index():
     global chat_id
     
+    conn = None
+    cursor = None
     try:
         conn = conexao_banco()
         cursor = conn.cursor()
         
-        # inserindo um novo chat
-        cursor.execute("""INSERT INTO CHATS(DT_CHAT, NR_PERGUNTAS, NR_RESPOSTAS) 
-                        VALUES (NOW(), 0, 0)
-                        RETURNING ID_CHAT;""")
+        cursor.execute("CALL prc_inserir_chat(%s)", (None,))
         chat_id = cursor.fetchone()[0]
+        conn.commit()       
         
-        cursor.execute("""INSERT INTO CONTROLE(CD_CHAT, NR_TOKENS_PERG, NR_TOKENS_RESP, VL_DOLAR)
-                        VALUES(%s, 0, 0, 0)""",(chat_id,))
-        
-        conn.commit()
     except Exception as e:
+        abort(500)
         conn.rollback()
         print(f"Erro: {e}")
-    finally:
+    else:
         cursor.close()
         conn.close()
         
@@ -142,15 +139,19 @@ def limparTerminal():
 def algo_ocorreu_de_errado():
     yield "Ocorreu um erro. Por favor, tente novamente mais tarde ou entre em contato com um de nossos desenvolvedores pelo e-mail: gedaijef@gmail.com."
 
+def procure_seu_gestor():
+    yield "Desculpe! Não consegui responder sua pergunta com as informações infornecidas. Procure seu gestor ou o RH mais próximo."
+
+
 def contar_tokens(texto):
     return len(encoding.encode(texto))
 
 def categorizador(prompt_usuario):
     prompt_100 = open('./prompts/indicador_prompt.txt', "r", encoding="utf8").read()
     global custo
-    for arq in os.listdir("./prompts/palavras_chaves"):
-        prompt_100 += f"\n\n{arq}\n" + open(f"./prompts/palavras_chaves/{arq}", "r", encoding="utf8").read()
-        
+    for arq in os.listdir("./prompts/palavras_chaves/bases_100"):
+        prompt_100 += f"\n\n{arq}\n" + open(f"./prompts/palavras_chaves/bases_100/{arq}", "r", encoding="utf8").read()
+
     prompt_100 += prompt_usuario
     
     # tokens do input
@@ -169,32 +170,24 @@ def categorizador(prompt_usuario):
     
     # custo do chat
     chat_custo = (tokens_input/1000*0.0025) + (tokens_output/1000*0.01)
-    print(chat_custo)
-    print (categoria.content)
+
+  
     
     try:
         conn = conexao_banco()
         cursor = conn.cursor()
     
         # Associar o procedimento ao chat
-        cursor.execute("""SELECT ID_PROCEDIMENTO FROM PROCEDIMENTOS
-                            WHERE NM_PROCEDIMENTO = %s;""", (resposta.replace(".txt",""),)) 
-        procedimento_id =  cursor.fetchone()[0]
+        cursor.execute("CALL prc_procedimento_chat(%s, %s, %s)",(chat_id,output,prompt_usuario))
         
-        cursor.execute("""INSERT INTO PROCEDIMENTOS_CHAT(CD_CHAT, CD_PROCEDIMENTO)
-                            VALUES (%s, %s);""", (chat_id, procedimento_id))
-        
-        #Atualizar custo do chat
-        cursor.execute("""UPDATE CONTROLE SET 
-                        NR_TOKENS_PERG = NR_TOKENS_PERG + %s, 
-                        NR_TOKENS_RESP = NR_TOKENS_RESP + %s,
-                        VL_DOLAR = VL_DOLAR + %s
-                        WHERE CD_CHAT = %s;""", (tokens_input, tokens_output, chat_custo, chat_id))
+        # Atualizar o custo do chat
+        cursor.execute("SELECT fnc_atualizar_controle(%s,%s,%s,%s)", (tokens_input, tokens_output, chat_custo, chat_id))
+
         conn.commit()
     except Exception as e:
         conn.rollback()
         print(f"Erro: {e}")
-    finally:
+    else:
         cursor.close()
         conn.close()
     
@@ -270,18 +263,15 @@ def resposta (prompt_usuario, nome_arquivo):
                 cursor = conn.cursor()
             
                 #Atualizar custo do chat
-                cursor.execute("""UPDATE CONTROLE SET 
-                                NR_TOKENS_PERG = NR_TOKENS_PERG + %s, 
-                                NR_TOKENS_RESP = NR_TOKENS_RESP + %s,
-                                VL_DOLAR = VL_DOLAR + %s
-                                WHERE CD_CHAT = %s;""", (tokens_input, tokens_output, chat_custo, chat_id))
+                cursor.execute("SELECT fnc_atualizar_controle(%s,%s,%s,%s)", (tokens_input, tokens_output, chat_custo, chat_id))
                 conn.commit()
             except Exception as e:
                 conn.rollback()
                 print(f"Erro: {e}")
-            finally:
+            else:
                 cursor.close()
-                conn.close() 
+                conn.close()     
+
             
             return
         except TracerException as e:
@@ -293,7 +283,6 @@ def resposta (prompt_usuario, nome_arquivo):
             print(f"Erro geral: {e}")
             time.sleep(tempo_de_espera)
             tempo_de_espera *=2
-
 
 
 def respostaErro (prompt_usuario):
@@ -355,18 +344,15 @@ def respostaErro (prompt_usuario):
                 cursor = conn.cursor()
             
                 #Atualizar custo do chat
-                cursor.execute("""UPDATE CONTROLE SET 
-                                NR_TOKENS_PERG = NR_TOKENS_PERG + %s, 
-                                NR_TOKENS_RESP = NR_TOKENS_RESP + %s,
-                                VL_DOLAR = VL_DOLAR + %s
-                                WHERE CD_CHAT = %s;""", (tokens_input, tokens_output, chat_custo, chat_id))
+                cursor.execute("SELECT fnc_atualizar_controle(%s,%s,%s,%s)", (tokens_input, tokens_output, chat_custo, chat_id))
                 conn.commit()
             except Exception as e:
                 conn.rollback()
                 print(f"Erro: {e}")
-            finally:
+            else:
                 cursor.close()
                 conn.close() 
+
             
             return
         except TracerException as e:
@@ -378,7 +364,7 @@ def respostaErro (prompt_usuario):
             print(f"Erro geral: {e}")
             time.sleep(tempo_de_espera)
             tempo_de_espera *=2
-
+            
 def substituidorNormas (resp, pergunta_usuario, norma):
     prompt=normas
     prompt += resp
@@ -440,18 +426,15 @@ def substituidorNormas (resp, pergunta_usuario, norma):
                 cursor = conn.cursor()
             
                 #Atualizar custo do chat
-                cursor.execute("""UPDATE CONTROLE SET 
-                                NR_TOKENS_PERG = NR_TOKENS_PERG + %s, 
-                                NR_TOKENS_RESP = NR_TOKENS_RESP + %s,
-                                VL_DOLAR = VL_DOLAR + %s
-                                WHERE CD_CHAT = %s;""", (tokens_input, tokens_output, chat_custo, chat_id))
+                cursor.execute("SELECT fnc_atualizar_controle(%s,%s,%s,%s)", (tokens_input, tokens_output, chat_custo, chat_id))
                 conn.commit()
             except Exception as e:
                 conn.rollback()
                 print(f"Erro: {e}")
-            finally:
+            else:
                 cursor.close()
                 conn.close() 
+
 
             return
         except TracerException as e:
@@ -462,7 +445,8 @@ def substituidorNormas (resp, pergunta_usuario, norma):
         except LangChainException as e:
             print(f"Erro geral: {e}")
             time.sleep(tempo_de_espera)
-            tempo_de_espera *=2
+            tempo_de_espera *=2            
+
 
 arquivos=[]
 for arq in (os.listdir("./pdfs_bases/procedimentos")):
@@ -470,12 +454,10 @@ for arq in (os.listdir("./pdfs_bases/procedimentos")):
  
 
 @app.route("/submit", methods=["POST"])
- 
 def submit():
-    
     try:
     
-        global chat_id
+        global chat_id 
         
         # historico = request.form['historico']
         print("P 1")
@@ -487,10 +469,33 @@ def submit():
         print("P 3")
         print(base)
         # Gerar a resposta
-        resposta_sem_normas = resposta(pergunta_usuario, base)
+        try:
+            conn = conexao_banco()
+            cursor = conn.cursor()
+            # Atualizar fluxo do chat
+            cursor.execute("SELECT fnc_atualizar_chat(%s)", (chat_id,))
+            array_procedimentos = cursor.fetchone()[0]
+            conn.commit()
+            print(array_procedimentos)
+            
+        except Exception as e:
+            conn.rollback()
+            print(f"Erro: {e}")
+        else:
+            cursor.close()
+            conn.close()
+        
+        if array_procedimentos:
+            for idx,proc in enumerate(array_procedimentos):
+                if proc==21:
+                    if array_procedimentos[idx-1]==21 and  array_procedimentos[idx-2]==21:
+                        return Response(stream_with_context(procure_seu_gestor()),content_type='text/plain')
+        
 
         if (base in arquivos ):
             print("Base encontrada")
+            
+            resposta_sem_normas = resposta(pergunta_usuario, base)
             
             # Verificar se há norma
             string_sem_espacos = ''.join(parte.replace(" ", "").replace("\n", "") for parte in resposta_sem_normas)
@@ -519,28 +524,20 @@ def submit():
             reais= custo * 5.60
             print(f"Custo em dólares: {custo}")
             print(f"Custo: {reais} reais pela pergunta")
+        
+
             
             return Response(stream_with_context(respostaErro(pergunta_usuario)), content_type='text/plain')
     except Exception as e:
         error(e)
         return Response(stream_with_context(algo_ocorreu_de_errado()), content_type='text/plain')
-    finally:
-        try:
-            conn = conexao_banco()
-            cursor = conn.cursor()
-            # Atualizar fluxo do chat
-            cursor.execute("""UPDATE CHATS SET 
-                            NR_PERGUNTAS = NR_PERGUNTAS + %s,  
-                            NR_RESPOSTAS = NR_RESPOSTAS + %s 
-                            WHERE ID_CHAT = %s;""", (1,1,chat_id))
-            conn.commit()
-        except Exception as e:
-            conn.rollback()
-            print(f"Erro: {e}")
-        finally:
-            cursor.close()
-            conn.close()
-    
-app.run(debug=True, port=5000, host="0.0.0.0")
 
+@app.errorhandler(400)
+@app.errorhandler(404)
+@app.errorhandler(405)
+@app.errorhandler(500)
+def handle_error(error):
+    return render_template('error.html',error=error), error.code
+    
+app.run(debug=True, port=5000)
 
