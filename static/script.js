@@ -1,17 +1,16 @@
-
 document.addEventListener('DOMContentLoaded', function () {
     // Verificar se o login já foi feito na sessão atual
     if (!sessionStorage.getItem('loggedIn')) {
         document.getElementById('loginOverlay').classList.remove('hidden');
         document.body.classList.add('blurred');
-    }
- 
-    // Evento de envio do formulário de login
-document.getElementById('loginForm').addEventListener('submit', function (e) {
+    }else{
+
+            // Evento de envio do formulário de login
+    document.getElementById('loginForm').addEventListener('submit', function (e) {
         e.preventDefault();
-       
+        
         let password = document.getElementById('password').value;
- 
+
         fetch('/login', {
         method: 'POST',
         headers: {
@@ -32,8 +31,9 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
             document.getElementById('errorMessage').style.display = 'block';
             console.error(error); // Log do erro para depuração
             });
-        });
-});
+        });       
+    }
+    });
 
 let isResponseIncreased = false;
 let cont_requisicao = 0

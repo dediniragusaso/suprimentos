@@ -39,7 +39,7 @@ if not api_key:
     raise ValueError("Chave API não encontrada. Verifique se 'OPENAI_API_KEY' está definida no ambiente.")
 
 if not correct_password:
-    raise ValueError("Chave API não encontrada. Verifique se 'GEMINI_API_KEY' está definida no ambiente.")
+    raise ValueError("Password não encontrada. Verifique se 'GEMINI_API_KEY' está definida no ambiente.")
 
 # definindo llm
 llm = ChatOpenAI(api_key = api_key,
@@ -369,7 +369,6 @@ def substituidorNormas (resp, pergunta_usuario, norma):
     prompt=normas
     prompt += resp
     global custo
-    nr_tokens_perg= contar_tokens(prompt)
     arquivoInput = (f"./pdfs_bases/politicas/{norma}.pdf")
     pdf = open(arquivoInput, "rb")
     pdf_reader = PyPDF2.PdfReader(pdf)
@@ -409,7 +408,6 @@ def substituidorNormas (resp, pergunta_usuario, norma):
 
             # tokens do retorno da api
             tokens_output = contar_tokens(output)
-            respostaFinal = output
             custo += tokens_output*0.01
             print(tokens_output) 
             
@@ -485,10 +483,11 @@ def submit():
             cursor.close()
             conn.close()
         
+        print(array_procedimentos)
         if array_procedimentos:
             for idx,proc in enumerate(array_procedimentos):
                 if proc==21:
-                    if array_procedimentos[idx-1]==21 and  array_procedimentos[idx-2]==21:
+                    if array_procedimentos[idx-1]==21 and array_procedimentos[idx-2]==21:
                         return Response(stream_with_context(procure_seu_gestor()),content_type='text/plain')
         
 
