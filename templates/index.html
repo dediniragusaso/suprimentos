@@ -6,12 +6,12 @@
 <title>Chat Suprimentos</title>
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 <link rel="shortcut icon" href="static/img/logo_jbs.svg" type="image/x-icon">
-<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body class="flex flex-col md:flex-row h-screen w-screen">
-
+ 
         <!-- Adicionando a caixa de login diretamente no index -->
-    <div id="loginOverlay" class="div-overlay ">
+    <div id="loginOverlay" class="login-overlay hidden">
         <div class="login-container">
             <h1>Login</h1>
             <form id="loginForm" action="/login" method="post">
@@ -21,6 +21,7 @@
             </form>
         </div>
     </div>
+ 
  
     <div id="hamburger" class= "md:hidden flex items-center justify-between text-white py-4 px-6">
         <button id="hamburgerBtn" class="text-white focus:outline-none">
@@ -45,7 +46,7 @@
         </div>
         <p class="text-base font-semibold">CHAT SUPRIMENTOS</p>
         <p class="text-sm text-blue-100">Consulte de maneira rápida e fácil os procedimentos</p>
-
+ 
         <nav>
             <div class="container-processos">
                 <a href="../static/pdfs/Adiantamento_fornecedores_materiais_servicos_jbs.pdf" target="_blank"><button class="cor_1 w-full text-center px-4 py-2 mt-2 rounded-md ">Adiantamento a Fornecedores de Materiais e Serviços JBS</button></a>
@@ -66,10 +67,10 @@
                 <a href="../static/pdfs/Retorno_mercadoria_exportada.pdf" target="_blank"><button class="cor_9 w-full text-center px-4 py-2 mt-2 rounded-md ">Retorno de Mercadoria Exportada</button></a>
                 <a href="../static/pdfs/Solicitacoes_despesas_viagem.pdf" target="_blank"><button class="cor_9 w-full text-center px-4 py-2 mt-2 rounded-md ">Solicitações e Despesas de Viagem</button></a>
                 <a href="../static/pdfs/Solicitacao_vistos_tecnicos.pdf" target="_blank"><button class="cor_10 w-full text-center px-4 py-2 mt-2 rounded-md ">Solitação de Vistos Técnicos</button></a>
-
+ 
             </div>
         </nav>
-
+ 
     </div>
  
     <div id="logoContainer" class="logo-container">
@@ -111,6 +112,6 @@
     </div>
  
     <script src="{{ url_for('static', filename='script.js') }}"></script>
-            
+           
 </body>
 </html>

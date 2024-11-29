@@ -1443,3 +1443,55 @@ ERROR->2024-11-01 14:48:08,622->cannot access local variable 'array_procedimento
 =======
 >>>>>>> eaf99bb90392b20159edc72775b1aac158a9c213
 >>>>>>> 81ad3700091c4edb9a30ef18aab82693d81e478f
+ERROR->2024-11-25 11:11:33,849->'str' object has no attribute 'content'->root
+ERROR->2024-11-25 11:35:58,018->'str' object has no attribute 'content'->root
+ERROR->2024-11-25 11:43:50,405->'str' object has no attribute 'content'->root
+ERROR->2024-11-25 11:45:07,660->'str' object has no attribute 'content'->root
+ERROR->2024-11-25 11:55:37,953->'str' object has no attribute 'content'->root
+ERROR->2024-11-26 14:10:10,865->name 'chat' is not defined->root
+ERROR->2024-11-26 14:13:51,317->name 'chat' is not defined->root
+ERROR->2024-11-26 14:40:26,598->Error on request:
+Traceback (most recent call last):
+  File "C:\Python\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Python\Lib\site-packages\werkzeug\serving.py", line 334, in execute
+    write(data)
+  File "C:\Python\Lib\site-packages\werkzeug\serving.py", line 302, in write
+    assert isinstance(data, bytes), "applications must write bytes"
+AssertionError: applications must write bytes->werkzeug
+ERROR->2024-11-26 16:57:26,231->Error on request:
+Traceback (most recent call last):
+  File "C:\Python\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Python\Lib\site-packages\werkzeug\serving.py", line 334, in execute
+    write(data)
+  File "C:\Python\Lib\site-packages\werkzeug\serving.py", line 302, in write
+    assert isinstance(data, bytes), "applications must write bytes"
+AssertionError: applications must write bytes->werkzeug
+ERROR->2024-11-26 17:01:05,445->Error on request:
+Traceback (most recent call last):
+  File "C:\Python\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Python\Lib\site-packages\werkzeug\serving.py", line 334, in execute
+    write(data)
+  File "C:\Python\Lib\site-packages\werkzeug\serving.py", line 302, in write
+    assert isinstance(data, bytes), "applications must write bytes"
+AssertionError: applications must write bytes->werkzeug
+ERROR->2024-11-28 09:28:46,550->Error on request:
+Traceback (most recent call last):
+  File "C:\Python\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Python\Lib\site-packages\werkzeug\serving.py", line 334, in execute
+    write(data)
+  File "C:\Python\Lib\site-packages\werkzeug\serving.py", line 302, in write
+    assert isinstance(data, bytes), "applications must write bytes"
+AssertionError: applications must write bytes->werkzeug
+ERROR->2024-11-28 09:33:37,767->Error on request:
+Traceback (most recent call last):
+  File "C:\Python\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Python\Lib\site-packages\werkzeug\serving.py", line 334, in execute
+    write(data)
+  File "C:\Python\Lib\site-packages\werkzeug\serving.py", line 302, in write
+    assert isinstance(data, bytes), "applications must write bytes"
+AssertionError: applications must write bytes->werkzeug

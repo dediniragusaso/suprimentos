@@ -18,21 +18,30 @@ class Client(Connection):
         conn = os.getenv("DB_LINK")
         self.client = MongoClient(host=conn)["dbChatSuprimentos"]["Client"]
         
+    def getId(self):
+        return self.client.count_documents({"_id": self.id}) > 0
+    
     def __init__(self, id, nome, empresa, cargo):
+        self.connection()
         self.id = id
         self.nome = nome
         self.empresa = empresa
         self.cargo = cargo
         
-        try:
-            self.client["clientes"].insert_one(
-                {"_id": self.id, 
-                 "data_criacao": datetime.now(),
-                 "nome": self.nome, 
-                 "empresa": self.empresa, 
-                 "cargo": self.cargo})
-        except Exception as e:
-            print(e)  
+        if self.getId() == False:
+            try:
+                self.client.insert_one(
+                    {"_id": self.id, 
+                    "data_criacao": datetime.now(),
+                    "nome": self.nome, 
+                    "empresa": self.empresa, 
+                    "cargo": self.cargo})
+            except Exception as e:
+                print(e)  
+    
+            
+    def __repr__(self):
+        return f"Client(id={self.id}, nome={self.nome}, empresa={self.empresa}, cargo={self.cargo})"
             
         
 class Chat(Connection):
@@ -43,6 +52,8 @@ class Chat(Connection):
     
  
     def __init__(self, cd_client):  
+        self.connection()
+        
         self.id = None      
         self.cd_client = cd_client
         
@@ -52,16 +63,19 @@ class Chat(Connection):
                   "cd_client": self.cd_client})
         except Exception as e:
             print(e)  
-    
-    @property
-    def getChat(self):        
+            
+    def setChat(self):        
         
-        return self.client.aggregate([
+        id =  self.client.aggregate([
             {"$match":{"cd_client": self.cd_client}},
             {"$sort":{"dt_criacao": -1}},
             {"$project":{"_id":1}},
             {"$limit": 1}
         ])
+        
+        self.id = list(id)[0]["_id"]
+    
+        
         
     def isErro(self):
         
@@ -85,14 +99,14 @@ class Chat(Connection):
             return False
 
         
-    def setPerguntaResposta(self, pergunta, procedimento, resposta, custo):
+    def setPerguntaResposta(self, pergunta, procedimento, resposta):
         
         try:
             
             self.client.update_one(
                 {"_id": self.id},
                 {
-                    "$inc": {"nr_pergunta": 1, "nr_resposta": 1, "vl_custo": custo},
+                    "$inc": {"nr_pergunta": 1, "nr_resposta": 1},
                     "$push": {
                         "ar_perguntas": pergunta,
                         "ar_respostas": resposta,
@@ -106,3 +120,21 @@ class Chat(Connection):
         except Exception as e:
             print(e)
             return False 
+
+    def setValorCusto(self, custo):
+        
+        try:
+            self.client.update_one(
+                {"_id": self.id},
+                {"$inc": {"vl_custo": custo}}
+            )   
+            
+            return True
+
+        except Exception as e:
+            print(e)
+            return False
+        
+    def __repr__(self):
+        return f"Chat(id={self.id}, cd_client={self.cd_client})"
+ 
