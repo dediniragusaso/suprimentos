@@ -137,4 +137,3 @@ class Chat(Connection):
         
     def __repr__(self):
         return f"Chat(id={self.id}, cd_client={self.cd_client})"
- 
