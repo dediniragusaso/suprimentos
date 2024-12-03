@@ -33,21 +33,12 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
 });
-<<<<<<< HEAD
-
-
-let isResponseIncreased = false;
-let cont_requisicao = 0
-
-
-=======
  
  
 let isResponseIncreased = false;
 let cont_requisicao = 0
  
  
->>>>>>> 752240aa043eb639969f0d57f13efecb27e33ace
 // Ajusta a altura do input de mensagem conforme o conteúdo
 document.getElementById("messageInput").addEventListener("input", function() {
     this.style.height = "auto";
