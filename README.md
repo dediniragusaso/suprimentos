@@ -53,3 +53,4 @@ Temos duas collections: Chat e Client.
 |dt_criacao | 
 |nome |
 | empresa | 
+| cargo | 
