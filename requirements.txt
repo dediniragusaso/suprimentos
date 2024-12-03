@@ -8,3 +8,4 @@ langchain
 langchain_openai
 langchain_core
 tiktoken>=0.7.0
+pymongo==4.5.0
