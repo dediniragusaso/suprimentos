@@ -3,10 +3,14 @@ from pymongo import MongoClient
 import os
 import psycopg2
 from decimal import Decimal
+from dotenv import load_dotenv
+
+load_dotenv()
 
 def conexao_banco():
     try:
-        db_link = os.getenv("DB_LINK", "postgres://avnadmin:AVNS_F0MZTuXcV6F6xwUYDwi@gedai-postgres-gedaijef.h.aivencloud.com:12518/dbchatsuprimentos?sslmode=require")
+        
+        db_link = os.getenv("DB_LINK_POSTGRESQL")
         if not db_link:
             raise ValueError("Variável de ambiente DB_LINK não definida.")
 
@@ -50,7 +54,7 @@ try:
             # Conectar ao MongoDB
             conexao_mongo = MongoClient(os.getenv("DB_LINK_MONGO"))
             chat_suprimentos = conexao_mongo["chat_suprimentos"]
-            collectionChats = chat_suprimentos["chats"]
+            collectionChats = chat_suprimentos["Chat"]
 
             # Processar linhas e corrigir valores Decimal
             documentos = []
